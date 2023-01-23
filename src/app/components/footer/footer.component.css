@@ -1,0 +1,38 @@
+.footer__section {
+  margin-top: auto;
+  background-color: var(--color-primary-dark);
+  padding: 2.4rem 0;
+}
+
+.footer__wrapper {
+  margin-bottom: 2.4rem;
+  padding-top: 2.4rem;
+}
+
+.footer__icons-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.footer__contact-icon:link,
+.footer__contact-icon:visited {
+  transition: 0.3s all;
+}
+
+.footer__contact-icon:hover,
+.footer__contact-icon:active {
+  transform: scale(1.1);
+}
+
+.footer__icon-image {
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(200deg)
+    brightness(106%) contrast(106%);
+  height: 2.4rem;
+}
+
+.footer__copyright-line {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #fff;
+}

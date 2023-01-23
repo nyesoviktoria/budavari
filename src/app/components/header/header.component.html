@@ -1,0 +1,62 @@
+<ng-container *ngIf="isMobileViewOn; else desktopView">
+  <nav class="header__section">
+    <a href="#" class="header__navigation-link header__logo">
+      <img
+        [src]="imagesRoute + 'logo.png'"
+        alt="egy hegedű és egy cselló csigája szív formát alkot"
+        class="header__logo-image"
+      />
+      <p class="header__logo-text">
+        <span>Budavári</span><span>Kamarazenekar</span>
+      </p>
+    </a>
+    <img
+      class="icon-dark header__mobile-menu-icon"
+      [src]="iconsRoute + 'bars.svg'"
+      alt="menu-icon"
+    />
+  </nav>
+
+  <nav class="nav-mobile hidden">
+    <ul class="nav-list-mobile">
+      <li *ngFor="let item of navigationItems; trackBy: trackByIndex">
+        <a
+          href="#"
+          class="header__navigation-link header__navigation-link-animation"
+          (click)="onNavigateToPage()"
+          >{{ item.pageTitle }}</a
+        >
+      </li>
+    </ul>
+  </nav>
+</ng-container>
+
+<ng-template #desktopView>
+  <nav class="header__section">
+    <a href="#" class="header__navigation-link header__logo">
+      <img
+        [src]="imagesRoute + 'logo.png'"
+        alt="egy hegedű és egy cselló csigája szív formát alkot"
+        class="header__logo-image"
+      />
+      <p class="header__logo-text">
+        <span>Budavári</span><span>Kamarazenekar</span>
+      </p>
+    </a>
+    <ul class="header__navigation-list">
+      <li *ngFor="let item of navigationItems; trackBy: trackByIndex">
+        <a
+          href="#"
+          class="header__navigation-link header__navigation-link-animation"
+          (click)="onNavigateToPage()"
+          >{{ item.pageTitle }}</a
+        >
+      </li>
+    </ul>
+    <!--     <img
+      class="icon-dark header__mobile-menu-icon"
+      [src]="iconsRoute + 'bars.svg'"
+      alt="menu-icon"
+    /> -->
+  </nav>
+</ng-template>
