@@ -97,3 +97,16 @@
   gap: 1.2rem;
   padding: 10px 0;
 }
+
+.hero__carousel-navigation-dot {
+  border: 0;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.hero__carousel-navigation-dot.active-navigation-dot {
+  background: rgba(0, 0, 0, 0.75);
+}
