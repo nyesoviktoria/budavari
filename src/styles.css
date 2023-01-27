@@ -25,7 +25,10 @@ body {
   font-family: "Roboto", sans-serif;
   color: #333;
   background-color: var(--color-primary-dark-lighter);
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+}
+
+.wrapper-container {
+  max-width: 130rem;
+  margin: 0 auto;
+  background-color: var(--color-primary-light-transparent-much);
 }

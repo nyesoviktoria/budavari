@@ -1,0 +1,10 @@
+.frame__container {
+  padding-top: 7.4rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.frame__footer {
+  margin-top: auto;
+}
