@@ -8,6 +8,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { FrameComponent } from './components/frame/frame.component';
 import { HomeContainerComponent } from './containers/home-container/home-container.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
+import { TestimonialsComponent } from './components/testimonials/testimonials.component';
+import { MembersComponent } from './components/members/members.component';
+import { PartCartComponent } from './components/part-cart/part-cart.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +20,9 @@ import { HeroSectionComponent } from './components/hero-section/hero-section.com
     HeaderComponent,
     HeroSectionComponent,
     HomeContainerComponent,
+    TestimonialsComponent,
+    MembersComponent,
+    PartCartComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

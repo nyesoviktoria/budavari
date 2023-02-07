@@ -36,3 +36,12 @@
   text-align: center;
   color: #fff;
 }
+
+/*Media queries*/
+
+@media (max-width: 56em) {
+  .footer__wrapper,
+  .footer__copyright-line {
+    font-size: 1.4rem;
+  }
+}

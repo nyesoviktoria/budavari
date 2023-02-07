@@ -2,6 +2,7 @@
   padding: 5.2rem 0 0 0;
 }
 
+/* todo: ez bizony about-us__container */
 .aboutus__container {
   display: grid;
   grid-template-columns: 3fr 1fr;

@@ -57,3 +57,57 @@ body {
   margin-bottom: 3rem;
   line-height: 3rem;
 }
+
+/*Media query*/
+
+@media (max-width: 87em) {
+  .wrapper-container {
+    max-width: 120rem;
+  }
+}
+
+@media (max-width: 78em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .wrapper-container {
+    max-width: 105rem;
+  }
+}
+
+@media (max-width: 56em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 48em) {
+  .primary-heading {
+    font-size: 3.6rem;
+  }
+
+  .secondary-heading {
+    font-size: 2.6rem;
+  }
+
+  .tertiary-heading {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 38em) {
+  .info {
+    line-height: 2.6rem;
+  }
+}
+
+@media (max-width: 28em) {
+  html {
+    font-size: 42.5%;
+  }
+
+  .wrapper {
+    padding: 3.2rem 2rem;
+  }
+}

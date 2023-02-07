@@ -1,0 +1,77 @@
+<section class="testimonials__section-desktop" aria-label="">
+  <div class="testimonials__carousel-track">
+    <div
+      class="testimonials__cart-desktop"
+      *ngFor="let testimonial of testimonialItems"
+    >
+      <div class="testimonials__content">
+        <div class="testimonials__image-container">
+          <img
+            class="testimonials__image"
+            [src]="imagesRoute + testimonial.imageSource"
+            [alt]="testimonial.name"
+          />
+        </div>
+        <blockquote class="testimonials__text-info info">
+          {{ testimonial.text }}
+        </blockquote>
+        <p class="testimonials__signature">{{ testimonial.title }}</p>
+      </div>
+      <img
+        class="testimonials__quotation-icon"
+        [src]="iconsRoute + 'quote-right.svg'"
+        alt="quotation mark"
+      />
+    </div>
+  </div>
+  <img
+    class="testimonials__arrow testimonials__arrow-left disabled"
+    [src]="iconsRoute + 'chevron-left-solid.svg'"
+    alt="arrow to the left"
+  />
+  <img
+    class="testimonials__arrow testimonials__arrow-right"
+    [src]="iconsRoute + 'chevron-right-solid.svg'"
+    alt="arrow to the right"
+  />
+  <div class="testimonials__carousel-navigation">
+    <button
+      class="testimonials__carousel-navigation-dot active-navigation-dot"
+      data-number="0"
+    ></button>
+    <button
+      class="testimonials__carousel-navigation-dot"
+      data-number="1"
+    ></button>
+    <button
+      class="testimonials__carousel-navigation-dot"
+      data-number="2"
+    ></button>
+  </div>
+</section>
+
+<section class="testimonials__section-mobile">
+  <div class="testimonials-container-mobile">
+    <div
+      class="testimonials__cart-mobile"
+      *ngFor="let testimonial of testimonialItems"
+    >
+      <div class="testimonials__image-container">
+        <img
+          class="img testimonials__image"
+          [src]="imagesRoute + testimonial.imageSource"
+          [alt]="testimonial.name"
+        />
+      </div>
+      <blockquote class="info testimonials__mobile-text">
+        {{ testimonial.text }}
+      </blockquote>
+      <p class="testimonials__signature">{{ testimonial.title }}</p>
+      <img
+        class="testimonials__quotation-icon"
+        [src]="iconsRoute + 'quote-right.svg'"
+        alt="quotation mark"
+      />
+    </div>
+  </div>
+</section>
