@@ -9,8 +9,8 @@ import { FOOTER_CONTACT_ICON_ITEMS } from '../../constants/footer-contact-icon-i
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FooterComponent {
-  iconsRoute = ICONS_ROUTE;
-  contactIcons = FOOTER_CONTACT_ICON_ITEMS;
+  readonly iconsRoute = ICONS_ROUTE;
+  readonly contactIcons = FOOTER_CONTACT_ICON_ITEMS;
 
   currentYear = new Date().getFullYear();
 

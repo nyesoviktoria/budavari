@@ -10,19 +10,19 @@ import { HomeContainerComponent } from './containers/home-container/home-contain
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { MembersComponent } from './components/members/members.component';
-import { PartCartComponent } from './components/part-cart/part-cart.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
 
 @NgModule({
   declarations: [
+    AboutUsComponent,
     AppComponent,
     FooterComponent,
     FrameComponent,
     HeaderComponent,
     HeroSectionComponent,
     HomeContainerComponent,
-    TestimonialsComponent,
     MembersComponent,
-    PartCartComponent,
+    TestimonialsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

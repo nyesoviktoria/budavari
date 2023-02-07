@@ -1,10 +1,10 @@
 import { PartNames } from '../types/part-names.type';
+import { MemberItem } from './member-item.interface';
 
 export interface MembersPartItem {
   readonly partName: PartNames;
   readonly imageSource: string;
   readonly altText: string;
-  // TODO: ide kell egy interface esetleg at is lehetne nevezni MembersPart es ez lenne a MembersPartItem
-  readonly members: { memberName: string; memberId: string }[];
+  readonly members: readonly MemberItem[];
   readonly isMiddleCart: boolean;
 }

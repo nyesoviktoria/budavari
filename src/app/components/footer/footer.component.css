@@ -1,6 +1,6 @@
 .footer__section {
-  margin-top: auto;
   background-color: var(--color-primary-dark);
+  margin-top: auto;
   padding: 2.4rem 0;
 }
 
@@ -11,8 +11,8 @@
 
 .footer__icons-container {
   display: flex;
-  justify-content: center;
   gap: 1.2rem;
+  justify-content: center;
 }
 
 .footer__contact-icon:link,
@@ -32,9 +32,9 @@
 }
 
 .footer__copyright-line {
+  color: #fff;
   font-size: 1.2rem;
   text-align: center;
-  color: #fff;
 }
 
 /*Media queries*/

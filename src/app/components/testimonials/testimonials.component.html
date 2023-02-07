@@ -1,8 +1,8 @@
-<section class="testimonials__section-desktop" aria-label="">
+<section class="testimonials__section-desktop" aria-label="Rólunk mondták">
   <div class="testimonials__carousel-track">
     <div
       class="testimonials__cart-desktop"
-      *ngFor="let testimonial of testimonialItems"
+      *ngFor="let testimonial of testimonialItems; trackBy: trackByIndex"
     >
       <div class="testimonials__content">
         <div class="testimonials__image-container">
@@ -13,9 +13,11 @@
           />
         </div>
         <blockquote class="testimonials__text-info info">
-          {{ testimonial.text }}
+          {{ testimonial.testimonial }}
         </blockquote>
-        <p class="testimonials__signature">{{ testimonial.title }}</p>
+        <p class="testimonials__signature">
+          {{ testimonial.name }}, {{ testimonial.profession }}
+        </p>
       </div>
       <img
         class="testimonials__quotation-icon"
@@ -24,30 +26,26 @@
       />
     </div>
   </div>
-  <img
-    class="testimonials__arrow testimonials__arrow-left disabled"
-    [src]="iconsRoute + 'chevron-left-solid.svg'"
-    alt="arrow to the left"
-  />
-  <img
-    class="testimonials__arrow testimonials__arrow-right"
-    [src]="iconsRoute + 'chevron-right-solid.svg'"
-    alt="arrow to the right"
-  />
-  <div class="testimonials__carousel-navigation">
-    <button
-      class="testimonials__carousel-navigation-dot active-navigation-dot"
-      data-number="0"
-    ></button>
-    <button
-      class="testimonials__carousel-navigation-dot"
-      data-number="1"
-    ></button>
-    <button
-      class="testimonials__carousel-navigation-dot"
-      data-number="2"
-    ></button>
-  </div>
+
+  <ng-container *ngIf="testimonialItems.length > 1">
+    <img
+      class="testimonials__arrow testimonials__arrow-left disabled"
+      [src]="iconsRoute + 'chevron-left-solid.svg'"
+      alt="arrow to the left"
+    />
+    <img
+      class="testimonials__arrow testimonials__arrow-right"
+      [src]="iconsRoute + 'chevron-right-solid.svg'"
+      alt="arrow to the right"
+    />
+    <div class="testimonials__carousel-navigation">
+      <button
+        *ngFor="let dot of testimonialItems; index as i"
+        class="testimonials__carousel-navigation-dot active-navigation-dot"
+        (click)="onDotSelectClick(i)"
+      ></button>
+    </div>
+  </ng-container>
 </section>
 
 <section class="testimonials__section-mobile">
@@ -64,9 +62,9 @@
         />
       </div>
       <blockquote class="info testimonials__mobile-text">
-        {{ testimonial.text }}
+        {{ testimonial.testimonial }}
       </blockquote>
-      <p class="testimonials__signature">{{ testimonial.title }}</p>
+      <p class="testimonials__signature">{{ testimonial.profession }}</p>
       <img
         class="testimonials__quotation-icon"
         [src]="iconsRoute + 'quote-right.svg'"
