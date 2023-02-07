@@ -3,9 +3,9 @@ import { IMAGES_ROUTE } from '../../constants/app.constants';
 import { ABOUTUS_GALLERY_ITEMS } from '../../constants/aboutus-gallery-items-config.constant';
 
 @Component({
-  selector: 'app-about-us',
+  selector: 'bvkz-about-us',
   templateUrl: './about-us.component.html',
-  styleUrls: ['./about-us.component.css'],
+  styleUrls: ['./about-us.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AboutUsComponent {

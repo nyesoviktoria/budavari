@@ -1,5 +1,7 @@
+@import "../../../variables.scss";
+
 .footer__section {
-  background-color: var(--color-primary-dark);
+  background-color: $color-primary-dark;
   margin-top: auto;
   padding: 2.4rem 0;
 }

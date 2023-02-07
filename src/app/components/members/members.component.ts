@@ -4,9 +4,9 @@ import { IMAGES_ROUTE } from '../../constants/app.constants';
 import { MEMBERS_PARTS_ITEMS } from '../../constants/members-part-items-config.constant';
 
 @Component({
-  selector: 'app-members',
+  selector: 'bvkz-members',
   templateUrl: './members.component.html',
-  styleUrls: ['./members.component.css'],
+  styleUrls: ['./members.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MembersComponent {

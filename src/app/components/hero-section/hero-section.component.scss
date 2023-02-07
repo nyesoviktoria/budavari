@@ -1,3 +1,5 @@
+@import "../../../variables.scss";
+
 .hero__section {
   height: 50rem;
   max-width: 100%;
@@ -36,7 +38,7 @@
 }
 
 .hero__text-container {
-  background-color: var(--color-primary-light-transparent-much);
+  background-color: $color-primary-light-transparent-much;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -68,9 +70,9 @@
 .btn-hero:link,
 .btn-hero:visited {
   -webkit-transition: 0.3s background-color linear;
-  background-color: var(--color-primary-dark);
+  background-color: $color-primary-dark;
   border-radius: 5px;
-  color: var(--color-primary-light);
+  color: $color-primary-light;
   font-size: 1.6rem;
   font-weight: 400;
   margin-left: auto;
@@ -81,7 +83,7 @@
 
 .nav-link.btn:hover,
 .btn-hero:hover {
-  background-color: var(--color-primary-dark-darker);
+  background-color: $color-primary-dark-darker;
 }
 
 .hero-btn-to-hide {
@@ -112,7 +114,6 @@
 }
 
 /*Media queries*/
-
 
 @media (max-width: 107em) {
   .hero__slide2 {

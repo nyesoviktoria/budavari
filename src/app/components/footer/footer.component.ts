@@ -3,9 +3,9 @@ import { ICONS_ROUTE } from '../../constants/app.constants';
 import { FOOTER_CONTACT_ICON_ITEMS } from '../../constants/footer-contact-icon-items-config.constants';
 
 @Component({
-  selector: 'app-footer',
+  selector: 'bvkz-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css'],
+  styleUrls: ['./footer.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FooterComponent {

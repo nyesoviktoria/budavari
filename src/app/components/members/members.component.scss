@@ -1,25 +1,41 @@
+@import "../../../variables.scss";
+@import "../../../mixins.scss";
+
 .members__section {
   margin-top: 6rem;
   padding: 0;
 }
 
 .members__carts-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   column-gap: 3.2rem;
-  row-gap: 4.8rem;
-  justify-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
   justify-content: start;
+  justify-items: center;
   margin-bottom: 7.2rem;
+  row-gap: 4.8rem;
+
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .members__cart {
-  justify-self: stretch;
-  display: flex;
-  gap: 2rem;
-  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.1);
-  position: relative;
   border-radius: 8px;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  justify-self: center;
+  max-width: 30rem;
+  position: relative;
+
+  @include desktop-xl {
+    flex-direction: row;
+    gap: 2rem;
+    justify-self: stretch;
+    max-width: none;
+  }
 }
 
 .members__cart-middle {
@@ -29,8 +45,8 @@
 }
 
 .members__cart-part-sign {
-  background-color: var(--color-primary-dark);
-  color: var(--color-primary-dark-lighter);
+  background-color: $color-primary-dark;
+  color: $color-primary-dark-lighter;
   border-radius: 50px;
   font-size: 1.8rem;
   padding: 0.8rem 1.2rem;
@@ -79,7 +95,7 @@
   height: 2px;
   left: 50%;
   position: absolute;
-  background: var(--color-primary-dark);
+  background: $color-primary-dark;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
@@ -95,24 +111,14 @@
 
 .members__gyes-icon {
   height: 1.8rem;
-  filter: invert(17%) sepia(31%) saturate(5667%) hue-rotate(198deg) brightness(97%) contrast(95%);
+  filter: invert(17%) sepia(31%) saturate(5667%) hue-rotate(198deg)
+    brightness(97%) contrast(95%);
   transform: scaleX(-1);
 }
 
 /*Media queries*/
 
 @media (max-width: 87em) {
-  .members__carts-container {
-    row-gap: 4.8rem;
-  }
-
-  .members__cart {
-    flex-direction: column;
-    gap: 0;
-    justify-self: center;
-    max-width: 30rem;
-  }
-
   .members__image-container {
     max-height: 20rem;
     max-width: 100%;
@@ -135,15 +141,5 @@
 
   .members__cart-part-sign {
     transform: translate(3rem, -2.5rem);
-     }
-}
-
-@media (max-width: 38em) {
-  .members__carts-container {
-    grid-template-columns: 1fr;
-  }
-
-  .members__list-item {
-    font-size: 2rem;
   }
 }

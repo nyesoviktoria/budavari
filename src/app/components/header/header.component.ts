@@ -4,9 +4,9 @@ import { HEADER_NAVIGATION_ITEMS } from '../../constants/header-navigation-items
 import { HeaderNavigationItem } from '../../interfaces/header-navigation-item.interface';
 
 @Component({
-  selector: 'app-header',
+  selector: 'bvkz-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css'],
+  styleUrls: ['./header.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent implements OnInit {

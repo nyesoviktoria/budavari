@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-frame',
+  selector: 'bvkz-frame',
   templateUrl: './frame.component.html',
-  styleUrls: ['./frame.component.css'],
+  styleUrls: ['./frame.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FrameComponent implements OnInit {

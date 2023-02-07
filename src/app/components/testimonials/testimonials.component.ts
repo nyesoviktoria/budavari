@@ -4,9 +4,9 @@ import { ICONS_ROUTE } from '../../constants/app.constants';
 import { TESTIMONIAL_ITEMS } from '../../constants/testimonial-items-config.constant';
 
 @Component({
-  selector: 'app-testimonials',
+  selector: 'bvkz-testimonials',
   templateUrl: './testimonials.component.html',
-  styleUrls: ['./testimonials.component.css'],
+  styleUrls: ['./testimonials.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TestimonialsComponent {
