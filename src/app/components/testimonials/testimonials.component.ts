@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { IMAGES_ROUTE } from '../../constants/app.constants';
-import { ICONS_ROUTE } from '../../constants/app.constants';
+import { IMAGES_ROUTE, ICONS_ROUTE } from '../../constants/app.constants';
 import { TESTIMONIAL_ITEMS } from '../../constants/testimonial-items-config.constant';
 
 @Component({
