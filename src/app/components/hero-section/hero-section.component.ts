@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { IMAGES_ROUTE } from '../../constants/app.constants';
 
 @Component({
@@ -7,10 +7,6 @@ import { IMAGES_ROUTE } from '../../constants/app.constants';
   styleUrls: ['./hero-section.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HeroSectionComponent implements OnInit {
+export class HeroSectionComponent {
   readonly imagesRoute = IMAGES_ROUTE;
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }

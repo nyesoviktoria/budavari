@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ICONS_ROUTE, IMAGES_ROUTE } from '../../constants/app.constants';
 import { HEADER_NAVIGATION_ITEMS } from '../../constants/header-navigation-items-config.constants';
 import { HeaderNavigationItem } from '../../interfaces/header-navigation-item.interface';
@@ -9,18 +9,13 @@ import { HeaderNavigationItem } from '../../interfaces/header-navigation-item.in
   styleUrls: ['./header.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   readonly imagesRoute = IMAGES_ROUTE;
   readonly iconsRoute = ICONS_ROUTE;
-  readonly navigationItems: readonly HeaderNavigationItem[] =
-    HEADER_NAVIGATION_ITEMS;
+  readonly navigationItems: readonly HeaderNavigationItem[] = HEADER_NAVIGATION_ITEMS;
   readonly isMobileViewOn: boolean = false;
 
-  constructor() {}
-
-  ngOnInit(): void {}
-
-  onNavigateToPage() {
+  onNavigateToPage(): void {
     return;
   }
 

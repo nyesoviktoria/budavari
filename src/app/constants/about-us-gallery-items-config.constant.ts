@@ -1,6 +1,6 @@
 import { ImageItem } from '../interfaces/image-item.interface';
 
-export const ABOUTUS_GALLERY_ITEMS: readonly ImageItem[] = [
+export const ABOUT_US_GALLERY_ITEMS: readonly ImageItem[] = [
   {
     source: 'csoportkep.webp',
     alt: 'zenekari csoportkép',
