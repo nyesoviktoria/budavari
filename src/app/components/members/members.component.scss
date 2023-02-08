@@ -1,5 +1,5 @@
-@import "../../../variables.scss";
-@import "../../../mixins.scss";
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
 
 .members__section {
   margin-top: 6rem;
@@ -25,9 +25,9 @@
   box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 1rem;
   justify-self: center;
-  max-width: 30rem;
+  max-width: 35rem;
   position: relative;
 
   @include desktop-xl {
@@ -41,7 +41,11 @@
 .members__cart-middle {
   grid-column: 1/-1;
   margin: 0 auto;
-  min-width: 60rem;
+  min-width: 0rem;
+
+  @include desktop-xl {
+    min-width: 60rem;
+  }
 }
 
 .members__cart-part-sign {
@@ -53,13 +57,22 @@
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(2rem, -1rem);
+  transform: translate(3rem, -2.5rem);
   box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.1);
+
+  @include desktop-xl {
+    transform: translate(2rem, -1rem);
+  }
 }
 
 .members__image-container {
-  max-width: 30rem;
-  max-height: 35rem;
+  max-height: 20rem;
+  max-width: 100%;
+
+  @include desktop-xl {
+    max-width: 30rem;
+    max-height: 35rem;
+  }
 }
 
 .members__cart-image {
@@ -67,15 +80,24 @@
   height: 100%;
   object-fit: cover;
   object-position: top;
-  border-radius: 8px 0 0 8px;
+  border-radius: 8px 8px 0 0;
+
+  @include desktop-xl {
+    border-radius: 8px 0 0 8px;
+  }
 }
 
 .members__list {
-  padding: 1.6rem 0;
+  padding: 1.6rem 1.6rem 3.2rem 4rem;
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 1rem;
   align-items: flex-start;
+
+  @include desktop-xl {
+    gap: 0.8rem;
+    padding: 1.6rem 0;
+  }
 }
 
 .members__list-item {
@@ -90,7 +112,7 @@
 .members__list-item:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
-  content: "";
+  content: '';
   display: block;
   height: 2px;
   left: 50%;
@@ -111,35 +133,6 @@
 
 .members__gyes-icon {
   height: 1.8rem;
-  filter: invert(17%) sepia(31%) saturate(5667%) hue-rotate(198deg)
-    brightness(97%) contrast(95%);
+  filter: invert(17%) sepia(31%) saturate(5667%) hue-rotate(198deg) brightness(97%) contrast(95%);
   transform: scaleX(-1);
-}
-
-/*Media queries*/
-
-@media (max-width: 87em) {
-  .members__image-container {
-    max-height: 20rem;
-    max-width: 100%;
-  }
-
-  .members__cart-middle {
-    grid-column: 1/-1;
-    margin: 0 auto;
-    min-width: 0rem;
-  }
-
-  .members__cart-image {
-    border-radius: 8px 8px 0 0;
-  }
-
-  .members__list {
-    gap: 1rem;
-    padding: 1.6rem 1.6rem 3.2rem 2.4rem;
-  }
-
-  .members__cart-part-sign {
-    transform: translate(3rem, -2.5rem);
-  }
 }

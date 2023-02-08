@@ -1,4 +1,5 @@
 @import '../../../variables.scss';
+@import '../../../mixins.scss';
 
 .about-us__section {
   padding: 5.2rem 0 0 0;
@@ -6,7 +7,11 @@
 
 .about-us__container {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 1fr;
+
+  @include tablet {
+    grid-template-columns: 3fr 1fr;
+  }
 }
 
 .about-us__text-container {
@@ -14,7 +19,11 @@
 }
 
 .about-us__text-to-hide.hidden {
-  display: inline-block;
+  display: none;
+
+  @include tablet {
+    display: inline-block;
+  }
 }
 
 .about-us__button-more-info,
@@ -22,10 +31,14 @@
   border: none;
   color: $color-primary-dark;
   cursor: pointer;
-  display: none;
+  display: inline-block;
   font-size: 2rem;
   font-weight: 700;
   transition: all 0.3s;
+
+  @include tablet {
+    display: none;
+  }
 }
 
 .about-us__button-more-info:hover,
@@ -34,35 +47,45 @@
   text-decoration: underline;
 }
 
+.about-us__button-more-info.hidden,
+.about-us__button-less-info.hidden {
+  display: none;
+}
+
 .about-us__gallery-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 0 0 6.4rem 2rem;
+  display: none;
+  padding: 3.2rem 2rem 7.2rem 2rem;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  @include desktop {
+    padding: 0 0 6.4rem 2rem;
+  }
 }
 
 .about-us__image-container {
   border-radius: 8px;
-  max-height: 17rem;
-  max-width: 20rem;
+  max-width: 13rem;
+  max-height: 12rem;
   overflow: hidden;
+
+  @include tablet {
+    max-width: 20rem;
+    max-height: 18rem;
+  }
+
+  @include desktop-lg {
+    max-height: 17rem;
+    max-width: 20rem;
+  }
 }
 
 .about-us__image {
   height: 100%;
   object-fit: cover;
   width: 100%;
-}
-
-@media (max-width: 48em) {
-
-  .about-us__button-less-info,
-  .about-us__button-more-info {
-    display: inline-block;
-  }
-
-  .about-us__button-less-info.hidden,
-  .about-us__button-more-info.hidden {
-    display: none;
-  }
 }

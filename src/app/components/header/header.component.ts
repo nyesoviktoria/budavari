@@ -19,6 +19,10 @@ export class HeaderComponent {
     return;
   }
 
+  onOpenMobileNavigation(): void {
+    return;
+  }
+
   trackByIndex(index: number): number {
     return index;
   }

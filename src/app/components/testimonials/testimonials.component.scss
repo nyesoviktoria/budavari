@@ -1,9 +1,16 @@
+@import '../../../mixins.scss';
+
 .testimonials__section-desktop {
+  display: none;
   height: 26rem;
   margin-bottom: 5rem;
   margin: 0 auto;
   max-width: 80rem;
   position: relative;
+
+  @include tablet {
+    display: block;
+  }
 }
 
 .testimonials__carousel-track {
@@ -30,9 +37,18 @@
 }
 
 .testimonials__image-container {
-  justify-self: end;
-  height: 9rem;
-  width: 9rem;
+  justify-self: center;
+  height: 10rem;
+  width: 10rem;
+
+  @include tablet {
+    justify-self: end;
+  }
+
+  @include desktop {
+    height: 9rem;
+    width: 9rem;
+  }
 }
 
 .testimonials__image {
@@ -43,11 +59,16 @@
 }
 
 .testimonials__signature {
-  font-size: 1.4rem;
+  align-self: end;
+  font-size: 1.6rem;
   font-style: italic;
   grid-column: 2/-1;
   justify-self: end;
-  align-self: end;
+  text-align: end;
+
+  @include desktop {
+    font-size: 1.4rem;
+  }
 }
 
 .testimonials__arrow {
@@ -62,14 +83,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  filter: invert(39%) sepia(76%) saturate(353%) hue-rotate(161deg)
-    brightness(96%) contrast(85%);
+  filter: invert(39%) sepia(76%) saturate(353%) hue-rotate(161deg) brightness(96%) contrast(85%);
   transition: all 0.3s;
 }
 
 .testimonials__arrow:hover {
-  filter: invert(18%) sepia(34%) saturate(4163%) hue-rotate(195deg)
-    brightness(101%) contrast(96%);
+  filter: invert(18%) sepia(34%) saturate(4163%) hue-rotate(195deg) brightness(101%) contrast(96%);
 }
 
 .testimonials__arrow-left {
@@ -82,8 +101,7 @@
 
 .disabled,
 .disabled:hover {
-  filter: invert(90%) sepia(11%) saturate(36%) hue-rotate(24deg) brightness(92%)
-    contrast(86%);
+  filter: invert(90%) sepia(11%) saturate(36%) hue-rotate(24deg) brightness(92%) contrast(86%);
   cursor: auto;
 }
 
@@ -113,12 +131,16 @@
 /**** SECTION-TESTIMONIAL-MOBILE ****/
 
 .testimonials__section-mobile {
-  display: none;
+  display: block;
+  max-width: 40rem;
+  margin: 0 auto;
+
+  @include tablet {
+    display: none;
+  }
 }
 
 .testimonials-container-mobile {
-  max-width: 40rem;
-  margin: 0 auto;
   margin-bottom: 2.4rem;
 }
 
@@ -128,7 +150,7 @@
   flex-direction: column;
   gap: 2.4rem;
   align-items: center;
-  padding: 2.4rem 4.8rem;
+  padding: 2.4rem;
   border-radius: 8px;
   box-shadow: 0rem 0.4rem 1.2rem 0.4rem rgba(0, 0, 0, 0.1);
   margin-bottom: 4.8rem;
@@ -140,67 +162,5 @@
   top: 0;
   left: 0;
   transform: translate(2rem, -2rem);
-  filter: invert(39%) sepia(76%) saturate(353%) hue-rotate(161deg)
-    brightness(96%) contrast(85%);
-}
-
-/*Media queries*/
-
-@media (max-width: 56em) {
-  .testimonials__image-container {
-    height: 10rem;
-    width: 10rem;
-  }
-
-  .testimonials__signature {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width: 48em) {
-  .testimonial__carousel-navigation {
-    gap: 2.4rem;
-  }
-
-  .carousel__indicator-testimonial {
-    width: 14px;
-    height: 14px;
-  }
-
-  .testimonials__section-desktop {
-    display: none;
-  }
-
-  .testimonials__section-mobile {
-    display: block;
-  }
-}
-
-@media (max-width: 38em) {
-  .testimonials__image-container {
-    justify-self: center;
-    height: 10rem;
-    width: 10rem;
-  }
-}
-
-@media (max-width: 28em) {
-  .testimonials__section-mobile {
-    max-width: 35rem;
-    margin: 0 auto;
-  }
-
-  .testimonials__cart-mobile {
-    padding: 2.4rem;
-  }
-
-  .testimonials__signature {
-    text-align: end;
-  }
-}
-
-@media (max-width: 21em) {
-  .testimonials__section-mobile {
-    max-width: 30rem;
-  }
+  filter: invert(39%) sepia(76%) saturate(353%) hue-rotate(161deg) brightness(96%) contrast(85%);
 }
