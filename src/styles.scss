@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import './variables.scss';
+@import './mixins.scss';
 
 * {
   margin: 0;
@@ -18,55 +19,72 @@ body {
 }
 
 .wrapper-container {
-  max-width: 130rem;
   margin: 0 auto;
   background-color: $color-primary-light-transparent-much;
-  padding: 3.2rem 5.2rem;
+  padding: 2rem 3.2rem;
+  max-width: 105rem;
+
+  @include tablet {
+    padding: 3.2rem 5.2rem;
+  }
+
+  @include desktop-lg {
+    max-width: 120rem;
+  }
+
+  @include desktop-xl {
+    max-width: 130rem;
+  }
 }
 
 .primary-heading {
-  font-size: 4rem;
+  font-size: 3.2rem;
   font-weight: 700;
-  margin-bottom: 3.2rem;
+  margin-bottom: 2rem;
+
+  @include tablet {
+    font-size: 4rem;
+    margin-bottom: 3.2rem;
+  }
 }
 
 .secondary-heading {
-  font-size: 3rem;
+  font-size: 2.6rem;
   font-weight: 600;
   margin-bottom: 2.4rem;
+
+  @include tablet {
+    font-size: 3rem;
+  }
 }
 
 .tertiary-heading {
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 500;
   margin-bottom: 0.8rem;
+
+  @include tablet {
+    font-size: 2.4rem;
+  }
 }
 
 .info {
   font-size: 2rem;
   margin-bottom: 3rem;
-  line-height: 3rem;
+  line-height: 2.6rem;
+
+  @include tablet {
+    line-height: 3rem;
+  }
 }
 
 .hidden {
   display: none;
 }
 
-/*Media query*/
-
-@media (max-width: 87em) {
-  .wrapper-container {
-    max-width: 120rem;
-  }
-}
-
 @media (max-width: 78em) {
   html {
     font-size: 56.25%;
-  }
-
-  .wrapper-container {
-    max-width: 105rem;
   }
 }
 
@@ -76,32 +94,8 @@ body {
   }
 }
 
-@media (max-width: 48em) {
-  .primary-heading {
-    font-size: 3.6rem;
-  }
-
-  .secondary-heading {
-    font-size: 2.6rem;
-  }
-
-  .tertiary-heading {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 38em) {
-  .info {
-    line-height: 2.6rem;
-  }
-}
-
 @media (max-width: 28em) {
   html {
     font-size: 42.5%;
-  }
-
-  .wrapper {
-    padding: 3.2rem 2rem;
   }
 }

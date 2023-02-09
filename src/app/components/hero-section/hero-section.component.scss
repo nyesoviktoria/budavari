@@ -1,10 +1,15 @@
-@import "../../../variables.scss";
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
 
 .hero__section {
-  height: 50rem;
+  height: 35rem;
   max-width: 100%;
   position: relative;
   width: auto;
+
+  @include tablet {
+    height: 50rem;
+  }
 }
 
 .hero__carousel-track {
@@ -15,79 +20,77 @@
 }
 
 .hero__slide {
-  background-position: center bottom;
-  background-size: cover;
   height: 100%;
   position: absolute;
   transition: all 1s;
   width: 100%;
 }
 
-.hero__slide1 {
-  background-image: linear-gradient(
-      rgba(66, 122, 161, 0.3),
-      rgba(66, 122, 161, 0.05)
-    ),
-    url(../../../assets/images/slide001.jpg);
-  background-position: top left;
-}
-
-.hero__slide2 {
-  background-image: linear-gradient(rgba(3, 3, 3, 0.1), rgba(3, 3, 3, 0.2)),
-    url(../../../assets/images/slide2.webp);
+.hero__slide-image {
+  width: 100%;
 }
 
 .hero__text-container {
   background-color: $color-primary-light-transparent-much;
-  border-radius: 8px;
+  border-radius: $border-radius-basic;
   display: flex;
-  flex-direction: column;
-  max-width: 45rem;
-  padding: 2.4rem;
+  flex-direction: row;
+  max-width: 53rem;
+  padding: 2rem;
   position: absolute;
   right: 0;
   text-align: right;
-  top: 0;
-  transform: translate(-4.8rem, 2.4rem);
-}
+  bottom: 0;
+  transform: translate(-1.2rem, -1.2rem);
+  gap: 2rem;
+  align-items: center;
 
-.hero__slide .hero__text-container2 {
-  font-size: 1.8rem;
-  left: 0;
-  max-width: 32rem;
-  padding: 1.2rem;
-  top: 0;
-  transform: translate(2.4rem, 1.2rem);
+  @include tablet {
+    flex-direction: column;
+    gap: 0;
+    align-items: end;
+  }
 }
 
 .hero__text-title {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 1.6rem;
+
+  @include tablet {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+  }
 }
 
-.nav-link.btn,
-.btn-hero:link,
-.btn-hero:visited {
+.hero__text-content {
+  font-size: 2rem;
+  line-height: 2.8rem;
+  display: none;
+
+  @include tablet {
+    display: inline-block;
+  }
+}
+
+.hero__navigation-button {
   -webkit-transition: 0.3s background-color linear;
   background-color: $color-primary-dark;
-  border-radius: 5px;
+  border: none;
+  border-radius: $border-radius-button;
   color: $color-primary-light;
   font-size: 1.6rem;
   font-weight: 400;
   margin-left: auto;
   padding: 0.8rem 1.4rem;
-  text-decoration: none;
   transition: all 0.3s;
+
+  @include tablet {
+    display: none;
+  }
 }
 
-.nav-link.btn:hover,
-.btn-hero:hover {
+.hero__navigation-button:hover {
   background-color: $color-primary-dark-darker;
-}
-
-.hero-btn-to-hide {
-  display: none;
 }
 
 .hero__carousel-navigation-dots-container {
@@ -102,7 +105,7 @@
 
 .hero__carousel-navigation-dot {
   background: rgba(0, 0, 0, 0.3);
-  border-radius: 50%;
+  border-radius: $border-radius-round;
   border: 0;
   cursor: pointer;
   height: 12px;
@@ -111,57 +114,4 @@
 
 .hero__carousel-navigation-dot.active-navigation-dot {
   background: rgba(0, 0, 0, 0.75);
-}
-
-/*Media queries*/
-
-@media (max-width: 107em) {
-  .hero__slide2 {
-    background-image: linear-gradient(rgba(3, 3, 3, 0.1), rgba(3, 3, 3, 0.2)),
-      url(../../../assets/images/slide02-107.webp);
-  }
-
-  .hero__text-container {
-    max-width: 40rem;
-  }
-
-  .hero__slide .hero__text-container2 {
-    max-width: 30rem;
-  }
-}
-
-@media (max-width: 87em) {
-  .hero__slide2 {
-    background-image: linear-gradient(rgba(3, 3, 3, 0.1), rgba(3, 3, 3, 0.2)),
-      url(../../../assets/images/slide02-87.webp);
-  }
-
-  .hero__slide .hero__text-container2 {
-    top: auto;
-    bottom: 0;
-    left: 0;
-    transform: translate(2.4rem, -2.4rem);
-    padding: 2.4rem;
-    font-size: 2rem;
-    max-width: 35rem;
-  }
-}
-
-@media (max-width: 65em) {
-  .hero__slide2 {
-    background-image: linear-gradient(rgba(3, 3, 3, 0.1), rgba(3, 3, 3, 0.2)),
-      url(../../../assets/images/slide02-65.webp);
-  }
-}
-
-@media (max-width: 56em) {
-  .hero__text-container {
-    max-width: 32rem;
-  }
-
-  .hero__slide2 {
-    background-image: linear-gradient(rgba(3, 3, 3, 0.1), rgba(3, 3, 3, 0.2)),
-      url(../../../assets/images/slide02-56.webp);
-    background-position: top;
-  }
 }

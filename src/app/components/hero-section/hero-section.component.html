@@ -1,16 +1,19 @@
 <section class="hero__section">
   <div class="hero__carousel-track">
     <div class="hero__slide hero__slide1">
+      <picture>
+        <source media="(min-width:768px)" [srcset]="imagesRoute + 'slide2.webp'" />
+        <img class="hero__slide-image" [src]="imagesRoute + 'slide2-mobile.webp'" />
+      </picture>
       <div class="hero__text-container hero__text-container">
-        <p class="hero__text-title">Gyermekkoncertek</p>
-        <p class="hero__text-content info">
-          Idén januárban 6 év kihagyás után, a legkisebbek és családjaik örömére, újra két gyermekkoncertet tartunk.<br /><br />Vidám
-          ismerkedés a komolyzenével, közös énekléssel, mondókázással, hangszersimogatással.
+        <p class="hero__text-title">Idézzük fel koncertjeinket</p>
+        <p class="hero__text-content">
+          A koncerteken készült fényképekeink már elérhetőek galériánkban, felvételeink pedig youtube csatornánkon.
         </p>
-        <a href="#" data-target="concerts" class="nav-link btn">Koncertek</a>
+        <button class="hero__navigation-button">Galéria</button>
       </div>
     </div>
-    <div class="hero__slide hero__slide2 hidden">
+    <!-- <div class="hero__slide hero__slide2 hidden">
       <div class="hero__text-container hero__text-container2">
         <p class="hero__text-title">Karácsonyi koncert</p>
         <p class="hero__text-content">
@@ -18,7 +21,7 @@
         </p>
         <a href="#" data-target="gallery" class="nav-link btn hero-btn-to-hide">Galéria</a>
       </div>
-    </div>
+    </div> -->
   </div>
 
   <div class="hero__carousel-navigation-dots-container">

@@ -4,7 +4,7 @@
 .header__navigation-desktop {
   align-items: center;
   background-color: $color-primary-light;
-  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.05);
+  box-shadow: $box-shadow-navbar;
   display: grid;
   grid-template-columns: 2fr 3fr;
   height: 7.4rem;
