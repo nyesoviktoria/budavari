@@ -1,4 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { SOLOISTS } from '../../constants/soloists.constants';
+import { EX_MEMBERS } from '../../constants/ex-members.constants';
 
 @Component({
   selector: 'bvkz-home-container',
@@ -6,4 +8,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrls: ['./home-container.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomeContainerComponent {}
+export class HomeContainerComponent {
+  readonly soloists = SOLOISTS;
+  readonly exMembers = EX_MEMBERS;
+}

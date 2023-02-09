@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { HeroSectionComponent } from './components/hero-section/hero-section.com
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { MembersComponent } from './components/members/members.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
+import { AccordionComponent } from './components/accordion/accordion.component';
 
 @NgModule({
   declarations: [
@@ -23,8 +25,9 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
     HomeContainerComponent,
     MembersComponent,
     TestimonialsComponent,
+    AccordionComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })

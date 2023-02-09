@@ -1,0 +1,28 @@
+.accordion__button {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  font-size: 2.4rem;
+  font-weight: 500;
+  gap: 2rem;
+}
+
+.accordion__arrow-icon {
+  cursor: pointer;
+  filter: invert(17%) sepia(31%) saturate(5667%) hue-rotate(198deg) brightness(97%) contrast(95%);
+  height: 2.4rem;
+  transition: all 0.3s;
+}
+
+.accordion__arrow-icon:hover {
+  filter: invert(14%) sepia(82%) saturate(1083%) hue-rotate(179deg) brightness(93%) contrast(101%);
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.accordion__item-content-container {
+  overflow: hidden;
+}
