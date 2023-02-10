@@ -2,15 +2,15 @@ import { HeaderNavigationItem } from '../interfaces/header-navigation-item.inter
 
 export const HEADER_NAVIGATION_ITEMS: readonly HeaderNavigationItem[] = [
   {
-    pageTitle: 'Koncertek',
+    pageTitle: 'CONCERTS',
   },
   {
-    pageTitle: 'Galéria',
+    pageTitle: 'GALLERY',
   },
   {
-    pageTitle: 'Kapcsolat',
+    pageTitle: 'CONTACT',
   },
   {
-    pageTitle: 'Lemezeink',
+    pageTitle: 'RECORDS',
   },
 ];

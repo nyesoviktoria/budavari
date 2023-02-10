@@ -1,3 +1,12 @@
+.accordion__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion__content-reverse {
+  flex-direction: column-reverse;
+}
+
 .accordion__button {
   background-color: inherit;
   border: none;

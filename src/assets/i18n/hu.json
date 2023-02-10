@@ -1,0 +1,55 @@
+{
+  "BVKZ": {
+    "MEMBERS__COMPONENT": {
+      "MEMBERS__TITLE": "Tagjaink"
+    },
+    "HEADER__COMPONENT": {
+      "HEADER__ORCHESTRA": "Kamarazenekar"
+    },
+    "NAVIGATION__LINKS": {
+      "CONCERTS": "Koncertek",
+      "GALLERY": "Galéria",
+      "CONTACT": "Kapcsolat",
+      "RECORDS": "Lemezeink"
+    },
+    "HERO__COMPONENT": {},
+    "ABOUT_US__COMPONENT": {
+      "ABOUT_US__TITLE": "Zenekarunkról",
+      "ABOUT_US__FIRST_PARAGRAPH": "Zenekarunk 2008-ban alakult, akkor még jórészt egyetemista fiatalokból. Az együttes tagjai ma már többségében felnőtt, dolgozó emberek, akik munkahelyi és családi elfoglaltságaik ellenére komolyan elköteleződtek a zenekar és a kamarazenélés mellett.",
+      "ABOUT_US__SECOND_PARAGRAPH": " Művészeti vezetőnk Héja Benedek, zenetanár, karmester, zeneszerző. Zenekarunk repertoárja elsősorban barokk és klasszikus, alkalmanként romantikus és kortárs darabokból áll. Bár főként vonószenekarra írott műveket játszunk, szívesen tűzünk műsorra különféle versenyműveket és oratóriumokat is.",
+      "ABOUT_US__THIRD_PARAGRAPH": "Az elmúlt években több olyan közismert, nagy művet is megszólaltattunk, mint Bach János- és Máté- passiója, Mozart Requiemje, Dvořák Újvilág szimfóniája vagy Beethoven 7. szimfóniája, de előszeretettel válogatunk olyan kevésbé ismert zeneszerzők műveiből is, mint William Herschel, Ralph Vaughan Williams, Ottorino Respighi vagy Dohnányi Ernő.",
+      "ABOUT_US__FOURTH_PARAGRAPH": "A Budavári Kamarazenekar nevét a próbák és a koncertek többségének kezdetben helyet adó városrészről kapta, ám jelenleg Óbudán, az Árpád Gimnáziumban próbálunk. Évente nyolc-tíz koncertet adunk fővárosi, alkalmanként vidéki helyszíneken, nyári táborunkat pedig minden évben Keszthelyen tartjuk."
+    },
+    "PART_TYPES": {
+      "CONDUCTOR": "Karmester",
+      "FIRST_VIOLIN": "I. hegedű",
+      "SECOND_VIOLIN": "II. hegedű",
+      "VIOLA": "Brácsa",
+      "CELLO": "Cselló",
+      "CONTRABASS": "Nagybőgő"
+    },
+    "SOLOISTS_AND_EX_MEMBERS": {
+      "SOLOISTS_AND_EX_MEMBERS__TITLE": {
+        "SOLOISTS__TITLE": "Szólistáink voltak",
+        "EX_MEMBERS__TITLE": "Korábbi tagjaink"
+      },
+      "INSTRUMENT_TYPES": {
+        "VIOLIN": "hegedű",
+        "VIOLA": "brácsa",
+        "CELLO": "cselló",
+        "CONTRABASS": "nagybőgő",
+        "PIANO": "zongora",
+        "ORGAN": "orgona",
+        "FLUTE": "fuvola",
+        "OBOE": "oboa",
+        "CLARINET": "klarinét",
+        "RECORDER": "furulya",
+        "SINGER": "ének"
+      }
+    },
+
+    "FOOTER__COMPONENT": {
+      "COPYRIGHT__TEXT": "Budavári Kamarazenekar - Minden jog fenntartva"
+    }
+  }
+}

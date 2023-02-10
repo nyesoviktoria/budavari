@@ -12,6 +12,12 @@ export class AboutUsComponent {
   readonly imageItems = ABOUT_US_GALLERY_ITEMS;
   readonly imagesRoute = IMAGES_ROUTE;
 
+  isOpen = false;
+
+  onIsCollapsed(isOpen: boolean): void {
+    this.isOpen = isOpen;
+  }
+
   trackByIndex(index: number): number {
     return index;
   }

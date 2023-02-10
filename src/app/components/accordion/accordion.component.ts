@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { toggleAnimation } from '../../constants/animations.constants';
 import { ICONS_ROUTE } from '../../constants/app.constants';
 
@@ -14,11 +14,16 @@ export class AccordionComponent {
 
   @Input() isIcon = true;
 
+  @Input() isReverse = false;
+
+  @Output() isCollapsed = new EventEmitter<boolean>();
+
   isOpen = false;
 
   readonly iconsRoute = ICONS_ROUTE;
 
   toggleVisibility(): void {
     this.isOpen = !this.isOpen;
+    this.isCollapsed.emit(this.isOpen);
   }
 }

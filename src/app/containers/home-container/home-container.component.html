@@ -9,14 +9,18 @@
     <div class="soloists__container">
       <bvkz-accordion [buttonName]="'Szólistáink voltak'">
         <ul class="soloists__list">
-          <li *ngFor="let member of soloists">{{ member.name }} ({{ member.instrument }})</li>
+          <li *ngFor="let member of soloists">
+            {{ member.name }} ({{ 'BVKZ.SOLOISTS_AND_EX_MEMBERS.INSTRUMENT_TYPES.' + member.instrument | translate }})
+          </li>
         </ul>
       </bvkz-accordion>
     </div>
     <div class="ex-members__container">
       <bvkz-accordion [buttonName]="'Korábbi tagjaink'">
         <ul class="ex-members__list">
-          <li *ngFor="let member of exMembers">{{ member.name }} ({{ member.instrument }})</li>
+          <li *ngFor="let member of exMembers">
+            {{ member.name }} ({{ 'BVKZ.SOLOISTS_AND_EX_MEMBERS.INSTRUMENT_TYPES.' + member.instrument | translate }})
+          </li>
         </ul>
       </bvkz-accordion>
     </div>

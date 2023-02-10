@@ -1,3 +1,5 @@
+<div class="accordion__wrapper" [ngClass]="{'accordion__content-reverse': isReverse}">
+
 <button (click)="toggleVisibility()" class="accordion__button">
   <span *ngIf="buttonName">{{ buttonName }}</span>
   <img
@@ -13,3 +15,5 @@
     <ng-content></ng-content>
   </div>
 </div>
+</div>
+

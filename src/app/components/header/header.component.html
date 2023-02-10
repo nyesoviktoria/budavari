@@ -2,21 +2,27 @@
   <nav class="header__navigation-desktop">
     <a href="#" class="header__navigation-link header__logo">
       <img [src]="imagesRoute + 'logo.png'" alt="egy hegedű és egy cselló csigája szív formát alkot" class="header__logo-image" />
-      <p class="header__logo-text"><span class="header__logo-text-row">Budavári</span><span class="header__logo-text-row">Kamarazenekar</span></p>
+      <p class="header__logo-text">
+        <span class="header__logo-text-row">Budavári</span><span class="header__logo-text-row">{{'BVKZ.HEADER__COMPONENT.HEADER__ORCHESTRA' | translate}}</span>
+      </p>
     </a>
     <ul class="header__navigation-list">
       <li *ngFor="let item of navigationItems; trackBy: trackByIndex">
-        <a href="#" class="header__navigation-link header__navigation-link-animation" (click)="onNavigateToPage()">{{ item.pageTitle }}</a>
+        <a href="#" class="header__navigation-link header__navigation-link-animation" (click)="onNavigateToPage()">{{
+          'BVKZ.NAVIGATION__LINKS.' + item.pageTitle | translate
+        }}</a>
       </li>
     </ul>
 
-    <img class="header__mobile-menu-icon" [src]="iconsRoute + 'bars.svg'" alt="menu-icon" (click)="onOpenMobileNavigation()"/>
+    <img class="header__mobile-menu-icon" [src]="iconsRoute + 'bars.svg'" alt="menu-icon" (click)="onOpenMobileNavigation()" />
   </nav>
 
   <nav class="header__navigation-mobile hidden">
     <ul class="header__navigation-list-mobile">
       <li *ngFor="let item of navigationItems; trackBy: trackByIndex">
-        <a href="#" class="header__navigation-link header__navigation-link-animation" (click)="onNavigateToPage()">{{ item.pageTitle }}</a>
+        <a href="#" class="header__navigation-link header__navigation-link-animation" (click)="onNavigateToPage()">{{
+          'BVKZ.NAVIGATION__LINKS.' + item.pageTitle | translate
+        }}</a>
       </li>
     </ul>
   </nav>

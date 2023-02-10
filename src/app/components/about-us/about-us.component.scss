@@ -18,7 +18,7 @@
   padding: 2.4rem;
 }
 
-.about-us__text-to-hide.hidden {
+.about-us__text-to-hide {
   display: none;
 
   @include tablet {
@@ -26,20 +26,28 @@
   }
 }
 
-.about-us__button-more-info,
-.about-us__button-less-info {
-  border: none;
-  color: $color-primary-dark;
-  cursor: pointer;
+.about-us__accordion {
   display: inline-block;
-  font-size: 2rem;
-  font-weight: 700;
-  transition: all 0.3s;
 
   @include tablet {
     display: none;
   }
 }
+
+// .about-us__button-more-info,
+// .about-us__button-less-info {
+//   border: none;
+//   color: $color-primary-dark;
+//   cursor: pointer;
+//   display: inline-block;
+//   font-size: 2rem;
+//   font-weight: 700;
+//   transition: all 0.3s;
+
+//   @include tablet {
+//     display: none;
+//   }
+// }
 
 .about-us__button-more-info:hover,
 .about-us__button-less-info:hover {

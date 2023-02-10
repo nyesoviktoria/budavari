@@ -1,5 +1,5 @@
 <section class="members__section">
-  <h2 class="secondary-heading">Tagjaink</h2>
+  <h2 class="secondary-heading">{{ 'BVKZ.MEMBERS__COMPONENT.MEMBERS__TITLE' | translate }}</h2>
   <div class="members__carts-container">
     <div
       class="members__cart"
@@ -7,27 +7,17 @@
       [ngClass]="{ 'members__cart-middle': cart.isMiddleCart }"
     >
       <div class="members__image-container">
-        <img
-          class="members__cart-image"
-          [src]="imagesRoute + cart.imageSource"
-          alt="{{ cart.altText }}"
-        />
+        <img class="members__cart-image" [src]="imagesRoute + cart.imageSource" alt="{{ cart.altText }}" />
       </div>
       <ul class="members__list">
-        <li
-          class="members__list-item"
-          *ngFor="let member of cart.members; trackBy: trackByIndex"
-        >
+        <li class="members__list-item" *ngFor="let member of cart.members; trackBy: trackByIndex">
           {{ member.memberName }}
           <span *ngIf="member.isOnGyes" class="mambers__gyes-icon-container"
-            ><img
-              class="members__gyes-icon"
-              [src]="iconsRoute + 'baby-carriage-solid.svg'"
-              alt="babakocsi-logo"
+            ><img class="members__gyes-icon" [src]="iconsRoute + 'baby-carriage-solid.svg'" alt="babakocsi-logo"
           /></span>
         </li>
       </ul>
-      <p class="members__cart-part-sign">{{ cart.partName }}</p>
+      <p class="members__cart-part-sign">{{ 'BVKZ.PART_TYPES.' + cart.partName | translate }}</p>
     </div>
   </div>
 </section>

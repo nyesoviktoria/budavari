@@ -5,9 +5,7 @@ export const MEMBERS_PARTS_ITEMS: readonly MembersPartItem[] = [
     partName: 'CONDUCTOR',
     imageSource: 'conductor.jpg',
     altText: 'Héja Benedek',
-    members: [
-      { memberName: 'Héja Benedek', memberId: 'heja-benedek', isOnGyes: false },
-    ],
+    members: [{ memberName: 'Héja Benedek', memberId: 'heja-benedek', isOnGyes: false }],
     isMiddleCart: true,
   },
   {
@@ -117,7 +115,7 @@ export const MEMBERS_PARTS_ITEMS: readonly MembersPartItem[] = [
     isMiddleCart: false,
   },
   {
-    partName: 'BASSO',
+    partName: 'CONTRABASS',
     imageSource: 'basso.jpg',
     altText: 'Király Miklós',
     members: [

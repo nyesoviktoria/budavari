@@ -75,7 +75,7 @@ export const EX_MEMBERS: AccordionMembersItem[] = [
   },
   {
     name: 'Kapitány Marcell',
-    instrument: 'BASSO',
+    instrument: 'CONTRABASS',
   },
   {
     name: 'Kiss Szonja',

@@ -1,30 +1,28 @@
 <section class="about-us__section" aria-labelledby="home-container-title">
-  <h1 class="primary-heading" id="home-container-title">Zenekarunkról</h1>
+  <h1 class="primary-heading" id="home-container-title">{{ 'BVKZ.ABOUT_US__COMPONENT.ABOUT_US__TITLE' | translate }}</h1>
 
   <div class="about-us__container">
     <div class="about-us__text-container">
       <p class="info">
-        Zenekarunk 2008-ban alakult, akkor még jórészt egyetemista fiatalokból. Az együttes tagjai ma már többségében felnőtt, dolgozó
-        emberek, akik munkahelyi és családi elfoglaltságaik ellenére komolyan elköteleződtek a zenekar és a kamarazenélés mellett.
+        {{ 'BVKZ.ABOUT_US__COMPONENT.ABOUT_US__FIRST_PARAGRAPH' | translate }}
       </p>
 
       <p class="info">
-        Művészeti vezetőnk Héja Benedek, zenetanár, karmester, zeneszerző. Zenekarunk repertoárja elsősorban barokk és klasszikus,
-        alkalmanként romantikus és kortárs darabokból áll. Bár főként vonószenekarra írott műveket játszunk, szívesen tűzünk műsorra
-        különféle versenyműveket és oratóriumokat is.
+        {{ 'BVKZ.ABOUT_US__COMPONENT.ABOUT_US__SECOND_PARAGRAPH' | translate }}
       </p>
-      <button class="about-us__button-more-info">Több</button>
-      <p class="info about-us__text-to-hide hidden">
-        Az elmúlt években több olyan közismert, nagy művet is megszólaltattunk, mint Bach János- és Máté- passiója, Mozart Requiemje, Dvořák
-        Újvilág szimfóniája vagy Beethoven 7. szimfóniája, de előszeretettel válogatunk olyan kevésbé ismert zeneszerzők műveiből is, mint
-        William Herschel, Ralph Vaughan Williams, Ottorino Respighi vagy Dohnányi Ernő.
-      </p>
-      <p class="info about-us__text-to-hide hidden">
-        A Budavári Kamarazenekar nevét a próbák és a koncertek többségének kezdetben helyet adó városrészről kapta, ám jelenleg Óbudán, az
-        Árpád Gimnáziumban próbálunk. Évente nyolc-tíz koncertet adunk fővárosi, alkalmanként vidéki helyszíneken, nyári táborunkat pedig
-        minden évben Keszthelyen tartjuk.
-      </p>
-      <button class="about-us__button-less-info hidden">Kevesebb</button>
+
+      <div class="about-us__text-to-hide">
+        <ng-container [ngTemplateOutlet]="moreInfo"> </ng-container>
+      </div>
+
+      <bvkz-accordion
+        [buttonName]="isOpen ? 'Kevesebb' : ' Több'"
+        class="about-us__accordion"
+        [isReverse]="true"
+        (isCollapsed)="onIsCollapsed($event)"
+      >
+        <ng-container [ngTemplateOutlet]="moreInfo"> </ng-container>
+      </bvkz-accordion>
     </div>
     <div class="about-us__gallery-container">
       <picture class="about-us__image-container" *ngFor="let image of imageItems; trackBy: trackByIndex">
@@ -33,3 +31,12 @@
     </div>
   </div>
 </section>
+
+<ng-template #moreInfo>
+  <p class="info">
+    {{ 'BVKZ.ABOUT_US__COMPONENT.ABOUT_US__THIRD_PARAGRAPH' | translate }}
+  </p>
+  <p class="info">
+    {{ 'BVKZ.ABOUT_US__COMPONENT.ABOUT_US__FOURTH_PARAGRAPH' | translate }}
+  </p>
+</ng-template>
