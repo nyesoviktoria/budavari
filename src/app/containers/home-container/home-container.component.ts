@@ -11,4 +11,8 @@ import { EX_MEMBERS } from '../../constants/ex-members.constants';
 export class HomeContainerComponent {
   readonly soloists = SOLOISTS;
   readonly exMembers = EX_MEMBERS;
+
+  onMemberSelected(member: string): void {
+    console.log('member: ', member);
+  }
 }

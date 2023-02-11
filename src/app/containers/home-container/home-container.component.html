@@ -3,11 +3,11 @@
 <div class="wrapper-container">
   <bvkz-about-us></bvkz-about-us>
   <bvkz-testimonials></bvkz-testimonials>
-  <bvkz-members> </bvkz-members>
+  <bvkz-members (memberId)="onMemberSelected($event)"> </bvkz-members>
 
   <section class="soloists-and-ex-members__section">
     <div class="soloists__container">
-      <bvkz-accordion [buttonName]="'Szólistáink voltak'">
+      <bvkz-accordion [buttonName]="'BVKZ.SOLOISTS_AND_EX_MEMBERS.SOLOISTS__TITLE' | translate">
         <ul class="soloists__list">
           <li *ngFor="let member of soloists">
             {{ member.name }} ({{ 'BVKZ.SOLOISTS_AND_EX_MEMBERS.INSTRUMENT_TYPES.' + member.instrument | translate }})
@@ -16,7 +16,7 @@
       </bvkz-accordion>
     </div>
     <div class="ex-members__container">
-      <bvkz-accordion [buttonName]="'Korábbi tagjaink'">
+      <bvkz-accordion [buttonName]="'BVKZ.SOLOISTS_AND_EX_MEMBERS.EX_MEMBERS__TITLE' | translate">
         <ul class="ex-members__list">
           <li *ngFor="let member of exMembers">
             {{ member.name }} ({{ 'BVKZ.SOLOISTS_AND_EX_MEMBERS.INSTRUMENT_TYPES.' + member.instrument | translate }})

@@ -12,7 +12,10 @@
       "CONTACT": "Kapcsolat",
       "RECORDS": "Lemezeink"
     },
-    "HERO__COMPONENT": {},
+    "HERO__COMPONENT": {
+      "HERO_1__TITLE": "Idézzük fel koncertjeinket",
+      "HERO_1__TEXT": "A koncerteken készült fényképekeink már elérhetőek galériánkban, felvételeink pedig youtube csatornánkon"
+    },
     "ABOUT_US__COMPONENT": {
       "ABOUT_US__TITLE": "Zenekarunkról",
       "ABOUT_US__FIRST_PARAGRAPH": "Zenekarunk 2008-ban alakult, akkor még jórészt egyetemista fiatalokból. Az együttes tagjai ma már többségében felnőtt, dolgozó emberek, akik munkahelyi és családi elfoglaltságaik ellenére komolyan elköteleződtek a zenekar és a kamarazenélés mellett.",
@@ -29,10 +32,8 @@
       "CONTRABASS": "Nagybőgő"
     },
     "SOLOISTS_AND_EX_MEMBERS": {
-      "SOLOISTS_AND_EX_MEMBERS__TITLE": {
-        "SOLOISTS__TITLE": "Szólistáink voltak",
-        "EX_MEMBERS__TITLE": "Korábbi tagjaink"
-      },
+      "SOLOISTS__TITLE": "Szólistáink voltak",
+      "EX_MEMBERS__TITLE": "Korábbi tagjaink",
       "INSTRUMENT_TYPES": {
         "VIOLIN": "hegedű",
         "VIOLA": "brácsa",
