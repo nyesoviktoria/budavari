@@ -1,0 +1,131 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.member-dialog__section {
+  background-color: $color-primary-light;
+  border-radius: 5px;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  height: auto;
+  max-width: 80rem;
+  transition: all 0.5s;
+  width: 100%;
+}
+
+.member-dialog__wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 4rem;
+  position: relative;
+}
+
+.member-dialog__image-container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  column-gap: 3.2rem;
+}
+
+.member-img-container {
+  width: 13rem;
+  height: 13rem;
+  justify-self: end;
+}
+
+.member-dialog__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.member-dialog__description {
+  font-size: 1.8rem;
+}
+
+.member-dialog__close-button {
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(-0.5rem, 0.5rem);
+
+  @include tablet {
+    transform: translate(-1rem, 1rem);
+  }
+}
+
+.member-dialog__close-image {
+  cursor: pointer;
+  filter: invert(12%) sepia(78%) saturate(4722%) hue-rotate(200deg) brightness(91%) contrast(95%);
+  height: 2.4rem;
+}
+
+.member-dialog__close-image:hover {
+  filter: invert(14%) sepia(82%) saturate(1083%) hue-rotate(179deg) brightness(93%) contrast(101%);
+}
+
+/*************************/
+/*BELOW 1040PX (tablets)*/
+/*************************/
+
+@media (max-width: 65em) {
+  .modal__member-cart {
+    grid-template-columns: 1fr 5fr;
+    column-gap: 2.4rem;
+  }
+}
+
+/*************************/
+/*BELOW 896PX*/
+/*************************/
+
+@media (max-width: 56em) {
+  .member-dialog__section {
+    width: 80%;
+    max-width: 70rem;
+  }
+
+  .modal__member-cart {
+    grid-template-columns: 1fr;
+    row-gap: 2.4rem;
+    justify-items: center;
+    padding: 0 2.4rem;
+  }
+
+  .member-dialog__wrapper {
+    padding: 2rem 4rem;
+  }
+
+  .member-dialog__image-container {
+    width: 14rem;
+    height: 14rem;
+    justify-self: center;
+  }
+
+  .member-dialog__description {
+    font-size: 2rem;
+  }
+}
+
+/*************************/
+/*BELOW 768PX*/
+/*************************/
+
+@media (max-width: 48em) {
+  .member-dialog__container {
+    padding: 0;
+  }
+}
+
+/*************************/
+/*BELOW 448PX*/
+/*************************/
+
+@media (max-width: 28em) {
+  .member-dialog__section {
+    width: 90%;
+  }
+
+  .member-dialog__wrapper {
+    padding: 2rem 3rem;
+  }
+}

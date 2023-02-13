@@ -1,0 +1,13 @@
+<section class="member-dialog__section">
+  <div class="member-dialog__wrapper">
+    <button mat-dialog-close class="member-dialog__close-button">
+      <img class="member-dialog__close-image" [src]="iconsRoute + 'square-xmark.svg'" alt="bezáró gomb" />
+    </button>
+    <div class="member-dialog__container">
+      <picture class="member-dialog__image-container">
+        <img class="member-dialog__image" [src]="membersImagesRoute + data.imageSource + '.webp'" [alt]="data.memberId" />
+      </picture>
+      <p class="member-dialog__description">{{ data.description }}</p>
+    </div>
+  </div>
+</section>

@@ -14,8 +14,10 @@ import { HomeContainerComponent } from './containers/home-container/home-contain
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { MembersComponent } from './components/members/members.component';
+import { MemberDialogComponent } from './components/member-dialog/member-dialog.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
@@ -24,6 +26,7 @@ export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
 @NgModule({
   declarations: [
     AboutUsComponent,
+    AccordionComponent,
     AppComponent,
     FooterComponent,
     FrameComponent,
@@ -31,14 +34,15 @@ export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
     HeroSectionComponent,
     HomeContainerComponent,
     MembersComponent,
+    MemberDialogComponent,
     TestimonialsComponent,
-    AccordionComponent,
   ],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    BrowserModule,
     HttpClientModule,
+    MatDialogModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
