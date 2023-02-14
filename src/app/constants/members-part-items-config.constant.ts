@@ -5,7 +5,7 @@ export const MEMBERS_PARTS_ITEMS: readonly MembersPartItem[] = [
     partName: 'CONDUCTOR',
     imageSource: 'conductor.jpg',
     altText: 'Héja Benedek',
-    members: [{ memberName: 'Héja Benedek', memberId: 'heja-benedek', isOnGyes: false }],
+    members: [{ memberName: 'Héja Benedek', memberId: 'HEJA_BENEDEK', isOnGyes: false }],
     isMiddleCart: true,
   },
   {
@@ -13,26 +13,26 @@ export const MEMBERS_PARTS_ITEMS: readonly MembersPartItem[] = [
     imageSource: 'violin1.jpg',
     altText: 'group photo of the first violinists',
     members: [
-      { memberName: 'Nánay Mihály', memberId: 'nanay-mihaly', isOnGyes: false },
+      { memberName: 'Nánay Mihály', memberId: 'NANAY_MIHALY', isOnGyes: false },
       {
         memberName: 'Csikós Veronika',
-        memberId: 'csikos-veronika',
+        memberId: 'CSIKOS_VERONIKA',
         isOnGyes: false,
       },
-      { memberName: 'Horváth Dóra', memberId: 'horvath-dora', isOnGyes: false },
+      { memberName: 'Horváth Dóra', memberId: 'HORVATH_DORA', isOnGyes: false },
       {
         memberName: 'Ábrahám Ferenc',
-        memberId: 'abraham-ferenc',
+        memberId: 'ABRAHAM_FERENC',
         isOnGyes: false,
       },
       {
         memberName: 'Cseuz Annamária',
-        memberId: 'cseuz-annamaria',
+        memberId: 'CSEUZ_ANNAMARIA',
         isOnGyes: false,
       },
       {
         memberName: 'Makk-Szibek Barbara',
-        memberId: 'makk-szibek-barbara',
+        memberId: 'MAKK_SZIBEK_BARBARA',
         isOnGyes: false,
       },
     ],
@@ -43,30 +43,30 @@ export const MEMBERS_PARTS_ITEMS: readonly MembersPartItem[] = [
     imageSource: 'violin2.jpg',
     altText: 'group photo of the second violinists',
     members: [
-      { memberName: 'Török Eszter', memberId: 'torok-eszter', isOnGyes: false },
+      { memberName: 'Török Eszter', memberId: 'TOROK_ESZTER', isOnGyes: false },
       {
         memberName: 'Renczesné Unger Anna',
-        memberId: 'renczesne-unger-anna',
+        memberId: 'RENCZESNE_UNGER_ANNA',
         isOnGyes: false,
       },
-      { memberName: 'Kardos Virág', memberId: 'kardor-virag', isOnGyes: false },
+      { memberName: 'Kardos Virág', memberId: 'KARDOS_VIRAG', isOnGyes: false },
 
       {
         memberName: 'Mravinac Anna',
-        memberId: 'mravinac-anna',
+        memberId: 'MRAVINAC_ANNA',
         isOnGyes: false,
       },
       {
         memberName: 'Németh-Tatai Lilla',
-        memberId: 'nemeth-tati-lilla',
+        memberId: 'NEMETH_TATAI_LILLA',
         isOnGyes: false,
       },
       {
         memberName: 'Petneházy Réka',
-        memberId: 'petnehazy-reka',
+        memberId: 'PETNEHAZY_REKA',
         isOnGyes: false,
       },
-      { memberName: 'Kézdy Luca', memberId: 'kezdy-luca', isOnGyes: true },
+      { memberName: 'Kézdy Luca', memberId: 'KEZDY_LUCA', isOnGyes: true },
     ],
     isMiddleCart: false,
   },
@@ -77,14 +77,14 @@ export const MEMBERS_PARTS_ITEMS: readonly MembersPartItem[] = [
     members: [
       {
         memberName: 'Nyeső Viktória',
-        memberId: 'nyeso-viktoria',
+        memberId: 'NYESO_VIKTORIA',
         isOnGyes: false,
       },
-      { memberName: 'Tóth Balázs', memberId: 'toth-balazs', isOnGyes: false },
-      { memberName: 'Lukács Márta', memberId: 'lukacs-marta', isOnGyes: false },
+      { memberName: 'Tóth Balázs', memberId: 'TOTH_BALAZS', isOnGyes: false },
+      { memberName: 'Lukács Márta', memberId: 'LUKACS_MARTA', isOnGyes: false },
       {
         memberName: 'Pertics Botond',
-        memberId: 'pertics-botond',
+        memberId: 'PERTICS_BOTOND',
         isOnGyes: false,
       },
     ],
@@ -97,19 +97,19 @@ export const MEMBERS_PARTS_ITEMS: readonly MembersPartItem[] = [
     members: [
       {
         memberName: 'Horváth Cecília',
-        memberId: 'horvath-cecilia',
+        memberId: 'HORVATH_CECILIA',
         isOnGyes: false,
       },
       {
         memberName: 'Nánay-Aba Emese',
-        memberId: 'nanay-aba-emese',
+        memberId: 'NANAY_ABA_EMESE',
         isOnGyes: false,
       },
-      { memberName: 'Almási Júlia', memberId: 'almasi-julia', isOnGyes: false },
-      { memberName: 'Gadó Benedek', memberId: 'gado-benedek', isOnGyes: false },
+      { memberName: 'Almási Júlia', memberId: 'ALMASI_JULIA', isOnGyes: false },
+      { memberName: 'Gadó Benedek', memberId: 'GADO_BENEDEK', isOnGyes: false },
       {
         memberName: 'Petneházy Gyöngyvér',
-        memberId: 'petnehazy-gyongyver',
+        memberId: 'PETNEHAZY_GYONGYVER',
         isOnGyes: true,
       },
     ],
@@ -122,7 +122,7 @@ export const MEMBERS_PARTS_ITEMS: readonly MembersPartItem[] = [
     members: [
       {
         memberName: 'Király Miklós',
-        memberId: 'kiraly-miklos',
+        memberId: 'KIRALY_MIKLOS',
         isOnGyes: false,
       },
     ],

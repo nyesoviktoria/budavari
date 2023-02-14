@@ -4,7 +4,6 @@
 .testimonials__section-desktop {
   display: none;
   height: 26rem;
-  margin-bottom: 5rem;
   margin: 0 auto;
   max-width: 80rem;
   position: relative;
@@ -53,10 +52,10 @@
 }
 
 .testimonials__image {
-  width: 100%;
+  border-radius: $border-radius-round;
   height: 100%;
   object-fit: cover;
-  border-radius: $border-radius-round;
+  width: 100%;
 }
 
 .testimonials__signature {
@@ -73,23 +72,23 @@
 }
 
 .testimonials__arrow {
-  border: none;
-  height: 40px;
-  width: 40px;
+  align-items: center;
   border-radius: $border-radius-round;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  filter: $icon-color-dark-blue;
+  height: 40px;
+  justify-content: center;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  filter: invert(39%) sepia(76%) saturate(353%) hue-rotate(161deg) brightness(96%) contrast(85%);
   transition: all 0.3s;
+  width: 40px;
 }
 
 .testimonials__arrow:hover {
-  filter: invert(18%) sepia(34%) saturate(4163%) hue-rotate(195deg) brightness(101%) contrast(96%);
+  filter: $icon-color-dark-blue-hover;
 }
 
 .testimonials__arrow-left {
@@ -102,27 +101,27 @@
 
 .disabled,
 .disabled:hover {
-  filter: invert(90%) sepia(11%) saturate(36%) hue-rotate(24deg) brightness(92%) contrast(86%);
   cursor: auto;
+  filter: $icon-color-disabled;
 }
 
 .testimonials__carousel-navigation {
-  position: absolute;
   bottom: 0;
-  right: 50%;
-  transform: translate(50%, 100%);
   display: flex;
   gap: 1.2rem;
   padding: 10px 0;
+  position: absolute;
+  right: 50%;
+  transform: translate(50%, 100%);
 }
 
 .testimonials__carousel-navigation-dot {
-  border: 0;
-  border-radius: $border-radius-round;
-  width: 12px;
-  height: 12px;
   background: rgba(0, 0, 0, 0.3);
+  border-radius: $border-radius-round;
+  border: 0;
   cursor: pointer;
+  height: 12px;
+  width: 12px;
 }
 
 .testimonials__carousel-navigation-dot.active-navigation-dot {
@@ -133,8 +132,8 @@
 
 .testimonials__section-mobile {
   display: block;
-  max-width: 40rem;
   margin: 0 auto;
+  max-width: 40rem;
 
   @include tablet {
     display: none;
@@ -146,22 +145,22 @@
 }
 
 .testimonials__cart-mobile {
-  position: relative;
+  align-items: center;
+  border-radius: $border-radius-basic;
+  box-shadow: $box-shadow-testimonial;
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
-  align-items: center;
-  padding: 2.4rem;
-  border-radius: $border-radius-basic;
-  box-shadow: $box-shadow-testimonial;
   margin-bottom: 4.8rem;
+  padding: 2.4rem;
+  position: relative;
 }
 
 .testimonials__quotation-icon {
+  filter: $icon-color-middle-blue;
   height: 4.2rem;
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
   transform: translate(2rem, -2rem);
-  filter: invert(39%) sepia(76%) saturate(353%) hue-rotate(161deg) brightness(96%) contrast(85%);
 }

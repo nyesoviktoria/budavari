@@ -18,6 +18,7 @@ import { MemberDialogComponent } from './components/member-dialog/member-dialog.
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { SoloistsAndExMembersComponent } from './components/soloists-and-ex-members/soloists-and-ex-members.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
@@ -36,6 +37,7 @@ export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
     MembersComponent,
     MemberDialogComponent,
     TestimonialsComponent,
+    SoloistsAndExMembersComponent,
   ],
   imports: [
     AppRoutingModule,

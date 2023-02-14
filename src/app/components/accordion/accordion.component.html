@@ -1,19 +1,17 @@
-<div class="accordion__wrapper" [ngClass]="{'accordion__content-reverse': isReverse}">
-
-<button (click)="toggleVisibility()" class="accordion__button">
-  <span *ngIf="buttonName">{{ buttonName }}</span>
-  <img
-    *ngIf="isIcon"
-    class="accordion__arrow-icon"
-    [ngClass]="{ rotate: isOpen }"
-    [src]="iconsRoute + 'chevron-down.svg'"
-    alt="lefelé mutató nyíl"
-  />
-</button>
-<div *ngIf="isOpen" class="accordion__item-content-container" @toggle>
-  <div class="accordion__item-content" data-id="accordion-item-content">
-    <ng-content></ng-content>
+<div class="accordion__wrapper" [ngClass]="{ 'accordion__content-reverse': isReverse }">
+  <button (click)="toggleVisibility()" class="accordion__button">
+    <span *ngIf="buttonName">{{ buttonName }}</span>
+    <img
+      *ngIf="isIcon"
+      class="accordion__arrow-icon"
+      [ngClass]="{ rotate: isOpen }"
+      [src]="iconsRoute + 'chevron-down.svg'"
+      [alt]="'arrow' + isOpen ? 'up' : 'down'"
+    />
+  </button>
+  <div *ngIf="isOpen" class="accordion__item-content-container" @toggle>
+    <div class="accordion__item-content" data-id="accordion-item-content">
+      <ng-content></ng-content>
+    </div>
   </div>
 </div>
-</div>
-

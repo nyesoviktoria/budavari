@@ -6,7 +6,15 @@ $color-primary-light-transparent-much: rgba(235, 242, 250, 0.85);
 $color-primary-middle-lighter: #a1bdd0;
 $color-primary-dark-lighter: #cddae7;
 $color-primary-dark-darker: #021529;
+$color-grey: #444;
 $color-grey-dark: #333;
+$color-white: #fff;
+
+$icon-color-white: invert(100%) sepia(0%) saturate(7500%) hue-rotate(200deg) brightness(106%) contrast(106%);
+$icon-color-disabled: invert(90%) sepia(11%) saturate(36%) hue-rotate(24deg) brightness(92%) contrast(86%);
+$icon-color-middle-blue: invert(39%) sepia(76%) saturate(353%) hue-rotate(161deg) brightness(96%) contrast(85%);
+$icon-color-dark-blue: invert(17%) sepia(31%) saturate(5667%) hue-rotate(198deg) brightness(97%) contrast(95%);
+$icon-color-dark-blue-hover: invert(18%) sepia(34%) saturate(4163%) hue-rotate(195deg) brightness(101%) contrast(96%);
 
 $border-radius-button: 5px;
 $border-radius-basic: 8px;

@@ -1,6 +1,6 @@
 import { AccordionMembersItem } from '../interfaces/accordion-members-item.interface';
 
-export const EX_MEMBERS: AccordionMembersItem[] = [
+export const EX_MEMBERS: readonly AccordionMembersItem[] = [
   {
     name: 'Almási Márk',
     instrument: 'CELLO',

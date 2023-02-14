@@ -55,13 +55,13 @@
 }
 
 .member-dialog__close-button {
+  cursor: pointer;
+  filter: $icon-color-dark-blue;
+  height: 2.4rem;
   position: absolute;
   right: 0;
   top: 0;
   transform: translate(-0.5rem, 0.5rem);
-  cursor: pointer;
-  filter: invert(12%) sepia(78%) saturate(4722%) hue-rotate(200deg) brightness(91%) contrast(95%);
-  height: 2.4rem;
 
   @include tablet {
     transform: translate(-1rem, 1rem);
@@ -69,7 +69,7 @@
 }
 
 .member-dialog__close-image:hover {
-  filter: invert(14%) sepia(82%) saturate(1083%) hue-rotate(179deg) brightness(93%) contrast(101%);
+  filter: $icon-color-dark-blue-hover;
 }
 
 .mdc-dialog__content {

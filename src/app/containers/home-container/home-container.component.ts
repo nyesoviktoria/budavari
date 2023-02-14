@@ -17,7 +17,9 @@ export class HomeContainerComponent {
   readonly soloists = SOLOISTS;
   readonly exMembers = EX_MEMBERS;
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog) {
+
+  }
 
   onMemberSelected(memberId: string): void {
     const selectedMember = MEMBER_DIALOG_DATA.find((memberDialogItem: MemberDialogItem) => memberDialogItem.memberId === memberId);

@@ -31,24 +31,24 @@
 }
 
 .hero__text-container {
+  align-items: center;
   background-color: $color-primary-light-transparent-much;
   border-radius: $border-radius-basic;
+  bottom: 0;
   display: flex;
   flex-direction: row;
+  gap: 2rem;
   max-width: 53rem;
   padding: 2rem;
   position: absolute;
   right: 0;
   text-align: right;
-  bottom: 0;
   transform: translate(-1.2rem, -1.2rem);
-  gap: 2rem;
-  align-items: center;
 
   @include tablet {
+    align-items: end;
     flex-direction: column;
     gap: 0;
-    align-items: end;
   }
 }
 
@@ -63,9 +63,9 @@
 }
 
 .hero__text-content {
+  display: none;
   font-size: 2rem;
   line-height: 2.8rem;
-  display: none;
 
   @include tablet {
     display: inline-block;
@@ -75,8 +75,8 @@
 .hero__navigation-button {
   -webkit-transition: 0.3s background-color linear;
   background-color: $color-primary-dark;
-  border: none;
   border-radius: $border-radius-button;
+  border: none;
   color: $color-primary-light;
   font-size: 1.6rem;
   font-weight: 400;

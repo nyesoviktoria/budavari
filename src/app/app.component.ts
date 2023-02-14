@@ -8,7 +8,7 @@ import { TranslateService } from '@ngx-translate/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
-  constructor(public translateService: TranslateService) {
+  constructor(readonly translateService: TranslateService) {
     translateService.use('hu');
   }
 }

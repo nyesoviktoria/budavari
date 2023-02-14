@@ -12,7 +12,7 @@ export class FooterComponent {
   readonly iconsRoute = ICONS_ROUTE;
   readonly contactIcons = FOOTER_CONTACT_ICON_ITEMS;
 
-  currentYear = new Date().getFullYear();
+  readonly currentYear = new Date().getFullYear();
 
   trackByIndex(index: number): number {
     return index;

@@ -16,7 +16,11 @@
       </div>
 
       <bvkz-accordion
-        [buttonName]="isOpen ? 'Kevesebb' : ' Több'"
+        [buttonName]="
+          isOpen
+            ? ('BVKZ.ABOUT_US__COMPONENT.ABOUT_US__LESS_INFO' | translate)
+            : ('BVKZ.ABOUT_US__COMPONENT.ABOUT_US__MORE_INFO' | translate)
+        "
         class="about-us__accordion"
         [isReverse]="true"
         (isCollapsed)="onIsCollapsed($event)"

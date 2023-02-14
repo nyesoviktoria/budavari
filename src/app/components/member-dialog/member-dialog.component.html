@@ -3,8 +3,15 @@
     <picture class="member-dialog__image-container">
       <img class="member-dialog__image" [src]="membersImagesRoute + data.imageSource + '.webp'" [alt]="data.name" />
     </picture>
-    <p mat-dialog-content class="member-dialog__description removePanelClass">{{ data.description }}</p>
+    <p mat-dialog-content class="member-dialog__description removePanelClass">
+      {{ 'BVKZ.MEMBER_DIALOG__COMPONENT.' + data.memberId | translate }}
+    </p>
   </div>
 
-  <img mat-dialog-close class="member-dialog__close-button" [src]="iconsRoute + 'square-xmark.svg'" alt="bezáró gomb" />
+  <img
+    mat-dialog-close
+    class="member-dialog__close-button"
+    [src]="iconsRoute + 'square-xmark.svg'"
+    [alt]="'BVKZ.MEMBER_DIALOG__COMPONENT.ESCAPE__BUTTON_ALT_TEXT' | translate"
+  />
 </section>

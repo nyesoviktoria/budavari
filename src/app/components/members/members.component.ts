@@ -9,11 +9,11 @@ import { MEMBERS_PARTS_ITEMS } from '../../constants/members-part-items-config.c
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MembersComponent {
+  @Output() memberId = new EventEmitter<string>();
+
   readonly iconsRoute = ICONS_ROUTE;
   readonly imagesRoute = IMAGES_ROUTE;
   readonly membersPartItems = MEMBERS_PARTS_ITEMS;
-
-  @Output() memberId = new EventEmitter<string>();
 
   onMemberSelected(member: string): void {
     this.memberId.emit(member);

@@ -35,13 +35,13 @@
 }
 
 .header__navigation-mobile {
-  position: fixed;
-  top: 7.4rem;
-  right: 0;
-  z-index: 200;
-  height: 100%;
-  width: 100%;
   background-color: $color-primary-light;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 7.4rem;
+  width: 100%;
+  z-index: 200;
 }
 
 .header__logo {
@@ -56,7 +56,7 @@
 
 .header__logo-text {
   align-self: center;
-  color: #444;
+  color: $color-grey;
   font-size: 2.2rem;
   line-height: 2rem;
 }
@@ -93,6 +93,7 @@
 }
 
 .header__navigation-link-animation:after {
+  background: $color-primary-dark-darker;
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: '';
@@ -100,7 +101,6 @@
   height: 2px;
   left: 50%;
   position: absolute;
-  background: $color-primary-dark-darker;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
@@ -113,7 +113,7 @@
 .header__mobile-menu-icon {
   cursor: pointer;
   display: flex;
-  filter: invert(17%) sepia(31%) saturate(5667%) hue-rotate(198deg) brightness(97%) contrast(95%);
+  filter: $icon-color-dark-blue;
   height: 3.6rem;
   justify-self: end;
   transition: all 0.3s;
@@ -124,7 +124,7 @@
 }
 
 .header__mobile-menu-icon :hover {
-  filter: invert(18%) sepia(34%) saturate(4163%) hue-rotate(195deg) brightness(101%) contrast(96%);
+  filter: $icon-color-dark-blue-hover;
 }
 
 .header__navigation-list-mobile {
