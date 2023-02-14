@@ -1,20 +1,36 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { TranslatePipe } from '@ngx-translate/core';
+import { MockPipe } from 'ng-mocks';
 
-import { ModalComponent } from './member-dialog.component';
+import { MemberDialogItem } from '../../interfaces/member-dialog.item.interface';
+import { MemberDialogComponent } from './member-dialog.component';
 
-describe('ModalComponent', () => {
-  let component: ModalComponent;
-  let fixture: ComponentFixture<ModalComponent>;
+describe('MemberDialogComponent', () => {
+  let component: MemberDialogComponent;
+  let fixture: ComponentFixture<MemberDialogComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ModalComponent],
+  const memberDialogItemTestData: MemberDialogItem = {
+    name: 'name',
+    memberId: 'NYESO_VIKTORIA',
+    imageSource: 'imageSource',
+  };
+
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      declarations: [MemberDialogComponent, MockPipe(TranslatePipe)],
+      providers: [
+        {
+          provide: MAT_DIALOG_DATA,
+          useValue: memberDialogItemTestData,
+        },
+      ],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ModalComponent);
+    fixture = TestBed.createComponent(MemberDialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  });
+  }));
 
   it('should create', () => {
     expect(component).toBeTruthy();
