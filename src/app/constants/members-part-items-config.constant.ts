@@ -50,10 +50,15 @@ export const MEMBERS_PARTS_ITEMS: readonly MembersPartItem[] = [
         isOnGyes: false,
       },
       { memberName: 'Kardos Virág', memberId: 'kardor-virag', isOnGyes: false },
-      { memberName: 'Kézdy Luca', memberId: 'kezdy-luca', isOnGyes: false },
+
       {
         memberName: 'Mravinac Anna',
         memberId: 'mravinac-anna',
+        isOnGyes: false,
+      },
+      {
+        memberName: 'Németh-Tatai Lilla',
+        memberId: 'nemeth-tati-lilla',
         isOnGyes: false,
       },
       {
@@ -61,11 +66,7 @@ export const MEMBERS_PARTS_ITEMS: readonly MembersPartItem[] = [
         memberId: 'petnehazy-reka',
         isOnGyes: false,
       },
-      {
-        memberName: 'Németh-Tatai Lilla',
-        memberId: 'nemeth-tati-lilla',
-        isOnGyes: true,
-      },
+      { memberName: 'Kézdy Luca', memberId: 'kezdy-luca', isOnGyes: true },
     ],
     isMiddleCart: false,
   },
