@@ -135,3 +135,14 @@ body {
     font-size: 42.5%;
   }
 }
+
+.anchor-style:link,
+.anchor-style:visited {
+  display: inline;
+  text-decoration: none;
+  color: $color-grey-dark;
+}
+
+.anchor-style:hover {
+  text-decoration: underline;
+}

@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { IMAGES_ROUTE } from '../../constants/app.constants';
-import { ABOUT_US_GALLERY_ITEMS } from '../../constants/about-us-gallery-items-config.constant';
+import { ABOUT_US_GALLERY_ITEMS } from '../../constants/about-us-gallery-items-config.constants';
 
 @Component({
   selector: 'bvkz-about-us',

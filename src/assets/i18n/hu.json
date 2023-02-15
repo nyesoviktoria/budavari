@@ -86,6 +86,19 @@
       "PETNEHAZY_GYONGYVER": "Csellótanulmányaimat nagycsoportos koromban, zenekari pályafutásomat 10 évesen kezdtem Veresegyházon. A hangszeres zenélés az érettségi után sajnos háttérbe szorult, de ha a csellózásra nem is mindig jutott kapacitásom, legalább egy kórusra mindig szántam időt. A Budavári kamarazenekarhoz is így csatlakoztam; egy karácsonyi koncerten énekeltem együtt Benedekkel. „Civilben” tájépítész mérnök vagyok, szabadidőmben a zene mellett szívesen fényképezek, kézműveskedek. Jelenleg időm nagy részét gyerkőceim és a családi élet töltik ki, amelyből természetesen a zenekar koncertjeinek meghallgatása sem maradhat ki.",
       "KIRALY_MIKLOS": "Bencével akkor találkoztam először, amikor az Óbudai Énekes Iskola tagjaként szoprán szólót énekelt egy hangversenyen az Óbudai Társaskörben, ahol jómagam meghívott öregdiákként voltam jelen. A Budavári Kamarazenekar akkor még meg sem született, hiszen javarészt a tagok sem éltek még. Az első közös megmozdulásunk a zenekar 5 éves jubileumi koncertjéhez köthető – ekkor kért meg Bence, hogy a nagybőgő szólamával egészítsem ki a zenekart. Azóta is – szó szerint – ezen a poszton állok az együttesben. Mivel zongoratanár vagyok, gyakran szólistaként is közreműködöm egy-egy koncerten, nem beszélve az orgona, zongora és csembalókíséretek nagy számáról. Szép emlékeim fűződnek a zenekarhoz és remélem, hogy még vár rám ezekből jó néhány!",
       "ESCAPE__BUTTON_ALT_TEXT": "bezáró gomb"
+    },
+    "CONTACT__COMPONENT": {
+      "CONTACT__TITLE": "Kapcsolat",
+      "CONTACT__ICONS_ALT_TEXT": {
+        "CONTACT__ICONS_CONTACT_PERSON_ALT_TEXT": "ember ikon",
+        "CONTACT__ICONS_ENVELOPE_ALT_TEXT": "boríték ikon",
+        "CONTACT__ICONS_PLACE_MARKER_ALT_TEXT": "helymegjelölő ikon"
+      },
+      "CONTACT__LEADER_NAME": "Művészeti vezetőnk: Héja Benedek",
+      "CONTACT__EMAIL_ADDRESS": "E-mail címünk: info@<span class=\"hidden\" aria-hidden=\"true\">PLEASE GO AWAY!</span>budavarikamarazenekar.hu",
+      "CONTACT__ADDRESS": "Próbáink helyszíne: Óbudai Árpád Gimnázium, <a class=\"anchor-style\" href=\"https://goo.gl/maps/vt4LGK1vLcbPhc6o7\" target=\"_blank\">1034 Budapest, Nagyszombat utca 19.</a>",
+      "JOIN_US__TITLE": "Csatlakozz hozzánk",
+      "JOIN_US__IMAGE_ALT_TEXT": "csoportkép a zenekarról"
     }
   }
 }

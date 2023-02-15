@@ -1,0 +1,39 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.contact-information__section {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  padding-left: 2rem;
+}
+
+.contact-information__icons,
+.contact-information__text {
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  font-weight: 500;
+  gap: 2rem;
+}
+
+.contact-information__icon {
+  height: 2.4rem;
+  filter: $icon-color-dark-blue;
+}
+
+.contact-information__map-container {
+  display: none;
+  margin-bottom: 4rem;
+  margin: 0 auto;
+  max-width: 60rem;
+
+  @include desktop {
+    display: block;
+  }
+}
+
+.contact-information__map {
+  border: none;
+  width: 100%;
+}
