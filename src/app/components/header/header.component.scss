@@ -88,13 +88,13 @@
 }
 
 .header__navigation-link:hover,
-.header__navigation-link:active {
+.header__navigation-link-active:visited {
   color: $color-primary-dark-darker;
 }
 
 .header__navigation-link-animation:after {
-  background: $color-primary-dark-darker;
   background: none repeat scroll 0 0 transparent;
+  background: $color-primary-dark-darker;
   bottom: 0;
   content: '';
   display: block;

@@ -5,7 +5,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MemberDialogComponent } from '../../components/member-dialog/member-dialog.component';
 
 import { MemberDialogItem } from '../../interfaces/member-dialog.item.interface';
-import { MEMBER_DIALOG_DATA } from '../../constants/member-dialog-data-config.constant';
+import { MEMBER_DIALOG_DATA } from '../../constants/member-dialog-data-config.constants';
 
 @Component({
   selector: 'bvkz-home-container',

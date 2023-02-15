@@ -19,6 +19,8 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { SoloistsAndExMembersComponent } from './components/soloists-and-ex-members/soloists-and-ex-members.component';
+import { RecordsContainerComponent } from './containers/records-container/records-container.component';
+import { ContactContainerComponent } from './containers/contact-container/contact-container.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
@@ -29,15 +31,17 @@ export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
     AboutUsComponent,
     AccordionComponent,
     AppComponent,
+    ContactContainerComponent,
     FooterComponent,
     FrameComponent,
     HeaderComponent,
     HeroSectionComponent,
     HomeContainerComponent,
-    MembersComponent,
     MemberDialogComponent,
-    TestimonialsComponent,
+    MembersComponent,
+    RecordsContainerComponent,
     SoloistsAndExMembersComponent,
+    TestimonialsComponent,
   ],
   imports: [
     AppRoutingModule,

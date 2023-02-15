@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angular/core';
 import { ICONS_ROUTE, IMAGES_ROUTE } from '../../constants/app.constants';
-import { MEMBERS_PARTS_ITEMS } from '../../constants/members-part-items-config.constant';
+import { MEMBERS_PARTS_ITEMS } from '../../constants/members-part-items-config.constants';
 
 @Component({
   selector: 'bvkz-members',
