@@ -1,0 +1,87 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.member-dialog__section {
+  background-color: $color-primary-light;
+  border-radius: 5px;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  height: auto;
+  max-width: 70rem;
+  transition: all 0.5s;
+
+  @include tablet {
+    max-width: 80rem;
+  }
+}
+
+.member-dialog__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 100%;
+  justify-items: center;
+  padding: 2rem;
+  position: relative;
+  row-gap: 2.4rem;
+  width: 100%;
+
+  @include tablet {
+    column-gap: 2.4rem;
+    grid-template-columns: 1fr 5fr;
+    padding: 4rem;
+  }
+
+  @include desktop {
+    grid-template-columns: 1fr 4fr;
+  }
+}
+
+.member-dialog__image-container {
+  height: 14rem;
+  justify-self: center;
+  width: 14rem;
+
+  @include tablet {
+    height: 13rem;
+    justify-self: end;
+    width: 13rem;
+  }
+}
+
+.member-dialog__image {
+  border-radius: 50%;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.member-dialog__close-button {
+  cursor: pointer;
+  filter: $icon-color-dark-blue;
+  height: 2.4rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(-0.5rem, 0.5rem);
+
+  @include tablet {
+    transform: translate(-1rem, 1rem);
+  }
+}
+
+.member-dialog__close-image:hover {
+  filter: $icon-color-dark-blue-hover;
+}
+
+.mdc-dialog__content {
+  color: $color-grey-dark;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: normal;
+  padding: 0 1rem;
+
+  @include tablet {
+    font-size: 1.8rem;
+  }
+}

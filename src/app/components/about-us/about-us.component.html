@@ -1,0 +1,46 @@
+<section class="about-us__section" aria-labelledby="home-container-title">
+  <h1 class="primary-heading" id="home-container-title">{{ 'BVKZ.ABOUT_US__COMPONENT.ABOUT_US__TITLE' | translate }}</h1>
+
+  <div class="about-us__container">
+    <div class="about-us__text-container">
+      <p class="info">
+        {{ 'BVKZ.ABOUT_US__COMPONENT.ABOUT_US__FIRST_PARAGRAPH' | translate }}
+      </p>
+
+      <p class="info">
+        {{ 'BVKZ.ABOUT_US__COMPONENT.ABOUT_US__SECOND_PARAGRAPH' | translate }}
+      </p>
+
+      <div class="about-us__text-to-hide">
+        <ng-container [ngTemplateOutlet]="moreInfo"> </ng-container>
+      </div>
+
+      <bvkz-accordion
+        [buttonName]="
+          isOpen
+            ? ('BVKZ.ABOUT_US__COMPONENT.ABOUT_US__LESS_INFO' | translate)
+            : ('BVKZ.ABOUT_US__COMPONENT.ABOUT_US__MORE_INFO' | translate)
+        "
+        class="about-us__accordion"
+        [isReverse]="true"
+        (isCollapsed)="onIsCollapsed($event)"
+      >
+        <ng-container [ngTemplateOutlet]="moreInfo"> </ng-container>
+      </bvkz-accordion>
+    </div>
+    <div class="about-us__gallery-container">
+      <picture class="about-us__image-container" *ngFor="let image of imageItems; trackBy: trackByIndex">
+        <img class="img about-us__image" [src]="imagesRoute + image.source" [alt]="image.alt" />
+      </picture>
+    </div>
+  </div>
+</section>
+
+<ng-template #moreInfo>
+  <p class="info">
+    {{ 'BVKZ.ABOUT_US__COMPONENT.ABOUT_US__THIRD_PARAGRAPH' | translate }}
+  </p>
+  <p class="info">
+    {{ 'BVKZ.ABOUT_US__COMPONENT.ABOUT_US__FOURTH_PARAGRAPH' | translate }}
+  </p>
+</ng-template>

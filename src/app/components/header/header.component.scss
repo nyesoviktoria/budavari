@@ -1,0 +1,143 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.header__navigation-desktop {
+  align-items: center;
+  background-color: $color-primary-light;
+  box-shadow: $box-shadow-navbar;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  height: 7.4rem;
+  padding-left: 2rem;
+  padding-right: 4.8rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  @include tablet {
+    padding: 0 1rem 0 3.2rem;
+  }
+
+  @include desktop {
+    padding: 0 2rem 0 3.2rem;
+  }
+
+  @include desktop-lg {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 3.2rem;
+  }
+
+  @include desktop-xl {
+    grid-template-columns: 3fr 2fr;
+    padding: 0 4.8rem;
+  }
+}
+
+.header__navigation-mobile {
+  background-color: $color-primary-light;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 7.4rem;
+  width: 100%;
+  z-index: 200;
+}
+
+.header__logo {
+  align-self: center;
+  display: flex;
+  gap: 8px;
+}
+
+.header__logo-image {
+  max-width: 4.5rem;
+}
+
+.header__logo-text {
+  align-self: center;
+  color: $color-grey;
+  font-size: 2.2rem;
+  line-height: 2rem;
+}
+
+.header__logo-text-row {
+  display: block;
+}
+
+.header__navigation-list {
+  align-self: center;
+  display: none;
+  list-style: none;
+  padding: 1.2rem 2.4rem;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.header__navigation-link:link,
+.header__navigation-link:visited {
+  color: $color-primary-dark;
+  font-size: 2.4rem;
+  font-weight: 700;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.header__navigation-link:hover,
+.header__navigation-link:active {
+  color: $color-primary-dark-darker;
+}
+
+.header__navigation-link-animation:after {
+  background: $color-primary-dark-darker;
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.header__navigation-link-animation:hover:after {
+  left: 0;
+  width: 100%;
+}
+
+.header__mobile-menu-icon {
+  cursor: pointer;
+  display: flex;
+  filter: $icon-color-dark-blue;
+  height: 3.6rem;
+  justify-self: end;
+  transition: all 0.3s;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.header__mobile-menu-icon :hover {
+  filter: $icon-color-dark-blue-hover;
+}
+
+.header__navigation-list-mobile {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  height: 80%;
+  justify-content: center;
+  list-style: none;
+  padding: 4rem;
+}
+
+.header__navigation-list-mobile .header__navigation-link {
+  font-size: 3.6rem;
+}

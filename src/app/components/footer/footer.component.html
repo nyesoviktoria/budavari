@@ -1,19 +1,10 @@
 <footer class="footer__section">
   <div class="footer__wrapper">
     <div class="footer__icons-container">
-      <a
-        *ngFor="let icon of contactIcons; trackBy: trackByIndex"
-        [href]="icon.url"
-        target="_blank"
-        class="footer__contact-icon"
-        ><img
-          class="footer__icon-image"
-          [src]="iconsRoute + icon.iconSource"
-          [alt]="icon.alt"
+      <a *ngFor="let icon of contactIcons; trackBy: trackByIndex" [href]="icon.url" target="_blank" class="footer__contact-icon"
+        ><img class="footer__icon-image" [src]="iconsRoute + icon.iconSource" [alt]="icon.alt"
       /></a>
     </div>
   </div>
-  <p class="footer__copyright-line">
-    &#169; {{ currentYear }} Budavári Kamarazenekar - Minden jog fenntartva
-  </p>
+  <p class="footer__copyright-line">&#169; {{ currentYear }} {{ 'BVKZ.FOOTER__COMPONENT.COPYRIGHT__TEXT' | translate }}</p>
 </footer>

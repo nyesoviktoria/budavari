@@ -1,0 +1,137 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$budavari-primary: mat.define-palette(mat.$indigo-palette);
+$budavari-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$budavari-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$budavari-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $budavari-primary,
+      accent: $budavari-accent,
+      warn: $budavari-warn,
+    ),
+  )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($budavari-theme);
+
+/* You can add global styles to this file, and also import other style files */
+@import './variables.scss';
+@import './mixins.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: $color-grey-dark;
+  background-color: $color-primary-dark-lighter;
+}
+
+.wrapper-container {
+  margin: 0 auto;
+  background-color: $color-primary-light-transparent-much;
+  padding: 2rem 3.2rem;
+  max-width: 105rem;
+
+  @include tablet {
+    padding: 3.2rem 5.2rem;
+  }
+
+  @include desktop-lg {
+    max-width: 120rem;
+  }
+
+  @include desktop-xl {
+    max-width: 130rem;
+  }
+}
+
+.primary-heading {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+
+  @include tablet {
+    font-size: 4rem;
+    margin-bottom: 3.2rem;
+  }
+}
+
+.secondary-heading {
+  font-size: 2.6rem;
+  font-weight: 600;
+  margin-bottom: 2.4rem;
+
+  @include tablet {
+    font-size: 3rem;
+  }
+}
+
+.tertiary-heading {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+
+  @include tablet {
+    font-size: 2.4rem;
+  }
+}
+
+.info {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  line-height: 2.6rem;
+
+  @include tablet {
+    line-height: 3rem;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 78em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 56em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 28em) {
+  html {
+    font-size: 42.5%;
+  }
+}

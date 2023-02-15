@@ -1,0 +1,35 @@
+@import '../../../variables.scss';
+
+.accordion__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion__content-reverse {
+  flex-direction: column-reverse;
+}
+
+.accordion__button {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  font-size: 2.4rem;
+  font-weight: 500;
+  gap: 2rem;
+}
+
+.accordion__arrow-icon {
+  cursor: pointer;
+  filter: $icon-color-dark-blue;
+  height: 2.4rem;
+  transition: all 0.3s;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.accordion__item-content-container {
+  overflow: hidden;
+}

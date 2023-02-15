@@ -1,0 +1,25 @@
+<section class="members__section">
+  <h2 class="secondary-heading">{{ 'BVKZ.MEMBERS__COMPONENT.MEMBERS__TITLE' | translate }}</h2>
+  <div class="members__carts-container">
+    <div
+      class="members__cart"
+      *ngFor="let cart of membersPartItems; trackBy: trackByIndex"
+      [ngClass]="{ 'members__cart-middle': cart.isMiddleCart }"
+    >
+      <div class="members__image-container">
+        <img class="members__cart-image" [src]="imagesRoute + cart.imageSource" alt="{{ cart.altText }}" />
+      </div>
+      <ul class="members__list">
+        <li
+          class="members__list-item"
+          *ngFor="let member of cart.members; trackBy: trackByIndex"
+          (click)="onMemberSelected(member.memberId)"
+        >
+          {{ member.memberName }}
+          <img *ngIf="member.isOnGyes" class="members__gyes-icon" [src]="iconsRoute + 'baby-carriage-solid.svg'" alt="babakocsi-logo" />
+        </li>
+      </ul>
+      <p class="members__cart-part-sign">{{ 'BVKZ.PART_TYPES.' + cart.partName | translate }}</p>
+    </div>
+  </div>
+</section>

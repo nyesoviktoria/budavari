@@ -1,0 +1,48 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.footer__section {
+  background-color: $color-primary-dark;
+  margin-top: auto;
+  padding: 2.4rem 0;
+}
+
+.footer__wrapper {
+  margin-bottom: 2.4rem;
+  padding-top: 2.4rem;
+}
+
+.footer__icons-container {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+.footer__contact-icon:link,
+.footer__contact-icon:visited {
+  transition: 0.3s all;
+}
+
+.footer__contact-icon:hover,
+.footer__contact-icon:active {
+  transform: scale(1.1);
+}
+
+.footer__icon-image {
+  filter: $icon-color-white;
+  height: 2.8rem;
+
+  @include tablet {
+    height: 2.4rem;
+  }
+}
+
+.footer__copyright-line {
+  color: $color-white;
+  font-size: 1.4rem;
+  text-align: center;
+
+  @include tablet {
+    font-size: 1.2rem;
+  }
+}
