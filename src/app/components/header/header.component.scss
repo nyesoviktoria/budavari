@@ -47,7 +47,9 @@
 .header__logo {
   align-self: center;
   display: flex;
+  font-family: 'Roboto Condensed', sans-serif;
   gap: 8px;
+  margin-right: auto;
 }
 
 .header__logo-image {

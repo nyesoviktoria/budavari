@@ -1,0 +1,23 @@
+<h2 class="secondary-heading">{{ 'BVKZ.CONTACT__COMPONENT.CONTACT__TITLE' | translate }}</h2>
+<section class="contact-information__section">
+  <div class="contact-information__icons">
+    <img
+      *ngFor="let icon of contactIcons; trackBy: trackByIndex"
+      class="contact-information__icon"
+      [src]="iconsRoute + icon.iconSource"
+      [alt]="'BVKZ.CONTACT__COMPONENT.CONTACT__ICONS_ALT_TEXT.' + icon.alt | translate"
+    />
+  </div>
+  <div class="contact-information__text">
+    <span *ngFor="let info of contactInformation; trackBy: trackByIndex" [innerHTML]="info | translate"></span>
+  </div>
+</section>
+<div class="contact-information__map-container">
+  <iframe
+    class="contact-information__map"
+    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10775.210260140788!2d19.0373548!3d47.5327067!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x278f8e3ad5f3f121!2zw5NidWRhaSDDgXJww6FkIEdpbW7DoXppdW0!5e0!3m2!1shu!2shu!4v1669726652189!5m2!1shu!2shu"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
