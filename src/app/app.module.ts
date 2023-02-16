@@ -24,6 +24,7 @@ import { ContactContainerComponent } from './containers/contact-container/contac
 import { JoinUsComponent } from './components/join-us/join-us.component';
 import { ContactInformationComponent } from './components/contact-information/contact-information.component';
 import { RecordsAudioComponent } from './components/records-audio/records-audio.component';
+import { RecordsAudioSourcePipe } from './pipes/records-audio-source/records-audio-source.pipe';
 
 export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
@@ -45,6 +46,7 @@ export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
     MemberDialogComponent,
     MembersComponent,
     RecordsAudioComponent,
+    RecordsAudioSourcePipe,
     RecordsContainerComponent,
     SoloistsAndExMembersComponent,
     TestimonialsComponent,
