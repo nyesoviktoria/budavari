@@ -99,6 +99,10 @@
       "CONTACT__ADDRESS": "Próbáink helyszíne: Óbudai Árpád Gimnázium, <a class=\"anchor-style\" href=\"https://goo.gl/maps/vt4LGK1vLcbPhc6o7\" target=\"_blank\">1034 Budapest, Nagyszombat utca 19.</a>",
       "JOIN_US__TITLE": "Csatlakozz hozzánk",
       "JOIN_US__IMAGE_ALT_TEXT": "csoportkép a zenekarról"
+    },
+    "RECORDS__COMPONENT":{
+      "RECORDS__HEADING": "Lemezeink",
+      "RECORDS__SOLOIST": "Szólista"
     }
   }
 }

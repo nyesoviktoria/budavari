@@ -23,6 +23,7 @@ import { RecordsContainerComponent } from './containers/records-container/record
 import { ContactContainerComponent } from './containers/contact-container/contact-container.component';
 import { JoinUsComponent } from './components/join-us/join-us.component';
 import { ContactInformationComponent } from './components/contact-information/contact-information.component';
+import { RecordsAudioComponent } from './components/records-audio/records-audio.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
@@ -34,18 +35,19 @@ export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
     AccordionComponent,
     AppComponent,
     ContactContainerComponent,
+    ContactInformationComponent,
     FooterComponent,
     FrameComponent,
     HeaderComponent,
     HeroSectionComponent,
     HomeContainerComponent,
+    JoinUsComponent,
     MemberDialogComponent,
     MembersComponent,
+    RecordsAudioComponent,
     RecordsContainerComponent,
     SoloistsAndExMembersComponent,
     TestimonialsComponent,
-    JoinUsComponent,
-    ContactInformationComponent,
   ],
   imports: [
     AppRoutingModule,

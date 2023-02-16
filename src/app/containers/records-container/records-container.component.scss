@@ -1,0 +1,30 @@
+@import '../../../mixins.scss';
+
+.records__information {
+  text-align: center;
+  padding: 2rem 0 2rem 2rem;
+
+  @include tablet {
+    display: flex;
+    gap: 3.2rem;
+    padding: 2rem 18rem 4rem 2rem;
+    text-align: left;
+  }
+}
+
+.records__image {
+  max-width: 20rem;
+}
+
+.records__description {
+  display: none;
+
+  @include tablet {
+    display: inline-block;
+  }
+}
+
+.records__audio-container {
+  list-style: none;
+  margin-bottom: 4.8rem;
+}
