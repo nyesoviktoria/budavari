@@ -1,0 +1,18 @@
+<li class="records-audio__list-item">
+  <p class="records-audio__title">
+    {{ track.audioTitle
+    }}<span class="records-audio__soloist" *ngIf="track.soloistName"
+      >{{ 'BVKZ.RECORDS__COMPONENT.RECORDS__SOLOIST' | translate }}: {{ track.soloistName }}</span
+    >
+  </p>
+
+  <audio
+    #audio
+    class="records-audio__music"
+    controlsList="nodownload noplaybackrate"
+    preload="none"
+    controls
+    [src]="audioRoute + album + '/' + track.trackSource + '.mp3'"
+    (play)="onPlay(audio)"
+  ></audio>
+</li>
