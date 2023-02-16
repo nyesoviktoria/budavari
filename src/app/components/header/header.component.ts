@@ -16,8 +16,14 @@ export class HeaderComponent {
   readonly navigationItems: readonly HeaderNavigationItem[] = HEADER_NAVIGATION_ITEMS;
   readonly isMobileViewOn: boolean = false;
 
+  isMobileNavigationOn = false;
+
   onOpenMobileNavigation(): void {
-    return;
+    this.isMobileNavigationOn = !this.isMobileNavigationOn;
+  }
+
+  onCloseMobileNavigation(): void {
+    this.isMobileNavigationOn = false;
   }
 
   trackByIndex(index: number): number {

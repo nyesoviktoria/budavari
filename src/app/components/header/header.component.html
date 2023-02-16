@@ -1,6 +1,6 @@
 <section class="header__section">
   <nav class="header__navigation-desktop">
-    <a class="header__navigation-link header__logo" routerLink="/home">
+    <a class="header__navigation-link header__logo" routerLink="/home" (click)="onCloseMobileNavigation()">
       <img [src]="imagesRoute + 'logo.png'" [alt]="'BVKZ.HEADER__COMPONENT.HEADER_LOGO_ALT__TEXT' | translate" class="header__logo-image" />
       <p class="header__logo-text">
         <span class="header__logo-text-row">Budavári</span
@@ -21,9 +21,9 @@
     <img class="header__mobile-menu-icon" [src]="iconsRoute + 'bars.svg'" alt="menu-icon" (click)="onOpenMobileNavigation()" />
   </nav>
 
-  <nav class="header__navigation-mobile hidden">
+  <nav *ngIf="isMobileNavigationOn" class="header__navigation-mobile">
     <ul class="header__navigation-list-mobile">
-      <li *ngFor="let item of navigationItems; trackBy: trackByIndex">
+      <li *ngFor="let item of navigationItems; trackBy: trackByIndex" (click)="onOpenMobileNavigation()">
         <a class="header__navigation-link header__navigation-link-animation" [routerLink]="item.pageRoute">{{
           'BVKZ.NAVIGATION__LINKS.' + item.pageTitle | translate
         }}</a>
