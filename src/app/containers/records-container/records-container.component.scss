@@ -1,6 +1,6 @@
 @import '../../../mixins.scss';
 
-.records__information {
+.records-container__information {
   text-align: center;
   padding: 2rem 0 2rem 2rem;
 
@@ -12,11 +12,11 @@
   }
 }
 
-.records__image {
+.records-container__image {
   max-width: 20rem;
 }
 
-.records__description {
+.records-container__description {
   display: none;
 
   @include tablet {
@@ -24,7 +24,7 @@
   }
 }
 
-.records__audio-container {
+.records-container__audio-container {
   list-style: none;
   margin-bottom: 4.8rem;
 }

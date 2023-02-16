@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { AUDIO_ROUTE } from '../../constants/app.constants';
 import { RecordAudioItem } from '../../interfaces/record-audio-item.interface';
-import { RecordId } from '../../types/records.type';
+import { RecordId } from '../../types/record-id.type';
 
 @Component({
   selector: 'bvkz-records-audio',

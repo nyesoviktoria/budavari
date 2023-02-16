@@ -2,11 +2,11 @@
   <h2 class="primary-heading">{{ 'BVKZ.RECORDS__COMPONENT.RECORDS__HEADING' | translate }}</h2>
   <div class="records__container" *ngFor="let record of recordItems; trackBy: trackByIndex">
     <h2 class="secondary-heading">{{ record.recordTitle }}</h2>
-    <div class="records__information">
-      <img class="records__image" [src]="imagesRoute + record.coverImageSource" [alt]="record.coverImageAltText" />
-      <p class="info records__description">{{ record.description }}</p>
+    <div class="records-container__information">
+      <img class="records-container__image" [src]="imagesRoute + record.coverImageSource" [alt]="record.coverImageAltText" />
+      <p class="info records-container__description">{{ record.description }}</p>
     </div>
-    <ul class="records__audio-container">
+    <ul class="records-container__audio-container">
       <bvkz-records-audio
         *ngFor="let audio of record.tracks; trackBy: trackByIndex"
         [track]="audio"

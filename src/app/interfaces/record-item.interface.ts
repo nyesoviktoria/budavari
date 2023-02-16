@@ -1,4 +1,4 @@
-import { RecordId } from '../types/records.type';
+import { RecordId } from '../types/record-id.type';
 import { RecordAudioItem } from './record-audio-item.interface';
 
 export interface RecordItem {

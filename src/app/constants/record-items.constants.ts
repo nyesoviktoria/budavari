@@ -12,7 +12,6 @@ export const RECORD_ITEMS: readonly RecordItem[] = [
       {
         trackSource: 'saba_short',
         audioTitle: 'Georg Friedrich Handel - Sába királynőjének bevonulása (részlet a Salamon című oratóriumból)',
-        soloistName: '',
       },
       {
         trackSource: 'bach_short',
@@ -27,22 +26,18 @@ export const RECORD_ITEMS: readonly RecordItem[] = [
       {
         trackSource: 'scaramouches_short',
         audioTitle: 'Georg Philipp Telemann - La Changeante szvit vonósokra (TWV 55.g2, III. tétel, Les Scaramouches)',
-        soloistName: '',
       },
       {
         trackSource: 'avec_douceur_short',
         audioTitle: 'Georg Philipp Telemann - La Changeante szvit vonósokra (TWV 55.g2, VII. tétel, Avec douceur)',
-        soloistName: '',
       },
       {
         trackSource: 'vivaldi_g-moll_short',
         audioTitle: 'Antonio Vivaldi - g-moll concerto (RV 156, III. tétel, Allegro)',
-        soloistName: '',
       },
       {
         trackSource: 'herschel_short',
         audioTitle: 'William Herschel - c-moll szimfónia (No. 8., I. tétel Allegro assai)',
-        soloistName: '',
       },
       {
         trackSource: 'barbarina_short',
@@ -52,7 +47,6 @@ export const RECORD_ITEMS: readonly RecordItem[] = [
       {
         trackSource: 'haydn_short',
         audioTitle: 'Joseph Haydn - d-moll vonósnégyes (Op. 42, IV. tétel, Finale - Presto)',
-        soloistName: '',
       },
       {
         trackSource: 'solvejg_short',
@@ -62,7 +56,6 @@ export const RECORD_ITEMS: readonly RecordItem[] = [
       {
         trackSource: 'erklarungen_short',
         audioTitle: 'Robert Schumann-Héja Benedek - Erklarungen (IV. tétel)',
-        soloistName: '',
       },
       {
         trackSource: 'fauré_short',
@@ -72,17 +65,14 @@ export const RECORD_ITEMS: readonly RecordItem[] = [
       {
         trackSource: 'britten_short',
         audioTitle: 'Benjamin Britten - Simple Symphony (IV. tétel, Frolicsome Finale)',
-        soloistName: '',
       },
       {
         trackSource: 'greensleeves_short',
         audioTitle: 'Ralph Vaughan Williams - Fantasia on Greensleeves',
-        soloistName: '',
       },
       {
         trackSource: 'naked_song_short',
         audioTitle: 'Héja Benedek - Naked song (as a doll)',
-        soloistName: '',
       },
     ],
   },
@@ -97,27 +87,22 @@ export const RECORD_ITEMS: readonly RecordItem[] = [
       {
         trackSource: 'vivaldi_concerto_short',
         audioTitle: 'Antonio Vivaldi - C-dúr concerto, RV 115',
-        soloistName: '',
       },
       {
         trackSource: 'consummatum_est_short',
         audioTitle: 'Joseph Haydn - Krisztus hét szava a keresztfán - Consummatum est',
-        soloistName: '',
       },
       {
         trackSource: 'italiana_short',
         audioTitle: 'Ottorino Respihi - Italiana',
-        soloistName: '',
       },
       {
         trackSource: 'laura_soave_short',
         audioTitle: 'Ottorino Respihi - Laura soave',
-        soloistName: '',
       },
       {
         trackSource: 'balletto_detto_short',
         audioTitle: 'Ottorino Respihi - Balletto detto il conte Orlando',
-        soloistName: '',
       },
       {
         trackSource: 'sugar_short',
@@ -127,12 +112,10 @@ export const RECORD_ITEMS: readonly RecordItem[] = [
       {
         trackSource: 'telemann_short',
         audioTitle: 'Georg Philipp Telemann - Rigaudon',
-        soloistName: '',
       },
       {
         trackSource: 'chaconne_short',
         audioTitle: 'Henry Purcell - Chaconne',
-        soloistName: '',
       },
       {
         trackSource: 'morgen_short',
@@ -142,7 +125,6 @@ export const RECORD_ITEMS: readonly RecordItem[] = [
       {
         trackSource: 'rameau_short',
         audioTitle: 'Jean-Philippe Rameau - Rondeau des Indes Galantes',
-        soloistName: '',
       },
       {
         trackSource: 'sosztakovics_short',
@@ -152,7 +134,6 @@ export const RECORD_ITEMS: readonly RecordItem[] = [
       {
         trackSource: 'sibelius_short',
         audioTitle: 'Jean Sibelius - Andante Festivo',
-        soloistName: '',
       },
       {
         trackSource: 'furulyaverseny_short',
@@ -162,27 +143,22 @@ export const RECORD_ITEMS: readonly RecordItem[] = [
       {
         trackSource: 'basse_danse_short',
         audioTitle: 'Peter Warlock - Capriol Suite, Basse-Danse',
-        soloistName: '',
       },
       {
         trackSource: 'pavane_short',
         audioTitle: 'Peter Warlock - Capriol Suite, Pavane',
-        soloistName: '',
       },
       {
         trackSource: 'holst_short',
         audioTitle: 'Holst - Szent Pál szvit, I. Jig',
-        soloistName: '',
       },
       {
         trackSource: 'lemezanyag_short',
         audioTitle: 'Héja Benedek - Lemezanyag',
-        soloistName: '',
       },
       {
         trackSource: 'janacek_short',
         audioTitle: 'Leoš Janáček - Két tánc',
-        soloistName: '',
       },
     ],
   },
