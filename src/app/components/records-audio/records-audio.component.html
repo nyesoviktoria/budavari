@@ -12,7 +12,7 @@
     controlsList="nodownload noplaybackrate"
     preload="none"
     controls
-    [src]="audioRoute + album + '/' + track.trackSource + '.mp3'"
+    [src]="album | recordsAudioSource : track.trackSource"
     (play)="onPlay(audio)"
   ></audio>
 </li>
