@@ -25,6 +25,9 @@ import { JoinUsComponent } from './components/join-us/join-us.component';
 import { ContactInformationComponent } from './components/contact-information/contact-information.component';
 import { RecordsAudioComponent } from './components/records-audio/records-audio.component';
 import { RecordsAudioSourcePipe } from './pipes/records-audio-source/records-audio-source.pipe';
+import { ConcertsContainerComponent } from './containers/concerts-container/concerts-container.component';
+import { ConcertsUpcomingComponent } from './components/concerts-upcoming/concerts-upcoming.component';
+import { ConcertsPreviousComponent } from './components/concerts-previous/concerts-previous.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
@@ -35,6 +38,9 @@ export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
     AboutUsComponent,
     AccordionComponent,
     AppComponent,
+    ConcertsContainerComponent,
+    ConcertsPreviousComponent,
+    ConcertsUpcomingComponent,
     ContactContainerComponent,
     ContactInformationComponent,
     FooterComponent,

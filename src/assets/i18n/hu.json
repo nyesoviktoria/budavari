@@ -57,6 +57,10 @@
         "SINGER": "ének"
       }
     },
+    "CONCERTS__COMPONENT": {
+      "CONCERTS_TITLE": "Koncertek",
+      "CONCERTS_PREVIOUS__TITLE": "Korábbi koncertjeink"
+    },
     "FOOTER__COMPONENT": {
       "COPYRIGHT__TEXT": "Budavári Kamarazenekar - Minden jog fenntartva"
     },
@@ -100,7 +104,7 @@
       "JOIN_US__TITLE": "Csatlakozz hozzánk",
       "JOIN_US__IMAGE_ALT_TEXT": "csoportkép a zenekarról"
     },
-    "RECORDS__COMPONENT":{
+    "RECORDS__COMPONENT": {
       "RECORDS__HEADING": "Lemezeink",
       "RECORDS__SOLOIST": "Szólista"
     }

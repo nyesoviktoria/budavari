@@ -1,0 +1,149 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.concert-upcoming__container {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  margin-bottom: 4.8rem;
+
+  @include tablet {
+    flex-direction: row;
+    margin-bottom: 8rem;
+  }
+}
+
+.concert-upcoming__container:nth-child(odd) {
+  @include tablet {
+    flex-direction: row-reverse;
+  }
+}
+
+.concert-upcoming__image-container {
+  height: 22rem;
+  margin: 0 auto;
+  position: relative;
+  width: 85%;
+
+  @include tablet {
+    flex: 2;
+    height: 25rem;
+    margin-top: 0;
+  }
+}
+
+.concert-upcoming__image {
+  border-radius: 8px;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+  width: 100%;
+}
+
+.concert-upcoming__text {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.concert-upcoming__text-title {
+  font-size: 2.6rem;
+  font-style: italic;
+  font-weight: 700;
+  margin-bottom: 2.4rem;
+}
+
+.concert-upcoming__text-description {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.concert-upcoming__text-date,
+.concert-upcoming__text-place {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.concerts-upcoming__icons-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-end;
+  margin-top: auto;
+  padding-right: 2rem;
+
+  @include tablet {
+    padding: 0;
+  }
+}
+
+.concert-upcoming__container:nth-child(odd) .concerts-upcoming__icons-container {
+  align-self: flex-end;
+
+  @include tablet {
+    align-self: flex-start;
+  }
+}
+
+.concerts-upcoming__icon {
+  filter: $icon-color-dark-blue;
+  height: 3.2rem;
+  transition: all 0.3s;
+}
+
+.concerts-upcoming__icon:hover {
+  filter: $icon-color-dark-blue-hover;
+  transform: scale(1.05);
+}
+
+.countdown {
+  align-items: center;
+  background-color: $color-primary-dark-darker;
+  border-radius: 0 8px 0 8px;
+  color: $color-primary-light;
+  display: flex;
+  font-size: 1.8rem;
+  font-weight: 500;
+  gap: 1.4rem;
+  padding: 1rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.concerts-upcoming_countdown-icon {
+  filter: $icon-color-white;
+  height: 2.4rem;
+}
+
+.countdown__cube {
+  display: flex;
+  flex-direction: column;
+}
+
+.countdown__container {
+  display: flex;
+  gap: 1rem;
+}
+
+.countdown__item {
+  align-items: center;
+  background-color: $color-primary-light;
+  border-radius: 4px;
+  color: $color-primary-dark-darker;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  width: 4rem;
+}
+
+.countdown__number {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.countdown__text {
+  font-size: 1rem;
+  font-weight: 500;
+}
