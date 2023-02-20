@@ -15,6 +15,13 @@ export class ConcertsUpcomingComponent {
   readonly concertsUpcomingItems = CONCERTS_UPCOMING_ITEMS;
   readonly concertUpcomingIcons = CONCERTS_UPCOMING_ICONS;
 
+  nonvisibleConcertIndex?: number;
+
+  isConcertVisible(index: number): void {
+    this.nonvisibleConcertIndex = index;
+
+  }
+
   trackByIndex(index: number): number {
     return index;
   }

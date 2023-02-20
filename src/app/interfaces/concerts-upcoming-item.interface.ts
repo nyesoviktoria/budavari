@@ -4,7 +4,7 @@ export interface ConcertUpcomingItem {
   readonly imageMobileSource: string;
   readonly title: string;
   readonly date: string;
-  readonly dateCode: string;
+  readonly timeStamp: string;
   readonly place: string;
   readonly description: string;
   readonly inviteImageSource?: string;

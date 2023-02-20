@@ -96,54 +96,56 @@
   transform: scale(1.05);
 }
 
-.countdown {
-  align-items: center;
-  background-color: $color-primary-dark-darker;
-  border-radius: 0 8px 0 8px;
-  color: $color-primary-light;
-  display: flex;
-  font-size: 1.8rem;
-  font-weight: 500;
-  gap: 1.4rem;
-  padding: 1rem;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
+// .countdown {
+//   align-items: center;
+//   background-color: $color-primary-dark-darker;
+//   border-radius: 0 8px 0 8px;
+//   color: $color-primary-light;
+//   display: flex;
+//   font-size: 1.8rem;
+//   font-weight: 500;
+//   gap: 1.4rem;
+//   padding: 1rem;
+//   position: absolute;
+//   right: 0;
+//   top: 0;
+// }
 
-.concerts-upcoming_countdown-icon {
-  filter: $icon-color-white;
-  height: 2.4rem;
-}
+// .concerts-upcoming_countdown-icon {
+//   filter: $icon-color-white;
+//   height: 2.4rem;
+//   align-self: center;
+// }
 
-.countdown__cube {
-  display: flex;
-  flex-direction: column;
-}
+// .countdown__cube {
+//   display: flex;
+//   flex-direction: column;
+// }
 
-.countdown__container {
-  display: flex;
-  gap: 1rem;
-}
+// .countdown__container {
+//   display: flex;
+//   gap: 1rem;
+// }
 
-.countdown__item {
-  align-items: center;
-  background-color: $color-primary-light;
-  border-radius: 4px;
-  color: $color-primary-dark-darker;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 0;
-  width: 4rem;
-}
+// .countdown__item {
+//   align-items: center;
+//   background-color: $color-primary-light;
+//   border-radius: 4px;
+//   color: $color-primary-dark-darker;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   padding: 0;
+//   width: 4rem;
+// }
 
-.countdown__number {
-  font-size: 2.2rem;
-  font-weight: 600;
-}
+// .countdown__number {
+//   font-size: 2.2rem;
+//   font-weight: 600;
+// }
 
-.countdown__text {
-  font-size: 1rem;
-  font-weight: 500;
-}
+// .countdown__text {
+//   font-size: 1rem;
+//   font-weight: 500;
+// }
+
