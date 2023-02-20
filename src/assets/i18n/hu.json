@@ -59,7 +59,10 @@
     },
     "CONCERTS__COMPONENT": {
       "CONCERTS_TITLE": "Koncertek",
-      "CONCERTS_PREVIOUS__TITLE": "Korábbi koncertjeink"
+      "CONCERTS_PREVIOUS__TITLE": "Korábbi koncertjeink",
+      "CONCERTS_PREVIOUS__LINK_FIRST_PART": "A koncert teljes felvételét",
+      "CONCERTS_PREVIOUS__LINK_ANCHOR": "itt",
+      "CONCERTS_PREVIOUS__LINK_SECOND_PART": "tudjátok megnézni."
     },
     "FOOTER__COMPONENT": {
       "COPYRIGHT__TEXT": "Budavári Kamarazenekar - Minden jog fenntartva"

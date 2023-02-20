@@ -1,2 +1,45 @@
 @import '../../../variables.scss';
 @import '../../../mixins.scss';
+
+.concerts-previous__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  row-gap: 4.8rem;
+
+  @include desktop {
+    column-gap: 4.8rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include desktop-xl {
+    padding: 2.4rem 4.8rem;
+  }
+}
+
+.concerts-previous__title {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+}
+
+.concerts-previous__link {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.concerts-previous__youtube-link:link,
+.concerts-previous__youtube-link:visited {
+  color: $color-grey-dark;
+  font-weight: 600;
+}
+
+.concerts-previous__video {
+  max-height: 20rem;
+  max-width: 36rem;
+
+  @include tablet {
+    max-height: 22rem;
+    max-width: 40rem;
+  }
+}

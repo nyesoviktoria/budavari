@@ -28,6 +28,7 @@ import { RecordsAudioSourcePipe } from './pipes/records-audio-source/records-aud
 import { ConcertsContainerComponent } from './containers/concerts-container/concerts-container.component';
 import { ConcertsUpcomingComponent } from './components/concerts-upcoming/concerts-upcoming.component';
 import { ConcertsPreviousComponent } from './components/concerts-previous/concerts-previous.component';
+import { VideosSourcePipe } from './pipes/videos-source/videos-source.pipe';
 
 export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
@@ -56,6 +57,7 @@ export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
     RecordsContainerComponent,
     SoloistsAndExMembersComponent,
     TestimonialsComponent,
+    VideosSourcePipe,
   ],
   imports: [
     AppRoutingModule,
