@@ -4,7 +4,7 @@
     <img
       *ngFor="let icon of contactIcons; trackBy: trackByIndex"
       class="contact-information__icon"
-      [src]="iconsRoute + icon.iconSource"
+      [src]="icon.iconSource | iconItem"
       [alt]="'BVKZ.CONTACT__COMPONENT.CONTACT__ICONS_ALT_TEXT.' + icon.alt | translate"
     />
   </div>

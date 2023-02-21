@@ -30,6 +30,10 @@ import { ConcertsUpcomingComponent } from './components/concerts-upcoming/concer
 import { ConcertsPreviousComponent } from './components/concerts-previous/concerts-previous.component';
 import { VideosSourcePipe } from './pipes/videos-source/videos-source.pipe';
 import { CountdownComponent } from './components/countdown/countdown.component';
+import { GalleryContainerComponent } from './containers/gallery-container/gallery-container.component';
+import { GalleryFolderComponent } from './components/gallery-folder/gallery-folder.component';
+import { GalleryItemSourcePipe } from './pipes/gallery-item-source/gallery-item-source.pipe';
+import { IconItemPipe } from './pipes/icon-item/icon-item.pipe';
 
 export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
@@ -48,9 +52,13 @@ export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
     CountdownComponent,
     FooterComponent,
     FrameComponent,
+    GalleryContainerComponent,
+    GalleryFolderComponent,
+    GalleryItemSourcePipe,
     HeaderComponent,
     HeroSectionComponent,
     HomeContainerComponent,
+    IconItemPipe,
     JoinUsComponent,
     MemberDialogComponent,
     MembersComponent,

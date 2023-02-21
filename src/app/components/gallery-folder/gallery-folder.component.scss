@@ -1,0 +1,63 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.gallery-folder__list {
+  list-style: none;
+}
+
+.gallery-folder__list-item {
+  border-bottom: 1px solid $color-primary-middle;
+  margin-bottom: 6rem;
+  padding-bottom: 4.8rem;
+}
+
+.gallery-folder__list-item:last-child {
+  border: none;
+}
+
+.gallery-folder__title {
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+.gallery-folder__photographer-icon {
+  filter: $icon-color-dark-blue;
+  height: 2.4rem;
+}
+
+.gallery-folder__photographer {
+  display: flex;
+  font-size: 2rem;
+  gap: 1.2rem;
+  margin-bottom: 2.4rem;
+  padding-left: 1rem;
+}
+
+.gallery-folder__images-wrapper {
+  text-align: center;
+}
+
+.gallery-folder__image-container {
+  border-radius: $border-radius-button;
+  display: inline-block;
+  height: 16rem;
+  margin: 1rem;
+  overflow: hidden;
+  width: 16rem;
+}
+
+.gallery-folder__image {
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.4s;
+  width: 100%;
+}
+
+.gallery-folder__image-vertical {
+  height: auto;
+}
+
+.gallery-folder__image:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}

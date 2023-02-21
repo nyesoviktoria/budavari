@@ -1,7 +1,7 @@
 <div *ngIf="countdownResult$ | async as countdownResult" class="countdown">
   <img
     class="countdown__icon"
-    [src]="iconsRoute + 'clock-regular.svg'"
+    [src]="'clock-regular' | iconItem"
     [alt]="'BVKZ.COUNTDOWN__COMPONENT.COUNTDOWN_ICON_ALT' | translate"
   />
   <span class="countdown__container">

@@ -5,7 +5,7 @@
       *ngIf="isIcon"
       class="accordion__arrow-icon"
       [ngClass]="{ rotate: isOpen }"
-      [src]="iconsRoute + 'chevron-down.svg'"
+      [src]="'chevron-down' | iconItem"
       [alt]="'arrow' + isOpen ? 'up' : 'down'"
     />
   </button>

@@ -1,7 +1,5 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { toggleAnimation } from '../../constants/animations.constants';
-import { ICONS_ROUTE } from '../../constants/app.constants';
-
 @Component({
   selector: 'bvkz-accordion',
   templateUrl: './accordion.component.html',
@@ -19,8 +17,6 @@ export class AccordionComponent {
   @Output() isCollapsed = new EventEmitter<boolean>();
 
   isOpen = false;
-
-  readonly iconsRoute = ICONS_ROUTE;
 
   toggleVisibility(): void {
     this.isOpen = !this.isOpen;

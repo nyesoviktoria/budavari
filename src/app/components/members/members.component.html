@@ -16,7 +16,7 @@
           (click)="onMemberSelected(member.memberId)"
         >
           {{ member.memberName }}
-          <img *ngIf="member.isOnGyes" class="members__gyes-icon" [src]="iconsRoute + 'baby-carriage-solid.svg'" alt="babakocsi-logo" />
+          <img *ngIf="member.isOnGyes" class="members__gyes-icon" [src]="'baby-carriage-solid' | iconItem" alt="babakocsi-logo" />
         </li>
       </ul>
       <p class="members__cart-part-sign">{{ 'BVKZ.PART_TYPES.' + cart.partName | translate }}</p>
