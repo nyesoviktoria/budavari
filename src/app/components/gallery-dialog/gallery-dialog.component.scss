@@ -1,0 +1,57 @@
+@import '../../../variables.scss';
+
+.gallery-dialog__section {
+  width: 80vw;
+  height: 100vh;
+  padding: 2.4rem 4.8rem;
+}
+
+.gallery-dialog__image-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-dialog__image {
+  object-fit: cover;
+}
+
+.gallery-dialog__image-vertical {
+  width: 100%;
+}
+.gallery-dialog__image-horizontal {
+  height: 100%;
+}
+
+// .modal__gallery-container {
+//   text-align: center;
+//   width: 100%;
+//   height: 100%;
+//   padding: 4rem 6rem;
+//   position: relative;
+// }
+
+// .modal__image-container {
+//   width: 100%;
+//   height: 100%;
+//   overflow: hidden;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// .gallery-image-modal {
+//   height: 100%;
+//   object-fit: cover;
+// }
+
+// .arrow-to-previous-image {
+//   left: 1rem;
+// }
+
+// .arrow-to-next-image {
+//   right: 1rem;
+// }

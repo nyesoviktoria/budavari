@@ -1,0 +1,21 @@
+<section class="gallery-dialog__section">
+  <!-- <img class="btn-close btn-close__image-modal icon-white" src="/icons/square-xmark.svg" alt="close button" />
+    <img class="icon-dark arrow arrow-to-previous-image" src="/icons/chevron-left-solid.svg" alt="balra mutató nyíl" />
+    <img class="icon-dark arrow arrow-to-next-image" src="/icons/chevron-right-solid.svg" alt="jobbra mutató nyíl" /> -->
+  <figure class="gallery-dialog__image-container">
+    <img
+      [ngClass]="{
+        'gallery-dialog__image-vertical': !data.galleryItems[currentIndex].vertical,
+        'gallery-dialog__image-horizontal': data.galleryItems[currentIndex].vertical
+      }"
+      class="gallery-dialog__image"
+      [src]="data.galleryItems[currentIndex].bigImageSource | galleryItemSource : folderId"
+      [alt]="data.galleryItems[currentIndex].alt"
+    />
+  </figure>
+</section>
+
+<!--
+
+<button (click)="onPreviousClick()">Hatra</button>
+<button (click)="onNextClick()">Elore</button> -->

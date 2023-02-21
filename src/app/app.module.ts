@@ -34,6 +34,7 @@ import { GalleryContainerComponent } from './containers/gallery-container/galler
 import { GalleryFolderComponent } from './components/gallery-folder/gallery-folder.component';
 import { GalleryItemSourcePipe } from './pipes/gallery-item-source/gallery-item-source.pipe';
 import { IconItemPipe } from './pipes/icon-item/icon-item.pipe';
+import { GalleryDialogComponent } from './components/gallery-dialog/gallery-dialog.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
@@ -53,6 +54,7 @@ export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
     FooterComponent,
     FrameComponent,
     GalleryContainerComponent,
+    GalleryDialogComponent,
     GalleryFolderComponent,
     GalleryItemSourcePipe,
     HeaderComponent,

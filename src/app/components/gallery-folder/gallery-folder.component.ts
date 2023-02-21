@@ -1,5 +1,7 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angular/core';
 import { GALLERY_ITEMS } from '../../constants/gallery-items.constants';
+import { GalleryItem } from '../../interfaces/gallery-item.interface';
+import { SelectedGalleryDialogData } from '../../interfaces/selected-gallery-dialog-data.interface';
 
 @Component({
   selector: 'bvkz-gallery-folder',
@@ -8,12 +10,12 @@ import { GALLERY_ITEMS } from '../../constants/gallery-items.constants';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GalleryFolderComponent {
-  @Output() selectedImageId = new EventEmitter<number>();
+  @Output() selectedImageId = new EventEmitter<SelectedGalleryDialogData>();
 
   readonly galleryItems = GALLERY_ITEMS;
 
-  onImageSelect(id: number): void {
-    this.selectedImageId.emit(id);
+  onImageSelect(galleryItems: readonly GalleryItem[], imageId: number): void {
+    this.selectedImageId.emit({ galleryItems, imageId });
   }
 
   trackByIndex(index: number): number {
