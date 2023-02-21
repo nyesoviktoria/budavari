@@ -1,5 +1,5 @@
 <section class="concert-upcoming__section">
-  <h2 class="primary-heading">{{ 'BVKZ.CONCERTS__COMPONENT.CONCERTS_TITLE' | translate }}</h2>
+  <h1 class="primary-heading">{{ 'BVKZ.CONCERTS__COMPONENT.CONCERTS_TITLE' | translate }}</h1>
   <ng-container *ngFor="let concert of concertsUpcomingItems; let i = index; trackBy: trackByIndex">
     <div *ngIf="i !== nonvisibleConcertIndex" class="concert-upcoming__container">
       <picture class="concert-upcoming__image-container">
@@ -20,7 +20,7 @@
               target="_blank"
               [href]="concert[icon.concertUpcomingItemLineIdentifier]"
             >
-              <img class="concerts-upcoming__icon" [src]="iconsRoute + icon.iconSource" [alt]="icon.iconImageAltText"
+              <img class="concerts-upcoming__icon" [src]="icon.iconSource | iconItem" [alt]="icon.iconImageAltText"
             /></a>
             <span
               *ngIf="concert.inviteImageSource"
@@ -28,7 +28,7 @@
               class="invite"
               ><img
                 class="concerts-upcoming__icons"
-                [src]="iconsRoute + 'music-solid.svg'"
+                [src]="'music-solid' | iconItem"
                 [alt]="'BVKZ.CONCERTS__COMPONENT.CONCERTS_UPCOMING__INVITE_ICON' | translate"
             /></span>
           </ng-container>

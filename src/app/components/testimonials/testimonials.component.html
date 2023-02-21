@@ -13,17 +13,13 @@
         </blockquote>
         <p class="testimonials__signature">{{ testimonial.name | translate }}, {{ testimonial.profession | translate }}</p>
       </div>
-      <img class="testimonials__quotation-icon" [src]="iconsRoute + 'quote-right.svg'" alt="quotation mark" />
+      <img class="testimonials__quotation-icon" [src]="'quote-right' | iconItem" alt="quotation mark" />
     </div>
   </div>
 
   <ng-container *ngIf="testimonialItems.length > 1">
-    <img
-      class="testimonials__arrow testimonials__arrow-left disabled"
-      [src]="iconsRoute + 'chevron-left-solid.svg'"
-      alt="arrow to the left"
-    />
-    <img class="testimonials__arrow testimonials__arrow-right" [src]="iconsRoute + 'chevron-right-solid.svg'" alt="arrow to the right" />
+    <img class="testimonials__arrow testimonials__arrow-left disabled" [src]="'chevron-left-solid' | iconItem" alt="arrow to the left" />
+    <img class="testimonials__arrow testimonials__arrow-right" [src]="'chevron-right-solid' | iconItem" alt="arrow to the right" />
     <div class="testimonials__carousel-navigation">
       <button
         *ngFor="let dot of testimonialItems; index as i"
@@ -44,7 +40,7 @@
         {{ testimonial.testimonial | translate }}
       </blockquote>
       <p class="testimonials__signature">{{ testimonial.name | translate }}, {{ testimonial.profession | translate }}</p>
-      <img class="testimonials__quotation-icon" [src]="iconsRoute + 'quote-right.svg'" alt="quotation mark" />
+      <img class="testimonials__quotation-icon" [src]="'quote-right' | iconItem" alt="quotation mark" />
     </div>
   </div>
 </section>

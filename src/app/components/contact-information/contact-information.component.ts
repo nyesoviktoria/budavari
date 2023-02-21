@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { ICONS_ROUTE } from '../../constants/app.constants';
 import { CONTACT_COMPONENT_ICON_ITEMS } from '../../constants/contact-components-icon-items.config.constants';
 import { CONTACT_INFORMATION } from '../../constants/contact-information.constants';
 
@@ -10,7 +9,6 @@ import { CONTACT_INFORMATION } from '../../constants/contact-information.constan
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ContactInformationComponent {
-  readonly iconsRoute = ICONS_ROUTE;
   readonly contactIcons = CONTACT_COMPONENT_ICON_ITEMS;
   readonly contactInformation = CONTACT_INFORMATION;
 

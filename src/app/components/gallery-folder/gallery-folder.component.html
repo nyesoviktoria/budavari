@@ -1,0 +1,25 @@
+<h1 class="primary-heading">{{ 'BVKZ.GALLERY__COMPONENT.GALLERY_TITLE' | translate }}</h1>
+<ul class="gallery-folder__list">
+  <li class="gallery-folder__list-item" *ngFor="let folder of galleryItems; trackBy: trackByIndex">
+    <div>
+      <h2 class="secondary-heading gallery-folder__title">{{ folder.title }}</h2>
+      <span class="gallery-folder__photographer"
+        ><img
+          class="gallery-folder__photographer-icon"
+          [src]="'camera-solid' | iconItem"
+          [alt]="'BVKZ.GALLERY__COMPONENT.GALLERY_CAMERA_ICON' | translate"
+        />{{ folder.photographer }}</span
+      >
+      <div class="gallery-folder__images-wrapper">
+        <figure class="gallery-folder__image-container" *ngFor="let image of folder.images; trackBy: trackByIndex">
+          <img
+            class="gallery-folder__image"
+            [ngClass]="{ 'gallery-folder__image-vertical': image.vertical }"
+            [src]="folder.galleryFolder | galleryItemSource : image.smallImageSource"
+            [alt]="image.alt"
+          />
+        </figure>
+      </div>
+    </div>
+  </li>
+</ul>

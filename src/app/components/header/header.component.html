@@ -18,7 +18,7 @@
       </li>
     </ul>
 
-    <img class="header__mobile-menu-icon" [src]="iconsRoute + 'bars.svg'" alt="menu-icon" (click)="onOpenMobileNavigation()" />
+    <img class="header__mobile-menu-icon" [src]="'bars' | iconItem" alt="menu-icon" (click)="onOpenMobileNavigation()" />
   </nav>
 
   <nav *ngIf="isMobileNavigationOn" class="header__navigation-mobile">

@@ -4,19 +4,19 @@ export const CONCERTS_UPCOMING_ICONS: readonly ConcertsUpcomingIconItem[] = [
   {
     iconHoverText: 'Naptár',
     concertUpcomingItemLineIdentifier: 'calendar',
-    iconSource: 'calendar-days.svg',
+    iconSource: 'calendar-days',
     iconImageAltText: 'naptár ikon',
   },
   {
     iconHoverText: 'Térkép',
     concertUpcomingItemLineIdentifier: 'mapUrl',
-    iconSource: 'map-location-dot.svg',
+    iconSource: 'map-location-dot',
     iconImageAltText: 'térkép ikon',
   },
   {
     iconHoverText: 'Facebook esemény',
     concertUpcomingItemLineIdentifier: 'facebookEventUrl',
-    iconSource: 'square-facebook.svg',
+    iconSource: 'square-facebook',
     iconImageAltText: 'facebook ikon',
   },
 ];

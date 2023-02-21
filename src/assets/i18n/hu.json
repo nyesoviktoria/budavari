@@ -75,6 +75,10 @@
       "COUNTDOWN_MINUTE": "PERC",
       "COUNTDOWN_SECOND": "MP"
     },
+    "GALLERY__COMPONENT": {
+      "GALLERY_TITLE": "Galéria",
+      "GALLERY_CAMERA_ICON": "fényképezőgép ikon"
+    },
     "FOOTER__COMPONENT": {
       "COPYRIGHT__TEXT": "Budavári Kamarazenekar - Minden jog fenntartva"
     },
