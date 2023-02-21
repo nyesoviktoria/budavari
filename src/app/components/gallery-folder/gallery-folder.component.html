@@ -17,6 +17,7 @@
             [ngClass]="{ 'gallery-folder__image-vertical': image.vertical }"
             [src]="folder.galleryFolder | galleryItemSource : image.smallImageSource"
             [alt]="image.alt"
+            (click)="onImageSelect(image.id)"
           />
         </figure>
       </div>

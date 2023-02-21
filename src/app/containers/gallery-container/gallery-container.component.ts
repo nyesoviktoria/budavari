@@ -6,4 +6,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrls: ['./gallery-container.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class GalleryContainerComponent {}
+export class GalleryContainerComponent {
+  onImageSelected(id: number): void {
+    console.log(id);
+  }
+}

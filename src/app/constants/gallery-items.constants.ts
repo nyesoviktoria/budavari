@@ -1,6 +1,6 @@
 import { GalleryFolderItem } from '../interfaces/gallery-folder-item.interface';
 
-export const GALLERY_ITEMS: GalleryFolderItem[] = [
+export const GALLERY_ITEMS: readonly GalleryFolderItem[] = [
   {
     title: '2022. december 17., Deák Téri Evangélikus Gimnázium',
     galleryFolder: '20221217',

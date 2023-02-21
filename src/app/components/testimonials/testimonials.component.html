@@ -22,7 +22,8 @@
     <img class="testimonials__arrow testimonials__arrow-right" [src]="'chevron-right-solid' | iconItem" alt="arrow to the right" />
     <div class="testimonials__carousel-navigation">
       <button
-        *ngFor="let dot of testimonialItems; index as i"
+        type="button"
+        *ngFor="let dot of testimonialItems; index as i; trackBy: trackByIndex"
         class="testimonials__carousel-navigation-dot active-navigation-dot"
         (click)="onDotSelectClick(i)"
       ></button>
@@ -32,7 +33,7 @@
 
 <section class="testimonials__section-mobile">
   <div class="testimonials-container-mobile">
-    <div class="testimonials__cart-mobile" *ngFor="let testimonial of testimonialItems">
+    <div class="testimonials__cart-mobile" *ngFor="let testimonial of testimonialItems; trackBy: trackByIndex">
       <div class="testimonials__image-container">
         <img class="img testimonials__image" [src]="imagesRoute + testimonial.imageSource" [alt]="testimonial.name | translate" />
       </div>
