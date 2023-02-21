@@ -29,6 +29,7 @@ import { ConcertsContainerComponent } from './containers/concerts-container/conc
 import { ConcertsUpcomingComponent } from './components/concerts-upcoming/concerts-upcoming.component';
 import { ConcertsPreviousComponent } from './components/concerts-previous/concerts-previous.component';
 import { VideosSourcePipe } from './pipes/videos-source/videos-source.pipe';
+import { CountdownComponent } from './components/countdown/countdown.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
@@ -44,6 +45,7 @@ export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
     ConcertsUpcomingComponent,
     ContactContainerComponent,
     ContactInformationComponent,
+    CountdownComponent,
     FooterComponent,
     FrameComponent,
     HeaderComponent,

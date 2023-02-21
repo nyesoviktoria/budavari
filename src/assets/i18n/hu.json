@@ -59,10 +59,21 @@
     },
     "CONCERTS__COMPONENT": {
       "CONCERTS_TITLE": "Koncertek",
+      "CONCERTS_UPCOMING__INVITE": "Meghívó",
+      "CONCERTS_UPCOMING__INVITE_ICON": "Meghívó",
       "CONCERTS_PREVIOUS__TITLE": "Korábbi koncertjeink",
       "CONCERTS_PREVIOUS__LINK_FIRST_PART": "A koncert teljes felvételét",
       "CONCERTS_PREVIOUS__LINK_ANCHOR": "itt",
       "CONCERTS_PREVIOUS__LINK_SECOND_PART": "tudjátok megnézni."
+    },
+    "COUNTDOWN__COMPONENT": {
+      "COUNTDOWN_ICON_ALT": "óra ikon",
+      "COUNTDOWN_DAY": "NAP",
+      "COUNTDOWN_DAYS": "NAP",
+      "COUNTDOWN_HOUR": "ÓRA",
+      "COUNTDOWN_HOURS": "ÓRA",
+      "COUNTDOWN_MINUTE": "PERC",
+      "COUNTDOWN_SECOND": "MP"
     },
     "FOOTER__COMPONENT": {
       "COPYRIGHT__TEXT": "Budavári Kamarazenekar - Minden jog fenntartva"
