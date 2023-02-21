@@ -22,24 +22,22 @@ import { getTime } from 'date-fns';
 })
 export class CountdownComponent implements OnInit, OnDestroy {
   @Input() dateTo!: string;
+
   @Input() index!: number;
 
   @Input() endMessage = 'A koncert befejeződött';
 
   @Output() isConcertVisible = new EventEmitter<number>();
 
-  // output ami kikopi, hogz vegzett (void)
-
   readonly iconsRoute = ICONS_ROUTE;
 
-  countdownResult$ = new BehaviorSubject<CountdownResult>({
+  readonly countdownResult$ = new BehaviorSubject<CountdownResult>({
     seconds: INITIAL_NUMBER,
     minutes: INITIAL_NUMBER,
     hours: INITIAL_NUMBER,
-    day: INITIAL_NUMBER,
+    days: INITIAL_NUMBER,
   });
 
-  dateNow!: number;
   totalSecondes!: number;
 
   interval$!: Observable<number>;
@@ -47,7 +45,6 @@ export class CountdownComponent implements OnInit, OnDestroy {
   private readonly objectDestroySource$ = new Subject<void>();
 
   ngOnInit(): void {
-    this.dateNow = this.getDateNow();
     this.initSimpleCountdown();
 
     if (this.totalSecondes < INITIAL_NUMBER) {
@@ -61,10 +58,10 @@ export class CountdownComponent implements OnInit, OnDestroy {
   }
 
   private initSimpleCountdown(): void {
-    this.totalSecondes = getTime(new Date(this.dateTo)) / MILLISECONDS_TO_SECONDS_COUNTER - this.dateNow;
+    this.totalSecondes =
+      getTime(new Date(this.dateTo)) / MILLISECONDS_TO_SECONDS_COUNTER - Math.floor(Date.now() / MILLISECONDS_TO_SECONDS_COUNTER);
 
     this.getCountdownResult(this.totalSecondes);
-    console.log(this.totalSecondes);
 
     this.interval$ = interval(MILLISECONDS_TO_SECONDS_COUNTER).pipe(
       takeUntil(this.objectDestroySource$),
@@ -84,11 +81,7 @@ export class CountdownComponent implements OnInit, OnDestroy {
       seconds: Math.floor(secondes % SECONDS_IN_A_MINUTE),
       minutes: Math.floor((secondes / SECONDS_IN_A_MINUTE) % MINUTES_IN_AN_HOUR),
       hours: Math.floor((secondes / (SECONDS_IN_A_MINUTE * MINUTES_IN_AN_HOUR)) % HOURS_IN_A_DAY),
-      day: Math.floor(secondes / (SECONDS_IN_A_MINUTE * MINUTES_IN_AN_HOUR * HOURS_IN_A_DAY)),
+      days: Math.floor(secondes / (SECONDS_IN_A_MINUTE * MINUTES_IN_AN_HOUR * HOURS_IN_A_DAY)),
     });
-  }
-
-  private getDateNow(): number {
-    return Math.floor(Date.now() / MILLISECONDS_TO_SECONDS_COUNTER);
   }
 }

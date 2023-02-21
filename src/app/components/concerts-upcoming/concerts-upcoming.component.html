@@ -5,7 +5,7 @@
       <picture class="concert-upcoming__image-container">
         <source media="(min-width:768px)" [srcset]="imagesRoute + concert.imageDesktopSource" />
         <img class="concert-upcoming__image" [src]="imagesRoute + concert.imageMobileSource" />
-        <bvkz-countdown [dateTo]="concert.timeStamp" [index]="i" (isConcertVisible)="isConcertVisible($event)"></bvkz-countdown>
+        <bvkz-countdown [dateTo]="concert.dateCode" [index]="i" (isConcertVisible)="isConcertVisible($event)"></bvkz-countdown>
       </picture>
       <div class="concert-upcoming__text">
         <p class="concert-upcoming__text-title">{{ concert.title }}</p>
@@ -22,8 +22,14 @@
             >
               <img class="concerts-upcoming__icon" [src]="iconsRoute + icon.iconSource" [alt]="icon.iconImageAltText"
             /></a>
-            <span *ngIf="concert.inviteImageSource" title="Meghívó" class="invite"
-              ><img class="concerts-upcoming__icons" [src]="iconsRoute + 'music-solid.svg'" alt="meghívó logo"
+            <span
+              *ngIf="concert.inviteImageSource"
+              [title]="'BVKZ.CONCERTS__COMPONENT.CONCERTS_UPCOMING__INVITE' | translate"
+              class="invite"
+              ><img
+                class="concerts-upcoming__icons"
+                [src]="iconsRoute + 'music-solid.svg'"
+                [alt]="'BVKZ.CONCERTS__COMPONENT.CONCERTS_UPCOMING__INVITE_ICON' | translate"
             /></span>
           </ng-container>
         </div>

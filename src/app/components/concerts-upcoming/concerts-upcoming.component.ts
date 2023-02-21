@@ -19,7 +19,6 @@ export class ConcertsUpcomingComponent {
 
   isConcertVisible(index: number): void {
     this.nonvisibleConcertIndex = index;
-
   }
 
   trackByIndex(index: number): number {
