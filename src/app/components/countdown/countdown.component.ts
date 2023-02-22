@@ -6,7 +6,6 @@ import { Observable, Subject, interval, takeUntil, filter, tap, BehaviorSubject 
 import {
   HOURS_IN_A_DAY,
   ICONS_ROUTE,
-  INITIAL_NUMBER,
   MILLISECONDS_TO_SECONDS_COUNTER,
   MINUTES_IN_AN_HOUR,
   SECONDS_IN_A_MINUTE,
@@ -32,10 +31,10 @@ export class CountdownComponent implements OnInit, OnDestroy {
   readonly iconsRoute = ICONS_ROUTE;
 
   readonly countdownResult$ = new BehaviorSubject<CountdownResult>({
-    seconds: INITIAL_NUMBER,
-    minutes: INITIAL_NUMBER,
-    hours: INITIAL_NUMBER,
-    days: INITIAL_NUMBER,
+    seconds: 0,
+    minutes: 0,
+    hours: 0,
+    days: 0,
   });
 
   totalSecondes!: number;
@@ -47,7 +46,7 @@ export class CountdownComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.initSimpleCountdown();
 
-    if (this.totalSecondes < INITIAL_NUMBER) {
+    if (this.totalSecondes < 0) {
       this.isConcertVisible.emit(this.index);
     }
   }
@@ -65,7 +64,7 @@ export class CountdownComponent implements OnInit, OnDestroy {
 
     this.interval$ = interval(MILLISECONDS_TO_SECONDS_COUNTER).pipe(
       takeUntil(this.objectDestroySource$),
-      filter(() => this.totalSecondes > INITIAL_NUMBER),
+      filter(() => this.totalSecondes > 0),
       tap(() => {
         this.totalSecondes--;
 
