@@ -11,8 +11,10 @@
       "RECORDS": "Lemezeink"
     },
     "HERO__COMPONENT": {
-      "HERO_1__TITLE": "Idézzük fel koncertjeinket",
-      "HERO_1__TEXT": "A koncerteken készült fényképekeink már elérhetőek galériánkban, felvételeink pedig youtube csatornánkon"
+      "HERO_1__TITLE": "János-passió",
+      "HERO_1__TEXT": "Március 18-án szeretettel várunk mindenkit nagyböjti koncertünkön.",
+      "HERO_2__TITLE": "Idézzük fel koncertjeinket",
+      "HERO_2__TEXT": "A koncerteken készült fényképekeink már elérhetőek galériánkban, felvételeink pedig youtube csatornánkon"
     },
     "ABOUT_US__COMPONENT": {
       "ABOUT_US__TITLE": "Zenekarunkról",
@@ -126,7 +128,7 @@
       "RECORDS__HEADING": "Lemezeink",
       "RECORDS__SOLOIST": "Szólista"
     },
-    "GENERAL":{
+    "GENERAL": {
       "ARROW_TO_THE_LEFT": "balra mutató nyíl",
       "ARROW_TO_THE_RIGHT": "jobbra mutató nyíl"
     }

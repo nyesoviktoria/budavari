@@ -35,6 +35,7 @@ import { GalleryFolderComponent } from './components/gallery-folder/gallery-fold
 import { GalleryItemSourcePipe } from './pipes/gallery-item-source/gallery-item-source.pipe';
 import { IconItemPipe } from './pipes/icon-item/icon-item.pipe';
 import { GalleryDialogComponent } from './components/gallery-dialog/gallery-dialog.component';
+import { MatCarouselModule } from '@magloft/material-carousel';
 
 export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
@@ -76,6 +77,7 @@ export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
     BrowserAnimationsModule,
     BrowserModule,
     HttpClientModule,
+    MatCarouselModule.forRoot(),
     MatDialogModule,
     TranslateModule.forRoot({
       loader: {
