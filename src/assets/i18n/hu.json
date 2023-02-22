@@ -1,8 +1,5 @@
 {
   "BVKZ": {
-    "MEMBERS__COMPONENT": {
-      "MEMBERS__TITLE": "Tagjaink"
-    },
     "HEADER__COMPONENT": {
       "HEADER__ORCHESTRA": "Kamarazenekar",
       "HEADER_LOGO_ALT__TEXT": "egy hegedű és egy cselló csigája szív formát alkot"
@@ -31,6 +28,9 @@
       "FIRST_TESTIMONIAL__NAME": "Bartók Tamás",
       "FIRST_TESTIMONIAL__TEXT": "Miután a zeneiskolai kereteket kinőttük, nem volt kérdés, hogy a közös muzsikálást folytatni szeretnénk, és egy élethosszig tartó, közös zenei kalandba vágunk bele együtt. Büszke vagyok rá, hogy a Budavári Kamarazenekar alapító tagja lehettem, hiszen az ilyen típusú amatőr együttesek hiánypótló szerepet töltenek be a magyar zenei életben.",
       "FIRST_TESTIMONIAL__SIGNATURE": "az Anima Musicae kamarazenekar brácsa szólamvezetője"
+    },
+    "MEMBERS__COMPONENT": {
+      "MEMBERS__TITLE": "Tagjaink"
     },
     "PART_TYPES": {
       "CONDUCTOR": "Karmester",
@@ -125,6 +125,10 @@
     "RECORDS__COMPONENT": {
       "RECORDS__HEADING": "Lemezeink",
       "RECORDS__SOLOIST": "Szólista"
+    },
+    "GENERAL":{
+      "ARROW_TO_THE_LEFT": "balra mutató nyíl",
+      "ARROW_TO_THE_RIGHT": "jobbra mutató nyíl"
     }
   }
 }

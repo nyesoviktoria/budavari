@@ -1,0 +1,31 @@
+<section class="gallery-dialog__section ">
+  <img
+    class="gallery-dialog__arrow gallery-dialog__arrow-to-previous-image"
+    [src]="'chevron-left-solid' | iconItem"
+    [alt]="'BVKZ.GENERAL.ARROW_TO_THE_LEFT' | translate"
+    (click)="onPreviousClick()"
+    [ngClass]="{ disabled: currentIndex === 0 }"
+  />
+
+  <img
+    class="gallery-dialog__arrow gallery-dialog__arrow-to-next-image"
+    [src]="'chevron-right-solid' | iconItem"
+    [alt]="'BVKZ.GENERAL.ARROW_TO_THE_RIGHT' | translate"
+    (click)="onNextClick()"
+    [ngClass]="{ disabled: currentIndex === data.galleryItems.length - 1 }"
+  />
+
+  <figure class="gallery-dialog__image-container">
+    <img
+      [ngClass]="{
+        'gallery-dialog__image-vertical': data.galleryItems[currentIndex].vertical,
+        'gallery-dialog__image-horizontal': !data.galleryItems[currentIndex].vertical
+      }"
+      class="gallery-dialog__image"
+      [src]="data.galleryItems[currentIndex].bigImageSource | galleryItemSource : folderId"
+      [alt]="data.galleryItems[currentIndex].alt"
+      (touchstart)="swipe($event, 'start')"
+      (touchend)="swipe($event, 'end')"
+    />
+  </figure>
+</section>

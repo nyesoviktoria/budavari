@@ -1,0 +1,55 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.gallery-dialog__section {
+  height: 100vh;
+  background: black;
+}
+
+.gallery-dialog__image-container {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.gallery-dialog__image-horizontal {
+  max-height: 100%;
+  width: 100%;
+}
+
+.gallery-dialog__image-vertical {
+  max-height: 100%;
+  min-width: 100%;
+}
+
+.gallery-dialog__arrow {
+  cursor: pointer;
+  filter: $icon-color-white;
+  height: 100vh;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s;
+  width: 40px;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.gallery-dialog__arrow-to-previous-image {
+  padding-left: 1rem;
+}
+
+.gallery-dialog__arrow-to-next-image {
+  right: 0;
+  padding-right: 1rem;
+}
+
+.disabled,
+.disabled:hover {
+  cursor: auto;
+  opacity: 0;
+}

@@ -5,7 +5,7 @@ import { IMAGES_ROUTE } from '../../constants/app.constants';
   name: 'galleryItemSource',
 })
 export class GalleryItemSourcePipe implements PipeTransform {
-  transform(folder: string, imageSource: string): unknown {
+  transform(imageSource: string, folder: string): unknown {
     return `${IMAGES_ROUTE}gallery/${folder}/${imageSource}.webp`;
   }
 }
