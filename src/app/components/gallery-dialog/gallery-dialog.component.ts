@@ -43,16 +43,20 @@ export class GalleryDialogComponent {
 
   swipe(touchEvent: TouchEvent, when: string): void {
     const coord: [number, number] = [touchEvent.changedTouches[0].clientX, touchEvent.changedTouches[0].clientY];
+    const time = new Date().getTime();
 
     if (when === SwipeWhen.START) {
       this.swipeCoord = coord;
+      this.swipeTime = time;
     } else if (when === SwipeWhen.END) {
       const direction = [coord[0] - this.swipeCoord[0], coord[1] - this.swipeCoord[1]];
+      const duration = time - this.swipeTime;
+      const isDurationLongEnough: boolean = duration < MILLISECONDS_TO_SECONDS_COUNTER;
       const isDistanceBigEnough: boolean = Math.abs(direction[0]) > NUMBER_TO_CHECK_IF_LONG_ENOUGH;
       const isDirectionDifferenceBigEnough: boolean =
         Math.abs(direction[0]) > Math.abs(direction[1] * NUMBER_TO_CHECK_IF_HORIZONTAL_ENOUGH);
 
-      if (isDistanceBigEnough && isDirectionDifferenceBigEnough) {
+      if (isDurationLongEnough && isDistanceBigEnough && isDirectionDifferenceBigEnough) {
         this.currentIndex = direction[0] < 0 ? this.currentIndex + 1 : this.currentIndex - 1;
       }
     }
