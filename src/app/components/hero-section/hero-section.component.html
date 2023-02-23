@@ -1,32 +1,32 @@
-<section class="hero__section">
-  <div class="hero__carousel-track">
-    <div class="hero__slide hero__slide1">
-      <picture>
-        <source media="(min-width:1024px)" [srcset]="imagesRoute + 'slide2-full.webp'" />
-        <source media="(min-width:768px)" [srcset]="imagesRoute + 'slide2.webp'" />
-        <img class="hero__slide-image" [src]="imagesRoute + 'slide2-mobile.webp'" />
-      </picture>
-      <div class="hero__text-container hero__text-container">
-        <p class="hero__text-title">{{ 'BVKZ.HERO__COMPONENT.HERO_1__TITLE' | translate }}</p>
-        <p class="hero__text-content">
-          {{ 'BVKZ.HERO__COMPONENT.HERO_1__TEXT' | translate }}
-        </p>
-        <button class="hero__navigation-button">{{ 'BVKZ.NAVIGATION__LINKS.GALLERY' | translate }}</button>
+<section class="hero-section__carousel-container">
+  <mat-carousel
+    timings="700ms ease-in"
+    [autoplay]="true"
+    [interval]="10000"
+    color="accent"
+    [maintainAspectRatio]="false"
+    [slides]="2"
+    [hideArrows]="true"
+    [hideIndicators]="false"
+    [useKeyboard]="true"
+  >
+    <mat-carousel-slide *ngFor="let slide of heroCarouselItems; trackBy: trackByIndex">
+      <div class="hero-section__carousel-slide">
+        <picture>
+          <source media="(min-width:1024px)" [srcset]="imagesRoute + slide.imageDesktopSource" />
+          <source media="(min-width:768px)" [srcset]="imagesRoute + slide.imageTabletSource" />
+          <img class="hero-section__carousel-slide-image" [src]="imagesRoute + slide.imageDesktopSource" />
+        </picture>
+        <div class="hero-section__carousel-text-container">
+          <p class="hero-section__carousel-text-title">{{ slide.slideTitle | translate }}</p>
+          <p class="hero-section__carousel-text-content">
+            {{ slide.slideText | translate }}
+          </p>
+          <a class="hero-section__carousel-navigation-button" [routerLink]="slide.navigateTo">
+            {{ slide.button | translate }}
+          </a>
+        </div>
       </div>
-    </div>
-    <!-- <div class="hero__slide hero__slide2 hidden">
-      <div class="hero__text-container hero__text-container2">
-        <p class="hero__text-title">Karácsonyi koncert</p>
-        <p class="hero__text-content">
-          A koncerten készült fényképek már elérhetőek galériánkban, a felvételek pedig youtube csatornánkon.
-        </p>
-        <a href="#" data-target="gallery" class="nav-link btn hero-btn-to-hide">Galéria</a>
-      </div>
-    </div> -->
-  </div>
-
-  <div class="hero__carousel-navigation-dots-container">
-    <button class="hero__carousel-navigation-dot active-navigation-dot" data-number="0"></button>
-    <button class="hero__carousel-navigation-dot" data-number="1"></button>
-  </div>
+    </mat-carousel-slide>
+  </mat-carousel>
 </section>
