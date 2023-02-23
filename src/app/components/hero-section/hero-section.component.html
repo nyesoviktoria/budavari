@@ -1,49 +1,33 @@
-<mat-carousel
-  timings="700ms ease-in"
-  [autoplay]="true"
-  [interval]="10000"
-  color="accent"
-  maxWidth="auto"
-  slideHeight="50rem"
-  [maintainAspectRatio]="false"
-  [slides]="2"
-  [loop]="true"
-  [hideArrows]="true"
-  [hideIndicators]="false"
-  [useKeyboard]="true"
-  [useMouseWheel]="false"
-  orientation="ltr"
->
-  <mat-carousel-slide>
-    <div class="hero__slide hero__slide1">
-      <picture>
-        <source media="(min-width:1024px)" [srcset]="imagesRoute + 'slide2-full.webp'" />
-        <source media="(min-width:768px)" [srcset]="imagesRoute + 'slide2.webp'" />
-        <img class="hero__slide-image" [src]="imagesRoute + 'slide2-mobile.webp'" />
-      </picture>
-      <div class="hero__text-container hero__text-container">
-        <p class="hero__text-title">{{ 'BVKZ.HERO__COMPONENT.HERO_1__TITLE' | translate }}</p>
-        <p class="hero__text-content">
-          {{ 'BVKZ.HERO__COMPONENT.HERO_1__TEXT' | translate }}
-        </p>
-        <button class="hero__navigation-button">{{ 'BVKZ.NAVIGATION__LINKS.GALLERY' | translate }}</button>
+<section class="hero-section__carousel-container">
+  <mat-carousel
+    timings="700ms ease-in"
+    [autoplay]="true"
+    [interval]="10000"
+    color="accent"
+    [maintainAspectRatio]="false"
+    [slides]="2"
+    [hideArrows]="true"
+    [hideIndicators]="false"
+    [useKeyboard]="true"
+  >
+    <mat-carousel-slide *ngFor="let slide of heroCarouselItems; trackBy: trackByIndex">
+      <div class="hero-section__carousel-slide">
+        <picture>
+          <source media="(min-width:1024px)" [srcset]="imagesRoute + slide.imageDesktopSource" />
+          <source media="(min-width:768px)" [srcset]="imagesRoute + slide.imageTabletSource" />
+          <img class="hero-section__carousel-slide-image" [src]="imagesRoute + slide.imageDesktopSource" />
+        </picture>
+        <div class="hero-section__carousel-text-container">
+          <p class="hero-section__carousel-text-title">{{ slide.slideTitle | translate }}</p>
+          <p class="hero-section__carousel-text-content">
+            {{ slide.slideText | translate }}
+          </p>
+          <h1>slide.navigateTo: {{ slide.navigateTo }}</h1>
+          <a class="hero-section__carousel-navigation-button" [routerLink]="slide.navigateTo">
+            {{ slide.button | translate }}
+          </a>
+        </div>
       </div>
-    </div>
-  </mat-carousel-slide>
-  <mat-carousel-slide>
-    <div class="hero__slide hero__slide1">
-      <picture>
-        <source media="(min-width:1024px)" [srcset]="imagesRoute + 'slide2-full.webp'" />
-        <source media="(min-width:768px)" [srcset]="imagesRoute + 'slide2.webp'" />
-        <img class="hero__slide-image" [src]="imagesRoute + 'slide2-mobile.webp'" />
-      </picture>
-      <div class="hero__text-container hero__text-container">
-        <p class="hero__text-title">{{ 'BVKZ.HERO__COMPONENT.HERO_2__TITLE' | translate }}</p>
-        <p class="hero__text-content">
-          {{ 'BVKZ.HERO__COMPONENT.HERO_2__TEXT' | translate }}
-        </p>
-        <button class="hero__navigation-button">{{ 'BVKZ.NAVIGATION__LINKS.GALLERY' | translate }}</button>
-      </div>
-    </div>
-  </mat-carousel-slide>
-</mat-carousel>
+    </mat-carousel-slide>
+  </mat-carousel>
+</section>
