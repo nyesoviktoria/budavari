@@ -24,8 +24,8 @@
       class="gallery-dialog__image"
       [src]="data.galleryItems[currentIndex].bigImageSource | galleryItemSource : folderId"
       [alt]="data.galleryItems[currentIndex].alt"
-      (touchstart)="swipe($event, 'start')"
-      (touchend)="swipe($event, 'end')"
+      (touchstart)="swipeStart($event)"
+      (touchend)="swipeEnd($event)"
     />
   </figure>
 </section>

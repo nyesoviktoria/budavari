@@ -1,13 +1,6 @@
 import { ChangeDetectionStrategy, Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import {
-  IMAGES_ROUTE,
-  MILLISECONDS_TO_SECONDS_COUNTER,
-  NUMBER_TO_CHECK_IF_HORIZONTAL_ENOUGH,
-  NUMBER_TO_CHECK_IF_LONG_ENOUGH,
-  NUMBER_TO_REDUCE_LENGTH_BY_2,
-} from '../../constants/app.constants';
-import { SwipeWhen } from '../../enums/swipe-when.enum';
+import { IMAGES_ROUTE, NUMBER_TO_REDUCE_LENGTH_BY_2 } from '../../constants/app.constants';
 import { GalleryItem } from '../../interfaces/gallery-item.interface';
 import { SelectedGalleryDialogData } from '../../interfaces/selected-gallery-dialog-data.interface';
 
@@ -18,10 +11,12 @@ import { SelectedGalleryDialogData } from '../../interfaces/selected-gallery-dia
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GalleryDialogComponent {
-  private swipeCoord: [number, number] = [0, 0];
-  private swipeTime = 0;
   readonly imagesRoute = IMAGES_ROUTE;
+
   readonly folderId = String(this.data.imageId).slice(0, NUMBER_TO_REDUCE_LENGTH_BY_2);
+
+  private touchStart = 0;
+  private touchEnd = 0;
 
   currentIndex = this.data.galleryItems.findIndex((galleryItem: GalleryItem) => galleryItem.id === this.data.imageId);
 
@@ -31,6 +26,7 @@ export class GalleryDialogComponent {
     if (this.currentIndex === this.data.galleryItems.length - 1) {
       return;
     }
+
     this.currentIndex++;
   }
 
@@ -38,23 +34,22 @@ export class GalleryDialogComponent {
     if (this.currentIndex === 0) {
       return;
     }
+
     this.currentIndex--;
   }
 
-  swipe(touchEvent: TouchEvent, when: string): void {
-    const coord: [number, number] = [touchEvent.changedTouches[0].clientX, touchEvent.changedTouches[0].clientY];
+  swipeStart(event: TouchEvent): void {
+    this.touchStart = event.changedTouches[0].screenX;
+  }
 
-    if (when === SwipeWhen.START) {
-      this.swipeCoord = coord;
-    } else if (when === SwipeWhen.END) {
-      const direction = [coord[0] - this.swipeCoord[0], coord[1] - this.swipeCoord[1]];
-      const isDistanceBigEnough: boolean = Math.abs(direction[0]) > NUMBER_TO_CHECK_IF_LONG_ENOUGH;
-      const isDirectionDifferenceBigEnough: boolean =
-        Math.abs(direction[0]) > Math.abs(direction[1] * NUMBER_TO_CHECK_IF_HORIZONTAL_ENOUGH);
+  swipeEnd(event: TouchEvent): void {
+    this.touchEnd = event.changedTouches[0].screenX;
+    if (this.touchEnd < this.touchStart) {
+      this.onNextClick();
+    }
 
-      if (isDistanceBigEnough && isDirectionDifferenceBigEnough) {
-        this.currentIndex = direction[0] < 0 ? this.currentIndex + 1 : this.currentIndex - 1;
-      }
+    if (this.touchEnd > this.touchStart) {
+      this.onPreviousClick();
     }
   }
 }
