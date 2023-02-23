@@ -11,6 +11,8 @@ import { HERO_CAROUSEL_ITEMS } from '../../constants/hero-carousel-items.constan
 export class HeroSectionComponent {
   readonly imagesRoute = IMAGES_ROUTE;
   readonly heroCarouselItems = HERO_CAROUSEL_ITEMS;
+  readonly carouselEaseInTiming = '700ms ease-in';
+  readonly carouselTiming = 10000;
 
   trackByIndex(index: number): number {
     return index;

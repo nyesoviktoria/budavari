@@ -1,12 +1,10 @@
 <section class="hero-section__carousel-container">
   <mat-carousel
-    timings="700ms ease-in"
+    [timings]="carouselEaseInTiming"
     [autoplay]="true"
-    [interval]="10000"
-    color="accent"
+    [interval]="carouselTiming"
     [maintainAspectRatio]="false"
-    [slides]="2"
-    [hideArrows]="true"
+    [slides]="heroCarouselItems.length"
     [hideIndicators]="false"
     [useKeyboard]="true"
   >

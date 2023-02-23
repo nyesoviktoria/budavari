@@ -77,7 +77,7 @@ export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
     BrowserAnimationsModule,
     BrowserModule,
     HttpClientModule,
-    MatCarouselModule.forRoot(),
+    MatCarouselModule,
     MatDialogModule,
     TranslateModule.forRoot({
       loader: {
