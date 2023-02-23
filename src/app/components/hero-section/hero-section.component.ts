@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { IMAGES_ROUTE } from '../../constants/app.constants';
-import { MatCarousel, MatCarouselComponent, MatCarouselSlide, MatCarouselSlideComponent } from '@magloft/material-carousel';
+import { HERO_CAROUSEL_ITEMS } from '../../constants/hero-carousel-items.constants';
 
 @Component({
   selector: 'bvkz-hero-section',
@@ -10,4 +10,9 @@ import { MatCarousel, MatCarouselComponent, MatCarouselSlide, MatCarouselSlideCo
 })
 export class HeroSectionComponent {
   readonly imagesRoute = IMAGES_ROUTE;
+  readonly heroCarouselItems = HERO_CAROUSEL_ITEMS;
+
+  trackByIndex(index: number): number {
+    return index;
+  }
 }

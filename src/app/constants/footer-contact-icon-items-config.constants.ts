@@ -7,7 +7,7 @@ export const FOOTER_CONTACT_ICON_ITEMS: readonly FooterContactIcon[] = [
     alt: 'facebook icon',
   },
   {
-    url: 'https://www.youtube.com/user/bkzk08',
+    url: 'https://www.youtube.com/@bkzk08/playlists',
     iconSource: 'youtube',
     alt: 'youtube icon',
   },

@@ -1,7 +1,7 @@
 @import '../../../variables.scss';
 @import '../../../mixins.scss';
 
-.hero__section {
+.hero-section__carousel-container {
   height: 35rem;
   max-width: 100%;
   position: relative;
@@ -12,25 +12,18 @@
   }
 }
 
-.hero__carousel-track {
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-
-.hero__slide {
+.hero-section__carousel-slide {
   height: 100%;
   position: absolute;
   transition: all 1s;
   width: 100%;
 }
 
-.hero__slide-image {
+.hero-section__carousel-slide-image {
   width: 100%;
 }
 
-.hero__text-container {
+.hero-section__carousel-text-container {
   align-items: center;
   background-color: $color-primary-light-transparent-much;
   border-radius: $border-radius-basic;
@@ -52,7 +45,7 @@
   }
 }
 
-.hero__text-title {
+.hero-section__carousel-text-title {
   font-size: 2rem;
   font-weight: 700;
 
@@ -62,7 +55,7 @@
   }
 }
 
-.hero__text-content {
+.hero-section__carousel-text-content {
   display: none;
   font-size: 2rem;
   line-height: 2.8rem;
@@ -72,46 +65,15 @@
   }
 }
 
-.hero__navigation-button {
-  -webkit-transition: 0.3s background-color linear;
+.hero-section__carousel-navigation-button {
   background-color: $color-primary-dark;
   border-radius: $border-radius-button;
-  border: none;
   color: $color-primary-light;
   font-size: 1.6rem;
-  font-weight: 400;
-  margin-left: auto;
   padding: 0.8rem 1.4rem;
-  transition: all 0.3s;
+  text-decoration: none;
 
   @include tablet {
     display: none;
   }
-}
-
-.hero__navigation-button:hover {
-  background-color: $color-primary-dark-darker;
-}
-
-.hero__carousel-navigation-dots-container {
-  bottom: 0;
-  display: flex;
-  gap: 1.2rem;
-  padding: 10px 0;
-  position: absolute;
-  right: 50%;
-  transform: translate(50%, 100%);
-}
-
-.hero__carousel-navigation-dot {
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: $border-radius-round;
-  border: 0;
-  cursor: pointer;
-  height: 12px;
-  width: 12px;
-}
-
-.hero__carousel-navigation-dot.active-navigation-dot {
-  background: rgba(0, 0, 0, 0.75);
 }

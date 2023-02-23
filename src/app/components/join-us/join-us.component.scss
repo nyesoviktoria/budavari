@@ -1,7 +1,12 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
 .join-us__image {
-  padding: 0 6.4rem;
+  border-radius: $border-radius-basic;
+  display: flex;
   margin: 0 auto;
-  border-radius: 5px;
-  display: inline-block;
-  max-width: 100%;
+  width: 90%;
+  @include tablet {
+    width: 80%;
+  }
 }
