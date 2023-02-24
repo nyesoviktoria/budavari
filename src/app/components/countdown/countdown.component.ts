@@ -4,6 +4,7 @@ import { CountdownResult } from '../../interfaces/countdown-result.interface';
 
 import { Observable, Subject, interval, takeUntil, filter, tap, BehaviorSubject } from 'rxjs';
 import {
+  CHARACTERS_TO_COUNTDOWN,
   HOURS_IN_A_DAY,
   ICONS_ROUTE,
   MILLISECONDS_TO_SECONDS_COUNTER,
@@ -31,10 +32,10 @@ export class CountdownComponent implements OnInit, OnDestroy {
   readonly iconsRoute = ICONS_ROUTE;
 
   readonly countdownResult$ = new BehaviorSubject<CountdownResult>({
-    seconds: 0,
-    minutes: 0,
-    hours: 0,
-    days: 0,
+    seconds: '',
+    minutes: '',
+    hours: '',
+    days: '',
   });
 
   totalSecondes!: number;
@@ -77,10 +78,13 @@ export class CountdownComponent implements OnInit, OnDestroy {
 
   private getCountdownResult(secondes: number): void {
     this.countdownResult$.next({
-      seconds: Math.floor(secondes % SECONDS_IN_A_MINUTE),
-      minutes: Math.floor((secondes / SECONDS_IN_A_MINUTE) % MINUTES_IN_AN_HOUR),
-      hours: Math.floor((secondes / (SECONDS_IN_A_MINUTE * MINUTES_IN_AN_HOUR)) % HOURS_IN_A_DAY),
-      days: Math.floor(secondes / (SECONDS_IN_A_MINUTE * MINUTES_IN_AN_HOUR * HOURS_IN_A_DAY)),
+      seconds: String(Math.floor(secondes % SECONDS_IN_A_MINUTE)).padStart(CHARACTERS_TO_COUNTDOWN, '0'),
+      minutes: String(Math.floor((secondes / SECONDS_IN_A_MINUTE) % MINUTES_IN_AN_HOUR)).padStart(CHARACTERS_TO_COUNTDOWN, '0'),
+      hours: String(Math.floor((secondes / (SECONDS_IN_A_MINUTE * MINUTES_IN_AN_HOUR)) % HOURS_IN_A_DAY)).padStart(
+        CHARACTERS_TO_COUNTDOWN,
+        '0'
+      ),
+      days: String(Math.floor(secondes / (SECONDS_IN_A_MINUTE * MINUTES_IN_AN_HOUR * HOURS_IN_A_DAY))),
     });
   }
 }

@@ -1,6 +1,6 @@
 export interface CountdownResult {
-  readonly seconds: number;
-  readonly minutes: number;
-  readonly hours: number;
-  readonly days: number;
+  readonly seconds: string;
+  readonly minutes: string;
+  readonly hours: string;
+  readonly days: string;
 }
