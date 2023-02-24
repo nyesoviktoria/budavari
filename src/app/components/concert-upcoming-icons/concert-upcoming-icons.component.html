@@ -3,12 +3,12 @@
     *ngIf="concertActual.dateCode"
     [title]="'BVKZ.CONCERTS__COMPONENT.CONCERTS_UPCOMING__ICON_CALENDAR_TITLE' | translate"
     target="_blank"
-    href="{{ concertCalendarUrl }}"
+    [href]="concertCalendarUrl"
   >
     <img
       class="concerts-upcoming__icon"
       [src]="'calendar-days' | iconItem"
-      [alt]="'BVKZ.CONCERTS__COMPONENT.CONCERTS_UPCOMING__ICON_CALENDAR_ALT  ' | translate"
+      [alt]="'BVKZ.CONCERTS__COMPONENT.CONCERTS_UPCOMING__ICON_CALENDAR_ALT' | translate"
   /></a>
   <a
     *ngIf="concertActual.mapUrl"

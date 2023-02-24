@@ -11,14 +11,15 @@ import { ConcertUpcomingItem } from '../../interfaces/concerts-upcoming-item.int
 export class ConcertUpcomingIconsComponent implements OnInit {
   @Input() concertActual!: ConcertUpcomingItem;
 
+  private googleCalendarUrlStart = 'https://www.google.com/calendar/render?action=TEMPLATE';
+
   concertCalendarUrl = '';
 
   ngOnInit(): void {
-    this.concertCalendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${
-      this.concertActual.title
-    }&dates=${this.createCorrectDateForm(this.concertActual.dateCode, this.concertActual.concertLengthInMinutes)}&details=${
-      this.concertActual.description
-    }&location=${this.concertActual.place}&sf=true&output=xml`;
+    this.concertCalendarUrl = `${this.googleCalendarUrlStart}&text=${this.concertActual.title}&dates=${this.createCorrectDateForm(
+      this.concertActual.dateCode,
+      this.concertActual.concertLengthInMinutes
+    )}&details=${this.concertActual.description}&location=${this.concertActual.place}&sf=true&output=xml`;
   }
 
   createCorrectDateForm(dateCode: string, length: number): string {
