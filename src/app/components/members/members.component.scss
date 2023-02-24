@@ -48,12 +48,16 @@
   border-radius: 50px;
   box-shadow: $box-shadow-small;
   color: $color-primary-dark-lighter;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   padding: 0.8rem 1.2rem;
   position: absolute;
   right: 0;
-  transform: translate(3rem, -2.5rem);
+  transform: translate(3rem, -2rem);
 
+  @include tablet {
+    font-size: 1.4rem;
+    transform: translate(3rem, -1.5rem);
+  }
   @include desktop-xl {
     transform: translate(2rem, -1rem);
   }

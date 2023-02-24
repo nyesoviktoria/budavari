@@ -54,24 +54,6 @@
   width: 100%;
 }
 
-.member-dialog__close-button {
-  cursor: pointer;
-  filter: $icon-color-dark-blue;
-  height: 2.4rem;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transform: translate(-0.5rem, 0.5rem);
-
-  @include tablet {
-    transform: translate(-1rem, 1rem);
-  }
-}
-
-.member-dialog__close-image:hover {
-  filter: $icon-color-dark-blue-hover;
-}
-
 .mdc-dialog__content {
   color: $color-grey-dark;
   font-family: 'Roboto', sans-serif;
