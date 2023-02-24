@@ -1,0 +1,12 @@
+@import '../../../variables.scss';
+
+.concerts-upcoming__icon {
+  filter: $icon-color-dark-blue;
+  height: 3.2rem;
+  transition: all 0.3s;
+}
+
+.concerts-upcoming__icon:hover {
+  filter: $icon-color-dark-blue-hover;
+  transform: scale(1.05);
+}

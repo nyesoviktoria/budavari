@@ -9,6 +9,6 @@ export interface ConcertUpcomingItem {
   readonly description: string;
   readonly inviteImageSource?: string;
   readonly mapUrl?: string;
-  readonly calendar?: string;
+  readonly calendarUrl?: string;
   readonly facebookEventUrl?: string;
 }
