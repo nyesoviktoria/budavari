@@ -5,7 +5,6 @@
     [interval]="carouselTiming"
     [maintainAspectRatio]="false"
     [slides]="heroCarouselItems.length"
-    [hideIndicators]="false"
     [useKeyboard]="true"
   >
     <mat-carousel-slide *ngFor="let slide of heroCarouselItems; trackBy: trackByIndex">
@@ -13,7 +12,7 @@
         <picture>
           <source media="(min-width:1024px)" [srcset]="imagesRoute + slide.imageDesktopSource" />
           <source media="(min-width:768px)" [srcset]="imagesRoute + slide.imageTabletSource" />
-          <img class="hero-section__carousel-slide-image" [src]="imagesRoute + slide.imageDesktopSource" />
+          <img class="hero-section__carousel-slide-image" [src]="imagesRoute + slide.imageMobileSource" />
         </picture>
         <div class="hero-section__carousel-text-container">
           <p class="hero-section__carousel-text-title">{{ slide.slideTitle | translate }}</p>
