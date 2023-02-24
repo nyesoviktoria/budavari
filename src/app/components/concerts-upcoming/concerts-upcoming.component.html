@@ -12,9 +12,8 @@
         <p class="concert-upcoming__text-description">{{ concert.description }}</p>
         <p class="concert-upcoming__text-date">{{ concert.date }}</p>
         <p class="concert-upcoming__text-place">{{ concert.place }}</p>
-        <div class="concerts-upcoming__icons-container">
-          <bvkz-concert-upcoming-icons [concertActual]="concert"></bvkz-concert-upcoming-icons>
-        </div>
+
+        <bvkz-concert-upcoming-icons [concertActual]="concert"></bvkz-concert-upcoming-icons>
       </div>
     </div>
   </ng-container>

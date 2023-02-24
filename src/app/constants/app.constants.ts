@@ -9,6 +9,7 @@ export const MILLISECONDS_TO_SECONDS_COUNTER = 1000;
 export const NUMBER_TO_CHECK_IF_LONG_ENOUGH = 30;
 export const NUMBER_TO_CHECK_IF_HORIZONTAL_ENOUGH = 30;
 export const NUMBER_TO_REDUCE_LENGTH_BY_2 = -2;
+export const NUMBER_TO_FIX_CONCERT_TIME = 100;
 export const HOURS_IN_A_DAY = 24;
 export const MINUTES_IN_AN_HOUR = 60;
 export const SECONDS_IN_A_MINUTE = 60;

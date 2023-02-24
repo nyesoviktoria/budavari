@@ -65,17 +65,6 @@
   margin-bottom: 1rem;
 }
 
-.concerts-upcoming__icons-container {
-  display: flex;
-  gap: 2rem;
-  justify-content: flex-end;
-  margin-top: auto;
-  padding-right: 2rem;
-
-  @include tablet {
-    padding: 0;
-  }
-}
 
 .concert-upcoming__container:nth-child(odd) .concerts-upcoming__icons-container {
   align-self: flex-end;

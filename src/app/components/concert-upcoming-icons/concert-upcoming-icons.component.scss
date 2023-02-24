@@ -1,4 +1,17 @@
 @import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.concerts-upcoming__icons-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-end;
+  margin-top: auto;
+  padding-right: 2rem;
+
+  @include tablet {
+    padding: 0;
+  }
+}
 
 .concerts-upcoming__icon {
   filter: $icon-color-dark-blue;
