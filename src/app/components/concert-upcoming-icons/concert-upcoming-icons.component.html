@@ -1,0 +1,44 @@
+<div class="concerts-upcoming__icons-container">
+  <a
+    *ngIf="concertActual.dateCode"
+    [title]="'BVKZ.CONCERTS__COMPONENT.CONCERTS_UPCOMING__ICON_CALENDAR_TITLE' | translate"
+    target="_blank"
+    [href]="concertCalendarUrl"
+  >
+    <img
+      class="concerts-upcoming__icon"
+      [src]="'calendar-days' | iconItem"
+      [alt]="'BVKZ.CONCERTS__COMPONENT.CONCERTS_UPCOMING__ICON_CALENDAR_ALT' | translate"
+  /></a>
+  <a
+    *ngIf="concertActual.mapUrl"
+    [title]="'BVKZ.CONCERTS__COMPONENT.CONCERTS_UPCOMING__ICON_MAP_TITLE' | translate"
+    target="_blank"
+    [href]="concertActual.mapUrl"
+  >
+    <img
+      class="concerts-upcoming__icon"
+      [src]="'map-location-dot' | iconItem"
+      [alt]="'BVKZ.CONCERTS__COMPONENT.CONCERTS_UPCOMING__ICON_MAP_ALT' | translate"
+  /></a>
+  <a
+    *ngIf="concertActual.facebookEventUrl"
+    [title]="'BVKZ.CONCERTS__COMPONENT.CONCERTS_UPCOMING__ICON_FACEBOOK_EVENT_TITLE' | translate"
+    target="_blank"
+    [href]="concertActual.facebookEventUrl"
+  >
+    <img
+      class="concerts-upcoming__icon"
+      [src]="'square-facebook' | iconItem"
+      [alt]="'BVKZ.CONCERTS__COMPONENT.CONCERTS_UPCOMING__ICON_FACEBOOK_EVENT_ALT' | translate"
+  /></a>
+  <span
+    *ngIf="concertActual.inviteImageSource"
+    [title]="'BVKZ.CONCERTS__COMPONENT.CONCERTS_UPCOMING__ICON_INVITE_TITLE' | translate"
+    class="invite"
+    ><img
+      class="concerts-upcoming__icons"
+      [src]="'music-solid' | iconItem"
+      [alt]="'BVKZ.CONCERTS__COMPONENT.CONCERTS_UPCOMING__ICON_INVITE_ALT' | translate"
+  /></span>
+</div>

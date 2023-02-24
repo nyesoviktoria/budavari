@@ -12,27 +12,8 @@
         <p class="concert-upcoming__text-description">{{ concert.description }}</p>
         <p class="concert-upcoming__text-date">{{ concert.date }}</p>
         <p class="concert-upcoming__text-place">{{ concert.place }}</p>
-        <div class="concerts-upcoming__icons-container">
-          <ng-container *ngFor="let icon of concertUpcomingIcons; trackBy: trackByIndex">
-            <a
-              *ngIf="concert[icon.concertUpcomingItemLineIdentifier]"
-              [title]="icon.iconHoverText"
-              target="_blank"
-              [href]="concert[icon.concertUpcomingItemLineIdentifier]"
-            >
-              <img class="concerts-upcoming__icon" [src]="icon.iconSource | iconItem" [alt]="icon.iconImageAltText"
-            /></a>
-            <span
-              *ngIf="concert.inviteImageSource"
-              [title]="'BVKZ.CONCERTS__COMPONENT.CONCERTS_UPCOMING__INVITE' | translate"
-              class="invite"
-              ><img
-                class="concerts-upcoming__icons"
-                [src]="'music-solid' | iconItem"
-                [alt]="'BVKZ.CONCERTS__COMPONENT.CONCERTS_UPCOMING__INVITE_ICON' | translate"
-            /></span>
-          </ng-container>
-        </div>
+
+        <bvkz-concert-upcoming-icons [concertActual]="concert"></bvkz-concert-upcoming-icons>
       </div>
     </div>
   </ng-container>
