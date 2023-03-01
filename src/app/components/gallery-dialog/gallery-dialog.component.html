@@ -1,4 +1,4 @@
-<section class="gallery-dialog__section ">
+<section class="gallery-dialog__section mdc-dialog__surface">
   <img
     class="gallery-dialog__arrow gallery-dialog__arrow-to-previous-image"
     [src]="'chevron-left-solid' | iconItem"
@@ -15,17 +15,15 @@
     [ngClass]="{ disabled: currentIndex === data.galleryItems.length - 1 }"
   />
 
-  <figure class="gallery-dialog__image-container">
-    <img
-      [ngClass]="{
-        'gallery-dialog__image-vertical': data.galleryItems[currentIndex].vertical,
-        'gallery-dialog__image-horizontal': !data.galleryItems[currentIndex].vertical
-      }"
-      class="gallery-dialog__image"
-      [src]="data.galleryItems[currentIndex].bigImageSource | galleryItemSource : folderId"
-      [alt]="data.galleryItems[currentIndex].alt"
-      (touchstart)="swipeStart($event)"
-      (touchend)="swipeEnd($event)"
-    />
-  </figure>
+  <img
+    [ngClass]="{
+      'gallery-dialog__image-vertical': data.galleryItems[currentIndex].vertical,
+      'gallery-dialog__image-horizontal': !data.galleryItems[currentIndex].vertical
+    }"
+    class="gallery-dialog__image"
+    [src]="data.galleryItems[currentIndex].bigImageSource | galleryItemSource : folderId"
+    [alt]="data.galleryItems[currentIndex].alt"
+    (touchstart)="swipeStart($event)"
+    (touchend)="swipeEnd($event)"
+  />
 </section>

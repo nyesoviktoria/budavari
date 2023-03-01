@@ -13,7 +13,7 @@
         <p class="concert-upcoming__text-date">{{ concert.date }}</p>
         <p class="concert-upcoming__text-place">{{ concert.place }}</p>
 
-        <bvkz-concert-upcoming-icons [concertActual]="concert"></bvkz-concert-upcoming-icons>
+        <bvkz-concert-upcoming-icons [concertActual]="concert" (selectedInviteSource)="onOpenInviteDialog($event)"></bvkz-concert-upcoming-icons>
       </div>
     </div>
   </ng-container>

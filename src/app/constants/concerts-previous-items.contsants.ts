@@ -1,4 +1,4 @@
-import { ConcertPreviousItem } from '../interfaces/concerts-previuos-item.interface';
+import { ConcertPreviousItem } from '../interfaces/concerts-previous-item.interface';
 
 export const CONCERTS_PREVIOUS_ITEMS: readonly ConcertPreviousItem[] = [
   {

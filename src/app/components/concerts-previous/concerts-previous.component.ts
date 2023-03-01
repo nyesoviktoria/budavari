@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angular/core';
-import { CONCERTS_PREVIOUS_ITEMS } from '../../constants/concerts-previous-items.contsants';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+import { ConcertPreviousItem } from '../../interfaces/concerts-previous-item.interface';
 
 @Component({
   selector: 'bvkz-concerts-previous',
@@ -8,9 +8,9 @@ import { CONCERTS_PREVIOUS_ITEMS } from '../../constants/concerts-previous-items
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ConcertsPreviousComponent {
-  @Output() video = new EventEmitter<HTMLVideoElement>();
+  @Input() concertsPreviousItems: readonly ConcertPreviousItem[] = [];
 
-  readonly concertsPreviousItems = CONCERTS_PREVIOUS_ITEMS;
+  @Output() video = new EventEmitter<HTMLVideoElement>();
 
   onPlay(audio: HTMLVideoElement): void {
     this.video.emit(audio);

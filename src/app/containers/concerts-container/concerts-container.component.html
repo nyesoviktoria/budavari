@@ -1,4 +1,4 @@
 <div class="wrapper-container">
-  <bvkz-concerts-upcoming></bvkz-concerts-upcoming>
-  <bvkz-concerts-previous (video)="onPlay($event)"></bvkz-concerts-previous>
+  <bvkz-concerts-upcoming (selectedInviteSource)="onOpenInviteDialog($event)"></bvkz-concerts-upcoming>
+  <bvkz-concerts-previous (video)="onPlay($event)" [concertsPreviousItems]="concertsPreviousItems"></bvkz-concerts-previous>
 </div>

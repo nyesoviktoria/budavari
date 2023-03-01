@@ -11,10 +11,10 @@
       "RECORDS": "Lemezeink"
     },
     "HERO__COMPONENT": {
-      "HERO_1__TITLE": "János-passió",
-      "HERO_1__TEXT": "Március 18-án szeretettel várunk mindenkit nagyböjti koncertünkön.",
-      "HERO_2__TITLE": "Idézzük fel koncertjeinket",
-      "HERO_2__TEXT": "A koncerteken készült fényképekeink már elérhetőek galériánkban, felvételeink pedig youtube csatornánkon"
+      "HERO_1__TITLE": "J.S.Bach: János-passió, BWV 245",
+      "HERO_1__TEXT": "A nagyböjti időszakban a zeneirodalom egyik legnagyszerűbb alkotását tűztük műsorra",
+      "HERO_2__TITLE": "Idézzük fel koncertjeinket!",
+      "HERO_2__TEXT": "A koncertjeinken készült fényképeink galériánkban, felvételeink pedig Youtube-csatornánkon elérhetőek."
     },
     "ABOUT_US__COMPONENT": {
       "ABOUT_US__TITLE": "Zenekarunkról",
@@ -73,6 +73,10 @@
       "CONCERTS_PREVIOUS__LINK_FIRST_PART": "A koncert teljes felvételét",
       "CONCERTS_PREVIOUS__LINK_ANCHOR": "itt",
       "CONCERTS_PREVIOUS__LINK_SECOND_PART": "tudjátok megnézni."
+    },
+    "CONCERTS_INVITE_DIALOG__COMPONENT": {
+      "CONCERTS_INVITE_DIALOG__TITLE": "Koncert meghívó",
+      "CONCERTS_INVITE_DIALOG__ALT": "Meghívó"
     },
     "COUNTDOWN__COMPONENT": {
       "COUNTDOWN_ICON_ALT": "óra ikon",
