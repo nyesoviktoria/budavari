@@ -3,9 +3,9 @@ import { ConcertUpcomingItem } from '../interfaces/concerts-upcoming-item.interf
 export const CONCERTS_UPCOMING_ITEMS: readonly ConcertUpcomingItem[] = [
   {
     number: 1,
-    imageDesktopSource: 'janos-passio.webp',
-    imageMobileSource: 'janos-passio-mobile.webp',
-    imageAltText: 'BVKZ.CONCERTS__COMPONENT.CONCERTS_UPCOMING__IMAGE_ALT_TEXT',
+    imageDesktopSource: 'janos-passio',
+    imageMobileSource: 'janos-passio-mobile',
+    imageAltTranslationKey: 'BVKZ.CONCERTS__COMPONENT.CONCERTS_UPCOMING__IMAGE_ALT_TEXT',
     title: 'Johann Sebastian Bach: János-passió, BWV 245',
     date: '2023. március 18., 19:30',
     dateCode: '2023-03-18T19:30',

@@ -3,8 +3,8 @@ import { RecordItem } from '../interfaces/record-item.interface';
 export const RECORD_ITEMS: readonly RecordItem[] = [
   {
     recordTitle: 'Jubileumi lemez a zenekar fennállásának 10. évfordulója alkalmából',
-    coverImageSource: '10borito.webp',
-    coverImageAltText: 'BVKZ.RECORDS__COMPONENT.REDORDS__SECOND_CD_COVER_ALT_TEXT',
+    coverImageSource: '10borito',
+    coverImageAltTranslationKey: 'BVKZ.RECORDS__COMPONENT.REDORDS__SECOND_CD_COVER_ALT_TEXT',
     description:
       '2020 januárjában és augusztusában rögzítettük második lemezünk anyagát. A műveket az első CD felvétele óta eltelt időszakban játszott, szívünkhöz közel álló darabok közül válogattunk. Hangmérnök és digitális utómunka: Rédly Dénes.',
     albumId: 'TENTH_JUBILEUM',
@@ -78,8 +78,8 @@ export const RECORD_ITEMS: readonly RecordItem[] = [
   },
   {
     recordTitle: 'Jubileumi lemez a zenekar fennállásának 5. évfordulója alkalmából',
-    coverImageSource: '5borito.webp',
-    coverImageAltText: 'BVKZ.RECORDS__COMPONENT.REDORDS__SECOND_CD_COVER_ALT_TEXT',
+    coverImageSource: '5borito',
+    coverImageAltTranslationKey: 'BVKZ.RECORDS__COMPONENT.REDORDS__SECOND_CD_COVER_ALT_TEXT',
     description:
       'A felvétel a Szent Benedek Iskolaközpont dísztermében készült 2013. augusztusában a zenekar fennállásának 5. évfordulója alkalmából. Hangmérnök és digitális utómunka: Rédly Dénes.',
     albumId: 'FIFTH_JUBILEUM',

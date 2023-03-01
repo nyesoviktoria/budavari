@@ -38,6 +38,8 @@ import { GalleryDialogComponent } from './components/gallery-dialog/gallery-dial
 import { MatCarouselModule } from '@magloft/material-carousel';
 import { ConcertUpcomingIconsComponent } from './components/concert-upcoming-icons/concert-upcoming-icons.component';
 import { ConcertInviteDialogComponent } from './components/concert-invite-dialog/concert-invite-dialog.component';
+import { ImageItemPipe } from './pipes/image-item/image-item.pipe';
+import { MembersDialogImageSourcePipe } from './pipes/members-dialog-image-source/members-dialog-image-source.pipe';
 
 export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
@@ -66,9 +68,11 @@ export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
     HeroSectionComponent,
     HomeContainerComponent,
     IconItemPipe,
+    ImageItemPipe,
     JoinUsComponent,
     MemberDialogComponent,
     MembersComponent,
+    MembersDialogImageSourcePipe,
     RecordsAudioComponent,
     RecordsAudioSourcePipe,
     RecordsContainerComponent,

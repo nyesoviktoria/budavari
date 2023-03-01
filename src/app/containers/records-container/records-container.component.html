@@ -3,7 +3,7 @@
   <div class="records__container" *ngFor="let record of recordItems; trackBy: trackByIndex">
     <h2 class="secondary-heading">{{ record.recordTitle }}</h2>
     <div class="records-container__information">
-      <img class="records-container__image" [src]="imagesRoute + record.coverImageSource" [alt]="record.coverImageAltText | translate" />
+      <img class="records-container__image" [src]="record.coverImageSource | imageItem" [alt]="record.coverImageAltTranslationKey | translate" />
       <p class="info records-container__description">{{ record.description }}</p>
     </div>
     <ul class="records-container__audio-container">

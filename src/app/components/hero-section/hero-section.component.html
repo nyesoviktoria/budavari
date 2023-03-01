@@ -10,12 +10,12 @@
     <mat-carousel-slide *ngFor="let slide of heroCarouselItems; trackBy: trackByIndex">
       <div class="hero-section__carousel-slide">
         <picture>
-          <source media="(min-width:1024px)" [srcset]="imagesRoute + slide.imageDesktopSource" />
-          <source media="(min-width:768px)" [srcset]="imagesRoute + slide.imageTabletSource" />
+          <source media="(min-width:1024px)" [srcset]="slide.imageDesktopSource | imageItem" />
+          <source media="(min-width:768px)" [srcset]="slide.imageTabletSource | imageItem" />
           <img
             class="hero-section__carousel-slide-image"
-            [src]="imagesRoute + slide.imageMobileSource"
-            [alt]="slide.imageAltText | translate"
+            [src]="slide.imageMobileSource | imageItem"
+            [alt]="slide.imageAltTranslationKey | translate"
           />
         </picture>
         <div class="hero-section__carousel-text-container">
