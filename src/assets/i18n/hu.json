@@ -88,7 +88,8 @@
       "CONCERTS_PREVIOUS__TITLE": "Korábbi koncertjeink",
       "CONCERTS_PREVIOUS__LINK_FIRST_PART": "A koncert teljes felvételét",
       "CONCERTS_PREVIOUS__LINK_ANCHOR": "itt",
-      "CONCERTS_PREVIOUS__LINK_SECOND_PART": "tudjátok megnézni."
+      "CONCERTS_PREVIOUS__LINK_SECOND_PART": "tudjátok megnézni.",
+      "CONCERTS_PREVIOUS__ERROR": "A tartalom jelenleg nem elérhető."
     },
     "CONCERTS_INVITE_DIALOG__COMPONENT": {
       "CONCERTS_INVITE_DIALOG__TITLE": "Koncert meghívó",

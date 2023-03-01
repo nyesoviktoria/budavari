@@ -14,6 +14,8 @@ import { ConcertPreviousResponse, PreviousConcertsService } from '../../services
 export class ConcertsContainerComponent implements OnInit {
   private currentPlayedElement?: HTMLAudioElement;
 
+  isConcertPreviousItemsExist = true;
+
   concertsPreviousItems: readonly ConcertPreviousItem[] = [];
 
   constructor(private readonly previousConcertsService: PreviousConcertsService, public dialog: MatDialog) {}
@@ -21,7 +23,9 @@ export class ConcertsContainerComponent implements OnInit {
   ngOnInit(): void {
     this.previousConcertsService.getPreviousConcertsData().subscribe((response: readonly ConcertPreviousResponse[]) => {
       this.concertsPreviousItems = mapConcertPreviousResponseToConcertPreviousItems(response);
-    });
+    }, (() => {
+      this.isConcertPreviousItemsExist = false;
+    }));
   }
 
   onPlay(element: HTMLVideoElement): void {
