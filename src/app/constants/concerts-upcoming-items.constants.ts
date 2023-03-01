@@ -5,13 +5,14 @@ export const CONCERTS_UPCOMING_ITEMS: readonly ConcertUpcomingItem[] = [
     number: 1,
     imageDesktopSource: 'janos-passio.webp',
     imageMobileSource: 'janos-passio-mobile.webp',
-    title: 'J.S.Bach - János-passió',
-    date: '2023. március 18.',
-    dateCode: '2023-03-18T19:00',
+    title: 'Johann Sebastian Bach: János-passió, BWV 245',
+    date: '2023. március 18., 19:30',
+    dateCode: '2023-03-18T19:30',
     concertLengthInMinutes: 120,
     place: 'Belvárosi Ferences Templom, Ferenciek tere 9.',
     description:
-      '5 év után ismét az a megtiszteltetés éri a zenekart, hogy közreműködhet J.S.Bach János-passiójának nagyböjti előadásában. Mindene kedves érdeklődőt szeretettel várunk.',
+      'Nehezen tudunk elfogódottság nélkül közelíteni ehhez a fantasztikus zeneműhöz, így nagy megtiszteltetés számunkra, hogy harmadik alkalommal játszhatjuk Bach János-passióját a Pesti Ferences Templomban.',
+    inviteImageSource: 'janos-passio-invite',
     mapUrl: 'https://goo.gl/maps/W9LXZQKcwSJkYmKh9',
   },
 ];

@@ -36,8 +36,9 @@
     *ngIf="concertActual.inviteImageSource"
     [title]="'BVKZ.CONCERTS__COMPONENT.CONCERTS_UPCOMING__ICON_INVITE_TITLE' | translate"
     class="invite"
+    (click)="onOpenInviteDialog(concertActual.inviteImageSource)"
     ><img
-      class="concerts-upcoming__icons"
+      class="concerts-upcoming__icon"
       [src]="'music-solid' | iconItem"
       [alt]="'BVKZ.CONCERTS__COMPONENT.CONCERTS_UPCOMING__ICON_INVITE_ALT' | translate"
   /></span>

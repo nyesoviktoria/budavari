@@ -1,4 +1,9 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ConcertInviteDialogComponent } from '../../components/concert-invite-dialog/concert-invite-dialog.component';
+import { ConcertPreviousItem } from '../../interfaces/concerts-previous-item.interface';
+import { mapConcertPreviousResponseToConcertPreviousItems } from '../../mappers/concert-previous-response-to-concert-previous-items/concert-previous-response-to-concert-previous-items.mapper';
+import { ConcertPreviousResponse, PreviousConcertsService } from '../../services/previous-concerts.service';
 
 @Component({
   selector: 'bvkz-concerts-container',
@@ -9,11 +14,25 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 export class ConcertsContainerComponent {
   private currentPlayedElement?: HTMLAudioElement;
 
+  concertsPreviousItems: readonly ConcertPreviousItem[] = [];
+
+  constructor(private readonly previousConcertsService: PreviousConcertsService, public dialog: MatDialog) {
+    this.previousConcertsService.getPreviousConcertsData().subscribe((response: readonly ConcertPreviousResponse[]) => {
+      this.concertsPreviousItems = mapConcertPreviousResponseToConcertPreviousItems(response);
+    });
+  }
+
   onPlay(element: HTMLVideoElement): void {
     if (this.currentPlayedElement && this.currentPlayedElement !== element) {
       this.currentPlayedElement.pause();
     }
 
     this.currentPlayedElement = element;
+  }
+
+  onOpenInviteDialog(inviteSource: string): void {
+    this.dialog.open(ConcertInviteDialogComponent, {
+      data: inviteSource,
+    });
   }
 }

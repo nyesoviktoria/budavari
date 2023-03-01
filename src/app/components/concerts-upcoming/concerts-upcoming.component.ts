@@ -1,6 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { ICONS_ROUTE, IMAGES_ROUTE } from '../../constants/app.constants';
-import { CONCERTS_UPCOMING_ICONS } from '../../constants/concerts-upcoming-icons.constants';
+import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angular/core';
+import { IMAGES_ROUTE } from '../../constants/app.constants';
 import { CONCERTS_UPCOMING_ITEMS } from '../../constants/concerts-upcoming-items.constants';
 
 @Component({
@@ -10,15 +9,18 @@ import { CONCERTS_UPCOMING_ITEMS } from '../../constants/concerts-upcoming-items
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ConcertsUpcomingComponent {
-  readonly iconsRoute = ICONS_ROUTE;
+  @Output() selectedInviteSource = new EventEmitter<string>();
   readonly imagesRoute = IMAGES_ROUTE;
   readonly concertsUpcomingItems = CONCERTS_UPCOMING_ITEMS;
-  readonly concertUpcomingIcons = CONCERTS_UPCOMING_ICONS;
 
   nonvisibleConcertIndex?: number;
 
   isConcertVisible(index: number): void {
     this.nonvisibleConcertIndex = index;
+  }
+
+  onOpenInviteDialog(inviteSource: string): void {
+    this.selectedInviteSource.emit(inviteSource);
   }
 
   trackByIndex(index: number): number {

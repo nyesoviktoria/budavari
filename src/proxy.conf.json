@@ -1,0 +1,9 @@
+{
+  "/api": {
+    "target": "https://budavarikamarazenekar.hu/",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "ws": true
+  }
+}

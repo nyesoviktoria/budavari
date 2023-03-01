@@ -37,6 +37,7 @@ import { IconItemPipe } from './pipes/icon-item/icon-item.pipe';
 import { GalleryDialogComponent } from './components/gallery-dialog/gallery-dialog.component';
 import { MatCarouselModule } from '@magloft/material-carousel';
 import { ConcertUpcomingIconsComponent } from './components/concert-upcoming-icons/concert-upcoming-icons.component';
+import { ConcertInviteDialogComponent } from './components/concert-invite-dialog/concert-invite-dialog.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
@@ -73,6 +74,7 @@ export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
     SoloistsAndExMembersComponent,
     TestimonialsComponent,
     VideosSourcePipe,
+    ConcertInviteDialogComponent,
   ],
   imports: [
     AppRoutingModule,

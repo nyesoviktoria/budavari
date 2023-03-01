@@ -20,6 +20,7 @@
 }
 
 .concerts-upcoming__icon:hover {
+  cursor: pointer;
   filter: $icon-color-dark-blue-hover;
   transform: scale(1.05);
 }

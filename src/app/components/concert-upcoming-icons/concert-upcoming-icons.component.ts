@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MINUTES_IN_AN_HOUR, NUMBER_TO_FIX_CONCERT_TIME } from '../../constants/app.constants';
 import { ConcertUpcomingItem } from '../../interfaces/concerts-upcoming-item.interface';
 
@@ -10,6 +10,7 @@ import { ConcertUpcomingItem } from '../../interfaces/concerts-upcoming-item.int
 })
 export class ConcertUpcomingIconsComponent implements OnInit {
   @Input() concertActual!: ConcertUpcomingItem;
+  @Output() selectedInviteSource = new EventEmitter<string>();
 
   private googleCalendarUrlStart = 'https://www.google.com/calendar/render?action=TEMPLATE';
 
@@ -32,5 +33,9 @@ export class ConcertUpcomingIconsComponent implements OnInit {
     const concertEnd = concertStart + concertLengthHours * NUMBER_TO_FIX_CONCERT_TIME + concertLengthMinutes;
 
     return dateCode.includes('T') ? `${concertDate}T${concertStart}00Z/${concertDate}T${concertEnd}00Z` : `${concertDate}/${concertDate}`;
+  }
+
+  onOpenInviteDialog(inviteSource: string): void {
+    this.selectedInviteSource.emit(inviteSource);
   }
 }
