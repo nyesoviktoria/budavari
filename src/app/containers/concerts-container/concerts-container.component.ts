@@ -14,7 +14,7 @@ import { ConcertPreviousResponse, PreviousConcertsService } from '../../services
 export class ConcertsContainerComponent implements OnInit {
   private currentPlayedElement?: HTMLAudioElement;
 
-  concertPreviousItemsExist = true;
+  isConcertPreviousItemsExist = true;
 
   concertsPreviousItems: readonly ConcertPreviousItem[] = [];
 
@@ -23,8 +23,8 @@ export class ConcertsContainerComponent implements OnInit {
   ngOnInit(): void {
     this.previousConcertsService.getPreviousConcertsData().subscribe((response: readonly ConcertPreviousResponse[]) => {
       this.concertsPreviousItems = mapConcertPreviousResponseToConcertPreviousItems(response);
-    }, (error => {
-      this.concertPreviousItemsExist = false;
+    }, (() => {
+      this.isConcertPreviousItemsExist = false;
     }));
   }
 

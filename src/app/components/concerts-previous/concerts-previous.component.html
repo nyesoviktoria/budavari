@@ -1,6 +1,7 @@
 <section>
   <h2 class="secondary-heading">{{ 'BVKZ.CONCERTS__COMPONENT.CONCERTS_PREVIOUS__TITLE' | translate }}</h2>
-  <ng-container *ngIf="concertPreviousItemsExist; else errorTemplate">
+
+  <ng-container *ngIf="isConcertPreviousItemsExist; else errorTemplate">
     <div class="concerts-previous__container">
       <div *ngFor="let concert of concertsPreviousItems; trackBy: trackByIndex">
         <p class="concerts-previous__title">{{ concert.concertDate }}, {{ concert.concertPlace }}</p>
@@ -17,8 +18,9 @@
       </div>
     </div>
   </ng-container>
+
   <ng-template #errorTemplate>
-    <p class="concerts-previous__error">
+    <p class="concerts-previous__error-text">
       {{ 'BVKZ.CONCERTS__COMPONENT.CONCERTS_PREVIOUS__ERROR' | translate }}
     </p>
   </ng-template>

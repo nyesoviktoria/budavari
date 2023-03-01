@@ -10,7 +10,7 @@ import { ConcertPreviousItem } from '../../interfaces/concerts-previous-item.int
 export class ConcertsPreviousComponent {
   @Input() concertsPreviousItems: readonly ConcertPreviousItem[] = [];
 
-  @Input() concertPreviousItemsExist!: boolean;
+  @Input() isConcertPreviousItemsExist = true;
 
   @Output() video = new EventEmitter<HTMLVideoElement>();
 
