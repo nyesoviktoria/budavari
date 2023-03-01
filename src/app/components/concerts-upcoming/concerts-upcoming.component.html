@@ -3,8 +3,12 @@
   <ng-container *ngFor="let concert of concertsUpcomingItems; let i = index; trackBy: trackByIndex">
     <div *ngIf="i !== nonvisibleConcertIndex" class="concert-upcoming__container">
       <picture class="concert-upcoming__image-container">
-        <source media="(min-width:768px)" [srcset]="imagesRoute + concert.imageDesktopSource" />
-        <img class="concert-upcoming__image" [src]="imagesRoute + concert.imageMobileSource" [alt]="concert.imageAltText | translate" />
+        <source media="(min-width:768px)" [srcset]="concert.imageDesktopSource | imageItem" />
+        <img
+          class="concert-upcoming__image"
+          [src]="concert.imageMobileSource | imageItem"
+          [alt]="concert.imageAltTranslationKey | translate"
+        />
         <bvkz-countdown [dateTo]="concert.dateCode" [index]="i" (isConcertVisible)="isConcertVisible($event)"></bvkz-countdown>
       </picture>
       <div class="concert-upcoming__text">

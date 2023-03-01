@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { IMAGES_ROUTE } from '../../constants/app.constants';
+
 
 @Component({
   selector: 'bvkz-concert-invite-dialog',
@@ -9,7 +9,6 @@ import { IMAGES_ROUTE } from '../../constants/app.constants';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ConcertInviteDialogComponent {
-  readonly imagesRoute = IMAGES_ROUTE;
 
   constructor(@Inject(MAT_DIALOG_DATA) readonly data: string) {}
 }

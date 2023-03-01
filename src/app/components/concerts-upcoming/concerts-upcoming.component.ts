@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angular/core';
-import { IMAGES_ROUTE } from '../../constants/app.constants';
 import { CONCERTS_UPCOMING_ITEMS } from '../../constants/concerts-upcoming-items.constants';
 
 @Component({
@@ -10,8 +9,6 @@ import { CONCERTS_UPCOMING_ITEMS } from '../../constants/concerts-upcoming-items
 })
 export class ConcertsUpcomingComponent {
   @Output() selectedInviteSource = new EventEmitter<string>();
-
-  readonly imagesRoute = IMAGES_ROUTE;
 
   readonly concertsUpcomingItems = CONCERTS_UPCOMING_ITEMS;
 

@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { IMAGES_ROUTE } from '../../constants/app.constants';
+import { MILLISECONDS_TO_CAROUSEL_SLIDE_CHANGE } from '../../constants/app.constants';
 import { HERO_CAROUSEL_ITEMS } from '../../constants/hero-carousel-items.constants';
 
 @Component({
@@ -9,10 +9,9 @@ import { HERO_CAROUSEL_ITEMS } from '../../constants/hero-carousel-items.constan
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeroSectionComponent {
-  readonly imagesRoute = IMAGES_ROUTE;
   readonly heroCarouselItems = HERO_CAROUSEL_ITEMS;
   readonly carouselEaseInTiming = '700ms ease-in';
-  readonly carouselTiming = 10000;
+  readonly carouselTiming = MILLISECONDS_TO_CAROUSEL_SLIDE_CHANGE;
 
   trackByIndex(index: number): number {
     return index;

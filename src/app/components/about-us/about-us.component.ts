@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { IMAGES_ROUTE } from '../../constants/app.constants';
 import { ABOUT_US_GALLERY_ITEMS } from '../../constants/about-us-gallery-items-config.constants';
 
 @Component({
@@ -10,7 +9,6 @@ import { ABOUT_US_GALLERY_ITEMS } from '../../constants/about-us-gallery-items-c
 })
 export class AboutUsComponent {
   readonly imageItems = ABOUT_US_GALLERY_ITEMS;
-  readonly imagesRoute = IMAGES_ROUTE;
 
   isOpen = false;
 

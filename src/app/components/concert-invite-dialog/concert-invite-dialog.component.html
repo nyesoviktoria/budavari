@@ -4,7 +4,7 @@
 >
   <img
     class="concert-invite-dialog__image"
-    [src]="imagesRoute + data + '.webp'"
+    [src]=" data | imageItem"
     [alt]="'BVKZ.CONCERTS_INVITE_DIALOG__COMPONENT.CONCERTS_INVITE_DIALOG__ALT' | translate"
   />
 </section>

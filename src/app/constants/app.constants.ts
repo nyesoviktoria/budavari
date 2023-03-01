@@ -14,3 +14,4 @@ export const HOURS_IN_A_DAY = 24;
 export const MINUTES_IN_AN_HOUR = 60;
 export const SECONDS_IN_A_MINUTE = 60;
 export const CHARACTERS_TO_COUNTDOWN = 2;
+export const MILLISECONDS_TO_CAROUSEL_SLIDE_CHANGE = 10000;

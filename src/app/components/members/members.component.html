@@ -7,7 +7,7 @@
       [ngClass]="{ 'members__cart-middle': cart.isMiddleCart }"
     >
       <div class="members__image-container">
-        <img class="members__cart-image" [src]="imagesRoute + cart.imageSource" [alt]="cart.altText | translate" />
+        <img class="members__cart-image" [src]="imagesRoute + cart.imageSource" [alt]="cart.altTranslationKey | translate" />
       </div>
       <ul class="members__list">
         <li

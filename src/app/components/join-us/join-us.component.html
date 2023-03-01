@@ -1,10 +1,7 @@
 <section class="section-join">
   <h3 class="tertiary-heading">{{ 'BVKZ.CONTACT__COMPONENT.JOIN_US__TITLE' | translate }}</h3>
   <picture>
-    <source media="(min-width:768px)" [srcset]="imagesRoute + 'join-us.webp'" />
-    <img
-      class="join-us__image"
-      [src]="imagesRoute + 'join-us-mobile.webp'"
-      [alt]="'BVKZ.CONTACT__COMPONENT.JOIN_US__IMAGE_ALT_TEXT' | translate"
+    <source media="(min-width:768px)" [srcset]="'join-us' | imageItem" />
+    <img class="join-us__image" [src]="'join-us-mobile' | imageItem" [alt]="'BVKZ.CONTACT__COMPONENT.JOIN_US__IMAGE_ALT_TEXT' | translate"
   /></picture>
 </section>

@@ -4,7 +4,7 @@ import { MemberItem } from './member-item.interface';
 export interface MembersPartItem {
   readonly partName: PartNames;
   readonly imageSource: string;
-  readonly altText: string;
+  readonly altTranslationKey: string;
   readonly members: readonly MemberItem[];
   readonly isMiddleCart: boolean;
 }
