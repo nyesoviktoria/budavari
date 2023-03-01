@@ -12,7 +12,11 @@
         <picture>
           <source media="(min-width:1024px)" [srcset]="imagesRoute + slide.imageDesktopSource" />
           <source media="(min-width:768px)" [srcset]="imagesRoute + slide.imageTabletSource" />
-          <img class="hero-section__carousel-slide-image" [src]="imagesRoute + slide.imageMobileSource" />
+          <img
+            class="hero-section__carousel-slide-image"
+            [src]="imagesRoute + slide.imageMobileSource"
+            [alt]="slide.imageAltText | translate"
+          />
         </picture>
         <div class="hero-section__carousel-text-container">
           <p class="hero-section__carousel-text-title">{{ slide.slideTitle | translate }}</p>

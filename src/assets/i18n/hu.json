@@ -2,7 +2,8 @@
   "BVKZ": {
     "HEADER__COMPONENT": {
       "HEADER__ORCHESTRA": "Kamarazenekar",
-      "HEADER_LOGO_ALT__TEXT": "egy hegedű és egy cselló csigája szív formát alkot"
+      "HEADER_LOGO_ALT__TEXT": "egy hegedű és egy cselló csigája szív formát alkot",
+      "HEADER_NAVIGATION_ICON_ALT_TEXT": "menü ikon"
     },
     "NAVIGATION__LINKS": {
       "CONCERTS": "Koncertek",
@@ -13,8 +14,10 @@
     "HERO__COMPONENT": {
       "HERO_1__TITLE": "J.S.Bach: János-passió, BWV 245",
       "HERO_1__TEXT": "A nagyböjti időszakban a zeneirodalom egyik legnagyszerűbb alkotását tűztük műsorra",
+      "HERO_1__IMAGE_ALT_TEXT": "Kőszobor jézus keresztrefeszítéséről egy erbőben",
       "HERO_2__TITLE": "Idézzük fel koncertjeinket!",
-      "HERO_2__TEXT": "A koncertjeinken készült fényképeink galériánkban, felvételeink pedig Youtube-csatornánkon elérhetőek."
+      "HERO_2__TEXT": "A koncertjeinken készült fényképeink galériánkban, felvételeink pedig Youtube-csatornánkon elérhetőek.",
+      "HERO_2__IMAGE_ALT_TEXT": "Csoportfotó a zenekarról a 2022. évi karácsonyi koncert után"
     },
     "ABOUT_US__COMPONENT": {
       "ABOUT_US__TITLE": "Zenekarunkról",
@@ -23,16 +26,28 @@
       "ABOUT_US__THIRD_PARAGRAPH": "Az elmúlt években több olyan közismert, nagy művet is megszólaltattunk, mint Bach János- és Máté- passiója, Mozart Requiemje, Dvořák Újvilág szimfóniája vagy Beethoven 7. szimfóniája, de előszeretettel válogatunk olyan kevésbé ismert zeneszerzők műveiből is, mint William Herschel, Ralph Vaughan Williams, Ottorino Respighi vagy Dohnányi Ernő.",
       "ABOUT_US__FOURTH_PARAGRAPH": "A Budavári Kamarazenekar nevét a próbák és a koncertek többségének kezdetben helyet adó városrészről kapta, ám jelenleg Óbudán, az Árpád Gimnáziumban próbálunk. Évente nyolc-tíz koncertet adunk fővárosi, alkalmanként vidéki helyszíneken, nyári táborunkat pedig minden évben Keszthelyen tartjuk.",
       "ABOUT_US__MORE_INFO": "Több",
-      "ABOUT_US__LESS_INFO": "Kevesebb"
+      "ABOUT_US__LESS_INFO": "Kevesebb",
+      "ABOUT_US__FIRST_IMAGE_ALT": "zenekari csoportkép",
+      "ABOUT_US__SECOND_IMAGE_ALT": "egy hegedű, egy brácsa, egy cselló és egy nagybőgő egymás mögött",
+      "ABOUT_US__THIRD_IMAGE_ALT": "zenekar játék közben a színpadon"
     },
     "TESTIMONIALS__COMPONENT": {
       "TESTIMONIALS_ARIA_LABEL_SR_ONLY": "Rólunk mondták",
+      "TESTIMONIALS_QUOTATION_MARK_ICON": "Egy nagy idézőjel",
+
       "FIRST_TESTIMONIAL__NAME": "Bartók Tamás",
       "FIRST_TESTIMONIAL__TEXT": "Miután a zeneiskolai kereteket kinőttük, nem volt kérdés, hogy a közös muzsikálást folytatni szeretnénk, és egy élethosszig tartó, közös zenei kalandba vágunk bele együtt. Büszke vagyok rá, hogy a Budavári Kamarazenekar alapító tagja lehettem, hiszen az ilyen típusú amatőr együttesek hiánypótló szerepet töltenek be a magyar zenei életben.",
       "FIRST_TESTIMONIAL__SIGNATURE": "az Anima Musicae kamarazenekar brácsa szólamvezetője"
     },
     "MEMBERS__COMPONENT": {
-      "MEMBERS__TITLE": "Tagjaink"
+      "MEMBERS__TITLE": "Tagjaink",
+      "MEMBERS__CART_IMAGE_ALT_CONDUCTOR": "Héja Benedek",
+      "MEMBERS__CART_IMAGE_ALT_FIRST_VIOLIN": "Csoportkép a zenekar első hegedű szólamáról.",
+      "MEMBERS__CART_IMAGE_ALT_SECOND_VIOLIN": "Csoportkép a zenekar második hegedű szólamáról.",
+      "MEMBERS__CART_IMAGE_ALT_VIOLA": "Csoportkép a zenekar brácsa szólamáról.",
+      "MEMBERS__CART_IMAGE_ALT_CELLO": "Csoportkép a zenekar cselló és nagybőgő hegedű szólamáról.",
+      "MEMBERS__CART_IMAGE_ALT_CONTRABASS": "Király Miklós játszik a nagybőgőn",
+      "MEMBERS__STROLLER_ICON": "babakocsi ikon"
     },
     "PART_TYPES": {
       "CONDUCTOR": "Karmester",
@@ -61,6 +76,7 @@
     },
     "CONCERTS__COMPONENT": {
       "CONCERTS_TITLE": "Koncertek",
+      "CONCERTS_UPCOMING__IMAGE_ALT_TEXT": "2018. évi János-passió koncertről készült fénykép",
       "CONCERTS_UPCOMING__ICON_CALENDAR_TITLE": "Naptár",
       "CONCERTS_UPCOMING__ICON_CALENDER_ALT": "naptár ikon",
       "CONCERTS_UPCOMING__ICON_MAP_TITLE": "Térkép",
@@ -91,9 +107,7 @@
       "GALLERY_TITLE": "Galéria",
       "GALLERY_CAMERA_ICON": "fényképezőgép ikon"
     },
-    "FOOTER__COMPONENT": {
-      "COPYRIGHT__TEXT": "Budavári Kamarazenekar - Minden jog fenntartva"
-    },
+
     "MEMBER_DIALOG__COMPONENT": {
       "HEJA_BENEDEK": "Zenészcsaládba születtem. Édesapám, Héja László (aki nem mellesleg zenekarunk állandó vendégkarmestere) az Operaház zenekarának volt hosszú évtizedekig tagja, édesanyám, Fáth Helga pedig hegedűtanárként dolgozott a III. kerületi Aelia Sabina Zeneiskolában. Bátyám, Héja Domonkos, karmester, az Óbudai Danubia Zenekar alapítója. Így nem meglepő, hogy én is ezt a pályát választottam. A fentebb említett zeneiskola diákjaként korán megismerkedtem a kamarazenélés, illetve a zenekari játék örömével. Zenetanárként is ide tértem vissza, ahol az intézmény vonószenekarát vezetem közel másfél évtizede. Itteni tanítványaim - élükön Nánay Mihály barátommal - kértek meg, hogy segítsek elindítani egy új együttest, amely az iskola már végzett diákjaiból állt össze. Azóta is együtt vagyunk, a társaság pedig hamar kibővült más, szintén zenekedvelő tagokkal. Túlzás nélkül állíthatom: olyan ez, mint egy második család. A szó legszebb értelmében.",
       "NANAY_MIHALY": "A zenekar koncertmestere vagyok, de időnként brácsázom is. Az Aelia Sabina Zeneiskolában tanultam hegedülni, és itt ismerkedtem meg karmesterünkkel, Bencével, akivel a zenekart alapítottuk. A Budavári mellett korábban az Albert Schweitzer Kamarazenekarban is játszottam. Az elmúlt 15 évben sok emlékezetes koncertet valósítottunk meg a zenekarral: legbüszkébb talán Bach két monumentális passiójának és Schubert 5. szimfóniájának megszólaltatására, valamint a két megjelent lemezünkre vagyok. „Civilben” tanárként és történészként dolgozom. Nagy öröm, hogy a feleségemet is a zenélésnek köszönhetem, illetve, hogy már több tanítványommal is együtt muzsikálhattam a zenekarban.",
@@ -136,11 +150,21 @@
     },
     "RECORDS__COMPONENT": {
       "RECORDS__HEADING": "Lemezeink",
-      "RECORDS__SOLOIST": "Szólista"
+      "RECORDS__SOLOIST": "Szólista",
+      "REDORDS__SECOND_CD_COVER_ALT_TEXT": "A zenekar 2. lemezének borítóképe",
+      "REDORDS__FIRST_CD_COVER_ALT_TEXT": "A zenekar 1. lemezének borítóképe"
+    },
+    "FOOTER__COMPONENT": {
+      "COPYRIGHT__TEXT": "Budavári Kamarazenekar - Minden jog fenntartva",
+      "FOOTER_FACEBOOK_ICON__ALT_TEXT": "facebook ikon",
+      "FOOTER_YOUTUBE_ICON__ALT_TEXT": "youtube ikon",
+      "FOOTER_EMAIL_ICON__ALT_TEXT": "email ikon"
     },
     "GENERAL": {
       "ARROW_TO_THE_LEFT": "balra mutató nyíl",
-      "ARROW_TO_THE_RIGHT": "jobbra mutató nyíl"
+      "ARROW_TO_THE_RIGHT": "jobbra mutató nyíl",
+      "ARROW_UP": "felfele mutató nyíl",
+      "ARROW_DOWN": "lefele mutató nyíl"
     }
   }
 }

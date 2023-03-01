@@ -2,7 +2,7 @@
   <div class="footer__wrapper">
     <div class="footer__icons-container">
       <a *ngFor="let icon of contactIcons; trackBy: trackByIndex" [href]="icon.url" target="_blank" class="footer__contact-icon"
-        ><img class="footer__icon-image" [src]="icon.iconSource | iconItem" [alt]="icon.alt"
+        ><img class="footer__icon-image" [src]="icon.iconSource | iconItem" [alt]="icon.alt |translate"
       /></a>
     </div>
   </div>

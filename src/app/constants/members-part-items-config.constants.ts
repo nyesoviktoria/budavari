@@ -4,14 +4,14 @@ export const MEMBERS_PARTS_ITEMS: readonly MembersPartItem[] = [
   {
     partName: 'CONDUCTOR',
     imageSource: 'conductor.jpg',
-    altText: 'Héja Benedek',
+    altText: 'BVKZ.MEMBERS__COMPONENT.MEMBERS__CART_IMAGE_ALT_CONDUCTOR',
     members: [{ memberName: 'Héja Benedek', memberId: 'HEJA_BENEDEK', isOnGyes: false }],
     isMiddleCart: true,
   },
   {
     partName: 'FIRST_VIOLIN',
     imageSource: 'violin1.jpg',
-    altText: 'group photo of the first violinists',
+    altText: 'BVKZ.MEMBERS__COMPONENT.MEMBERS__CART_IMAGE_ALT_FIRST_VIOLIN',
     members: [
       { memberName: 'Nánay Mihály', memberId: 'NANAY_MIHALY', isOnGyes: false },
       {
@@ -41,7 +41,7 @@ export const MEMBERS_PARTS_ITEMS: readonly MembersPartItem[] = [
   {
     partName: 'SECOND_VIOLIN',
     imageSource: 'violin2.jpg',
-    altText: 'group photo of the second violinists',
+    altText: 'BVKZ.MEMBERS__COMPONENT.MEMBERS__CART_IMAGE_ALT_SECOND_VIOLIN',
     members: [
       { memberName: 'Török Eszter', memberId: 'TOROK_ESZTER', isOnGyes: false },
       {
@@ -73,7 +73,7 @@ export const MEMBERS_PARTS_ITEMS: readonly MembersPartItem[] = [
   {
     partName: 'VIOLA',
     imageSource: 'viola.jpg',
-    altText: 'group photo of the violists',
+    altText: 'BVKZ.MEMBERS__COMPONENT.MEMBERS__CART_IMAGE_ALT_VIOLA',
     members: [
       {
         memberName: 'Nyeső Viktória',
@@ -93,7 +93,7 @@ export const MEMBERS_PARTS_ITEMS: readonly MembersPartItem[] = [
   {
     partName: 'CELLO',
     imageSource: 'cello.jpg',
-    altText: 'group photo of the cellists',
+    altText: 'BVKZ.MEMBERS__COMPONENT.MEMBERS__CART_IMAGE_ALT_CELLO',
     members: [
       {
         memberName: 'Horváth Cecília',
@@ -118,7 +118,7 @@ export const MEMBERS_PARTS_ITEMS: readonly MembersPartItem[] = [
   {
     partName: 'CONTRABASS',
     imageSource: 'basso.jpg',
-    altText: 'Király Miklós',
+    altText: 'BVKZ.MEMBERS__COMPONENT.MEMBERS__CART_IMAGE_ALT_CONTRABASS',
     members: [
       {
         memberName: 'Király Miklós',

@@ -18,7 +18,12 @@
       </li>
     </ul>
 
-    <img class="header__mobile-menu-icon" [src]="'bars' | iconItem" alt="menu-icon" (click)="onOpenMobileNavigation()" />
+    <img
+      class="header__mobile-menu-icon"
+      [src]="'bars' | iconItem"
+      [alt]="'BVKZ.HEADER__COMPONENT.HEADER_NAVIGATION_ICON_ALT_TEXT' | translate"
+      (click)="onOpenMobileNavigation()"
+    />
   </nav>
 
   <nav *ngIf="isMobileNavigationOn" class="header__navigation-mobile">
