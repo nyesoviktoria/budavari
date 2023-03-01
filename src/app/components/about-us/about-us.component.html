@@ -30,7 +30,7 @@
     </div>
     <div class="about-us__gallery-container">
       <picture class="about-us__image-container" *ngFor="let image of imageItems; trackBy: trackByIndex">
-        <img class="img about-us__image" [src]="imagesRoute + image.source" [alt]="image.alt" />
+        <img class="img about-us__image" [src]="imagesRoute + image.source" [alt]="image.alt | translate" />
       </picture>
     </div>
   </div>

@@ -7,7 +7,7 @@
       [ngClass]="{ 'members__cart-middle': cart.isMiddleCart }"
     >
       <div class="members__image-container">
-        <img class="members__cart-image" [src]="imagesRoute + cart.imageSource" alt="{{ cart.altText }}" />
+        <img class="members__cart-image" [src]="imagesRoute + cart.imageSource" [alt]="cart.altText | translate" />
       </div>
       <ul class="members__list">
         <li
@@ -16,7 +16,12 @@
           (click)="onMemberSelected(member.memberId)"
         >
           {{ member.memberName }}
-          <img *ngIf="member.isOnGyes" class="members__gyes-icon" [src]="'baby-carriage-solid' | iconItem" alt="babakocsi-logo" />
+          <img
+            *ngIf="member.isOnGyes"
+            class="members__gyes-icon"
+            [src]="'baby-carriage-solid' | iconItem"
+            [alt]="'BVKZ.MEMBERS__COMPONENT.MEMBERS__STROLLER_ICON' | translate"
+          />
         </li>
       </ul>
       <p class="members__cart-part-sign">{{ 'BVKZ.PART_TYPES.' + cart.partName | translate }}</p>

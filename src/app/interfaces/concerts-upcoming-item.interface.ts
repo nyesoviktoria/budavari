@@ -2,6 +2,7 @@ export interface ConcertUpcomingItem {
   readonly number: number;
   readonly imageDesktopSource: string;
   readonly imageMobileSource: string;
+  readonly imageAltText: string;
   readonly title: string;
   readonly date: string;
   readonly dateCode: string;

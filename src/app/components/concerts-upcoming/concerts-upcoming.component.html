@@ -4,7 +4,7 @@
     <div *ngIf="i !== nonvisibleConcertIndex" class="concert-upcoming__container">
       <picture class="concert-upcoming__image-container">
         <source media="(min-width:768px)" [srcset]="imagesRoute + concert.imageDesktopSource" />
-        <img class="concert-upcoming__image" [src]="imagesRoute + concert.imageMobileSource" />
+        <img class="concert-upcoming__image" [src]="imagesRoute + concert.imageMobileSource" [alt]="concert.imageAltText | translate" />
         <bvkz-countdown [dateTo]="concert.dateCode" [index]="i" (isConcertVisible)="isConcertVisible($event)"></bvkz-countdown>
       </picture>
       <div class="concert-upcoming__text">
@@ -13,7 +13,10 @@
         <p class="concert-upcoming__text-date">{{ concert.date }}</p>
         <p class="concert-upcoming__text-place">{{ concert.place }}</p>
 
-        <bvkz-concert-upcoming-icons [concertActual]="concert" (selectedInviteSource)="onOpenInviteDialog($event)"></bvkz-concert-upcoming-icons>
+        <bvkz-concert-upcoming-icons
+          [concertActual]="concert"
+          (selectedInviteSource)="onOpenInviteDialog($event)"
+        ></bvkz-concert-upcoming-icons>
       </div>
     </div>
   </ng-container>

@@ -13,13 +13,25 @@
         </blockquote>
         <p class="testimonials__signature">{{ testimonial.name | translate }}, {{ testimonial.profession | translate }}</p>
       </div>
-      <img class="testimonials__quotation-icon" [src]="'quote-right' | iconItem" alt="quotation mark" />
+      <img
+        class="testimonials__quotation-icon"
+        [src]="'quote-right' | iconItem"
+        [alt]="'BVKZ.TESTIMONIALS__COMPONENT.TESTIMONIALS_QUOTATION_MARK_ICON' | translate"
+      />
     </div>
   </div>
 
   <ng-container *ngIf="testimonialItems.length > 1">
-    <img class="testimonials__arrow testimonials__arrow-left disabled" [src]="'chevron-left-solid' | iconItem" alt="arrow to the left" />
-    <img class="testimonials__arrow testimonials__arrow-right" [src]="'chevron-right-solid' | iconItem" alt="arrow to the right" />
+    <img
+      class="testimonials__arrow testimonials__arrow-left disabled"
+      [src]="'chevron-left-solid' | iconItem"
+      [alt]="'BVKZ.GENERAL.ARROW_TO_THE_LEFT' | translate"
+    />
+    <img
+      class="testimonials__arrow testimonials__arrow-right"
+      [src]="'chevron-right-solid' | iconItem"
+      [alt]="'BVKZ.GENERAL.ARROW_TO_THE_RIGHT' | translate"
+    />
     <div class="testimonials__carousel-navigation">
       <button
         type="button"
@@ -41,7 +53,11 @@
         {{ testimonial.testimonial | translate }}
       </blockquote>
       <p class="testimonials__signature">{{ testimonial.name | translate }}, {{ testimonial.profession | translate }}</p>
-      <img class="testimonials__quotation-icon" [src]="'quote-right' | iconItem" alt="quotation mark" />
+      <img
+        class="testimonials__quotation-icon"
+        [src]="'quote-right' | iconItem"
+        [alt]="'BVKZ.TESTIMONIALS__COMPONENT.TESTIMONIALS_QUOTATION_MARK_ICON' | translate"
+      />
     </div>
   </div>
 </section>
