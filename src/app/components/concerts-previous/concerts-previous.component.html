@@ -1,18 +1,25 @@
 <section>
   <h2 class="secondary-heading">{{ 'BVKZ.CONCERTS__COMPONENT.CONCERTS_PREVIOUS__TITLE' | translate }}</h2>
-  <div class="concerts-previous__container">
-    <div *ngFor="let concert of concertsPreviousItems; trackBy: trackByIndex">
-      <p class="concerts-previous__title">{{ concert.concertDate }}, {{ concert.concertPlace }}</p>
-      <p class="concerts-previous__link">
-        {{ 'BVKZ.CONCERTS__COMPONENT.CONCERTS_PREVIOUS__LINK_FIRST_PART' | translate }}
-        <a [href]="concert.concertLink" target="_blank" class="concerts-previous__youtube-link">{{
-          'BVKZ.CONCERTS__COMPONENT.CONCERTS_PREVIOUS__LINK_ANCHOR' | translate
-        }}</a>
-        {{ 'BVKZ.CONCERTS__COMPONENT.CONCERTS_PREVIOUS__LINK_SECOND_PART' | translate }}
-      </p>
-      <video #video class="concerts-previous__video" controls (play)="onPlay(video)">
-        <source [src]="concert.videoSource | videosSource" type="video/mp4" />
-      </video>
+  <ng-container *ngIf="concertPreviousItemsExist; else errorTemplate">
+    <div class="concerts-previous__container">
+      <div *ngFor="let concert of concertsPreviousItems; trackBy: trackByIndex">
+        <p class="concerts-previous__title">{{ concert.concertDate }}, {{ concert.concertPlace }}</p>
+        <p class="concerts-previous__link">
+          {{ 'BVKZ.CONCERTS__COMPONENT.CONCERTS_PREVIOUS__LINK_FIRST_PART' | translate }}
+          <a [href]="concert.concertLink" target="_blank" class="concerts-previous__youtube-link">{{
+            'BVKZ.CONCERTS__COMPONENT.CONCERTS_PREVIOUS__LINK_ANCHOR' | translate
+          }}</a>
+          {{ 'BVKZ.CONCERTS__COMPONENT.CONCERTS_PREVIOUS__LINK_SECOND_PART' | translate }}
+        </p>
+        <video #video class="concerts-previous__video" controls (play)="onPlay(video)">
+          <source [src]="concert.videoSource | videosSource" type="video/mp4" />
+        </video>
+      </div>
     </div>
-  </div>
+  </ng-container>
+  <ng-template #errorTemplate>
+    <p class="concerts-previous__error">
+      {{ 'BVKZ.CONCERTS__COMPONENT.CONCERTS_PREVIOUS__ERROR' | translate }}
+    </p>
+  </ng-template>
 </section>
