@@ -1,6 +1,6 @@
-import { ChangeDetectionStrategy, Component, Inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { IMAGES_ROUTE, NUMBER_TO_REDUCE_LENGTH_BY_2 } from '../../constants/app.constants';
+import { NUMBER_TO_REDUCE_LENGTH_BY_2 } from '../../constants/app.constants';
 import { GalleryItem } from '../../interfaces/gallery-item.interface';
 import { SelectedGalleryDialogData } from '../../interfaces/selected-gallery-dialog-data.interface';
 
@@ -11,7 +11,15 @@ import { SelectedGalleryDialogData } from '../../interfaces/selected-gallery-dia
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GalleryDialogComponent {
-  readonly imagesRoute = IMAGES_ROUTE;
+  @HostListener('document:keydown.arrowleft')
+  onArrowLeft(): void {
+    this.onPreviousClick();
+  }
+
+  @HostListener('document:keydown.arrowright')
+  onArrowRight(): void {
+    this.onNextClick();
+  }
 
   readonly folderId = String(this.data.imageId).slice(0, NUMBER_TO_REDUCE_LENGTH_BY_2);
 
