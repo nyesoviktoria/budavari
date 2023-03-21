@@ -5,9 +5,7 @@
 }
 
 .gallery-folder__list-item {
-  border-bottom: 1px solid $color-primary-middle;
-  margin-bottom: 6rem;
-  padding-bottom: 4.8rem;
+  margin-bottom: 4.8rem;
 }
 
 .gallery-folder__list-item:last-child {
@@ -59,4 +57,27 @@
 
 .gallery-folder__image-vertical {
   height: auto;
+}
+
+.gallery-folder__pagination ::ng-deep .ngx-pagination {
+  font-size: 1.8rem;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: $color-grey-dark;
+
+  & li {
+    margin: 0 1rem;
+
+    &:hover :not(.current span) {
+      background-color: $color-primary-lighter;
+    }
+  }
+
+  & .current {
+    background-color: $color-primary-dark;
+    width: 2.6rem;
+    height: 2.6rem;
+    color: $color-primary-lighter;
+    border-radius: $border-radius-round;
+  }
 }

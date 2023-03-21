@@ -1,8 +1,7 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Output, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angular/core';
 import { GALLERY_ITEMS } from '../../constants/gallery-items.constants';
 import { GalleryItem } from '../../interfaces/gallery-item.interface';
 import { SelectedGalleryDialogData } from '../../interfaces/selected-gallery-dialog-data.interface';
-import { MatPaginator, PageEvent } from '@angular/material/paginator';
 
 @Component({
   selector: 'bvkz-gallery-folder',
@@ -13,21 +12,8 @@ import { MatPaginator, PageEvent } from '@angular/material/paginator';
 export class GalleryFolderComponent {
   @Output() selectedImageId = new EventEmitter<SelectedGalleryDialogData>();
 
-  @ViewChild(MatPaginator) paginator!: MatPaginator;
-
   galleryItems = GALLERY_ITEMS;
-
-  pageSize = 1;
-  pageIndex = 0;
-  length = this.galleryItems.length;
-
-  onPageChange(event: PageEvent): void {
-    this.pageIndex = event.pageIndex;
-    this.pageSize = event.pageSize;
-    this.length = event.length;
-    console.log(event);
-    console.log(this.length);
-  }
+  p = 1;
 
   onImageSelect(galleryItems: readonly GalleryItem[], imageId: number): void {
     this.selectedImageId.emit({ galleryItems, imageId });

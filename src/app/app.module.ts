@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { MatPaginatorModule } from '@angular/material/paginator';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
@@ -88,7 +88,7 @@ export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
     HttpClientModule,
     MatCarouselModule,
     MatDialogModule,
-    MatPaginatorModule,
+    NgxPaginationModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
