@@ -12,11 +12,16 @@ import { SelectedGalleryDialogData } from '../../interfaces/selected-gallery-dia
 export class GalleryFolderComponent {
   @Output() selectedImageId = new EventEmitter<SelectedGalleryDialogData>();
 
-  galleryItems = GALLERY_ITEMS;
-  p = 1;
+  readonly galleryItems = GALLERY_ITEMS;
+  page = 1;
 
   onImageSelect(galleryItems: readonly GalleryItem[], imageId: number): void {
     this.selectedImageId.emit({ galleryItems, imageId });
+  }
+
+  onPageChange(page: number): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    this.page = page;
   }
 
   trackByIndex(index: number): number {

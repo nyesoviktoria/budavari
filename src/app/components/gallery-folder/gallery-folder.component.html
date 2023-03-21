@@ -1,36 +1,43 @@
 <h1 class="primary-heading">{{ 'BVKZ.GALLERY__COMPONENT.GALLERY_TITLE' | translate }}</h1>
+
 <ul class="gallery-folder__list">
   <li
     class="gallery-folder__list-item"
-    *ngFor="let folder of galleryItems | paginate : { itemsPerPage: 1, currentPage: p }; trackBy: trackByIndex"
+    *ngFor="let folder of galleryItems | paginate : { itemsPerPage: 1, currentPage: page }; trackBy: trackByIndex"
   >
-    <div>
+    <div class="gallery-folder__header">
       <h2 class="secondary-heading gallery-folder__title">{{ folder.title }}</h2>
-      <span class="gallery-folder__photographer"
-        ><img
-          class="gallery-folder__photographer-icon"
-          [src]="'camera-solid' | iconItem"
-          [alt]="'BVKZ.GALLERY__COMPONENT.GALLERY_CAMERA_ICON' | translate"
-        />{{ folder.photographer }}</span
-      >
-      <div class="gallery-folder__images-wrapper">
-        <figure class="gallery-folder__image-container" *ngFor="let image of folder.images; trackBy: trackByIndex">
-          <img
-            class="gallery-folder__image"
-            [ngClass]="{ 'gallery-folder__image-vertical': image.vertical }"
-            [src]="image.smallImageSource | galleryItemSource : folder.galleryFolder"
-            [alt]="image.alt"
-            (click)="onImageSelect(folder.images, image.id)"
-          />
-        </figure>
-      </div>
+      <pagination-controls
+        class="gallery-folder__pagination gallery-folder__pagination-top"
+        [nextLabel]="'BVKZ.GALLERY__COMPONENT.PAGINATION_BUTTON_NEXT' | translate"
+        [previousLabel]="'BVKZ.GALLERY__COMPONENT.PAGINATION_BUTTON_PREVIOUS' | translate"
+        (pageChange)="onPageChange($event)"
+      ></pagination-controls>
+    </div>
+    <p class="gallery-folder__photographer">
+      <img
+        class="gallery-folder__photographer-icon"
+        [src]="'camera-solid' | iconItem"
+        [alt]="'BVKZ.GALLERY__COMPONENT.GALLERY_CAMERA_ICON' | translate"
+      />{{ folder.photographer }}
+    </p>
+    <div class="gallery-folder__images-wrapper">
+      <figure class="gallery-folder__image-container" *ngFor="let image of folder.images; trackBy: trackByIndex">
+        <img
+          class="gallery-folder__image"
+          [ngClass]="{ 'gallery-folder__image-vertical': image.vertical }"
+          [src]="image.smallImageSource | galleryItemSource : folder.galleryFolder"
+          [alt]="image.alt"
+          (click)="onImageSelect(folder.images, image.id)"
+        />
+      </figure>
     </div>
   </li>
 
   <pagination-controls
     class="gallery-folder__pagination"
-    [nextLabel]="'Következő'"
-    [previousLabel]="'Előző'"
-    (pageChange)="p = $event"
+    [nextLabel]="'BVKZ.GALLERY__COMPONENT.PAGINATION_BUTTON_NEXT' | translate"
+    [previousLabel]="'BVKZ.GALLERY__COMPONENT.PAGINATION_BUTTON_PREVIOUS' | translate"
+    (pageChange)="onPageChange($event)"
   ></pagination-controls>
 </ul>

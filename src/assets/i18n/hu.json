@@ -106,7 +106,9 @@
     },
     "GALLERY__COMPONENT": {
       "GALLERY_TITLE": "Galéria",
-      "GALLERY_CAMERA_ICON": "fényképezőgép ikon"
+      "GALLERY_CAMERA_ICON": "fényképezőgép ikon",
+      "PAGINATION_BUTTON_NEXT": "Következő",
+      "PAGINATION_BUTTON_PREVIOUS": "Előző"
     },
 
     "MEMBER_DIALOG__COMPONENT": {

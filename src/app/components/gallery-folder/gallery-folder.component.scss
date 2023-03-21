@@ -1,4 +1,5 @@
 @import '../../../variables.scss';
+@import '../../../mixins.scss';
 
 .gallery-folder__list {
   list-style: none;
@@ -8,13 +9,35 @@
   margin-bottom: 4.8rem;
 }
 
-.gallery-folder__list-item:last-child {
-  border: none;
-}
-
 .gallery-folder__title {
   font-style: italic;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
+}
+
+.gallery-folder__header {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @include tablet {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.gallery-folder__pagination-top {
+  margin-left: auto;
+  margin-bottom: 3rem;
+
+  @include desktop-lg {
+    margin-bottom: 0;
+  }
+}
+
+.gallery-folder__pagination-top ::ng-deep .ngx-pagination {
+  display: flex;
+  justify-content: flex-end;
+  width: 38rem;
 }
 
 .gallery-folder__photographer-icon {
@@ -60,10 +83,11 @@
 }
 
 .gallery-folder__pagination ::ng-deep .ngx-pagination {
-  font-size: 1.8rem;
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
   color: $color-grey-dark;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 0;
+  text-align: center;
 
   & li {
     margin: 0 1rem;
@@ -75,9 +99,9 @@
 
   & .current {
     background-color: $color-primary-dark;
-    width: 2.6rem;
-    height: 2.6rem;
-    color: $color-primary-lighter;
     border-radius: $border-radius-round;
+    color: $color-primary-lighter;
+    height: 2.6rem;
+    width: 2.6rem;
   }
 }
