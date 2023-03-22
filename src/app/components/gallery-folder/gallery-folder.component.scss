@@ -85,9 +85,9 @@
 .gallery-folder__pagination ::ng-deep .ngx-pagination {
   color: $color-grey-dark;
   font-family: 'Roboto', sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   margin-bottom: 0;
-  text-align: center;
+  text-align: right;
 
   & li {
     margin: 0 1rem;
@@ -101,7 +101,7 @@
     background-color: $color-primary-dark;
     border-radius: $border-radius-round;
     color: $color-primary-lighter;
-    height: 2.6rem;
-    width: 2.6rem;
+    height: 2.2rem;
+    width: 2.2rem;
   }
 }
