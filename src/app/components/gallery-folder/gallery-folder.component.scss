@@ -1,22 +1,43 @@
 @import '../../../variables.scss';
+@import '../../../mixins.scss';
 
 .gallery-folder__list {
   list-style: none;
 }
 
 .gallery-folder__list-item {
-  border-bottom: 1px solid $color-primary-middle;
-  margin-bottom: 6rem;
-  padding-bottom: 4.8rem;
-}
-
-.gallery-folder__list-item:last-child {
-  border: none;
+  margin-bottom: 4.8rem;
 }
 
 .gallery-folder__title {
   font-style: italic;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
+}
+
+.gallery-folder__header {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @include tablet {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.gallery-folder__pagination-top {
+  margin-left: auto;
+  margin-bottom: 3rem;
+
+  @include desktop-lg {
+    margin-bottom: 0;
+  }
+}
+
+.gallery-folder__pagination-top ::ng-deep .ngx-pagination {
+  display: flex;
+  justify-content: flex-end;
+  width: 38rem;
 }
 
 .gallery-folder__photographer-icon {
@@ -59,4 +80,28 @@
 
 .gallery-folder__image-vertical {
   height: auto;
+}
+
+.gallery-folder__pagination ::ng-deep .ngx-pagination {
+  color: $color-grey-dark;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 0;
+  text-align: right;
+
+  & li {
+    margin: 0 1rem;
+
+    &:hover :not(.current span) {
+      background-color: $color-primary-lighter;
+    }
+  }
+
+  & .current {
+    background-color: $color-primary-dark;
+    border-radius: $border-radius-round;
+    color: $color-primary-lighter;
+    height: 2.2rem;
+    width: 2.2rem;
+  }
 }
