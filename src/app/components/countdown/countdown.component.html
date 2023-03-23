@@ -1,9 +1,5 @@
 <div *ngIf="countdownResult$ | async as countdownResult" class="countdown">
-  <img
-    class="countdown__icon"
-    [src]="'clock-regular' | iconItem"
-    [alt]="'BVKZ.COUNTDOWN__COMPONENT.COUNTDOWN_ICON_ALT' | translate"
-  />
+  <img class="countdown__icon" [src]="'clock-regular' | iconItem" [alt]="'BVKZ.COUNTDOWN__COMPONENT.COUNTDOWN_ICON_ALT' | translate" />
   <span class="countdown__container">
     <div class="countdown__item">
       <p class="countdown__number countdown__days">{{ countdownResult.days }}</p>

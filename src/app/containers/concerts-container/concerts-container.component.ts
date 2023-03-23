@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { map, Observable } from 'rxjs';
 import { ConcertInviteDialogComponent } from '../../components/concert-invite-dialog/concert-invite-dialog.component';
 import { ConcertPreviousItem } from '../../interfaces/concerts-previous-item.interface';
 import { mapConcertPreviousResponseToConcertPreviousItems } from '../../mappers/concert-previous-response-to-concert-previous-items/concert-previous-response-to-concert-previous-items.mapper';
@@ -14,18 +15,14 @@ import { ConcertPreviousResponse, PreviousConcertsService } from '../../services
 export class ConcertsContainerComponent implements OnInit {
   private currentPlayedElement?: HTMLAudioElement;
 
-  isConcertPreviousItemsExist = true;
-
-  concertsPreviousItems: readonly ConcertPreviousItem[] = [];
+  concertsPreviousItems$!: Observable<readonly ConcertPreviousItem[]>;
 
   constructor(private readonly previousConcertsService: PreviousConcertsService, public dialog: MatDialog) {}
 
   ngOnInit(): void {
-    this.previousConcertsService.getPreviousConcertsData().subscribe((response: readonly ConcertPreviousResponse[]) => {
-      this.concertsPreviousItems = mapConcertPreviousResponseToConcertPreviousItems(response);
-    }, (() => {
-      this.isConcertPreviousItemsExist = false;
-    }));
+    this.concertsPreviousItems$ = this.previousConcertsService
+      .getPreviousConcertsData()
+      .pipe(map((response: readonly ConcertPreviousResponse[]) => mapConcertPreviousResponseToConcertPreviousItems(response)));
   }
 
   onPlay(element: HTMLVideoElement): void {
