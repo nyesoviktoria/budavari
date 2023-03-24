@@ -12,11 +12,7 @@ export class ConcertsUpcomingComponent {
 
   readonly concertsUpcomingItems = CONCERTS_UPCOMING_ITEMS;
 
-  nonvisibleConcertIndex?: number;
-
-  isConcertVisible(index: number): void {
-    this.nonvisibleConcertIndex = index;
-  }
+  expiredConcertIndex = true;
 
   onOpenInviteDialog(inviteSource: string): void {
     this.selectedInviteSource.emit(inviteSource);

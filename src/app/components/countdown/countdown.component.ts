@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnDestroy, OnInit } from '@angular/core';
 
 import { CountdownResult } from '../../interfaces/countdown-result.interface';
 
@@ -21,13 +21,7 @@ import { getTime } from 'date-fns';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CountdownComponent implements OnInit, OnDestroy {
-  @Input() dateTo!: string;
-
-  @Input() index!: number;
-
-  @Input() endMessage = 'A koncert befejeződött';
-
-  @Output() isConcertVisible = new EventEmitter<number>();
+  @Input() dateTo = '';
 
   readonly iconsRoute = ICONS_ROUTE;
 
@@ -46,10 +40,6 @@ export class CountdownComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.initSimpleCountdown();
-
-    if (this.totalSecondes < 0) {
-      this.isConcertVisible.emit(this.index);
-    }
   }
 
   ngOnDestroy(): void {

@@ -1,5 +1,5 @@
 import { ConcertPreviousItem } from '../../interfaces/concerts-previous-item.interface';
-import { ConcertPreviousResponse } from '../../services/previous-concerts.service';
+import { ConcertPreviousResponse } from '../../interfaces/concerts-previous-response.interface';
 
 export const mapConcertPreviousResponseToConcertPreviousItems = (
   concertPreviousResponse: readonly ConcertPreviousResponse[]

@@ -15,6 +15,7 @@ import { ConcertsContainerComponent } from './containers/concerts-container/conc
 import { ConcertsPreviousComponent } from './components/concerts-previous/concerts-previous.component';
 import { ConcertsUpcomingComponent } from './components/concerts-upcoming/concerts-upcoming.component';
 import { ConcertUpcomingIconsComponent } from './components/concert-upcoming-icons/concert-upcoming-icons.component';
+import { ConcertUpcomingItemComponent } from './components/concert-upcoming-item/concert-upcoming-item.component';
 import { ContactContainerComponent } from './containers/contact-container/contact-container.component';
 import { ContactInformationComponent } from './components/contact-information/contact-information.component';
 import { CountdownComponent } from './components/countdown/countdown.component';
@@ -56,6 +57,7 @@ export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
     ConcertsPreviousComponent,
     ConcertsUpcomingComponent,
     ConcertUpcomingIconsComponent,
+    ConcertUpcomingItemComponent,
     ContactContainerComponent,
     ContactInformationComponent,
     CountdownComponent,

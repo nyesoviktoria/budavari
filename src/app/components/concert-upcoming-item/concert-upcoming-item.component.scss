@@ -1,0 +1,74 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.concert-upcoming__container {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  margin-bottom: 4.8rem;
+
+  @include tablet {
+    flex-direction: row;
+    margin-bottom: 8rem;
+  }
+}
+
+.concert-upcoming__container:nth-child(odd) {
+  @include tablet {
+    flex-direction: row-reverse;
+  }
+}
+
+.concert-upcoming__image-container {
+  height: 22rem;
+  margin: 0 auto;
+  position: relative;
+  width: 85%;
+
+  @include tablet {
+    flex: 2;
+    height: 25rem;
+    margin-top: 0;
+  }
+}
+
+.concert-upcoming__image {
+  border-radius: 8px;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+  width: 100%;
+}
+
+.concert-upcoming__text {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.concert-upcoming__text-title {
+  font-size: 2.6rem;
+  font-style: italic;
+  font-weight: 700;
+  margin-bottom: 2.4rem;
+}
+
+.concert-upcoming__text-description {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.concert-upcoming__text-date,
+.concert-upcoming__text-place {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.concert-upcoming__container:nth-child(odd) .concerts-upcoming__icons-container {
+  align-self: flex-end;
+
+  @include tablet {
+    align-self: flex-start;
+  }
+}

@@ -3,8 +3,9 @@ import { MatDialog } from '@angular/material/dialog';
 import { map, Observable } from 'rxjs';
 import { ConcertInviteDialogComponent } from '../../components/concert-invite-dialog/concert-invite-dialog.component';
 import { ConcertPreviousItem } from '../../interfaces/concerts-previous-item.interface';
+import { ConcertPreviousResponse } from '../../interfaces/concerts-previous-response.interface';
 import { mapConcertPreviousResponseToConcertPreviousItems } from '../../mappers/concert-previous-response-to-concert-previous-items/concert-previous-response-to-concert-previous-items.mapper';
-import { ConcertPreviousResponse, PreviousConcertsService } from '../../services/previous-concerts.service';
+import { PreviousConcertsService } from '../../services/previous-concert/previous-concerts.service';
 
 @Component({
   selector: 'bvkz-concerts-container',
