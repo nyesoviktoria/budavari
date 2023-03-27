@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnDestroy, OnInit } from '@angular/core';
 
 import { CountdownResult } from '../../interfaces/countdown-result.interface';
 
@@ -11,8 +11,7 @@ import {
   MINUTES_IN_AN_HOUR,
   SECONDS_IN_A_MINUTE,
 } from '../../constants/app.constants';
-
-import { getTime } from 'date-fns';
+import { secondsUntilConcert } from '../../utils/seconds-until-concert/seconds-until-concert.util';
 
 @Component({
   selector: 'bvkz-countdown',
@@ -21,13 +20,7 @@ import { getTime } from 'date-fns';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CountdownComponent implements OnInit, OnDestroy {
-  @Input() dateTo!: string;
-
-  @Input() index!: number;
-
-  @Input() endMessage = 'A koncert befejeződött';
-
-  @Output() isConcertVisible = new EventEmitter<number>();
+  @Input() dateTo = '';
 
   readonly iconsRoute = ICONS_ROUTE;
 
@@ -46,10 +39,6 @@ export class CountdownComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.initSimpleCountdown();
-
-    if (this.totalSecondes < 0) {
-      this.isConcertVisible.emit(this.index);
-    }
   }
 
   ngOnDestroy(): void {
@@ -58,8 +47,7 @@ export class CountdownComponent implements OnInit, OnDestroy {
   }
 
   private initSimpleCountdown(): void {
-    this.totalSecondes =
-      getTime(new Date(this.dateTo)) / MILLISECONDS_TO_SECONDS_COUNTER - Math.floor(Date.now() / MILLISECONDS_TO_SECONDS_COUNTER);
+    this.totalSecondes = secondsUntilConcert(this.dateTo);
 
     this.getCountdownResult(this.totalSecondes);
 

@@ -1,0 +1,15 @@
+<div *ngIf="!isConcertExpired" class="concert-upcoming__container">
+  <picture class="concert-upcoming__image-container">
+    <source media="(min-width:768px)" [srcset]="concert.imageDesktopSource | imageItem" />
+    <img class="concert-upcoming__image" [src]="concert.imageMobileSource | imageItem" [alt]="concert.imageAltTranslationKey | translate" />
+    <bvkz-countdown [dateTo]="concert.dateCode"></bvkz-countdown>
+  </picture>
+  <div class="concert-upcoming__text">
+    <p class="concert-upcoming__text-title">{{ concert.title }}</p>
+    <p class="concert-upcoming__text-description">{{ concert.description }}</p>
+    <p class="concert-upcoming__text-date">{{ concert.date }}</p>
+    <p class="concert-upcoming__text-place">{{ concert.place }}</p>
+
+    <bvkz-concert-upcoming-icons [concertActual]="concert" (selectedInviteSource)="onOpenInviteDialog($event)"></bvkz-concert-upcoming-icons>
+  </div>
+</div>

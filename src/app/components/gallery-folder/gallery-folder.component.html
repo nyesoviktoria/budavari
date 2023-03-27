@@ -3,7 +3,7 @@
 <ul class="gallery-folder__list">
   <li
     class="gallery-folder__list-item"
-    *ngFor="let folder of galleryItems | paginate : { itemsPerPage: 1, currentPage: page }; trackBy: trackByIndex"
+    *ngFor="let folder of galleryItems | paginate : { itemsPerPage: itemsPerPage, currentPage: currentPage }; trackBy: trackByIndex"
   >
     <div class="gallery-folder__header">
       <h2 class="secondary-heading gallery-folder__title">{{ folder.title }}</h2>

@@ -1,7 +1,7 @@
 <section>
   <h2 class="secondary-heading">{{ 'BVKZ.CONCERTS__COMPONENT.CONCERTS_PREVIOUS__TITLE' | translate }}</h2>
 
-  <ng-container *ngIf="isConcertPreviousItemsExist; else errorTemplate">
+  <ng-container *ngIf="concertsPreviousItems.length > 0; else errorTemplate">
     <div class="concerts-previous__container">
       <div *ngFor="let concert of concertsPreviousItems; trackBy: trackByIndex">
         <p class="concerts-previous__title">{{ concert.concertDate }}, {{ concert.concertPlace }}</p>

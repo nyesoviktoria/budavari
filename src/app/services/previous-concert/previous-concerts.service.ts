@@ -1,13 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
-export interface ConcertPreviousResponse {
-  readonly date: string;
-  readonly location: string;
-  readonly url: string;
-  readonly videoSource: string;
-}
+import { ConcertPreviousResponse } from '../../interfaces/concerts-previous-response.interface';
 
 @Injectable({
   providedIn: 'root',

@@ -13,7 +13,8 @@ export class GalleryFolderComponent {
   @Output() selectedImageId = new EventEmitter<SelectedGalleryDialogData>();
 
   readonly galleryItems = GALLERY_ITEMS;
-  page = 1;
+  readonly itemsPerPage = 1;
+  currentPage = 1;
 
   onImageSelect(galleryItems: readonly GalleryItem[], imageId: number): void {
     this.selectedImageId.emit({ galleryItems, imageId });
@@ -21,7 +22,7 @@ export class GalleryFolderComponent {
 
   onPageChange(page: number): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    this.page = page;
+    this.currentPage = page;
   }
 
   trackByIndex(index: number): number {
