@@ -3,7 +3,6 @@ import { MatDialog } from '@angular/material/dialog';
 import { map, Observable } from 'rxjs';
 import { ConcertInviteDialogComponent } from '../../components/concert-invite-dialog/concert-invite-dialog.component';
 import { ConcertPreviousItem } from '../../interfaces/concerts-previous-item.interface';
-import { ConcertPreviousResponse } from '../../interfaces/concerts-previous-response.interface';
 import { mapConcertPreviousResponseToConcertPreviousItems } from '../../mappers/concert-previous-response-to-concert-previous-items/concert-previous-response-to-concert-previous-items.mapper';
 import { PreviousConcertsService } from '../../services/previous-concert/previous-concerts.service';
 
@@ -23,7 +22,7 @@ export class ConcertsContainerComponent implements OnInit {
   ngOnInit(): void {
     this.concertsPreviousItems$ = this.previousConcertsService
       .getPreviousConcertsData()
-      .pipe(map((response: readonly ConcertPreviousResponse[]) => mapConcertPreviousResponseToConcertPreviousItems(response)));
+      .pipe(map(mapConcertPreviousResponseToConcertPreviousItems));
   }
 
   onPlay(element: HTMLVideoElement): void {

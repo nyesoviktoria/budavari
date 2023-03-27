@@ -11,8 +11,7 @@ import {
   MINUTES_IN_AN_HOUR,
   SECONDS_IN_A_MINUTE,
 } from '../../constants/app.constants';
-
-import { getTime } from 'date-fns';
+import { secondsUntilConcert } from '../../utils/seconds-until-concert/seconds-until-concert.util';
 
 @Component({
   selector: 'bvkz-countdown',
@@ -48,8 +47,7 @@ export class CountdownComponent implements OnInit, OnDestroy {
   }
 
   private initSimpleCountdown(): void {
-    this.totalSecondes =
-      getTime(new Date(this.dateTo)) / MILLISECONDS_TO_SECONDS_COUNTER - Math.floor(Date.now() / MILLISECONDS_TO_SECONDS_COUNTER);
+    this.totalSecondes = secondsUntilConcert(this.dateTo);
 
     this.getCountdownResult(this.totalSecondes);
 
