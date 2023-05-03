@@ -42,6 +42,7 @@ import { RecordsContainerComponent } from './containers/records-container/record
 import { SoloistsAndExMembersComponent } from './components/soloists-and-ex-members/soloists-and-ex-members.component';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { VideosSourcePipe } from './pipes/videos-source/videos-source.pipe';
+import { StoreModule } from '@ngrx/store';
 
 export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
@@ -98,6 +99,7 @@ export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
         deps: [HttpClient],
       },
     }),
+    StoreModule.forRoot({}, {}),
   ],
   providers: [],
   bootstrap: [AppComponent],
