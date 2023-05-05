@@ -1,10 +1,10 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { map, Observable } from 'rxjs';
 import { ConcertInviteDialogComponent } from '../../components/concert-invite-dialog/concert-invite-dialog.component';
-import { ConcertPreviousItem } from '../../interfaces/concerts-previous-item.interface';
-import { mapConcertPreviousResponseToConcertPreviousItems } from '../../mappers/concert-previous-response-to-concert-previous-items/concert-previous-response-to-concert-previous-items.mapper';
-import { PreviousConcertsService } from '../../services/previous-concert/previous-concerts.service';
+
+import { Store } from '@ngrx/store';
+import { fetchPreviousConcerts } from './store/actions/previous-concerts.actions';
+import { selectPreviousConcerts } from './store/selectors/previous-concerts.selectors';
 
 @Component({
   selector: 'bvkz-concerts-container',
@@ -15,14 +15,12 @@ import { PreviousConcertsService } from '../../services/previous-concert/previou
 export class ConcertsContainerComponent implements OnInit {
   private currentPlayedElement?: HTMLAudioElement;
 
-  concertsPreviousItems$!: Observable<readonly ConcertPreviousItem[]>;
+  previousConcert$ = this.store.select(selectPreviousConcerts);
 
-  constructor(private readonly previousConcertsService: PreviousConcertsService, public dialog: MatDialog) {}
+  constructor(private readonly store: Store, public dialog: MatDialog) {}
 
   ngOnInit(): void {
-    this.concertsPreviousItems$ = this.previousConcertsService
-      .getPreviousConcertsData()
-      .pipe(map(mapConcertPreviousResponseToConcertPreviousItems));
+    this.store.dispatch(fetchPreviousConcerts());
   }
 
   onPlay(element: HTMLVideoElement): void {

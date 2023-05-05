@@ -1,5 +1,6 @@
 <section class="concert-upcoming__section">
-  <h1 class="primary-heading">{{ 'BVKZ.CONCERTS__COMPONENT.CONCERTS_TITLE' | translate }}</h1>
+  <h1 class="primary-heading">{{ 'BVKZ.CONCERTS__COMPONENT.CONCERTS__COMPONENT_TITLE' | translate }}</h1>
+
   <ng-container *ngFor="let concert of concertsUpcomingItems; let i = index; trackBy: trackByIndex">
     <bvkz-concert-upcoming-item [concert]="concert" (selectedInviteSource)="onOpenInviteDialog($event)"></bvkz-concert-upcoming-item>
   </ng-container>
