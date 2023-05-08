@@ -13,7 +13,7 @@
   }
 }
 
-.concert-upcoming__container:nth-child(odd) {
+.concert-upcoming__container-reverse {
   @include tablet {
     flex-direction: row-reverse;
   }
@@ -63,12 +63,4 @@
   font-size: 2.2rem;
   font-weight: 500;
   margin-bottom: 1rem;
-}
-
-.concert-upcoming__container:nth-child(odd) .concerts-upcoming__icons-container {
-  align-self: flex-end;
-
-  @include tablet {
-    align-self: flex-start;
-  }
-}
+} 

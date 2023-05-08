@@ -42,6 +42,16 @@ import { RecordsContainerComponent } from './containers/records-container/record
 import { SoloistsAndExMembersComponent } from './components/soloists-and-ex-members/soloists-and-ex-members.component';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { VideosSourcePipe } from './pipes/videos-source/videos-source.pipe';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { bvkzReducer } from './store/reducers/bvkz.reducer';
+
+import { effects } from './store/effects/bvkz.effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment.prod';
+import { BVKZ_FEATURE_NAME } from './constants/store.constants';
+import { pipes } from './pipes';
+import { LoaderComponent } from './components/loader/loader.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
@@ -82,6 +92,8 @@ export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
     SoloistsAndExMembersComponent,
     TestimonialsComponent,
     VideosSourcePipe,
+    ...pipes,
+    LoaderComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -98,8 +110,12 @@ export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
         deps: [HttpClient],
       },
     }),
+    EffectsModule.forRoot([...effects]),
+    StoreModule.forRoot(),
+    StoreModule.forFeature(BVKZ_FEATURE_NAME, bvkzReducer),
+    StoreDevtoolsModule.instrument({ logOnly: environment.production }),
   ],
-  providers: [],
   bootstrap: [AppComponent],
+  providers: [{ provide: BVKZ_FEATURE_NAME, useValue: bvkzReducer }],
 })
 export class AppModule {}

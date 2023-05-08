@@ -74,8 +74,10 @@
         "SINGER": "ének"
       }
     },
-    "CONCERTS__COMPONENT": {
-      "CONCERTS_TITLE": "Koncertek",
+    "CONCERTS_CONTAINER__COMPONENT": {
+      "CONCERTS__TITLE": "Koncertek",
+      "PREVIOUS_CONCERTS__TITLE": "Korábbi koncertjeink",
+      "PREVIOUS_CONCERTS__ERROR": "A tartalom jelenleg nem elérhető.",
       "CONCERTS_UPCOMING__IMAGE_ALT_TEXT": "2018. évi János-passió koncertről készült fénykép",
       "CONCERTS_UPCOMING__ICON_CALENDAR_TITLE": "Naptár",
       "CONCERTS_UPCOMING__ICON_CALENDER_ALT": "naptár ikon",
@@ -85,11 +87,9 @@
       "CONCERTS_UPCOMING__ICON_FACEBOOK_EVENT_ALT": "facebook ikon",
       "CONCERTS_UPCOMING__ICON_INVITE_TITLE": "Meghívó",
       "CONCERTS_UPCOMING__ICON_INVITE_ALT": "meghívó ikon",
-      "CONCERTS_PREVIOUS__TITLE": "Korábbi koncertjeink",
       "CONCERTS_PREVIOUS__LINK_FIRST_PART": "A koncert teljes felvételét",
       "CONCERTS_PREVIOUS__LINK_ANCHOR": "itt",
-      "CONCERTS_PREVIOUS__LINK_SECOND_PART": "tudjátok megnézni.",
-      "CONCERTS_PREVIOUS__ERROR": "A tartalom jelenleg nem elérhető."
+      "CONCERTS_PREVIOUS__LINK_SECOND_PART": "tudjátok megnézni."
     },
     "CONCERTS_INVITE_DIALOG__COMPONENT": {
       "CONCERTS_INVITE_DIALOG__TITLE": "Koncert meghívó",

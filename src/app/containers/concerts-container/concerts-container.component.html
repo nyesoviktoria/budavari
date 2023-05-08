@@ -1,7 +1,25 @@
 <div class="wrapper-container">
   <bvkz-concerts-upcoming (selectedInviteSource)="onOpenInviteDialog($event)"></bvkz-concerts-upcoming>
-  <bvkz-concerts-previous
-    (video)="onPlay($event)"
-    [concertsPreviousItems]="(concertsPreviousItems$ | async) ?? []"
-  ></bvkz-concerts-previous>
+
+  <section aria-labelledby="previous-concerts">
+    <h2 class="secondary-heading" id="previous-concerts">
+      {{ 'BVKZ.CONCERTS_CONTAINER__COMPONENT.PREVIOUS_CONCERTS__TITLE' | translate }}
+    </h2>
+
+    <ng-container *ngIf="previousConcert$ | async as previousConcert">
+      <bvkz-loader *ngIf="previousConcert | isLoading; else content"></bvkz-loader>
+
+      <ng-template #content>
+        <ng-container *ngIf="previousConcert | hasError; else loadedContent">
+          <p class="info">{{ 'BVKZ.CONCERTS_CONTAINER__COMPONENT.PREVIOUS_CONCERTS__ERROR' | translate }}</p>
+        </ng-container>
+      </ng-template>
+
+      <ng-template #loadedContent>
+        <ng-container *ngIf="previousConcert | hasResult">
+          <bvkz-concerts-previous (video)="onPlay($event)" [concertsPreviousItems]="previousConcert.data"></bvkz-concerts-previous>
+        </ng-container>
+      </ng-template>
+    </ng-container>
+  </section>
 </div>

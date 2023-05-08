@@ -1,4 +1,8 @@
-<div *ngIf="!isConcertExpired" class="concert-upcoming__container">
+<div
+  *ngIf="!isConcertExpired"
+  class="concert-upcoming__container"
+  [ngClass]="{ 'concert-upcoming__container-reverse': concert.number % 2 }"
+>
   <picture class="concert-upcoming__image-container">
     <source media="(min-width:768px)" [srcset]="concert.imageDesktopSource | imageItem" />
     <img class="concert-upcoming__image" [src]="concert.imageMobileSource | imageItem" [alt]="concert.imageAltTranslationKey | translate" />
@@ -10,6 +14,9 @@
     <p class="concert-upcoming__text-date">{{ concert.date }}</p>
     <p class="concert-upcoming__text-place">{{ concert.place }}</p>
 
-    <bvkz-concert-upcoming-icons [concertActual]="concert" (selectedInviteSource)="onOpenInviteDialog($event)"></bvkz-concert-upcoming-icons>
+    <bvkz-concert-upcoming-icons
+      [concertActual]="concert"
+      (selectedInviteSource)="onOpenInviteDialog($event)"
+    ></bvkz-concert-upcoming-icons>
   </div>
 </div>
