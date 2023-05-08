@@ -74,10 +74,10 @@
         "SINGER": "ének"
       }
     },
-    "CONCERTS__COMPONENT": {
-      "CONCERTS__COMPONENT_TITLE": "Koncertek",
-      "CONCERTS__COMPONENT_PREVIOUS_CONCERTS_TITLE": "Korábbi koncertjeink",
-      "CONCERTS__COMPONENT_PREVIOUS_CONCERTS_ERROR": "A tartalom jelenleg nem elérhető.",
+    "CONCERTS_CONTAINER__COMPONENT": {
+      "CONCERTS__TITLE": "Koncertek",
+      "PREVIOUS_CONCERTS__TITLE": "Korábbi koncertjeink",
+      "PREVIOUS_CONCERTS__ERROR": "A tartalom jelenleg nem elérhető.",
       "CONCERTS_UPCOMING__IMAGE_ALT_TEXT": "2018. évi János-passió koncertről készült fénykép",
       "CONCERTS_UPCOMING__ICON_CALENDAR_TITLE": "Naptár",
       "CONCERTS_UPCOMING__ICON_CALENDER_ALT": "naptár ikon",

@@ -17,7 +17,7 @@ export class ConcertsContainerComponent implements OnInit {
 
   previousConcert$ = this.store.select(selectPreviousConcerts);
 
-  constructor(private readonly store: Store, public dialog: MatDialog) {}
+  constructor(private readonly store: Store, private readonly dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.store.dispatch(fetchPreviousConcerts());

@@ -6,7 +6,7 @@ export interface FetchPreviousConcertsSuccessAction {
   previousConcerts: readonly ConcertPreviousItem[];
 }
 
-export const fetchPreviousConcerts = createAction('[concerts] Fetch Previous Concerts');
+export const fetchPreviousConcerts = createAction('[Concerts] Fetch Previous Concerts');
 
 export const fetchPreviousConcertsSuccess = createAction(
   '[concerts] Fetch Previous Concerts Success',

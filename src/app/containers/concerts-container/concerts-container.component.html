@@ -1,15 +1,17 @@
 <div class="wrapper-container">
   <bvkz-concerts-upcoming (selectedInviteSource)="onOpenInviteDialog($event)"></bvkz-concerts-upcoming>
 
-  <section>
-    <h2 class="secondary-heading">{{ 'BVKZ.CONCERTS__COMPONENT.CONCERTS__COMPONENT_PREVIOUS_CONCERTS_TITLE' | translate }}</h2>
+  <section aria-labelledby="previous-concerts">
+    <h2 class="secondary-heading" id="previous-concerts">
+      {{ 'BVKZ.CONCERTS_CONTAINER__COMPONENT.PREVIOUS_CONCERTS__TITLE' | translate }}
+    </h2>
 
     <ng-container *ngIf="previousConcert$ | async as previousConcert">
       <bvkz-loader *ngIf="previousConcert | isLoading; else content"></bvkz-loader>
 
       <ng-template #content>
         <ng-container *ngIf="previousConcert | hasError; else loadedContent">
-          <p class="info">{{ 'BVKZ.CONCERTS__COMPONENT.CONCERTS__COMPONENT_PREVIOUS_CONCERTS_ERROR' | translate }}</p>
+          <p class="info">{{ 'BVKZ.CONCERTS_CONTAINER__COMPONENT.PREVIOUS_CONCERTS__ERROR' | translate }}</p>
         </ng-container>
       </ng-template>
 
