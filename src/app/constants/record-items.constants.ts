@@ -1,6 +1,6 @@
-import { RecordItem } from '../interfaces/record-item.interface';
+import { RecordsFolderItem } from '../interfaces/record-item.interface';
 
-export const RECORD_ITEMS: readonly RecordItem[] = [
+export const RECORD_ITEMS: readonly RecordsFolderItem[] = [
   {
     recordTitle: 'Jubileumi lemez a zenekar fennállásának 10. évfordulója alkalmából',
     coverImageSource: '10borito',

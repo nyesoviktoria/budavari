@@ -152,6 +152,7 @@
       "JOIN_US__IMAGE_ALT_TEXT": "csoportkép a zenekarról"
     },
     "RECORDS__COMPONENT": {
+      "ERROR_TEXT": "A tartalom jelenleg nem elérhető",
       "RECORDS__HEADING": "Lemezeink",
       "RECORDS__SOLOIST": "Szólista",
       "REDORDS__SECOND_CD_COVER_ALT_TEXT": "A zenekar 2. lemezének borítóképe",

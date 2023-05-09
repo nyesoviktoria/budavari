@@ -1,18 +1,36 @@
 <div class="wrapper-container">
   <h1 class="primary-heading">{{ 'BVKZ.RECORDS__COMPONENT.RECORDS__HEADING' | translate }}</h1>
-  <div class="records__container" *ngFor="let record of recordItems; trackBy: trackByIndex">
-    <h2 class="secondary-heading">{{ record.recordTitle }}</h2>
-    <div class="records-container__information">
-      <img class="records-container__image" [src]="record.coverImageSource | imageItem" [alt]="record.coverImageAltTranslationKey | translate" />
-      <p class="info records-container__description">{{ record.description }}</p>
-    </div>
-    <ul class="records-container__audio-container">
-      <bvkz-records-audio
-        *ngFor="let audio of record.tracks; trackBy: trackByIndex"
-        [track]="audio"
-        [album]="record.albumId"
-        (audio)="onPlay($event)"
-      ></bvkz-records-audio>
-    </ul>
-  </div>
+  <ng-container *ngIf="recordItems$ | async as recordItems">
+    <bvkz-loader *ngIf="recordItems | isLoading; else content"></bvkz-loader>
+
+    <ng-template #content>
+      <ng-container *ngIf="recordItems | hasError; else loadedContent">
+        <p class="info">{{ 'BVKZ.RECORDS__COMPONENT.ERROR_TEXT' | translate }}</p>
+      </ng-container>
+    </ng-template>
+
+    <ng-template #loadedContent>
+      <ng-container *ngIf="recordItems | hasResult">
+        <div class="records__container" *ngFor="let record of recordItems.data; trackBy: trackByIndex">
+          <h2 class="secondary-heading">{{ record.recordTitle }}</h2>
+          <div class="records-container__information">
+            <img
+              class="records-container__image"
+              [src]="record.coverImageSource | imageItem"
+              [alt]="record.coverImageAltTranslationKey | translate"
+            />
+            <p class="info records-container__description">{{ record.description }}</p>
+          </div>
+          <ul class="records-container__audio-container">
+            <bvkz-records-audio
+              *ngFor="let audio of record.tracks; trackBy: trackByIndex"
+              [track]="audio"
+              [album]="record.albumId"
+              (audio)="onPlay($event)"
+            ></bvkz-records-audio>
+          </ul>
+        </div>
+      </ng-container>
+    </ng-template>
+  </ng-container>
 </div>

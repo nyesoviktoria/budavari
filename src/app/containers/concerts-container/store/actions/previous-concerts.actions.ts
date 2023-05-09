@@ -9,8 +9,8 @@ export interface FetchPreviousConcertsSuccessAction {
 export const fetchPreviousConcerts = createAction('[Concerts] Fetch Previous Concerts');
 
 export const fetchPreviousConcertsSuccess = createAction(
-  '[concerts] Fetch Previous Concerts Success',
+  '[Concerts] Fetch Previous Concerts Success',
   props<FetchPreviousConcertsSuccessAction>()
 );
 
-export const fetchPreviousConcertsError = createErrorAction('[concerts] Fetch Previous Concerts Error');
+export const fetchPreviousConcertsError = createErrorAction('[Concerts] Fetch Previous Concerts Error');
