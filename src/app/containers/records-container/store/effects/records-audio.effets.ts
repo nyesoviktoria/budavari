@@ -14,11 +14,9 @@ export class RecordsAudioEffects {
     this.actions$.pipe(
       ofType(fetchRecordsAudio),
       switchMap(() => this.recordsAudioService.getRecordsAudioData()),
-      map((response: readonly RecordsAudioResponse[]) => {
-        console.log('Mapper: ', mapRecordsAudioResponseToRecordsFolderItems(response));
-
-        return fetchRecordsAudioSuccess({ recordsAudio: mapRecordsAudioResponseToRecordsFolderItems(response) });
-      }),
+      map((response: readonly RecordsAudioResponse[]) =>
+        fetchRecordsAudioSuccess({ recordsAudio: mapRecordsAudioResponseToRecordsFolderItems(response) })
+      ),
       catchError(toErrorAction(fetchRecordsAudioError))
     )
   );

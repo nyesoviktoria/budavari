@@ -8,7 +8,6 @@
         <p class="info">{{ 'BVKZ.RECORDS__COMPONENT.ERROR_TEXT' | translate }}</p>
       </ng-container>
     </ng-template>
-
     <ng-template #loadedContent>
       <ng-container *ngIf="recordItems | hasResult">
         <div class="records__container" *ngFor="let record of recordItems.data; trackBy: trackByIndex">
@@ -17,7 +16,7 @@
             <img
               class="records-container__image"
               [src]="record.coverImageSource | imageItem"
-              [alt]="record.coverImageAltTranslationKey | translate"
+              [alt]="record.coverImageAltText | translate"
             />
             <p class="info records-container__description">{{ record.description }}</p>
           </div>

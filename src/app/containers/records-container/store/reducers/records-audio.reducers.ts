@@ -18,5 +18,5 @@ export const recordsAudioReducer = createReducer(
     data: recordsAudio,
   })),
 
-  on(fetchRecordsAudioError, () => ({ error: 'fetch Records Audio Error' }))
+  on(fetchRecordsAudioError, () => ({ error: 'Fetch Records Audio Error' }))
 );
