@@ -1,11 +1,11 @@
 <div
   *ngIf="!isConcertExpired"
   class="concert-upcoming__container"
-  [ngClass]="{ 'concert-upcoming__container-reverse': concert.number % 2 }"
+  [ngClass]="{ 'concert-upcoming__container-reverse': concertIndex % 2 === 0 }"
 >
   <picture class="concert-upcoming__image-container">
     <source media="(min-width:768px)" [srcset]="concert.imageDesktopSource | imageItem" />
-    <img class="concert-upcoming__image" [src]="concert.imageMobileSource | imageItem" [alt]="concert.imageAltTranslationKey | translate" />
+    <img class="concert-upcoming__image" [src]="concert.imageMobileSource | imageItem" [alt]="concert.imageAltText | translate" />
     <bvkz-countdown [dateTo]="concert.dateCode"></bvkz-countdown>
   </picture>
   <div class="concert-upcoming__text">

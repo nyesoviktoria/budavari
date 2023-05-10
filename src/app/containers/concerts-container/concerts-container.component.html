@@ -1,5 +1,26 @@
 <div class="wrapper-container">
-  <bvkz-concerts-upcoming (selectedInviteSource)="onOpenInviteDialog($event)"></bvkz-concerts-upcoming>
+  <h1 class="primary-heading">{{ 'BVKZ.CONCERTS_CONTAINER__COMPONENT.CONCERTS__TITLE' | translate }}</h1>
+
+  <section aria-label="upcoming-concerts">
+    <ng-container *ngIf="upcomingConcert$ | async as upcomingConcert">
+      <bvkz-loader *ngIf="upcomingConcert | isLoading; else upcomingConcertsContent"></bvkz-loader>
+
+      <ng-template #upcomingConcertsContent>
+        <ng-container *ngIf="upcomingConcert | hasError; else loadedUpcomingConcertsContent">
+          <p class="info">{{ 'BVKZ.CONCERTS_CONTAINER__COMPONENT.ERROR_MESSAGE' | translate }}</p>
+        </ng-container>
+      </ng-template>
+
+      <ng-template #loadedUpcomingConcertsContent>
+        <ng-container *ngIf="upcomingConcert | hasResult">
+          <bvkz-concerts-upcoming
+            (selectedInviteSource)="onOpenInviteDialog($event)"
+            [concertsUpcomingItems]="upcomingConcert.data"
+          ></bvkz-concerts-upcoming>
+        </ng-container>
+      </ng-template>
+    </ng-container>
+  </section>
 
   <section aria-labelledby="previous-concerts">
     <h2 class="secondary-heading" id="previous-concerts">
@@ -7,15 +28,15 @@
     </h2>
 
     <ng-container *ngIf="previousConcert$ | async as previousConcert">
-      <bvkz-loader *ngIf="previousConcert | isLoading; else content"></bvkz-loader>
+      <bvkz-loader *ngIf="previousConcert | isLoading; else previousConcertsContent"></bvkz-loader>
 
-      <ng-template #content>
-        <ng-container *ngIf="previousConcert | hasError; else loadedContent">
-          <p class="info">{{ 'BVKZ.CONCERTS_CONTAINER__COMPONENT.PREVIOUS_CONCERTS__ERROR' | translate }}</p>
+      <ng-template #previousConcertsContent>
+        <ng-container *ngIf="previousConcert | hasError; else loadedPreviousConcertsContent">
+          <p class="info">{{ 'BVKZ.CONCERTS_CONTAINER__COMPONENT.ERROR_MESSAGE' | translate }}</p>
         </ng-container>
       </ng-template>
 
-      <ng-template #loadedContent>
+      <ng-template #loadedPreviousConcertsContent>
         <ng-container *ngIf="previousConcert | hasResult">
           <bvkz-concerts-previous (video)="onPlay($event)" [concertsPreviousItems]="previousConcert.data"></bvkz-concerts-previous>
         </ng-container>

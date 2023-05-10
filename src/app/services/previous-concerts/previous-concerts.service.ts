@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { ConcertPreviousResponse } from '../../interfaces/concerts-previous-response.interface';
+import { ConcertsPreviousResponse } from '../../interfaces/concerts-previous-response.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +11,7 @@ export class PreviousConcertsService {
 
   constructor(private http: HttpClient) {}
 
-  getPreviousConcertsData(): Observable<readonly ConcertPreviousResponse[]> {
-    return this.http.get<readonly ConcertPreviousResponse[]>(this.previousConcertsUrl);
+  getPreviousConcertsData(): Observable<readonly ConcertsPreviousResponse[]> {
+    return this.http.get<readonly ConcertsPreviousResponse[]>(this.previousConcertsUrl);
   }
 }
