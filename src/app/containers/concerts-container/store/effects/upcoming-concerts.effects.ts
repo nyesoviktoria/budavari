@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { concertsService } from '../../../../services/concerts/concerts.service';
+import { ConcertsService } from '../../../../services/concerts/concerts.service';
 import { catchError, map, switchMap } from 'rxjs';
 import { fetchUpcomingConcerts, fetchUpcomingConcertsError, fetchUpcomingConcertsSuccess } from '../actions/upcoming-concerts.actions';
 import { ConcertsUpcomingResponse } from '../../../../interfaces/concerts-upcoming-response.interface';
@@ -20,5 +20,5 @@ export class UpcomingConcertsEffects {
     )
   );
 
-  constructor(private readonly actions$: Actions, private readonly concertsService: concertsService) {}
+  constructor(private readonly actions$: Actions, private readonly concertsService: ConcertsService) {}
 }
