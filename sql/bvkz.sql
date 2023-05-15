@@ -216,6 +216,6 @@ INSERT INTO `images` (`FolderId`, `ImageSource`, `IsVertical`) VALUES
 (3, '2019.06.23.img20', true);
 
 
- SELECT g.FolderId, g.FolderTitle, g.FolderDateCode, g.PhotographerName, i.ImageSource, i.IsVertical FROM images i INNER JOIN gallery_folders g ON i.FolderId = g.FolderId;
+
 
 
