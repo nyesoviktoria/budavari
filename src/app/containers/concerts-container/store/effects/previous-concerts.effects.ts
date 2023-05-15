@@ -6,7 +6,7 @@ import { catchError, map, switchMap } from 'rxjs';
 import { ConcertsPreviousResponse } from '../../../../interfaces/concerts-previous-response.interface';
 import { mapConcertsPreviousResponseToConcertPreviousItems } from '../../../../mappers/concerts-previous-response-to-concert-previous-items/concerts-previous-response-to-concert-previous-items.mapper';
 import { toErrorAction } from '../../../../utils/store-util/store-util';
-import { concertsService } from '../../../../services/concerts/concerts.service';
+import { ConcertsService } from '../../../../services/concerts/concerts.service';
 
 @Injectable()
 export class PreviousConcertsEffects {
@@ -21,5 +21,5 @@ export class PreviousConcertsEffects {
     )
   );
 
-  constructor(private readonly actions$: Actions, private readonly concertsService: concertsService) {}
+  constructor(private readonly actions$: Actions, private readonly concertsService: ConcertsService) {}
 }

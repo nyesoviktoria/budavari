@@ -4,6 +4,7 @@ export const ICONS_ROUTE = `${ASSET_BASE_ROUTE}icons/`;
 export const IMAGES_ROUTE = `${ASSET_BASE_ROUTE}images/`;
 export const VIDEOS_ROUTE = `${ASSET_BASE_ROUTE}videos/`;
 export const MEMBER_IMAGES_ROUTE = `${ASSET_BASE_ROUTE}images/members/`;
+export const API_ROUTE = 'api/bvkz/';
 
 export const MILLISECONDS_TO_SECONDS_COUNTER = 1000;
 export const NUMBER_TO_CHECK_IF_LONG_ENOUGH = 30;

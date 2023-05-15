@@ -1,6 +1,9 @@
 DROP TABLE IF EXISTS `records`;
 DROP TABLE IF EXISTS `albums`;
 DROP TABLE IF EXISTS `upcoming-concerts`;
+DROP TABLE IF EXISTS `previous-concerts`;
+DROP TABLE IF EXISTS `gallery_folders`;
+DROP TABLE IF EXISTS `images`;
 
 CREATE TABLE `records` (
   `RecordId` INT NOT NULL AUTO_INCREMENT,
@@ -81,3 +84,138 @@ CREATE TABLE `upcoming_concerts` (
 INSERT INTO `upcoming_concerts` (`ImageDesktopSource`, `ImageMobileSource`, `ImageAltText`, `ConcertTitle`, `ConcertDate`, `ConcertDateCode`, `ConcertLengthInMinutes`, `ConcertLocation`, `ConcertDescription`, `ConcertInviteImageSource`, `ConcertLocationMapUrl`, `ConcertFacebookEventUrl`) VALUES
   ('szegedi-dom-desktop', 'szegedi-dom-mobile', 'szegedi dóm kupolája', 'Koncert a Szegedi Dómban', '2023. május 27., 18:00', '2023-05-27T17:00', 60, 'Szeged Dóm tér 15, 6720', 'Nem először látja vendégül zenekarunkat a Szegedi Dóm, a Lassus Énekegyüttes és Varjasi Gyula karnagy. Együttműködéseink során szinte már hagyománnyá vált, hogy a szentmise keretében Mozart valamelyik missa brevisét - ez alkalommal a Spatzen Messe-t (KV 220) - adjuk elő. ', 'mozart', 'https://goo.gl/maps/23nARtjyrZbkHcto6?coh=178572&entry=tt', null),
   ('szegedi-dom-desktop', 'szegedi-dom-mobile', 'Jézus keresztrefeszítését ábrázoló üvegablak', 'Koncert a Szegedi Dómban', '2023. május 27., 19:00', '2023-05-27T18:00', 60, 'Szeged Dóm tér 15, 6720', 'A mise után a kórussal közös koncertünkön Pergolesi csodálatos Stabat Materét hallhatja a közönség. ', 'mozart', 'https://goo.gl/maps/23nARtjyrZbkHcto6?coh=178572&entry=tt', null);
+
+CREATE TABLE `previous_concerts` (
+  `id` tinyint NOT NULL AUTO_INCREMENT,
+  `date` varchar(30) ,
+  `location` varchar(40),
+  `url` varchar(150) ,
+  `videoSource` varchar(20) ,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_hungarian_ci;
+
+INSERT INTO `previous_concerts` (`id`, `date`, `location`, `url`, `videoSource`) VALUES
+(1, '2022. december 17.', 'Deák Téri Gimnázium', 'https://youtube.com/playlist?list=PLFHt78hGynFlYLnJbUotQF043nBPaWHYg', '20221217'),
+(2, '2022. július 9.', 'Keszthely', 'https://youtube.com/playlist?list=PLFHt78hGynFlbOsj3aPcN1A6ot7eHtZom', '20220709'),
+(3, '2022. május 15.', 'ELTE Aula Magna', 'https://youtube.com/playlist?list=PLFHt78hGynFmoVwtgzBstR4A0TJNItmnf', '20220515'),
+(4, '2022. február 27.', 'Festetics Palota', 'https://youtube.com/playlist?list=PLFHt78hGynFm4jUgOOARSH2yQBG8-laQV', '20220227'),
+(5, '2021. július 24.', 'Keszthely', 'https://youtube.com/playlist?list=PLFHt78hGynFkTWWRE2PjscfClZ6AyIqwO', '20210724'),
+(6, '2019. június 23.', 'ELTE Aula Magna', 'https://youtube.com/playlist?list=PLFHt78hGynFnQ8jBIjaICBPwA_b5mjeXK', '20190623');
+
+
+CREATE TABLE `gallery_folders` (
+  `FolderId` INT NOT NULL AUTO_INCREMENT,
+  `FolderTitle` VARCHAR(256),
+  `FolderDateCode`: VARCHAR(32),
+  `PhotographerName` VARCHAR(128),
+  `Added` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+   PRIMARY KEY (`FolderId`)
+) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_hungarian_ci;
+
+INSERT INTO `gallery_folders` (`FolderTitle`, `FolderDateCode`, `PhotographerName`) VALUES
+('2022. december 17., Deák Téri Evangélikus Gimnázium', '20221217', 'Stépán Virág'),
+('2022. május 15., ELTE', '20220515', 'Stépán Virág'),
+('2019. június 23., ELTE', '20190623', 'Werner András');
+
+
+CREATE TABLE `images` (
+  `ImageId` INT NOT NULL AUTO_INCREMENT,
+  `FolderId` INT,
+  `ImageSource` VARCHAR(128),
+  `IsVertical` BOOLEAN,
+  `Added` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+   PRIMARY KEY (`ImageId`)
+) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_hungarian_ci;
+
+INSERT INTO `images` (`FolderId`, `ImageSource`, `IsVertical`) VALUES
+(1, '2022.12.17.img01', false),
+(1, '2022.12.17.img02', true),
+(1, '2022.12.17.img03', true),
+(1, '2022.12.17.img04', false),
+(1, '2022.12.17.img05', false),
+(1, '2022.12.17.img06', true),
+(1, '2022.12.17.img07', false),
+(1, '2022.12.17.img08', false),
+(1, '2022.12.17.img09', false),
+(1, '2022.12.17.img10', false),
+(1, '2022.12.17.img11', true),
+(1, '2022.12.17.img12', false),
+(1, '2022.12.17.img13', false),
+(1, '2022.12.17.img14', false),
+(1, '2022.12.17.img15', true),
+(1, '2022.12.17.img16', false),
+(1, '2022.12.17.img17', false),
+(1, '2022.12.17.img18', false),
+(1, '2022.12.17.img19', true),
+(1, '2022.12.17.img20', true),
+(1, '2022.12.17.img21', true),
+(1, '2022.12.17.img22', true),
+(1, '2022.12.17.img23', false),
+(1, '2022.12.17.img24', false),
+(1, '2022.12.17.img25', true),
+(1, '2022.12.17.img26', false),
+(1, '2022.12.17.img27', false),
+(1, '2022.12.17.img28', false),
+(1, '2022.12.17.img29', false),
+(1, '2022.12.17.img30', true),
+(1, '2022.12.17.img31', true),
+(1, '2022.12.17.img32', false),
+(1, '2022.12.17.img33', false),
+(1, '2022.12.17.img34', false),
+(1, '2022.12.17.img35', false),
+(1, '2022.12.17.img36', true),
+(2, '2022.05.15.img01', false),
+(2, '2022.05.15.img02', false),
+(2, '2022.05.15.img03', false),
+(2, '2022.05.15.img04', false),
+(2, '2022.05.15.img05', true),
+(2, '2022.05.15.img06', false),
+(2, '2022.05.15.img07', false),
+(2, '2022.05.15.img08', true),
+(2, '2022.05.15.img09', false),
+(2, '2022.05.15.img10', true),
+(2, '2022.05.15.img11', true),
+(2, '2022.05.15.img12', true),
+(2, '2022.05.15.img13', true),
+(2, '2022.05.15.img14', false),
+(2, '2022.05.15.img15', false),
+(2, '2022.05.15.img16', false),
+(2, '2022.05.15.img17', false),
+(2, '2022.05.15.img18', false),
+(2, '2022.05.15.img19', true),
+(2, '2022.05.15.img20', false),
+(2, '2022.05.15.img21', false),
+(2, '2022.05.15.img22', false),
+(2, '2022.05.15.img23', false),
+(2, '2022.05.15.img24', false),
+(2, '2022.05.15.img25', false),
+(2, '2022.05.15.img26', false),
+(2, '2022.05.15.img27', false),
+(2, '2022.05.15.img28', false),
+(2, '2022.05.15.img29', false),
+(2, '2022.05.15.img30', true),
+(3, '2019.06.23.img01', false),
+(3, '2019.06.23.img02', false),
+(3, '2019.06.23.img03', true),
+(3, '2019.06.23.img04', false),
+(3, '2019.06.23.img05', true),
+(3, '2019.06.23.img06', true),
+(3, '2019.06.23.img07', false),
+(3, '2019.06.23.img08', true),
+(3, '2019.06.23.img09', false),
+(3, '2019.06.23.img10', true),
+(3, '2019.06.23.img11', false),
+(3, '2019.06.23.img12', false),
+(3, '2019.06.23.img13', true),
+(3, '2019.06.23.img14', false),
+(3, '2019.06.23.img15', true),
+(3, '2019.06.23.img16', false),
+(3, '2019.06.23.img17', false),
+(3, '2019.06.23.img18', false),
+(3, '2019.06.23.img19', false),
+(3, '2019.06.23.img20', true);
+
+
+ SELECT g.FolderId, g.FolderTitle, g.FolderDateCode, g.PhotographerName, i.ImageSource, i.IsVertical FROM images i INNER JOIN gallery_folders g ON i.FolderId = g.FolderId;
+
+
