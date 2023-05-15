@@ -22,5 +22,5 @@ export const previousConcertsReducer = createReducer(
     })
   ),
 
-  on(fetchPreviousConcertsError, () => ({ error: 'fetch Previous Concerts Error' }))
+  on(fetchPreviousConcertsError, () => ({ error: 'Fetch Previous Concerts Error' }))
 );

@@ -32,3 +32,18 @@ $app->get('/records-audio', function (Request $request, Response $response, arra
   $json = json_encode($records, JSON_NUMERIC_CHECK);
   echo $json;
 });
+
+$app->get('/upcoming-concerts', function (Request $request, Response $response, array $args) {
+
+  $qry = "SELECT `ImageDesktopSource`, `ImageMobileSource`, `ImageAltText`, `ConcertTitle`, `ConcertDate`, `ConcertDateCode`, `ConcertLengthInMinutes`, `ConcertLocation`, `ConcertDescription`, `ConcertInviteImageSource`, `ConcertLocationMapUrl`, `ConcertFacebookEventUrl` FROM `upcoming_concerts`";
+  $rs = $this->db->query($qry);
+
+
+  while ($row = $rs->fetch_assoc()) {
+    $upcomingConcerts[] = $row;
+  }
+
+
+  $json = json_encode($upcomingConcerts, JSON_NUMERIC_CHECK);
+  echo $json;
+});

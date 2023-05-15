@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angular/core';
-import { CONCERTS_UPCOMING_ITEMS } from '../../constants/concerts-upcoming-items.constants';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+import { ConcertUpcomingItem } from '../../interfaces/concert-upcoming-item.interface';
 
 @Component({
   selector: 'bvkz-concerts-upcoming',
@@ -8,9 +8,9 @@ import { CONCERTS_UPCOMING_ITEMS } from '../../constants/concerts-upcoming-items
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ConcertsUpcomingComponent {
-  @Output() selectedInviteSource = new EventEmitter<string>();
+  @Input() concertsUpcomingItems: readonly ConcertUpcomingItem[] = [];
 
-  readonly concertsUpcomingItems = CONCERTS_UPCOMING_ITEMS;
+  @Output() selectedInviteSource = new EventEmitter<string>();
 
   expiredConcertIndex = true;
 

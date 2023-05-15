@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ConcertUpcomingItem } from '../../interfaces/concerts-upcoming-item.interface';
+import { ConcertUpcomingItem } from '../../interfaces/concert-upcoming-item.interface';
 import { secondsUntilConcert } from '../../utils/seconds-until-concert/seconds-until-concert.util';
 
 @Component({
@@ -10,6 +10,7 @@ import { secondsUntilConcert } from '../../utils/seconds-until-concert/seconds-u
 })
 export class ConcertUpcomingItemComponent implements OnInit {
   @Input() concert!: ConcertUpcomingItem;
+  @Input() concertIndex = 0;
 
   @Output() selectedInviteSource = new EventEmitter<string>();
 

@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MINUTES_IN_AN_HOUR, NUMBER_TO_FIX_CONCERT_TIME } from '../../constants/app.constants';
-import { ConcertUpcomingItem } from '../../interfaces/concerts-upcoming-item.interface';
+import { ConcertUpcomingItem } from '../../interfaces/concert-upcoming-item.interface';
 
 @Component({
   selector: 'bvkz-concert-upcoming-icons',
