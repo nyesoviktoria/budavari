@@ -26,7 +26,7 @@
         <img
           class="gallery-folder__image"
           [ngClass]="{ 'gallery-folder__image-vertical': image.isVertical }"
-          [src]="image.imageSource | galleryItemSmallSource : folder.folderId"
+          [src]="image.imageSource | galleryItemThumbnailSource : folder.folderId"
           (click)="onImageSelect(folder.images, folder.folderId, image.id)"
         />
       </figure>

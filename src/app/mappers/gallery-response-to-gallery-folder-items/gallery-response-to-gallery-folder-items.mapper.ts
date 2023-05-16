@@ -1,8 +1,8 @@
 import { GalleryFolderItem } from '../../interfaces/gallery-folder-item.interface';
 import { GalleryResponse } from '../../interfaces/gallery-response.interface';
 
-export const mapGalleryResponseToGalleryFolderItems = (galleryResponse: readonly GalleryResponse[]): readonly GalleryFolderItem[] => {
-  return galleryResponse
+export const mapGalleryResponseToGalleryFolderItems = (galleryResponse: readonly GalleryResponse[]): readonly GalleryFolderItem[] =>
+  galleryResponse
     .map((galleryTo: GalleryResponse) => {
       const images = [{ imageSource: galleryTo.ImageSource, isVertical: galleryTo.IsVertical, id: galleryTo.ImageId }];
 
@@ -32,4 +32,3 @@ export const mapGalleryResponseToGalleryFolderItems = (galleryResponse: readonly
 
       return galleryFolderItems;
     }, []);
-};

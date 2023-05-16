@@ -1,4 +1,4 @@
-import { GalleryItemSmallSourcePipe } from './gallery-item-small-source.pipe';
+import { GalleryItemSmallSourcePipe } from './gallery-item-thumbnail-source.pipe';
 
 describe('GalleryItemSmallSourcePipe', () => {
   it('create an instance', () => {

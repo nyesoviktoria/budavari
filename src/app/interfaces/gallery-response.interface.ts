@@ -1,9 +1,9 @@
 export interface GalleryResponse {
-  FolderId: number;
-  FolderTitle: string;
-  FolderDateCode: string;
-  PhotographerName: string;
-  ImageId: number;
-  ImageSource: string;
-  IsVertical: boolean;
+  readonly FolderId: number;
+  readonly FolderTitle: string;
+  readonly FolderDateCode: string;
+  readonly PhotographerName: string;
+  readonly ImageId: number;
+  readonly ImageSource: string;
+  readonly IsVertical: boolean;
 }
