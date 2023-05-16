@@ -2,7 +2,7 @@ import { GalleryItem } from './gallery-item.interface';
 
 export interface GalleryFolderItem {
   readonly title: string;
-  readonly galleryFolder: string;
+  readonly folderId: string;
   readonly photographer: string;
-  readonly images: readonly GalleryItem[];
+  readonly images: GalleryItem[];
 }

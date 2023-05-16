@@ -17,12 +17,11 @@
 
   <img
     [ngClass]="{
-      'gallery-dialog__image-vertical': data.galleryItems[currentIndex].vertical,
-      'gallery-dialog__image-horizontal': !data.galleryItems[currentIndex].vertical
+      'gallery-dialog__image-vertical': data.galleryItems[currentIndex].isVertical,
+      'gallery-dialog__image-horizontal': !data.galleryItems[currentIndex].isVertical
     }"
     class="gallery-dialog__image"
-    [src]="data.galleryItems[currentIndex].bigImageSource | galleryItemSource : folderId"
-    [alt]="data.galleryItems[currentIndex].alt"
+    [src]="data.galleryItems[currentIndex].imageSource | galleryItemSource : folderId"
     (touchstart)="swipeStart($event)"
     (touchend)="swipeEnd($event)"
   />

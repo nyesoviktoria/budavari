@@ -106,6 +106,7 @@
     },
     "GALLERY__COMPONENT": {
       "GALLERY_TITLE": "Galéria",
+      "ERROR_MESSAGE": "A geléria képei jelenleg nem elérhetőek",
       "GALLERY_CAMERA_ICON": "fényképezőgép ikon",
       "PAGINATION_BUTTON_NEXT": "Következő",
       "PAGINATION_BUTTON_PREVIOUS": "Előző"

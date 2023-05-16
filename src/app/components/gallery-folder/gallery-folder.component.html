@@ -25,10 +25,9 @@
       <figure class="gallery-folder__image-container" *ngFor="let image of folder.images; trackBy: trackByIndex">
         <img
           class="gallery-folder__image"
-          [ngClass]="{ 'gallery-folder__image-vertical': image.vertical }"
-          [src]="image.smallImageSource | galleryItemSource : folder.galleryFolder"
-          [alt]="image.alt"
-          (click)="onImageSelect(folder.images, image.id)"
+          [ngClass]="{ 'gallery-folder__image-vertical': image.isVertical }"
+          [src]="image.imageSource | galleryItemThumbnailSource : folder.folderId"
+          (click)="onImageSelect(folder.images, folder.folderId, image.id)"
         />
       </figure>
     </div>

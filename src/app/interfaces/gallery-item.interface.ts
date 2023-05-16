@@ -1,7 +1,5 @@
 export interface GalleryItem {
-  readonly smallImageSource: string;
-  readonly bigImageSource: string;
-  readonly vertical: boolean;
-  readonly alt: string;
+  readonly imageSource: string;
+  readonly isVertical: boolean;
   readonly id: number;
 }
