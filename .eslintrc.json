@@ -1,9 +1,13 @@
 {
   "root": true,
-  "ignorePatterns": ["projects/**/*"],
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
   "overrides": [
     {
-      "files": ["*.ts"],
+      "files": [
+        "*.ts"
+      ],
       "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
@@ -37,7 +41,11 @@
         "@typescript-eslint/no-magic-numbers": [
           "warn",
           {
-            "ignore": [-1, 0, 1]
+            "ignore": [
+              -1,
+              0,
+              1
+            ]
           }
         ],
         "@typescript-eslint/no-unused-expressions": "warn",
@@ -47,8 +55,12 @@
       }
     },
     {
-      "files": ["*.html"],
-      "extends": ["plugin:@angular-eslint/template/recommended"],
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
       "rules": {}
     }
   ]
