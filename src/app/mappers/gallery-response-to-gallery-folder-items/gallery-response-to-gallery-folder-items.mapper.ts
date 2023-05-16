@@ -1,43 +1,35 @@
 import { GalleryFolderItem } from '../../interfaces/gallery-folder-item.interface';
 import { GalleryResponse } from '../../interfaces/gallery-response.interface';
 
+export const mapGalleryResponseToGalleryFolderItems = (galleryResponse: readonly GalleryResponse[]): readonly GalleryFolderItem[] => {
+  return galleryResponse
+    .map((galleryTo: GalleryResponse) => {
+      const images = [{ imageSource: galleryTo.ImageSource, isVertical: galleryTo.IsVertical, id: galleryTo.ImageId }];
 
-export const mapGalleryResponseToGalleryFolderItems = (galleryResponse: readonly GalleryResponse[]) => {
-  return galleryResponse.map((galleryTo: GalleryResponse))
-}
-//   (galleryResponse: readonly galleryResponse[]): readonly GalleryFolderItem[] => {
-//   return galleryResponse
-//     .map((recordsAudioTo: RecordsAudioResponse) => {
-//       const tracks = [
-//         { trackSource: recordsAudioTo.TrackSource, audioTitle: recordsAudioTo.RecordTitle, soloistName: recordsAudioTo.SoloistName },
-//       ];
+      return {
+        title: galleryTo.FolderTitle,
+        folderId: galleryTo.FolderDateCode,
+        photographer: galleryTo.PhotographerName,
+        images: images,
+      };
+    })
+    .reduce((galleryFolderItems: GalleryFolderItem[], item) => {
+      const galleryFolders: string[] = [];
 
-//       return {
-//         recordTitle: recordsAudioTo.AlbumTitle,
-//         coverImageSource: recordsAudioTo.CoverImageSource,
-//         coverImageAltText: recordsAudioTo.CoverImageAltText,
-//         description: recordsAudioTo.Description,
-//         albumId: mapRecordId(recordsAudioTo.AlbumName),
-//         tracks: tracks,
-//       };
-//     })
-//     .reduce((recordsFolderItems: RecordsFolderItem[], item) => {
-//       const folders: string[] = [];
+      galleryFolderItems.forEach((image: GalleryFolderItem) => {
+        if (galleryFolders.includes(image.folderId)) {
+          return;
+        }
+        galleryFolders.push(image.folderId);
+      });
 
-//       recordsFolderItems.forEach((record: RecordsFolderItem) => {
-//         if (folders.includes(record.albumId)) {
-//           return;
-//         }
-//         folders.push(record.albumId);
-//       });
+      if (galleryFolders.includes(item.folderId)) {
+        const correctFolderIndex = galleryFolderItems.findIndex((folder: GalleryFolderItem) => folder.folderId === item.folderId);
+        galleryFolderItems[correctFolderIndex].images.push(...item.images);
+      } else {
+        galleryFolderItems.push(item);
+      }
 
-//       if (folders.includes(item.albumId)) {
-//         const correctFolderIndex = recordsFolderItems.findIndex((folder: RecordsFolderItem) => folder.albumId === item.albumId);
-//         recordsFolderItems[correctFolderIndex].tracks.push(...item.tracks);
-//       } else {
-//         recordsFolderItems.push(item);
-//       }
-
-//       return recordsFolderItems;
-//     }, []);
-// };
+      return galleryFolderItems;
+    }, []);
+};

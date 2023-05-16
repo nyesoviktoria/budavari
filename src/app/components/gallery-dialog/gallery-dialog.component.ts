@@ -21,7 +21,7 @@ export class GalleryDialogComponent {
     this.onNextClick();
   }
 
-  readonly folderId = String(this.data.imageId).slice(0, NUMBER_TO_REDUCE_LENGTH_BY_2);
+  readonly folderId = String(this.data.folderId);
 
   private touchStart = 0;
   private touchEnd = 0;

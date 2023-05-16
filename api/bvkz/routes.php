@@ -51,7 +51,7 @@ $app->get('/upcoming-concerts', function (Request $request, Response $response, 
 
 $app->get('/gallery', function (Request $request, Response $response, array $args) {
 
-  $qry = "SELECT g.FolderId, g.FolderTitle, g.FolderDateCode, g.PhotographerName, i.ImageSource, i.IsVertical FROM images i INNER JOIN gallery_folders g ON i.FolderId = g.FolderId";
+  $qry = "SELECT g.FolderId, g.FolderTitle, g.FolderDateCode, g.PhotographerName, i.ImageId, i.ImageSource, i.IsVertical FROM images i INNER JOIN gallery_folders g ON i.FolderId = g.FolderId";
   $rs = $this->db->query($qry);
 
 

@@ -12,8 +12,8 @@ const mapRecordId = (albumName: string): RecordId => {
 
 export const mapRecordsAudioResponseToRecordsFolderItems = (
   recordsAudioResponse: readonly RecordsAudioResponse[]
-): readonly RecordsFolderItem[] => {
-  return recordsAudioResponse
+): readonly RecordsFolderItem[] =>
+  recordsAudioResponse
     .map((recordsAudioTo: RecordsAudioResponse) => {
       const tracks = [
         { trackSource: recordsAudioTo.TrackSource, audioTitle: recordsAudioTo.RecordTitle, soloistName: recordsAudioTo.SoloistName },
@@ -47,4 +47,3 @@ export const mapRecordsAudioResponseToRecordsFolderItems = (
 
       return recordsFolderItems;
     }, []);
-};

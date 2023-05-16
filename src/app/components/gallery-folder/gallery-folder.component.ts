@@ -1,7 +1,8 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angular/core';
-import { GALLERY_ITEMS } from '../../constants/gallery-items.constants';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+
 import { GalleryItem } from '../../interfaces/gallery-item.interface';
 import { SelectedGalleryDialogData } from '../../interfaces/selected-gallery-dialog-data.interface';
+import { GalleryFolderItem } from '../../interfaces/gallery-folder-item.interface';
 
 @Component({
   selector: 'bvkz-gallery-folder',
@@ -12,12 +13,13 @@ import { SelectedGalleryDialogData } from '../../interfaces/selected-gallery-dia
 export class GalleryFolderComponent {
   @Output() selectedImageId = new EventEmitter<SelectedGalleryDialogData>();
 
-  readonly galleryItems = GALLERY_ITEMS;
+  @Input() galleryItems: readonly GalleryFolderItem[] = [];
+
   readonly itemsPerPage = 1;
   currentPage = 1;
 
-  onImageSelect(galleryItems: readonly GalleryItem[], imageId: number): void {
-    this.selectedImageId.emit({ galleryItems, imageId });
+  onImageSelect(galleryItems: readonly GalleryItem[], folderId: string, imageId: number): void {
+    this.selectedImageId.emit({ galleryItems, folderId, imageId });
   }
 
   onPageChange(page: number): void {

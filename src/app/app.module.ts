@@ -52,6 +52,7 @@ import { environment } from '../environments/environment.prod';
 import { BVKZ_FEATURE_NAME } from './constants/store.constants';
 import { pipes } from './pipes';
 import { LoaderComponent } from './components/loader/loader.component';
+import { GalleryItemSmallSourcePipe } from './pipes/gallery-item-source/gallery-item-small-source.pipe';
 
 export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
@@ -94,6 +95,7 @@ export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
     VideosSourcePipe,
     ...pipes,
     LoaderComponent,
+    GalleryItemSmallSourcePipe,
   ],
   imports: [
     AppRoutingModule,
