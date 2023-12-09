@@ -63,3 +63,18 @@ $app->get('/gallery', function (Request $request, Response $response, array $arg
   $json = json_encode($gallery, JSON_NUMERIC_CHECK);
   echo $json;
 });
+
+$app->delete('/deleteGames', function ($request, $response) {
+  $id = json_decode($request->getBody());
+
+  if (isset($id)) {
+    delete($this, "previous_concerts", array('id' => $id));
+    $response_data["status"] = "success";
+    $response_data["message"] = "Játék sikeresen eltávolítva";
+    return $response->withJson($response_data, 200);
+  } else {
+    $response_data["status"] = "error";
+    $response_data["message"] = "Sikertelen törlés";
+    return $response->withJson($response_data, 200);
+  }
+});

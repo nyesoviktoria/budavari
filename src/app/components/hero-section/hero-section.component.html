@@ -7,13 +7,14 @@
     [slides]="heroCarouselItems.length"
     [useKeyboard]="true"
   >
-    <mat-carousel-slide *ngFor="let slide of heroCarouselItems; trackBy: trackByIndex">
+    <mat-carousel-slide *ngFor="let slide of heroCarouselItems; let i = index; trackBy: trackByIndex">
       <div class="hero-section__carousel-slide">
         <picture>
           <source media="(min-width:1024px)" [srcset]="slide.imageDesktopSource | imageItem" />
           <source media="(min-width:768px)" [srcset]="slide.imageTabletSource | imageItem" />
           <img
             class="hero-section__carousel-slide-image"
+            [ngClass]="{ 'hero-section__carousel-slide-image-bottom': i === 0 }"
             [src]="slide.imageMobileSource | imageItem"
             [alt]="slide.imageAltTranslationKey | translate"
           />

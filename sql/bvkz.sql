@@ -96,12 +96,14 @@ CREATE TABLE `previous_concerts` (
 ) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_hungarian_ci;
 
 INSERT INTO `previous_concerts` (`id`, `date`, `location`, `url`, `videoSource`) VALUES
-(1, '2022. december 17.', 'Deák Téri Gimnázium', 'https://youtube.com/playlist?list=PLFHt78hGynFlYLnJbUotQF043nBPaWHYg', '20221217'),
-(2, '2022. július 9.', 'Keszthely', 'https://youtube.com/playlist?list=PLFHt78hGynFlbOsj3aPcN1A6ot7eHtZom', '20220709'),
-(3, '2022. május 15.', 'ELTE Aula Magna', 'https://youtube.com/playlist?list=PLFHt78hGynFmoVwtgzBstR4A0TJNItmnf', '20220515'),
-(4, '2022. február 27.', 'Festetics Palota', 'https://youtube.com/playlist?list=PLFHt78hGynFm4jUgOOARSH2yQBG8-laQV', '20220227'),
-(5, '2021. július 24.', 'Keszthely', 'https://youtube.com/playlist?list=PLFHt78hGynFkTWWRE2PjscfClZ6AyIqwO', '20210724'),
-(6, '2019. június 23.', 'ELTE Aula Magna', 'https://youtube.com/playlist?list=PLFHt78hGynFnQ8jBIjaICBPwA_b5mjeXK', '20190623');
+(1, '2023. július 22.', 'Vászoly, Szent Jakab-templom', 'https://www.youtube.com/playlist?list=PLFHt78hGynFneBXgRUvPjOT2-6vq2_L9m', '20230722'),
+(2, '2023. június 24.', 'Albertfalvi Közösségi Ház', 'https://www.youtube.com/playlist?list=PLFHt78hGynFnUIK8oIFMlD_QeY3eibBYy', '20230624'),
+(3, '2022. december 17.', 'Deák Téri Gimnázium', 'https://youtube.com/playlist?list=PLFHt78hGynFlYLnJbUotQF043nBPaWHYg', '20221217'),
+(4, '2022. július 9.', 'Keszthely', 'https://youtube.com/playlist?list=PLFHt78hGynFlbOsj3aPcN1A6ot7eHtZom', '20220709'),
+(5, '2022. május 15.', 'ELTE Aula Magna', 'https://youtube.com/playlist?list=PLFHt78hGynFmoVwtgzBstR4A0TJNItmnf', '20220515'),
+(6, '2022. február 27.', 'Festetics Palota', 'https://youtube.com/playlist?list=PLFHt78hGynFm4jUgOOARSH2yQBG8-laQV', '20220227'),
+(7, '2021. július 24.', 'Keszthely', 'https://youtube.com/playlist?list=PLFHt78hGynFkTWWRE2PjscfClZ6AyIqwO', '20210724'),
+(8, '2019. június 23.', 'ELTE Aula Magna', 'https://youtube.com/playlist?list=PLFHt78hGynFnQ8jBIjaICBPwA_b5mjeXK', '20190623');
 
 
 CREATE TABLE `gallery_folders` (
@@ -218,5 +220,5 @@ INSERT INTO `images` (`FolderId`, `ImageSource`, `IsVertical`) VALUES
 
 
 
-
-
+INSERT INTO `upcoming_concerts` (`ImageDesktopSource`, `ImageMobileSource`, `ImageAltText`, `ConcertTitle`, `ConcertDate`, `ConcertDateCode`, `ConcertLengthInMinutes`, `ConcertLocation`, `ConcertDescription`, `ConcertInviteImageSource`, `ConcertLocationMapUrl`, `ConcertFacebookEventUrl`) VALUES
+  ('concert-desktop', 'concert-mobile', 'kottás karácsonyfadisz', 'Karácsonyi koncert', '2023. december 17., 17:00', '2023-12-17T16:00', 90, '1053 Budapest, Egyetem tér 1-3.', 'Szeretettel várunk mindenkit hagyományos karácsonyi koncertünkön az ELTE Jogi Karának csodálatos dísztermében, ahol részletek hangzanak el többek között J.S.Bach, Telemann, Mendelssohn, Sosztakovics, Rutter és V.Williams műveiből.', 'meghivo', 'https://maps.app.goo.gl/4kNs7jZq2RfJWpo38', 'https://fb.me/e/1jKUmjd61');

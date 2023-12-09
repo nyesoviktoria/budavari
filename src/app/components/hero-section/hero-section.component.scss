@@ -23,6 +23,11 @@
   width: 100%;
 }
 
+.hero-section__carousel-slide-image-bottom {
+  position: absolute;
+  bottom: 0;
+}
+
 .hero-section__carousel-text-container {
   align-items: center;
   background-color: $color-primary-light-transparent-much;

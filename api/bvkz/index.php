@@ -12,6 +12,8 @@ $app = new \Slim\App($settings);
 // Get container
 $container = $app->getContainer();
 
+$conn;
+
 $container['db'] = function ($container) {
   $getSettings = $container->get('settings')['db'];
   $mysqli = new mysqli($getSettings['host'], $getSettings['user'], $getSettings['password'], $getSettings['database']);
@@ -29,5 +31,40 @@ $container['notFoundHandler'] = function ($c) {
 
 // Register routes
 require __DIR__ . '/routes.php';
+
+
+function delete($container, $table, $where)
+{
+  $response = [];
+
+  try {
+    $a = array();
+    $w = "";
+    foreach ($where as $key => $value) {
+      $w .= " and " . $key . " = :" . $key;
+      $a[":" . $key] = $value;
+    }
+
+    $pdo = $container->get('pdo'); // Az adatbázis-kapcsolat objektumának lekérése a konténerből
+    $stmt = $pdo->prepare("DELETE FROM $table WHERE 1=1 " . $w);
+    $stmt->execute($a);
+    $affected_rows = $stmt->rowCount();
+
+    if ($affected_rows <= 0) {
+      $response["status"] = "warning";
+      $response["message"] = "Már törölt játék.";
+    } else {
+      $response["status"] = "success";
+      $response["message"] = $affected_rows . " sor(ok) törölve az adatbázisból.";
+    }
+  } catch (PDOException $e) {
+    $response["status"] = "error";
+    $response["message"] = 'Törlés sikertelen: ' . $e->getMessage();
+  }
+
+  return $response;
+}
+
+
 
 $app->run();
