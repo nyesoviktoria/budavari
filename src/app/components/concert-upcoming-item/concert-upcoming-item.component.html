@@ -10,7 +10,7 @@
   </picture>
   <div class="concert-upcoming__text">
     <p class="concert-upcoming__text-title">{{ concert.title }}</p>
-    <p class="concert-upcoming__text-description">{{ concert.description }}</p>
+    <p class="concert-upcoming__text-description" [innerHTML]="concert.description"></p>
     <p class="concert-upcoming__text-date">{{ concert.date }}</p>
     <p class="concert-upcoming__text-place">{{ concert.place }}</p>
 
