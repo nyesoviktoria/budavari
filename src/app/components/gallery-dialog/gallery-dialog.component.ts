@@ -3,12 +3,23 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { NUMBER_TO_REDUCE_LENGTH_BY_2 } from '../../constants/app.constants';
 import { GalleryItem } from '../../interfaces/gallery-item.interface';
 import { SelectedGalleryDialogData } from '../../interfaces/selected-gallery-dialog-data.interface';
+import { NgClass } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
+import { GalleryItemSourcePipe } from '../../pipes/gallery-item-source/gallery-item-source.pipe';
+import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
 
 @Component({
-  selector: 'bvkz-gallery-dialog',
-  templateUrl: './gallery-dialog.component.html',
-  styleUrls: ['./gallery-dialog.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'bvkz-gallery-dialog',
+    templateUrl: './gallery-dialog.component.html',
+    styleUrls: ['./gallery-dialog.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [
+        NgClass,
+        TranslateModule,
+        GalleryItemSourcePipe,
+        IconItemPipe,
+    ],
 })
 export class GalleryDialogComponent {
   @HostListener('document:keydown.arrowleft')

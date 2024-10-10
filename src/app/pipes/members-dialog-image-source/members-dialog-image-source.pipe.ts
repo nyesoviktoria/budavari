@@ -2,7 +2,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { MEMBER_IMAGES_ROUTE } from '../../constants/app.constants';
 
 @Pipe({
-  name: 'membersDialogImageSource',
+    name: 'membersDialogImageSource',
+    standalone: true,
 })
 export class MembersDialogImageSourcePipe implements PipeTransform {
   transform(image: string): unknown {

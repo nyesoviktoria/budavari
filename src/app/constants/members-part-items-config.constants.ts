@@ -128,4 +128,4 @@ export const MEMBERS_PARTS_ITEMS: readonly MembersPartItem[] = [
     ],
     isMiddleCart: true,
   },
-];
+] as const;

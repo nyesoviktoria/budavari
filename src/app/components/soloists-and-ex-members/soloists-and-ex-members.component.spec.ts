@@ -11,8 +11,8 @@ describe('SoloistsAndExMembersComponent', () => {
 
   beforeEach(waitForAsync (() => {
      TestBed.configureTestingModule({
-      declarations: [SoloistsAndExMembersComponent, MockComponent(AccordionComponent), MockPipe(TranslatePipe)],
-    }).compileComponents();
+    imports: [SoloistsAndExMembersComponent, MockComponent(AccordionComponent), MockPipe(TranslatePipe)],
+}).compileComponents();
 
     fixture = TestBed.createComponent(SoloistsAndExMembersComponent);
     component = fixture.componentInstance;

@@ -2,7 +2,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { ICONS_ROUTE } from '../../constants/app.constants';
 
 @Pipe({
-  name: 'iconItem',
+    name: 'iconItem',
+    standalone: true,
 })
 export class IconItemPipe implements PipeTransform {
   transform(icon: string): unknown {

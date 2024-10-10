@@ -145,4 +145,4 @@ export const EX_MEMBERS: readonly AccordionMembersItem[] = [
     name: 'Werner Ágnes',
     instrument: 'VIOLIN',
   },
-];
+] as const;

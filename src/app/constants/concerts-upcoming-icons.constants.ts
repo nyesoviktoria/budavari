@@ -19,4 +19,4 @@ export const CONCERTS_UPCOMING_ICONS: readonly ConcertsUpcomingIconItem[] = [
     iconSource: 'square-facebook',
     iconImageAltTranslationKey: 'facebook ikon',
   },
-];
+] as const;

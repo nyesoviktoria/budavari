@@ -10,8 +10,8 @@ describe('HeroSectionComponent', () => {
 
   beforeEach(waitForAsync (() => {
      TestBed.configureTestingModule({
-      declarations: [HeroSectionComponent, MockPipe(TranslatePipe)],
-    }).compileComponents();
+    imports: [HeroSectionComponent, MockPipe(TranslatePipe)],
+}).compileComponents();
 
     fixture = TestBed.createComponent(HeroSectionComponent);
     component = fixture.componentInstance;

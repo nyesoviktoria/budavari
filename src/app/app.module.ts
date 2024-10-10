@@ -58,10 +58,25 @@ export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
 }
 
-@NgModule({ declarations: [
-        AboutUsComponent,
+@NgModule({ declarations: [AppComponent],
+    bootstrap: [AppComponent], imports: [AppRoutingModule,
+        BrowserAnimationsModule,
+        BrowserModule,
+        MatCarouselModule,
+        MatDialogModule,
+        NgxPaginationModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient],
+            },
+        }),
+        EffectsModule.forRoot([...effects]),
+        StoreModule.forRoot(),
+        StoreModule.forFeature(BVKZ_FEATURE_NAME, bvkzReducer),
+        StoreDevtoolsModule.instrument({ logOnly: environment.production, connectInZone: true }), AboutUsComponent,
         AccordionComponent,
-        AppComponent,
         ConcertInviteDialogComponent,
         ConcertsContainerComponent,
         ConcertsPreviousComponent,
@@ -94,23 +109,5 @@ export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
         VideosSourcePipe,
         ...pipes,
         LoaderComponent,
-        GalleryItemSmallSourcePipe,
-    ],
-    bootstrap: [AppComponent], imports: [AppRoutingModule,
-        BrowserAnimationsModule,
-        BrowserModule,
-        MatCarouselModule,
-        MatDialogModule,
-        NgxPaginationModule,
-        TranslateModule.forRoot({
-            loader: {
-                provide: TranslateLoader,
-                useFactory: HttpLoaderFactory,
-                deps: [HttpClient],
-            },
-        }),
-        EffectsModule.forRoot([...effects]),
-        StoreModule.forRoot(),
-        StoreModule.forFeature(BVKZ_FEATURE_NAME, bvkzReducer),
-        StoreDevtoolsModule.instrument({ logOnly: environment.production , connectInZone: true})], providers: [{ provide: BVKZ_FEATURE_NAME, useValue: bvkzReducer }, provideHttpClient(withInterceptorsFromDi())] })
+        GalleryItemSmallSourcePipe], providers: [{ provide: BVKZ_FEATURE_NAME, useValue: bvkzReducer }, provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {}

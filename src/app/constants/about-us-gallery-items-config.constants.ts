@@ -13,4 +13,4 @@ export const ABOUT_US_GALLERY_ITEMS: readonly ImageItem[] = [
     source: 'concertfull',
     alt: 'BVKZ.ABOUT_US__COMPONENT.ABOUT_US__THIRD_IMAGE_ALT',
   },
-];
+] as const;

@@ -2,12 +2,21 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from 
 import { AUDIO_ROUTE } from '../../constants/app.constants';
 import { RecordAudioItem } from '../../interfaces/record-audio-item.interface';
 import { RecordId } from '../../types/record-id.type';
+import { NgIf } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
+import { RecordsAudioSourcePipe } from '../../pipes/records-audio-source/records-audio-source.pipe';
 
 @Component({
-  selector: 'bvkz-records-audio',
-  templateUrl: './records-audio.component.html',
-  styleUrls: ['./records-audio.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'bvkz-records-audio',
+    templateUrl: './records-audio.component.html',
+    styleUrls: ['./records-audio.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [
+        NgIf,
+        TranslateModule,
+        RecordsAudioSourcePipe,
+    ],
 })
 export class RecordsAudioComponent {
   @Input() track!: RecordAudioItem;

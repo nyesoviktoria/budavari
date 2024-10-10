@@ -18,4 +18,4 @@ export const HEADER_NAVIGATION_ITEMS: readonly HeaderNavigationItem[] = [
     pageTitle: 'RECORDS',
     pageRoute: RECORDS_ROUTE,
   },
-];
+] as const;

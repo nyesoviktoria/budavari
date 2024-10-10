@@ -16,4 +16,4 @@ export const FOOTER_CONTACT_ICON_ITEMS: readonly FooterContactIcon[] = [
     iconSource: 'envelope',
     alt: 'BVKZ.FOOTER__COMPONENT.FOOTER_EMAIL_ICON__ALT_TEXT',
   },
-];
+] as const;

@@ -22,4 +22,4 @@ export const HERO_CAROUSEL_ITEMS: readonly HeroCarouselItem[] = [
     navigateTo: GALLERY_PATH,
     button: 'BVKZ.NAVIGATION__LINKS.GALLERY',
   },
-];
+] as const;

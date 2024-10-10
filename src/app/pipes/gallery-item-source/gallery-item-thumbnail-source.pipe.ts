@@ -2,7 +2,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { IMAGES_ROUTE } from '../../constants/app.constants';
 
 @Pipe({
-  name: 'galleryItemThumbnailSource',
+    name: 'galleryItemThumbnailSource',
+    standalone: true,
 })
 export class GalleryItemSmallSourcePipe implements PipeTransform {
   transform(imageSource: string, folder: string): string {

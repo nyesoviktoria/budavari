@@ -10,8 +10,8 @@ describe('FooterComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [FooterComponent, MockPipe(TranslatePipe)],
-    }).compileComponents();
+    imports: [FooterComponent, MockPipe(TranslatePipe)],
+}).compileComponents();
 
     fixture = TestBed.createComponent(FooterComponent);
     component = fixture.componentInstance;

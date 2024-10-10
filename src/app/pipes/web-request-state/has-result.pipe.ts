@@ -4,7 +4,8 @@ import { isResultState } from '../../typeguards/web-request-state.guards';
 import { WebRequestState, ResultState } from '../../interfaces/states/web-request-state.interface';
 
 @Pipe({
-  name: 'hasResult',
+    name: 'hasResult',
+    standalone: true,
 })
 export class HasResultPipe implements PipeTransform {
   transform<D, E>(request: WebRequestState<D, E>): request is ResultState<D> {

@@ -13,4 +13,4 @@ export const CONTACT_COMPONENT_ICON_ITEMS: readonly ContactIcon[] = [
     iconSource: 'location-dot',
     alt: 'CONTACT__ICONS_PLACE_MARKER_ALT_TEXT',
   },
-];
+] as const;

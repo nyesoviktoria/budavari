@@ -45,4 +45,4 @@ export const SOLOISTS: readonly AccordionMembersItem[] = [
     name: 'Vereb Balázs',
     instrument: 'VIOLIN',
   },
-];
+] as const;

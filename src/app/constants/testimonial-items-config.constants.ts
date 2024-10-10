@@ -7,4 +7,4 @@ export const TESTIMONIAL_ITEMS: readonly TestimonialItem[] = [
     imageSource: 'bartok_tamas',
     testimonial: 'BVKZ.TESTIMONIALS__COMPONENT.FIRST_TESTIMONIAL__TEXT',
   },
-];
+] as const;

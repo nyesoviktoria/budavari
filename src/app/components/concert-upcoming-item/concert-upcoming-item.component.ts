@@ -1,12 +1,26 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ConcertUpcomingItem } from '../../interfaces/concert-upcoming-item.interface';
 import { secondsUntilConcert } from '../../utils/seconds-until-concert/seconds-until-concert.util';
+import { NgIf, NgClass } from '@angular/common';
+import { CountdownComponent } from '../countdown/countdown.component';
+import { ConcertUpcomingIconsComponent } from '../concert-upcoming-icons/concert-upcoming-icons.component';
+import { TranslateModule } from '@ngx-translate/core';
+import { ImageItemPipe } from '../../pipes/image-item/image-item.pipe';
 
 @Component({
-  selector: 'bvkz-concert-upcoming-item',
-  templateUrl: './concert-upcoming-item.component.html',
-  styleUrls: ['./concert-upcoming-item.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'bvkz-concert-upcoming-item',
+    templateUrl: './concert-upcoming-item.component.html',
+    styleUrls: ['./concert-upcoming-item.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [
+        NgIf,
+        NgClass,
+        CountdownComponent,
+        ConcertUpcomingIconsComponent,
+        TranslateModule,
+        ImageItemPipe,
+    ],
 })
 export class ConcertUpcomingItemComponent implements OnInit {
   @Input() concert!: ConcertUpcomingItem;

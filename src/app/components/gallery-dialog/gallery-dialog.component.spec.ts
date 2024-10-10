@@ -8,8 +8,8 @@ describe('GalleryDialogComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GalleryDialogComponent ]
-    })
+    imports: [GalleryDialogComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(GalleryDialogComponent);

@@ -121,4 +121,4 @@ export const MEMBER_DIALOG_DATA: readonly MemberDialogItem[] = [
     memberId: 'KIRALY_MIKLOS',
     imageSource: 'kmiki',
   },
-];
+] as const;
