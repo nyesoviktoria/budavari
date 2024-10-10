@@ -16,5 +16,8 @@ export class GalleryEffects {
     )
   );
 
-  constructor(private readonly actions$: Actions, private readonly galleryService: GalleryService) {}
+  constructor(
+    private readonly actions$: Actions,
+    private readonly galleryService: GalleryService
+  ) {}
 }

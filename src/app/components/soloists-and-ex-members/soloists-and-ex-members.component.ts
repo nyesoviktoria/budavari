@@ -6,15 +6,12 @@ import { AccordionComponent } from '../accordion/accordion.component';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-    selector: 'bvkz-soloists-and-ex-members',
-    templateUrl: './soloists-and-ex-members.component.html',
-    styleUrls: ['./soloists-and-ex-members.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
-    imports: [
-    AccordionComponent,
-    TranslateModule
-],
+  selector: 'bvkz-soloists-and-ex-members',
+  templateUrl: './soloists-and-ex-members.component.html',
+  styleUrls: ['./soloists-and-ex-members.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [AccordionComponent, TranslateModule],
 })
 export class SoloistsAndExMembersComponent {
   readonly soloists = SOLOISTS;

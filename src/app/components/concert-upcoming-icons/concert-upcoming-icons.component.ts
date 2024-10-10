@@ -6,15 +6,12 @@ import { TranslateModule } from '@ngx-translate/core';
 import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
 
 @Component({
-    selector: 'bvkz-concert-upcoming-icons',
-    templateUrl: './concert-upcoming-icons.component.html',
-    styleUrls: ['./concert-upcoming-icons.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
-    imports: [
-    TranslateModule,
-    IconItemPipe
-],
+  selector: 'bvkz-concert-upcoming-icons',
+  templateUrl: './concert-upcoming-icons.component.html',
+  styleUrls: ['./concert-upcoming-icons.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [TranslateModule, IconItemPipe],
 })
 export class ConcertUpcomingIconsComponent implements OnInit {
   @Input() concertActual!: ConcertUpcomingItem;

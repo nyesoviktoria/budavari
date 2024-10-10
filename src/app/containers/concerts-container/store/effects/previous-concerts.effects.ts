@@ -21,5 +21,8 @@ export class PreviousConcertsEffects {
     )
   );
 
-  constructor(private readonly actions$: Actions, private readonly concertsService: ConcertsService) {}
+  constructor(
+    private readonly actions$: Actions,
+    private readonly concertsService: ConcertsService
+  ) {}
 }

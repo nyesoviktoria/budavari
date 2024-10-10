@@ -13,8 +13,8 @@ describe('FrameComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-    imports: [RouterTestingModule, FrameComponent, MockComponents(HeaderComponent, FooterComponent)],
-}).compileComponents();
+      imports: [RouterTestingModule, FrameComponent, MockComponents(HeaderComponent, FooterComponent)],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(FrameComponent);
     component = fixture.componentInstance;

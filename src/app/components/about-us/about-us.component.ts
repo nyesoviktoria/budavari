@@ -6,17 +6,12 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ImageItemPipe } from '../../pipes/image-item/image-item.pipe';
 
 @Component({
-    selector: 'bvkz-about-us',
-    templateUrl: './about-us.component.html',
-    styleUrls: ['./about-us.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
-    imports: [
-    NgTemplateOutlet,
-    AccordionComponent,
-    TranslateModule,
-    ImageItemPipe
-],
+  selector: 'bvkz-about-us',
+  templateUrl: './about-us.component.html',
+  styleUrls: ['./about-us.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [NgTemplateOutlet, AccordionComponent, TranslateModule, ImageItemPipe],
 })
 export class AboutUsComponent {
   readonly imageItems = ABOUT_US_GALLERY_ITEMS;

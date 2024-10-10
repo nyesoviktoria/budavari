@@ -1,10 +1,8 @@
 <h1 class="primary-heading">{{ 'BVKZ.GALLERY__COMPONENT.GALLERY_TITLE' | translate }}</h1>
 
 <ul class="gallery-folder__list">
-  @for (folder of galleryItems | paginate : { itemsPerPage: itemsPerPage, currentPage: currentPage }; track folder.folderId) {
-    <li
-      class="gallery-folder__list-item"
-      >
+  @for (folder of galleryItems | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }; track folder.folderId) {
+    <li class="gallery-folder__list-item">
       <div class="gallery-folder__header">
         <h2 class="secondary-heading gallery-folder__title">{{ folder.title }}</h2>
         <pagination-controls
@@ -19,27 +17,27 @@
           class="gallery-folder__photographer-icon"
           [src]="'camera-solid' | iconItem"
           [alt]="'BVKZ.GALLERY__COMPONENT.GALLERY_CAMERA_ICON' | translate"
-          />{{ folder.photographer }}
-        </p>
-        <div class="gallery-folder__images-wrapper">
-          @for (image of folder.images; track image.id) {
-            <figure class="gallery-folder__image-container">
-              <img
-                class="gallery-folder__image"
-                [ngClass]="{ 'gallery-folder__image-vertical': image.isVertical }"
-                [src]="image.imageSource | galleryItemThumbnailSource : folder.folderId"
-                (click)="onImageSelect(folder.images, folder.folderId, image.id)"
-                />
-            </figure>
-          }
-        </div>
-      </li>
-    }
+        />{{ folder.photographer }}
+      </p>
+      <div class="gallery-folder__images-wrapper">
+        @for (image of folder.images; track image.id) {
+          <figure class="gallery-folder__image-container">
+            <img
+              class="gallery-folder__image"
+              [ngClass]="{ 'gallery-folder__image-vertical': image.isVertical }"
+              [src]="image.imageSource | galleryItemThumbnailSource: folder.folderId"
+              (click)="onImageSelect(folder.images, folder.folderId, image.id)"
+            />
+          </figure>
+        }
+      </div>
+    </li>
+  }
 
-    <pagination-controls
-      class="gallery-folder__pagination"
-      [nextLabel]="'BVKZ.GALLERY__COMPONENT.PAGINATION_BUTTON_NEXT' | translate"
-      [previousLabel]="'BVKZ.GALLERY__COMPONENT.PAGINATION_BUTTON_PREVIOUS' | translate"
-      (pageChange)="onPageChange($event)"
-    ></pagination-controls>
-  </ul>
+  <pagination-controls
+    class="gallery-folder__pagination"
+    [nextLabel]="'BVKZ.GALLERY__COMPONENT.PAGINATION_BUTTON_NEXT' | translate"
+    [previousLabel]="'BVKZ.GALLERY__COMPONENT.PAGINATION_BUTTON_PREVIOUS' | translate"
+    (pageChange)="onPageChange($event)"
+  ></pagination-controls>
+</ul>

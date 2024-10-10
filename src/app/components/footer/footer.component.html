@@ -3,7 +3,7 @@
     <div class="footer__icons-container">
       @for (icon of contactIcons; track icon.iconSource) {
         <a [href]="icon.url" target="_blank" class="footer__contact-icon"
-          ><img class="footer__icon-image" [src]="icon.iconSource | iconItem" [alt]="icon.alt |translate"
+          ><img class="footer__icon-image" [src]="icon.iconSource | iconItem" [alt]="icon.alt | translate"
         /></a>
       }
     </div>

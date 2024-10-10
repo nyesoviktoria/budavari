@@ -11,8 +11,8 @@ describe('AboutUsComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-    imports: [AboutUsComponent, MockComponent(AccordionComponent), MockPipe(TranslatePipe)],
-}).compileComponents();
+      imports: [AboutUsComponent, MockComponent(AccordionComponent), MockPipe(TranslatePipe)],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(AboutUsComponent);
     component = fixture.componentInstance;

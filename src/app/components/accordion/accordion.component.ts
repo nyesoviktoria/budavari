@@ -4,17 +4,13 @@ import { NgClass } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
 @Component({
-    selector: 'bvkz-accordion',
-    templateUrl: './accordion.component.html',
-    styleUrls: ['./accordion.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    animations: [toggleAnimation],
-    standalone: true,
-    imports: [
-    NgClass,
-    TranslateModule,
-    IconItemPipe
-],
+  selector: 'bvkz-accordion',
+  templateUrl: './accordion.component.html',
+  styleUrls: ['./accordion.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  animations: [toggleAnimation],
+  standalone: true,
+  imports: [NgClass, TranslateModule, IconItemPipe],
 })
 export class AccordionComponent {
   @Input() buttonName = '';

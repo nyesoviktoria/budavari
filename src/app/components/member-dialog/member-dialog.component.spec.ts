@@ -18,14 +18,14 @@ describe('MemberDialogComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-    imports: [MemberDialogComponent, MockPipe(TranslatePipe)],
-    providers: [
+      imports: [MemberDialogComponent, MockPipe(TranslatePipe)],
+      providers: [
         {
-            provide: MAT_DIALOG_DATA,
-            useValue: memberDialogItemTestData,
+          provide: MAT_DIALOG_DATA,
+          useValue: memberDialogItemTestData,
         },
-    ],
-}).compileComponents();
+      ],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(MemberDialogComponent);
     component = fixture.componentInstance;

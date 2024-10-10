@@ -6,15 +6,12 @@ import { TranslateModule } from '@ngx-translate/core';
 import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
 
 @Component({
-    selector: 'bvkz-contact-information',
-    templateUrl: './contact-information.component.html',
-    styleUrls: ['./contact-information.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
-    imports: [
-    TranslateModule,
-    IconItemPipe
-],
+  selector: 'bvkz-contact-information',
+  templateUrl: './contact-information.component.html',
+  styleUrls: ['./contact-information.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [TranslateModule, IconItemPipe],
 })
 export class ContactInformationComponent {
   readonly contactIcons = CONTACT_COMPONENT_ICON_ITEMS;

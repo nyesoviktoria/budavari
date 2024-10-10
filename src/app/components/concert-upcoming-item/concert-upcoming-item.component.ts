@@ -8,18 +8,12 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ImageItemPipe } from '../../pipes/image-item/image-item.pipe';
 
 @Component({
-    selector: 'bvkz-concert-upcoming-item',
-    templateUrl: './concert-upcoming-item.component.html',
-    styleUrls: ['./concert-upcoming-item.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
-    imports: [
-    NgClass,
-    CountdownComponent,
-    ConcertUpcomingIconsComponent,
-    TranslateModule,
-    ImageItemPipe
-],
+  selector: 'bvkz-concert-upcoming-item',
+  templateUrl: './concert-upcoming-item.component.html',
+  styleUrls: ['./concert-upcoming-item.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [NgClass, CountdownComponent, ConcertUpcomingIconsComponent, TranslateModule, ImageItemPipe],
 })
 export class ConcertUpcomingItemComponent implements OnInit {
   @Input() concert!: ConcertUpcomingItem;

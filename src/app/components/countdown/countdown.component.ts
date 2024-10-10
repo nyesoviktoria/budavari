@@ -17,16 +17,12 @@ import { TranslateModule } from '@ngx-translate/core';
 import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
 
 @Component({
-    selector: 'bvkz-countdown',
-    templateUrl: './countdown.component.html',
-    styleUrls: ['./countdown.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
-    imports: [
-    AsyncPipe,
-    TranslateModule,
-    IconItemPipe
-],
+  selector: 'bvkz-countdown',
+  templateUrl: './countdown.component.html',
+  styleUrls: ['./countdown.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [AsyncPipe, TranslateModule, IconItemPipe],
 })
 export class CountdownComponent implements OnInit, OnDestroy {
   @Input() dateTo = '';

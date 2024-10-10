@@ -4,12 +4,12 @@ import { ConcertUpcomingItem } from '../../interfaces/concert-upcoming-item.inte
 import { ConcertUpcomingItemComponent } from '../concert-upcoming-item/concert-upcoming-item.component';
 
 @Component({
-    selector: 'bvkz-concerts-upcoming',
-    templateUrl: './concerts-upcoming.component.html',
-    styleUrls: ['./concerts-upcoming.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
-    imports: [ConcertUpcomingItemComponent],
+  selector: 'bvkz-concerts-upcoming',
+  templateUrl: './concerts-upcoming.component.html',
+  styleUrls: ['./concerts-upcoming.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [ConcertUpcomingItemComponent],
 })
 export class ConcertsUpcomingComponent {
   @Input() concertsUpcomingItems: readonly ConcertUpcomingItem[] = [];
@@ -21,5 +21,4 @@ export class ConcertsUpcomingComponent {
   onOpenInviteDialog(inviteSource: string): void {
     this.selectedInviteSource.emit(inviteSource);
   }
-
 }

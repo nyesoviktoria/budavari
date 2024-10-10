@@ -3,9 +3,7 @@
     <bvkz-accordion [buttonName]="'BVKZ.SOLOISTS_AND_EX_MEMBERS.SOLOISTS__TITLE' | translate">
       <ul class="soloists-and-ex-members__soloists__list">
         @for (member of soloists; track member) {
-          <li>
-            {{ member.name }} ({{ 'BVKZ.SOLOISTS_AND_EX_MEMBERS.INSTRUMENT_TYPES.' + member.instrument | translate }})
-          </li>
+          <li>{{ member.name }} ({{ 'BVKZ.SOLOISTS_AND_EX_MEMBERS.INSTRUMENT_TYPES.' + member.instrument | translate }})</li>
         }
       </ul>
     </bvkz-accordion>
@@ -14,9 +12,7 @@
     <bvkz-accordion [buttonName]="'BVKZ.SOLOISTS_AND_EX_MEMBERS.EX_MEMBERS__TITLE' | translate">
       <ul class="soloists-and-ex-members__ex-members__list">
         @for (member of exMembers; track member) {
-          <li>
-            {{ member.name }} ({{ 'BVKZ.SOLOISTS_AND_EX_MEMBERS.INSTRUMENT_TYPES.' + member.instrument | translate }})
-          </li>
+          <li>{{ member.name }} ({{ 'BVKZ.SOLOISTS_AND_EX_MEMBERS.INSTRUMENT_TYPES.' + member.instrument | translate }})</li>
         }
       </ul>
     </bvkz-accordion>

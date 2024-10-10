@@ -4,21 +4,24 @@ import { TranslateService } from '@ngx-translate/core';
 import { filter, Subject, takeUntil } from 'rxjs';
 import { FrameComponent } from './components/frame/frame.component';
 
-// eslint-disable-next-line @typescript-eslint/ban-types
+// eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
 declare let gtag: Function;
 
 @Component({
-    selector: 'bvkz-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
-    imports: [FrameComponent],
+  selector: 'bvkz-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [FrameComponent],
 })
 export class AppComponent implements AfterViewInit, OnDestroy {
   private readonly objectDestroySource$ = new Subject<void>();
 
-  constructor(private readonly translateService: TranslateService, private readonly router: Router) {
+  constructor(
+    private readonly translateService: TranslateService,
+    private readonly router: Router
+  ) {
     this.translateService.use('hu');
   }
 

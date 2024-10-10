@@ -17,10 +17,12 @@ describe('HomeContainerComponent', () => {
     const spy = jasmine.createSpyObj('MatDialog', ['open']);
 
     TestBed.configureTestingModule({
-    imports: [HomeContainerComponent,
-        MockComponents(AboutUsComponent, HeroSectionComponent, MembersComponent, SoloistsAndExMembersComponent, TestimonialsComponent)],
-    providers: [{ provide: MatDialog, useValue: spy }],
-}).compileComponents();
+      imports: [
+        HomeContainerComponent,
+        MockComponents(AboutUsComponent, HeroSectionComponent, MembersComponent, SoloistsAndExMembersComponent, TestimonialsComponent),
+      ],
+      providers: [{ provide: MatDialog, useValue: spy }],
+    }).compileComponents();
 
     TestBed.inject(MatDialog) as jasmine.SpyObj<MatDialog>;
 

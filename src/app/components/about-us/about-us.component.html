@@ -29,9 +29,9 @@
     </div>
     <div class="about-us__gallery-container">
       @for (image of imageItems; track image) {
-      <picture class="about-us__image-container">
-        <img class="img about-us__image" [src]="image.source | imageItem" [alt]="image.alt | translate" />
-      </picture>
+        <picture class="about-us__image-container">
+          <img class="img about-us__image" [src]="image.source | imageItem" [alt]="image.alt | translate" />
+        </picture>
       }
     </div>
   </div>

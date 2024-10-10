@@ -13,21 +13,12 @@ import { HasResultPipe } from '../../pipes/web-request-state/has-result.pipe';
 import { IsLoadingPipe } from '../../pipes/web-request-state/is-loading.pipe';
 
 @Component({
-    selector: 'bvkz-records-container',
-    templateUrl: './records-container.component.html',
-    styleUrls: ['./records-container.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
-    imports: [
-    LoaderComponent,
-    RecordsAudioComponent,
-    AsyncPipe,
-    TranslateModule,
-    ImageItemPipe,
-    HasErrorPipe,
-    HasResultPipe,
-    IsLoadingPipe
-],
+  selector: 'bvkz-records-container',
+  templateUrl: './records-container.component.html',
+  styleUrls: ['./records-container.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [LoaderComponent, RecordsAudioComponent, AsyncPipe, TranslateModule, ImageItemPipe, HasErrorPipe, HasResultPipe, IsLoadingPipe],
 })
 export class RecordsContainerComponent implements OnInit {
   readonly recordItems$ = this.store.select(selectRecordsAudio);

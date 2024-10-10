@@ -8,17 +8,12 @@ import { TranslateModule } from '@ngx-translate/core';
 import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
 
 @Component({
-    selector: 'bvkz-header',
-    templateUrl: './header.component.html',
-    styleUrls: ['./header.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
-    imports: [
-    RouterLink,
-    RouterLinkActive,
-    TranslateModule,
-    IconItemPipe
-],
+  selector: 'bvkz-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [RouterLink, RouterLinkActive, TranslateModule, IconItemPipe],
 })
 export class HeaderComponent {
   readonly imagesRoute = IMAGES_ROUTE;

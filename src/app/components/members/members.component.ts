@@ -6,16 +6,12 @@ import { TranslateModule } from '@ngx-translate/core';
 import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
 
 @Component({
-    selector: 'bvkz-members',
-    templateUrl: './members.component.html',
-    styleUrls: ['./members.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
-    imports: [
-    NgClass,
-    TranslateModule,
-    IconItemPipe
-],
+  selector: 'bvkz-members',
+  templateUrl: './members.component.html',
+  styleUrls: ['./members.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [NgClass, TranslateModule, IconItemPipe],
 })
 export class MembersComponent {
   @Output() memberId = new EventEmitter<string>();

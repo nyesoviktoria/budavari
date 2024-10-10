@@ -10,8 +10,8 @@ describe('TestimonialsComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-    imports: [TestimonialsComponent, MockPipe(TranslatePipe)],
-}).compileComponents();
+      imports: [TestimonialsComponent, MockPipe(TranslatePipe)],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(TestimonialsComponent);
     component = fixture.componentInstance;

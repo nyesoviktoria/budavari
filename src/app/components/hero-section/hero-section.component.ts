@@ -8,18 +8,12 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ImageItemPipe } from '../../pipes/image-item/image-item.pipe';
 
 @Component({
-    selector: 'bvkz-hero-section',
-    templateUrl: './hero-section.component.html',
-    styleUrls: ['./hero-section.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
-    imports: [
-    MatCarouselModule,
-    NgClass,
-    RouterLink,
-    TranslateModule,
-    ImageItemPipe
-],
+  selector: 'bvkz-hero-section',
+  templateUrl: './hero-section.component.html',
+  styleUrls: ['./hero-section.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [MatCarouselModule, NgClass, RouterLink, TranslateModule, ImageItemPipe],
 })
 export class HeroSectionComponent {
   readonly heroCarouselItems = HERO_CAROUSEL_ITEMS;

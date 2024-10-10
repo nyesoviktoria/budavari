@@ -11,8 +11,8 @@ describe('HeaderComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-    imports: [RouterTestingModule, HeaderComponent, MockPipe(TranslatePipe)],
-}).compileComponents();
+      imports: [RouterTestingModule, HeaderComponent, MockPipe(TranslatePipe)],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;

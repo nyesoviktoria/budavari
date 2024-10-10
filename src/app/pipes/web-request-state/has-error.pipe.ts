@@ -3,8 +3,8 @@ import { WebRequestState, ErrorState } from '../../interfaces/states/web-request
 import { isErrorState } from '../../typeguards/web-request-state.guards';
 
 @Pipe({
-    name: 'hasError',
-    standalone: true,
+  name: 'hasError',
+  standalone: true,
 })
 export class HasErrorPipe implements PipeTransform {
   transform<D, E>(request: WebRequestState<D, E>): request is ErrorState<E> {

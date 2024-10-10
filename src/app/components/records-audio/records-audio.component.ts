@@ -7,15 +7,12 @@ import { TranslateModule } from '@ngx-translate/core';
 import { RecordsAudioSourcePipe } from '../../pipes/records-audio-source/records-audio-source.pipe';
 
 @Component({
-    selector: 'bvkz-records-audio',
-    templateUrl: './records-audio.component.html',
-    styleUrls: ['./records-audio.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
-    imports: [
-    TranslateModule,
-    RecordsAudioSourcePipe
-],
+  selector: 'bvkz-records-audio',
+  templateUrl: './records-audio.component.html',
+  styleUrls: ['./records-audio.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [TranslateModule, RecordsAudioSourcePipe],
 })
 export class RecordsAudioComponent {
   @Input() track!: RecordAudioItem;

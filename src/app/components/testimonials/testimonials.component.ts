@@ -7,16 +7,12 @@ import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
 import { ImageItemPipe } from '../../pipes/image-item/image-item.pipe';
 
 @Component({
-    selector: 'bvkz-testimonials',
-    templateUrl: './testimonials.component.html',
-    styleUrls: ['./testimonials.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
-    imports: [
-    TranslateModule,
-    IconItemPipe,
-    ImageItemPipe
-],
+  selector: 'bvkz-testimonials',
+  templateUrl: './testimonials.component.html',
+  styleUrls: ['./testimonials.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [TranslateModule, IconItemPipe, ImageItemPipe],
 })
 export class TestimonialsComponent {
   readonly iconsRoute = ICONS_ROUTE;

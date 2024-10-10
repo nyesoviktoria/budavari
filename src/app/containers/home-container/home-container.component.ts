@@ -13,26 +13,18 @@ import { MembersComponent } from '../../components/members/members.component';
 import { SoloistsAndExMembersComponent } from '../../components/soloists-and-ex-members/soloists-and-ex-members.component';
 
 @Component({
-    selector: 'bvkz-home-container',
-    templateUrl: './home-container.component.html',
-    styleUrls: ['./home-container.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
-    imports: [
-        HeroSectionComponent,
-        AboutUsComponent,
-        TestimonialsComponent,
-        MembersComponent,
-        SoloistsAndExMembersComponent,
-    ],
+  selector: 'bvkz-home-container',
+  templateUrl: './home-container.component.html',
+  styleUrls: ['./home-container.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [HeroSectionComponent, AboutUsComponent, TestimonialsComponent, MembersComponent, SoloistsAndExMembersComponent],
 })
 export class HomeContainerComponent {
   readonly soloists = SOLOISTS;
   readonly exMembers = EX_MEMBERS;
 
-  constructor(public dialog: MatDialog) {
-
-  }
+  constructor(public dialog: MatDialog) {}
 
   onMemberSelected(memberId: string): void {
     const selectedMember = MEMBER_DIALOG_DATA.find((memberDialogItem: MemberDialogItem) => memberDialogItem.memberId === memberId);

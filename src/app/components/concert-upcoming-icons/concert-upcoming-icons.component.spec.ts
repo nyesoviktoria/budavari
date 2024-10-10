@@ -8,9 +8,8 @@ describe('ConcertUpcomingIconsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    imports: [ConcertUpcomingIconsComponent]
-})
-    .compileComponents();
+      imports: [ConcertUpcomingIconsComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ConcertUpcomingIconsComponent);
     component = fixture.componentInstance;

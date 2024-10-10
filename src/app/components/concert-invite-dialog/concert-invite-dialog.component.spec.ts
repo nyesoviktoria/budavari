@@ -8,9 +8,8 @@ describe('ConcertInviteDialogComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    imports: [ConcertInviteDialogComponent]
-})
-    .compileComponents();
+      imports: [ConcertInviteDialogComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ConcertInviteDialogComponent);
     component = fixture.componentInstance;

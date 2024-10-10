@@ -2,7 +2,7 @@
   <p class="records-audio__title">
     {{ track.audioTitle }}
     @if (track.soloistName) {
-    <span class="records-audio__soloist">{{ 'BVKZ.RECORDS__COMPONENT.RECORDS__SOLOIST' | translate }}: {{ track.soloistName }}</span>
+      <span class="records-audio__soloist">{{ 'BVKZ.RECORDS__COMPONENT.RECORDS__SOLOIST' | translate }}: {{ track.soloistName }}</span>
     }
   </p>
 
@@ -12,7 +12,7 @@
     controlsList="nodownload noplaybackrate"
     preload="none"
     controls
-    [src]="album | recordsAudioSource : track.trackSource"
+    [src]="album | recordsAudioSource: track.trackSource"
     (play)="onPlay(audio)"
   ></audio>
 </li>

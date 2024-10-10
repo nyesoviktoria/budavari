@@ -17,12 +17,12 @@ import { HasResultPipe } from '../../pipes/web-request-state/has-result.pipe';
 import { IsLoadingPipe } from '../../pipes/web-request-state/is-loading.pipe';
 
 @Component({
-    selector: 'bvkz-concerts-container',
-    templateUrl: './concerts-container.component.html',
-    styleUrls: ['./concerts-container.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
-    imports: [
+  selector: 'bvkz-concerts-container',
+  templateUrl: './concerts-container.component.html',
+  styleUrls: ['./concerts-container.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [
     LoaderComponent,
     ConcertsUpcomingComponent,
     ConcertsPreviousComponent,
@@ -30,8 +30,8 @@ import { IsLoadingPipe } from '../../pipes/web-request-state/is-loading.pipe';
     TranslateModule,
     HasErrorPipe,
     HasResultPipe,
-    IsLoadingPipe
-],
+    IsLoadingPipe,
+  ],
 })
 export class ConcertsContainerComponent implements OnInit {
   private currentPlayedElement?: HTMLAudioElement;
@@ -40,7 +40,10 @@ export class ConcertsContainerComponent implements OnInit {
   upcomingConcert$ = this.store.select(selectUpcomingConcerts);
   hasUpcomingConcerts$ = this.store.select(selectHasUpcomingConcerts);
 
-  constructor(private readonly store: Store, private readonly dialog: MatDialog) {}
+  constructor(
+    private readonly store: Store,
+    private readonly dialog: MatDialog
+  ) {}
 
   ngOnInit(): void {
     this.store.dispatch(fetchPreviousConcerts());

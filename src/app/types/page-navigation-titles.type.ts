@@ -1,6 +1,1 @@
-export type PageNavigationTitles =
-  | 'HOME'
-  | 'CONCERTS'
-  | 'GALLERY'
-  | 'CONTACT'
-  | 'RECORDS';
+export type PageNavigationTitles = 'HOME' | 'CONCERTS' | 'GALLERY' | 'CONTACT' | 'RECORDS';

@@ -9,10 +9,10 @@ describe('SoloistsAndExMembersComponent', () => {
   let component: SoloistsAndExMembersComponent;
   let fixture: ComponentFixture<SoloistsAndExMembersComponent>;
 
-  beforeEach(waitForAsync (() => {
-     TestBed.configureTestingModule({
-    imports: [SoloistsAndExMembersComponent, MockComponent(AccordionComponent), MockPipe(TranslatePipe)],
-}).compileComponents();
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      imports: [SoloistsAndExMembersComponent, MockComponent(AccordionComponent), MockPipe(TranslatePipe)],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(SoloistsAndExMembersComponent);
     component = fixture.componentInstance;

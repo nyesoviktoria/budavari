@@ -10,18 +10,12 @@ import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
 import { GalleryItemSmallSourcePipe } from '../../pipes/gallery-item-source/gallery-item-thumbnail-source.pipe';
 
 @Component({
-    selector: 'bvkz-gallery-folder',
-    templateUrl: './gallery-folder.component.html',
-    styleUrls: ['./gallery-folder.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
-    imports: [
-    NgxPaginationModule,
-    NgClass,
-    TranslateModule,
-    IconItemPipe,
-    GalleryItemSmallSourcePipe
-],
+  selector: 'bvkz-gallery-folder',
+  templateUrl: './gallery-folder.component.html',
+  styleUrls: ['./gallery-folder.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [NgxPaginationModule, NgClass, TranslateModule, IconItemPipe, GalleryItemSmallSourcePipe],
 })
 export class GalleryFolderComponent {
   @Output() selectedImageId = new EventEmitter<SelectedGalleryDialogData>();

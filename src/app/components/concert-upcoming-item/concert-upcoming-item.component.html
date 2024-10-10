@@ -1,8 +1,5 @@
 @if (!isConcertExpired) {
-  <div
-    class="concert-upcoming__container"
-    [ngClass]="{ 'concert-upcoming__container-reverse': concertIndex % 2 === 0 }"
-    >
+  <div class="concert-upcoming__container" [ngClass]="{ 'concert-upcoming__container-reverse': concertIndex % 2 === 0 }">
     <picture class="concert-upcoming__image-container">
       <source media="(min-width:768px)" [srcset]="concert.imageDesktopSource | imageItem" />
       <img class="concert-upcoming__image" [src]="concert.imageMobileSource | imageItem" [alt]="concert.imageAltText | translate" />

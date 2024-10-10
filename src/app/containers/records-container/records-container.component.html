@@ -16,16 +16,12 @@
                   class="records-container__image"
                   [src]="record.coverImageSource | imageItem"
                   [alt]="record.coverImageAltText | translate"
-                  />
+                />
                 <p class="info records-container__description">{{ record.description }}</p>
               </div>
               <ul class="records-container__audio-container">
                 @for (audio of record.tracks; track audio) {
-                  <bvkz-records-audio
-                    [track]="audio"
-                    [album]="record.albumId"
-                    (audio)="onPlay($event)"
-                  ></bvkz-records-audio>
+                  <bvkz-records-audio [track]="audio" [album]="record.albumId" (audio)="onPlay($event)"></bvkz-records-audio>
                 }
               </ul>
             </div>

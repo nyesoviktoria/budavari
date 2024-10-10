@@ -21,5 +21,8 @@ export class RecordsAudioEffects {
     )
   );
 
-  constructor(private readonly actions$: Actions, private readonly recordsAudioService: RecordsAudioService) {}
+  constructor(
+    private readonly actions$: Actions,
+    private readonly recordsAudioService: RecordsAudioService
+  ) {}
 }

@@ -8,10 +8,10 @@ describe('HeroSectionComponent', () => {
   let component: HeroSectionComponent;
   let fixture: ComponentFixture<HeroSectionComponent>;
 
-  beforeEach(waitForAsync (() => {
-     TestBed.configureTestingModule({
-    imports: [HeroSectionComponent, MockPipe(TranslatePipe)],
-}).compileComponents();
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      imports: [HeroSectionComponent, MockPipe(TranslatePipe)],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(HeroSectionComponent);
     component = fixture.componentInstance;
