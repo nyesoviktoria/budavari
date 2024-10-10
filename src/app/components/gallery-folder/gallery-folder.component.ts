@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from 
 import { GalleryItem } from '../../interfaces/gallery-item.interface';
 import { SelectedGalleryDialogData } from '../../interfaces/selected-gallery-dialog-data.interface';
 import { GalleryFolderItem } from '../../interfaces/gallery-folder-item.interface';
-import { NgFor, NgClass } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { TranslateModule } from '@ngx-translate/core';
 import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
@@ -16,13 +16,12 @@ import { GalleryItemSmallSourcePipe } from '../../pipes/gallery-item-source/gall
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
     imports: [
-        NgFor,
-        NgxPaginationModule,
-        NgClass,
-        TranslateModule,
-        IconItemPipe,
-        GalleryItemSmallSourcePipe,
-    ],
+    NgxPaginationModule,
+    NgClass,
+    TranslateModule,
+    IconItemPipe,
+    GalleryItemSmallSourcePipe
+],
 })
 export class GalleryFolderComponent {
   @Output() selectedImageId = new EventEmitter<SelectedGalleryDialogData>();
@@ -39,9 +38,5 @@ export class GalleryFolderComponent {
   onPageChange(page: number): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     this.currentPage = page;
-  }
-
-  trackByIndex(index: number): number {
-    return index;
   }
 }

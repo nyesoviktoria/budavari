@@ -1,7 +1,7 @@
-<ng-container *ngFor="let concert of concertsUpcomingItems; let i = index; trackBy: trackByIndex">
+@for (concert of concertsUpcomingItems; track concert.title; let i = $index) {
   <bvkz-concert-upcoming-item
     [concert]="concert"
     [concertIndex]="i"
     (selectedInviteSource)="onOpenInviteDialog($event)"
   ></bvkz-concert-upcoming-item>
-</ng-container>
+}

@@ -3,7 +3,7 @@ import { ICONS_ROUTE, IMAGES_ROUTE } from '../../constants/app.constants';
 import { HEADER_NAVIGATION_ITEMS } from '../../constants/header-navigation-items-config.constants';
 import { HeaderNavigationItem } from '../../interfaces/header-navigation-item.interface';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { NgFor, NgIf } from '@angular/common';
+
 import { TranslateModule } from '@ngx-translate/core';
 import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
 
@@ -14,13 +14,11 @@ import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
     imports: [
-        RouterLink,
-        NgFor,
-        RouterLinkActive,
-        NgIf,
-        TranslateModule,
-        IconItemPipe,
-    ],
+    RouterLink,
+    RouterLinkActive,
+    TranslateModule,
+    IconItemPipe
+],
 })
 export class HeaderComponent {
   readonly imagesRoute = IMAGES_ROUTE;
@@ -36,9 +34,5 @@ export class HeaderComponent {
 
   onCloseMobileNavigation(): void {
     this.isMobileNavigationOn = false;
-  }
-
-  trackByIndex(index: number): number {
-    return index;
   }
 }

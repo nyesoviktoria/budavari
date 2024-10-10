@@ -7,7 +7,7 @@ import { fetchPreviousConcerts } from './store/actions/previous-concerts.actions
 import { selectPreviousConcerts } from './store/selectors/previous-concerts.selectors';
 import { selectHasUpcomingConcerts, selectUpcomingConcerts } from './store/selectors/upcoming-concerts.selectors';
 import { fetchUpcomingConcerts } from './store/actions/upcoming-concerts.actions';
-import { NgIf, AsyncPipe } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { LoaderComponent } from '../../components/loader/loader.component';
 import { ConcertsUpcomingComponent } from '../../components/concerts-upcoming/concerts-upcoming.component';
 import { ConcertsPreviousComponent } from '../../components/concerts-previous/concerts-previous.component';
@@ -23,16 +23,15 @@ import { IsLoadingPipe } from '../../pipes/web-request-state/is-loading.pipe';
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
     imports: [
-        NgIf,
-        LoaderComponent,
-        ConcertsUpcomingComponent,
-        ConcertsPreviousComponent,
-        AsyncPipe,
-        TranslateModule,
-        HasErrorPipe,
-        HasResultPipe,
-        IsLoadingPipe,
-    ],
+    LoaderComponent,
+    ConcertsUpcomingComponent,
+    ConcertsPreviousComponent,
+    AsyncPipe,
+    TranslateModule,
+    HasErrorPipe,
+    HasResultPipe,
+    IsLoadingPipe
+],
 })
 export class ConcertsContainerComponent implements OnInit {
   private currentPlayedElement?: HTMLAudioElement;

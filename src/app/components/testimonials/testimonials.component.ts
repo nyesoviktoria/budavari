@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ICONS_ROUTE } from '../../constants/app.constants';
 import { TESTIMONIAL_ITEMS } from '../../constants/testimonial-items-config.constants';
-import { NgFor, NgIf } from '@angular/common';
+
 import { TranslateModule } from '@ngx-translate/core';
 import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
 import { ImageItemPipe } from '../../pipes/image-item/image-item.pipe';
@@ -13,12 +13,10 @@ import { ImageItemPipe } from '../../pipes/image-item/image-item.pipe';
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
     imports: [
-        NgFor,
-        NgIf,
-        TranslateModule,
-        IconItemPipe,
-        ImageItemPipe,
-    ],
+    TranslateModule,
+    IconItemPipe,
+    ImageItemPipe
+],
 })
 export class TestimonialsComponent {
   readonly iconsRoute = ICONS_ROUTE;
@@ -26,9 +24,5 @@ export class TestimonialsComponent {
 
   onDotSelectClick(index: number): void {
     console.log('selected index: ', index);
-  }
-
-  trackByIndex(index: number): number {
-    return index;
   }
 }

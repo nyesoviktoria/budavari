@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { toggleAnimation } from '../../constants/animations.constants';
-import { NgClass, NgIf } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
 @Component({
@@ -11,11 +11,10 @@ import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
     animations: [toggleAnimation],
     standalone: true,
     imports: [
-        NgClass,
-        NgIf,
-        TranslateModule,
-        IconItemPipe,
-    ],
+    NgClass,
+    TranslateModule,
+    IconItemPipe
+],
 })
 export class AccordionComponent {
   @Input() buttonName = '';

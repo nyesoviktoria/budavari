@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { ConcertPreviousItem } from '../../interfaces/concerts-previous-item.interface';
-import { NgFor } from '@angular/common';
+
 import { TranslateModule } from '@ngx-translate/core';
 import { VideosSourcePipe } from '../../pipes/videos-source/videos-source.pipe';
 
@@ -11,10 +11,9 @@ import { VideosSourcePipe } from '../../pipes/videos-source/videos-source.pipe';
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
     imports: [
-        NgFor,
-        TranslateModule,
-        VideosSourcePipe,
-    ],
+    TranslateModule,
+    VideosSourcePipe
+],
 })
 export class ConcertsPreviousComponent {
   @Input() concertsPreviousItems: readonly ConcertPreviousItem[] = [];
@@ -23,9 +22,5 @@ export class ConcertsPreviousComponent {
 
   onPlay(audio: HTMLVideoElement): void {
     this.video.emit(audio);
-  }
-
-  trackByIndex(index: number): number {
-    return index;
   }
 }

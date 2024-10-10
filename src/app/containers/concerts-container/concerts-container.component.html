@@ -1,46 +1,44 @@
 <div class="wrapper-container">
   <h1 class="primary-heading">{{ 'BVKZ.CONCERTS_CONTAINER__COMPONENT.CONCERTS__TITLE' | translate }}</h1>
 
-  <section *ngIf="hasUpcomingConcerts$ | async" aria-label="upcoming-concerts">
-    <ng-container *ngIf="upcomingConcert$ | async as upcomingConcert">
-      <bvkz-loader *ngIf="upcomingConcert | isLoading; else upcomingConcertsContent"></bvkz-loader>
-
-      <ng-template #upcomingConcertsContent>
-        <ng-container *ngIf="upcomingConcert | hasError; else loadedUpcomingConcertsContent">
-          <p class="info">{{ 'BVKZ.CONCERTS_CONTAINER__COMPONENT.ERROR_MESSAGE' | translate }}</p>
-        </ng-container>
-      </ng-template>
-
-      <ng-template #loadedUpcomingConcertsContent>
-        <ng-container *ngIf="upcomingConcert | hasResult">
-          <bvkz-concerts-upcoming
-            (selectedInviteSource)="onOpenInviteDialog($event)"
-            [concertsUpcomingItems]="upcomingConcert.data"
-          ></bvkz-concerts-upcoming>
-        </ng-container>
-      </ng-template>
-    </ng-container>
-  </section>
+  @if (hasUpcomingConcerts$ | async) {
+    <section aria-label="upcoming-concerts">
+      @if (upcomingConcert$ | async; as upcomingConcert) {
+        @if (upcomingConcert | isLoading) {
+          <bvkz-loader></bvkz-loader>
+        } @else {
+          @if (upcomingConcert | hasError) {
+            <p class="info">{{ 'BVKZ.CONCERTS_CONTAINER__COMPONENT.ERROR_MESSAGE' | translate }}</p>
+          } @else {
+            @if (upcomingConcert | hasResult) {
+              <bvkz-concerts-upcoming
+                (selectedInviteSource)="onOpenInviteDialog($event)"
+                [concertsUpcomingItems]="upcomingConcert.data"
+              ></bvkz-concerts-upcoming>
+            }
+          }
+        }
+      }
+    </section>
+  }
 
   <section aria-labelledby="previous-concerts">
     <h2 class="secondary-heading" id="previous-concerts">
       {{ 'BVKZ.CONCERTS_CONTAINER__COMPONENT.PREVIOUS_CONCERTS__TITLE' | translate }}
     </h2>
 
-    <ng-container *ngIf="previousConcert$ | async as previousConcert">
-      <bvkz-loader *ngIf="previousConcert | isLoading; else previousConcertsContent"></bvkz-loader>
-
-      <ng-template #previousConcertsContent>
-        <ng-container *ngIf="previousConcert | hasError; else loadedPreviousConcertsContent">
+    @if (previousConcert$ | async; as previousConcert) {
+      @if (previousConcert | isLoading) {
+        <bvkz-loader></bvkz-loader>
+      } @else {
+        @if (previousConcert | hasError) {
           <p class="info">{{ 'BVKZ.CONCERTS_CONTAINER__COMPONENT.ERROR_MESSAGE' | translate }}</p>
-        </ng-container>
-      </ng-template>
-
-      <ng-template #loadedPreviousConcertsContent>
-        <ng-container *ngIf="previousConcert | hasResult">
-          <bvkz-concerts-previous (video)="onPlay($event)" [concertsPreviousItems]="previousConcert.data"></bvkz-concerts-previous>
-        </ng-container>
-      </ng-template>
-    </ng-container>
+        } @else {
+          @if (previousConcert | hasResult) {
+            <bvkz-concerts-previous (video)="onPlay($event)" [concertsPreviousItems]="previousConcert.data"></bvkz-concerts-previous>
+          }
+        }
+      }
+    }
   </section>
 </div>

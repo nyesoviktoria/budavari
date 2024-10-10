@@ -4,35 +4,41 @@
       <img [src]="imagesRoute + 'logo.png'" [alt]="'BVKZ.HEADER__COMPONENT.HEADER_LOGO_ALT__TEXT' | translate" class="header__logo-image" />
       <p class="header__logo-text">
         <span class="header__logo-text-row">Budavári</span
-        ><span class="header__logo-text-row">{{ 'BVKZ.HEADER__COMPONENT.HEADER__ORCHESTRA' | translate }}</span>
-      </p>
-    </a>
-    <ul class="header__navigation-list">
-      <li *ngFor="let item of navigationItems; trackBy: trackByIndex">
-        <a
-          class="header__navigation-link header__navigation-link-animation"
-          [routerLink]="item.pageRoute"
-          routerLinkActive="header__navigation-link-active"
-          >{{ 'BVKZ.NAVIGATION__LINKS.' + item.pageTitle | translate }}</a
-        >
-      </li>
-    </ul>
+          ><span class="header__logo-text-row">{{ 'BVKZ.HEADER__COMPONENT.HEADER__ORCHESTRA' | translate }}</span>
+        </p>
+      </a>
+      <ul class="header__navigation-list">
+        @for (item of navigationItems; track item) {
+          <li>
+            <a
+              class="header__navigation-link header__navigation-link-animation"
+              [routerLink]="item.pageRoute"
+              routerLinkActive="header__navigation-link-active"
+              >{{ 'BVKZ.NAVIGATION__LINKS.' + item.pageTitle | translate }}</a
+              >
+            </li>
+          }
+        </ul>
 
-    <img
-      class="header__mobile-menu-icon"
-      [src]="'bars' | iconItem"
-      [alt]="'BVKZ.HEADER__COMPONENT.HEADER_NAVIGATION_ICON_ALT_TEXT' | translate"
-      (click)="onOpenMobileNavigation()"
-    />
-  </nav>
+        <img
+          class="header__mobile-menu-icon"
+          [src]="'bars' | iconItem"
+          [alt]="'BVKZ.HEADER__COMPONENT.HEADER_NAVIGATION_ICON_ALT_TEXT' | translate"
+          (click)="onOpenMobileNavigation()"
+          />
+      </nav>
 
-  <nav *ngIf="isMobileNavigationOn" class="header__navigation-mobile">
-    <ul class="header__navigation-list-mobile">
-      <li *ngFor="let item of navigationItems; trackBy: trackByIndex" (click)="onOpenMobileNavigation()">
-        <a class="header__navigation-link header__navigation-link-animation" [routerLink]="item.pageRoute">{{
-          'BVKZ.NAVIGATION__LINKS.' + item.pageTitle | translate
-        }}</a>
-      </li>
-    </ul>
-  </nav>
-</section>
+      @if (isMobileNavigationOn) {
+        <nav class="header__navigation-mobile">
+          <ul class="header__navigation-list-mobile">
+            @for (item of navigationItems; track item) {
+              <li (click)="onOpenMobileNavigation()">
+                <a class="header__navigation-link header__navigation-link-animation" [routerLink]="item.pageRoute">{{
+                  'BVKZ.NAVIGATION__LINKS.' + item.pageTitle | translate
+                }}</a>
+              </li>
+            }
+          </ul>
+        </nav>
+      }
+    </section>

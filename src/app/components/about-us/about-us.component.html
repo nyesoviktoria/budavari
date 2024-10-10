@@ -28,9 +28,11 @@
       </bvkz-accordion>
     </div>
     <div class="about-us__gallery-container">
-      <picture class="about-us__image-container" *ngFor="let image of imageItems; trackBy: trackByIndex">
+      @for (image of imageItems; track image) {
+      <picture class="about-us__image-container">
         <img class="img about-us__image" [src]="image.source | imageItem" [alt]="image.alt | translate" />
       </picture>
+      }
     </div>
   </div>
 </section>

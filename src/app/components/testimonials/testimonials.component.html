@@ -1,63 +1,68 @@
 <section
   class="testimonials__section-desktop"
   [attr.aria-label]="'BVKZ.TESTIMONIALS__COMPONENT.TESTIMONIALS_ARIA_LABEL_SR_ONLY' | translate"
->
+  >
   <div class="testimonials__carousel-track">
-    <div class="testimonials__cart-desktop" *ngFor="let testimonial of testimonialItems; trackBy: trackByIndex">
-      <div class="testimonials__content">
-        <div class="testimonials__image-container">
-          <img class="testimonials__image" [src]="testimonial.imageSource  | imageItem" [alt]="testimonial.name | translate" />
+    @for (testimonial of testimonialItems; track testimonial.name) {
+      <div class="testimonials__cart-desktop">
+        <div class="testimonials__content">
+          <div class="testimonials__image-container">
+            <img class="testimonials__image" [src]="testimonial.imageSource  | imageItem" [alt]="testimonial.name | translate" />
+          </div>
+          <blockquote class="testimonials__text-info info">
+            {{ testimonial.testimonial | translate }}
+          </blockquote>
+          <p class="testimonials__signature">{{ testimonial.name | translate }}, {{ testimonial.profession | translate }}</p>
         </div>
-        <blockquote class="testimonials__text-info info">
-          {{ testimonial.testimonial | translate }}
-        </blockquote>
-        <p class="testimonials__signature">{{ testimonial.name | translate }}, {{ testimonial.profession | translate }}</p>
+        <img
+          class="testimonials__quotation-icon"
+          [src]="'quote-right' | iconItem"
+          [alt]="'BVKZ.TESTIMONIALS__COMPONENT.TESTIMONIALS_QUOTATION_MARK_ICON' | translate"
+          />
       </div>
-      <img
-        class="testimonials__quotation-icon"
-        [src]="'quote-right' | iconItem"
-        [alt]="'BVKZ.TESTIMONIALS__COMPONENT.TESTIMONIALS_QUOTATION_MARK_ICON' | translate"
-      />
-    </div>
+    }
   </div>
 
-  <ng-container *ngIf="testimonialItems.length > 1">
+  @if (testimonialItems.length > 1) {
     <img
       class="testimonials__arrow testimonials__arrow-left disabled"
       [src]="'chevron-left-solid' | iconItem"
       [alt]="'BVKZ.GENERAL.ARROW_TO_THE_LEFT' | translate"
-    />
+      />
     <img
       class="testimonials__arrow testimonials__arrow-right"
       [src]="'chevron-right-solid' | iconItem"
       [alt]="'BVKZ.GENERAL.ARROW_TO_THE_RIGHT' | translate"
-    />
+      />
     <div class="testimonials__carousel-navigation">
-      <button
-        type="button"
-        *ngFor="let dot of testimonialItems; index as i; trackBy: trackByIndex"
-        class="testimonials__carousel-navigation-dot active-navigation-dot"
-        (click)="onDotSelectClick(i)"
-      ></button>
+      @for (dot of testimonialItems; track dot.name; let i = $index) {
+        <button
+          type="button"
+          class="testimonials__carousel-navigation-dot active-navigation-dot"
+          (click)="onDotSelectClick(i)"
+        ></button>
+      }
     </div>
-  </ng-container>
+  }
 </section>
 
 <section class="testimonials__section-mobile">
   <div class="testimonials-container-mobile">
-    <div class="testimonials__cart-mobile" *ngFor="let testimonial of testimonialItems; trackBy: trackByIndex">
-      <div class="testimonials__image-container">
-        <img class="img testimonials__image" [src]="testimonial.imageSource  | imageItem" [alt]="testimonial.name | translate" />
+    @for (testimonial of testimonialItems; track testimonial.name) {
+      <div class="testimonials__cart-mobile">
+        <div class="testimonials__image-container">
+          <img class="img testimonials__image" [src]="testimonial.imageSource  | imageItem" [alt]="testimonial.name | translate" />
+        </div>
+        <blockquote class="info testimonials__mobile-text">
+          {{ testimonial.testimonial | translate }}
+        </blockquote>
+        <p class="testimonials__signature">{{ testimonial.name | translate }}, {{ testimonial.profession | translate }}</p>
+        <img
+          class="testimonials__quotation-icon"
+          [src]="'quote-right' | iconItem"
+          [alt]="'BVKZ.TESTIMONIALS__COMPONENT.TESTIMONIALS_QUOTATION_MARK_ICON' | translate"
+          />
       </div>
-      <blockquote class="info testimonials__mobile-text">
-        {{ testimonial.testimonial | translate }}
-      </blockquote>
-      <p class="testimonials__signature">{{ testimonial.name | translate }}, {{ testimonial.profession | translate }}</p>
-      <img
-        class="testimonials__quotation-icon"
-        [src]="'quote-right' | iconItem"
-        [alt]="'BVKZ.TESTIMONIALS__COMPONENT.TESTIMONIALS_QUOTATION_MARK_ICON' | translate"
-      />
-    </div>
+    }
   </div>
 </section>

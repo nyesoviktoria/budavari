@@ -1,15 +1,18 @@
 <h2 class="secondary-heading">{{ 'BVKZ.CONTACT__COMPONENT.CONTACT__TITLE' | translate }}</h2>
 <section class="contact-information__section">
   <div class="contact-information__icons">
-    <img
-      *ngFor="let icon of contactIcons; trackBy: trackByIndex"
-      class="contact-information__icon"
-      [src]="icon.iconSource | iconItem"
-      [alt]="'BVKZ.CONTACT__COMPONENT.CONTACT__ICONS_ALT_TEXT.' + icon.alt | translate"
-    />
+    @for (icon of contactIcons; track icon) {
+      <img
+        class="contact-information__icon"
+        [src]="icon.iconSource | iconItem"
+        [alt]="'BVKZ.CONTACT__COMPONENT.CONTACT__ICONS_ALT_TEXT.' + icon.alt | translate"
+        />
+    }
   </div>
   <div class="contact-information__text">
-    <span *ngFor="let info of contactInformation; trackBy: trackByIndex" [innerHTML]="info | translate"></span>
+    @for (info of contactInformation; track info) {
+      <span [innerHTML]="info | translate"></span>
+    }
   </div>
 </section>
 <div class="contact-information__map-container">

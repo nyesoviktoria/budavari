@@ -1,9 +1,9 @@
 <li class="records-audio__list-item">
   <p class="records-audio__title">
-    {{ track.audioTitle
-    }}<span class="records-audio__soloist" *ngIf="track.soloistName"
-      >{{ 'BVKZ.RECORDS__COMPONENT.RECORDS__SOLOIST' | translate }}: {{ track.soloistName }}</span
-    >
+    {{ track.audioTitle }}
+    @if (track.soloistName) {
+    <span class="records-audio__soloist">{{ 'BVKZ.RECORDS__COMPONENT.RECORDS__SOLOIST' | translate }}: {{ track.soloistName }}</span>
+    }
   </p>
 
   <audio

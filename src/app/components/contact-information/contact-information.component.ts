@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CONTACT_COMPONENT_ICON_ITEMS } from '../../constants/contact-components-icon-items.config.constants';
 import { CONTACT_INFORMATION } from '../../constants/contact-information.constants';
-import { NgFor } from '@angular/common';
+
 import { TranslateModule } from '@ngx-translate/core';
 import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
 
@@ -12,16 +12,11 @@ import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
     imports: [
-        NgFor,
-        TranslateModule,
-        IconItemPipe,
-    ],
+    TranslateModule,
+    IconItemPipe
+],
 })
 export class ContactInformationComponent {
   readonly contactIcons = CONTACT_COMPONENT_ICON_ITEMS;
   readonly contactInformation = CONTACT_INFORMATION;
-
-  trackByIndex(index: number): number {
-    return index;
-  }
 }

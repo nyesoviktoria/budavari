@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ABOUT_US_GALLERY_ITEMS } from '../../constants/about-us-gallery-items-config.constants';
-import { NgTemplateOutlet, NgFor } from '@angular/common';
+import { NgTemplateOutlet } from '@angular/common';
 import { AccordionComponent } from '../accordion/accordion.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { ImageItemPipe } from '../../pipes/image-item/image-item.pipe';
@@ -12,12 +12,11 @@ import { ImageItemPipe } from '../../pipes/image-item/image-item.pipe';
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
     imports: [
-        NgTemplateOutlet,
-        AccordionComponent,
-        NgFor,
-        TranslateModule,
-        ImageItemPipe,
-    ],
+    NgTemplateOutlet,
+    AccordionComponent,
+    TranslateModule,
+    ImageItemPipe
+],
 })
 export class AboutUsComponent {
   readonly imageItems = ABOUT_US_GALLERY_ITEMS;
@@ -26,9 +25,5 @@ export class AboutUsComponent {
 
   onIsCollapsed(isOpen: boolean): void {
     this.isOpen = isOpen;
-  }
-
-  trackByIndex(index: number): number {
-    return index;
   }
 }

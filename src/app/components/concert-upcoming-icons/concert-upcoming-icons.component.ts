@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MINUTES_IN_AN_HOUR, NUMBER_TO_FIX_CONCERT_TIME } from '../../constants/app.constants';
 import { ConcertUpcomingItem } from '../../interfaces/concert-upcoming-item.interface';
-import { NgIf } from '@angular/common';
+
 import { TranslateModule } from '@ngx-translate/core';
 import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
 
@@ -12,10 +12,9 @@ import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
     imports: [
-        NgIf,
-        TranslateModule,
-        IconItemPipe,
-    ],
+    TranslateModule,
+    IconItemPipe
+],
 })
 export class ConcertUpcomingIconsComponent implements OnInit {
   @Input() concertActual!: ConcertUpcomingItem;

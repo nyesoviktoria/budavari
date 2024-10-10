@@ -5,7 +5,7 @@ import { SelectedGalleryDialogData } from '../../interfaces/selected-gallery-dia
 import { Store } from '@ngrx/store';
 import { fetchGallery } from './store/actions/gallery-actions';
 import { selectGallery } from './store/selectors/gallery.selectors';
-import { NgIf, AsyncPipe } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { LoaderComponent } from '../../components/loader/loader.component';
 import { GalleryFolderComponent } from '../../components/gallery-folder/gallery-folder.component';
 import { TranslateModule } from '@ngx-translate/core';
@@ -20,15 +20,14 @@ import { IsLoadingPipe } from '../../pipes/web-request-state/is-loading.pipe';
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
     imports: [
-        NgIf,
-        LoaderComponent,
-        GalleryFolderComponent,
-        AsyncPipe,
-        TranslateModule,
-        HasErrorPipe,
-        HasResultPipe,
-        IsLoadingPipe,
-    ],
+    LoaderComponent,
+    GalleryFolderComponent,
+    AsyncPipe,
+    TranslateModule,
+    HasErrorPipe,
+    HasResultPipe,
+    IsLoadingPipe
+],
 })
 export class GalleryContainerComponent implements OnInit {
   constructor(public dialog: MatDialog, private store: Store) {}

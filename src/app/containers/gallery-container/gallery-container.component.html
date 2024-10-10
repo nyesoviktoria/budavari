@@ -1,17 +1,15 @@
 <div class="wrapper-container">
-  <ng-container *ngIf="galleryItems$ | async as galleryItems">
-    <bvkz-loader *ngIf="galleryItems | isLoading; else galleryContent"></bvkz-loader>
-
-    <ng-template #galleryContent>
-      <ng-container *ngIf="galleryItems | hasError; else loadedGalleryContent">
+  @if (galleryItems$ | async; as galleryItems) {
+    @if (galleryItems | isLoading) {
+      <bvkz-loader></bvkz-loader>
+    } @else {
+      @if (galleryItems | hasError) {
         <p class="info">{{ 'BVKZ.GALLERY__COMPONENT.ERROR_MESSAGE' | translate }}</p>
-      </ng-container>
-    </ng-template>
-
-    <ng-template #loadedGalleryContent>
-      <ng-container *ngIf="galleryItems | hasResult">
-        <bvkz-gallery-folder [galleryItems]="galleryItems.data" (selectedImageId)="onImageSelected($event)"></bvkz-gallery-folder>
-      </ng-container>
-    </ng-template>
-  </ng-container>
+      } @else {
+        @if (galleryItems | hasResult) {
+          <bvkz-gallery-folder [galleryItems]="galleryItems.data" (selectedImageId)="onImageSelected($event)"></bvkz-gallery-folder>
+        }
+      }
+    }
+  }
 </div>

@@ -2,18 +2,22 @@
   <div class="soloists-and-ex-members__soloists__container">
     <bvkz-accordion [buttonName]="'BVKZ.SOLOISTS_AND_EX_MEMBERS.SOLOISTS__TITLE' | translate">
       <ul class="soloists-and-ex-members__soloists__list">
-        <li *ngFor="let member of soloists; trackBy: trackByIndex">
-          {{ member.name }} ({{ 'BVKZ.SOLOISTS_AND_EX_MEMBERS.INSTRUMENT_TYPES.' + member.instrument | translate }})
-        </li>
+        @for (member of soloists; track member) {
+          <li>
+            {{ member.name }} ({{ 'BVKZ.SOLOISTS_AND_EX_MEMBERS.INSTRUMENT_TYPES.' + member.instrument | translate }})
+          </li>
+        }
       </ul>
     </bvkz-accordion>
   </div>
   <div class="soloists-and-ex-members__ex-members__container">
     <bvkz-accordion [buttonName]="'BVKZ.SOLOISTS_AND_EX_MEMBERS.EX_MEMBERS__TITLE' | translate">
       <ul class="soloists-and-ex-members__ex-members__list">
-        <li *ngFor="let member of exMembers; trackBy: trackByIndex">
-          {{ member.name }} ({{ 'BVKZ.SOLOISTS_AND_EX_MEMBERS.INSTRUMENT_TYPES.' + member.instrument | translate }})
-        </li>
+        @for (member of exMembers; track member) {
+          <li>
+            {{ member.name }} ({{ 'BVKZ.SOLOISTS_AND_EX_MEMBERS.INSTRUMENT_TYPES.' + member.instrument | translate }})
+          </li>
+        }
       </ul>
     </bvkz-accordion>
   </div>

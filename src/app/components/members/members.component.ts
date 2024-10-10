@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angular/core';
 import { ICONS_ROUTE, IMAGES_ROUTE } from '../../constants/app.constants';
 import { MEMBERS_PARTS_ITEMS } from '../../constants/members-part-items-config.constants';
-import { NgFor, NgClass, NgIf } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
 
@@ -12,12 +12,10 @@ import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
     imports: [
-        NgFor,
-        NgClass,
-        NgIf,
-        TranslateModule,
-        IconItemPipe,
-    ],
+    NgClass,
+    TranslateModule,
+    IconItemPipe
+],
 })
 export class MembersComponent {
   @Output() memberId = new EventEmitter<string>();
@@ -28,9 +26,5 @@ export class MembersComponent {
 
   onMemberSelected(member: string): void {
     this.memberId.emit(member);
-  }
-
-  trackByIndex(index: number): number {
-    return index;
   }
 }

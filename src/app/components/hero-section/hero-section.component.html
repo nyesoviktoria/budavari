@@ -6,29 +6,31 @@
     [maintainAspectRatio]="false"
     [slides]="heroCarouselItems.length"
     [useKeyboard]="true"
-  >
-    <mat-carousel-slide *ngFor="let slide of heroCarouselItems; let i = index; trackBy: trackByIndex">
-      <div class="hero-section__carousel-slide">
-        <picture>
-          <source media="(min-width:1024px)" [srcset]="slide.imageDesktopSource | imageItem" />
-          <source media="(min-width:768px)" [srcset]="slide.imageTabletSource | imageItem" />
-          <img
-            class="hero-section__carousel-slide-image"
-            [ngClass]="{ 'hero-section__carousel-slide-image-bottom': i === 0 }"
-            [src]="slide.imageMobileSource | imageItem"
-            [alt]="slide.imageAltTranslationKey | translate"
-          />
-        </picture>
-        <div class="hero-section__carousel-text-container">
-          <p class="hero-section__carousel-text-title">{{ slide.slideTitle | translate }}</p>
-          <p class="hero-section__carousel-text-content">
-            {{ slide.slideText | translate }}
-          </p>
-          <a class="hero-section__carousel-navigation-button" [routerLink]="slide.navigateTo">
-            {{ slide.button | translate }}
-          </a>
+    >
+    @for (slide of heroCarouselItems; track slide.slideTitle; let i = $index) {
+      <mat-carousel-slide>
+        <div class="hero-section__carousel-slide">
+          <picture>
+            <source media="(min-width:1024px)" [srcset]="slide.imageDesktopSource | imageItem" />
+            <source media="(min-width:768px)" [srcset]="slide.imageTabletSource | imageItem" />
+            <img
+              class="hero-section__carousel-slide-image"
+              [ngClass]="{ 'hero-section__carousel-slide-image-bottom': i === 0 }"
+              [src]="slide.imageMobileSource | imageItem"
+              [alt]="slide.imageAltTranslationKey | translate"
+              />
+          </picture>
+          <div class="hero-section__carousel-text-container">
+            <p class="hero-section__carousel-text-title">{{ slide.slideTitle | translate }}</p>
+            <p class="hero-section__carousel-text-content">
+              {{ slide.slideText | translate }}
+            </p>
+            <a class="hero-section__carousel-navigation-button" [routerLink]="slide.navigateTo">
+              {{ slide.button | translate }}
+            </a>
+          </div>
         </div>
-      </div>
-    </mat-carousel-slide>
+      </mat-carousel-slide>
+    }
   </mat-carousel>
 </section>

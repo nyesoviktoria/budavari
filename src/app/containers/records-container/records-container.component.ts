@@ -3,7 +3,7 @@ import { IMAGES_ROUTE } from '../../constants/app.constants';
 import { Store } from '@ngrx/store';
 import { fetchRecordsAudio } from './store/actions/records-audio.actions';
 import { selectRecordsAudio } from './store/selectors/records-audio.selectors';
-import { NgIf, NgFor, AsyncPipe } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { LoaderComponent } from '../../components/loader/loader.component';
 import { RecordsAudioComponent } from '../../components/records-audio/records-audio.component';
 import { TranslateModule } from '@ngx-translate/core';
@@ -19,17 +19,15 @@ import { IsLoadingPipe } from '../../pipes/web-request-state/is-loading.pipe';
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
     imports: [
-        NgIf,
-        LoaderComponent,
-        NgFor,
-        RecordsAudioComponent,
-        AsyncPipe,
-        TranslateModule,
-        ImageItemPipe,
-        HasErrorPipe,
-        HasResultPipe,
-        IsLoadingPipe,
-    ],
+    LoaderComponent,
+    RecordsAudioComponent,
+    AsyncPipe,
+    TranslateModule,
+    ImageItemPipe,
+    HasErrorPipe,
+    HasResultPipe,
+    IsLoadingPipe
+],
 })
 export class RecordsContainerComponent implements OnInit {
   readonly recordItems$ = this.store.select(selectRecordsAudio);
@@ -49,9 +47,5 @@ export class RecordsContainerComponent implements OnInit {
     }
 
     this.currentPlayedElement = element;
-  }
-
-  trackByIndex(index: number): number {
-    return index;
   }
 }

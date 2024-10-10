@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MILLISECONDS_TO_CAROUSEL_SLIDE_CHANGE } from '../../constants/app.constants';
 import { HERO_CAROUSEL_ITEMS } from '../../constants/hero-carousel-items.constants';
 import { MatCarouselModule } from '@magloft/material-carousel';
-import { NgFor, NgClass } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { ImageItemPipe } from '../../pipes/image-item/image-item.pipe';
@@ -14,20 +14,15 @@ import { ImageItemPipe } from '../../pipes/image-item/image-item.pipe';
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
     imports: [
-        MatCarouselModule,
-        NgFor,
-        NgClass,
-        RouterLink,
-        TranslateModule,
-        ImageItemPipe,
-    ],
+    MatCarouselModule,
+    NgClass,
+    RouterLink,
+    TranslateModule,
+    ImageItemPipe
+],
 })
 export class HeroSectionComponent {
   readonly heroCarouselItems = HERO_CAROUSEL_ITEMS;
   readonly carouselEaseInTiming = '700ms ease-in';
   readonly carouselTiming = MILLISECONDS_TO_CAROUSEL_SLIDE_CHANGE;
-
-  trackByIndex(index: number): number {
-    return index;
-  }
 }
