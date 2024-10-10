@@ -16,7 +16,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from './environments/environment.prod';
 import { pipes } from './app/pipes';
 import { AppComponent } from './app/app.component';
-import { importProvidersFrom } from '@angular/core';
+import { importProvidersFrom, provideExperimentalZonelessChangeDetection } from '@angular/core';
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -42,6 +42,7 @@ bootstrapApplication(AppComponent, {
     { provide: BVKZ_FEATURE_NAME, useValue: bvkzReducer },
     provideHttpClient(withInterceptorsFromDi()),
     provideAnimations(),
+    provideExperimentalZonelessChangeDetection()
   ],
 })
   // eslint-disable-next-line no-console
