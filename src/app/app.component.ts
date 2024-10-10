@@ -1,16 +1,19 @@
 import { AfterViewInit, ChangeDetectionStrategy, Component, OnDestroy } from '@angular/core';
-import { NavigationEnd, Router, Event } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { filter, Subject, takeUntil } from 'rxjs';
+import { FrameComponent } from './components/frame/frame.component';
 
 // eslint-disable-next-line @typescript-eslint/ban-types
 declare let gtag: Function;
 
 @Component({
-  selector: 'bvkz-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'bvkz-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [FrameComponent],
 })
 export class AppComponent implements AfterViewInit, OnDestroy {
   private readonly objectDestroySource$ = new Subject<void>();

@@ -9,8 +9,7 @@ describe('AppComponent', () => {
     const spy = jasmine.createSpyObj('TranslateService', ['use']);
 
     TestBed.configureTestingModule({
-    imports: [MockComponent(FrameComponent)],
-    declarations: [AppComponent],
+    imports: [MockComponent(FrameComponent), AppComponent],
     providers: [{ provide: TranslateService, useValue: spy }],
 }).compileComponents();
 
