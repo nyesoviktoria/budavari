@@ -9,7 +9,6 @@ import { VideosSourcePipe } from '../../pipes/videos-source/videos-source.pipe';
   templateUrl: './concerts-previous.component.html',
   styleUrls: ['./concerts-previous.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [TranslateModule, VideosSourcePipe],
 })
 export class ConcertsPreviousComponent {

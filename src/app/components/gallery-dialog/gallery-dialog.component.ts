@@ -12,7 +12,6 @@ import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
   templateUrl: './gallery-dialog.component.html',
   styleUrls: ['./gallery-dialog.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [NgClass, TranslateModule, GalleryItemSourcePipe, IconItemPipe],
 })
 export class GalleryDialogComponent {

@@ -7,7 +7,6 @@ import { JoinUsComponent } from '../../components/join-us/join-us.component';
   templateUrl: './contact-container.component.html',
   styleUrls: ['./contact-container.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [ContactInformationComponent, JoinUsComponent],
 })
 export class ContactContainerComponent {}

@@ -18,7 +18,6 @@ import { IsLoadingPipe } from '../../pipes/web-request-state/is-loading.pipe';
   templateUrl: './gallery-container.component.html',
   styleUrls: ['./gallery-container.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [LoaderComponent, GalleryFolderComponent, AsyncPipe, TranslateModule, HasErrorPipe, HasResultPipe, IsLoadingPipe],
 })
 export class GalleryContainerComponent implements OnInit {

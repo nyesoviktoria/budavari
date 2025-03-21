@@ -17,7 +17,6 @@ import { IsLoadingPipe } from '../../pipes/web-request-state/is-loading.pipe';
   templateUrl: './records-container.component.html',
   styleUrls: ['./records-container.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [LoaderComponent, RecordsAudioComponent, AsyncPipe, TranslateModule, ImageItemPipe, HasErrorPipe, HasResultPipe, IsLoadingPipe],
 })
 export class RecordsContainerComponent implements OnInit {

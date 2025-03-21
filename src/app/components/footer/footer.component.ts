@@ -9,7 +9,6 @@ import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [TranslateModule, IconItemPipe],
 })
 export class FooterComponent {

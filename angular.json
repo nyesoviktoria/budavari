@@ -15,17 +15,18 @@
       "prefix": "bvkz",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser-esbuild",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/budavari",
+            "outputPath": {
+              "base": "dist/budavari"
+            },
             "index": "src/index.html",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.png", "src/assets", "src/.htaccess"],
             "styles": ["src/styles.scss"],
             "scripts": [],
-            "main": "src/main.ts",
-            "buildOptimizer": true
+            "browser": "src/main.ts"
           },
           "configurations": {
             "production": {

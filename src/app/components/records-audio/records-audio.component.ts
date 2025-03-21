@@ -11,7 +11,6 @@ import { RecordsAudioSourcePipe } from '../../pipes/records-audio-source/records
   templateUrl: './records-audio.component.html',
   styleUrls: ['./records-audio.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [TranslateModule, RecordsAudioSourcePipe],
 })
 export class RecordsAudioComponent {

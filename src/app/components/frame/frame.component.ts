@@ -8,7 +8,6 @@ import { FooterComponent } from '../footer/footer.component';
   templateUrl: './frame.component.html',
   styleUrls: ['./frame.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [HeaderComponent, RouterOutlet, FooterComponent],
 })
 export class FrameComponent {}

@@ -17,7 +17,6 @@ import { SoloistsAndExMembersComponent } from '../../components/soloists-and-ex-
   templateUrl: './home-container.component.html',
   styleUrls: ['./home-container.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [HeroSectionComponent, AboutUsComponent, TestimonialsComponent, MembersComponent, SoloistsAndExMembersComponent],
 })
 export class HomeContainerComponent {

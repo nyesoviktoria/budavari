@@ -10,7 +10,6 @@ import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
   templateUrl: './concert-upcoming-icons.component.html',
   styleUrls: ['./concert-upcoming-icons.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [TranslateModule, IconItemPipe],
 })
 export class ConcertUpcomingIconsComponent implements OnInit {

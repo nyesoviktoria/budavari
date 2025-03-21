@@ -11,7 +11,6 @@ import { ImageItemPipe } from '../../pipes/image-item/image-item.pipe';
   templateUrl: './testimonials.component.html',
   styleUrls: ['./testimonials.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [TranslateModule, IconItemPipe, ImageItemPipe],
 })
 export class TestimonialsComponent {

@@ -14,7 +14,6 @@ import { GalleryItemSmallSourcePipe } from '../../pipes/gallery-item-source/gall
   templateUrl: './gallery-folder.component.html',
   styleUrls: ['./gallery-folder.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [NgxPaginationModule, NgClass, TranslateModule, IconItemPipe, GalleryItemSmallSourcePipe],
 })
 export class GalleryFolderComponent {

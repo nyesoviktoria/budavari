@@ -12,7 +12,6 @@ declare let gtag: Function;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [FrameComponent],
 })
 export class AppComponent implements AfterViewInit, OnDestroy {

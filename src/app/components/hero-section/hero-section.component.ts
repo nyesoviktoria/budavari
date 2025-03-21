@@ -12,7 +12,6 @@ import { ImageItemPipe } from '../../pipes/image-item/image-item.pipe';
   templateUrl: './hero-section.component.html',
   styleUrls: ['./hero-section.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [MatCarouselModule, NgClass, RouterLink, TranslateModule, ImageItemPipe],
 })
 export class HeroSectionComponent {

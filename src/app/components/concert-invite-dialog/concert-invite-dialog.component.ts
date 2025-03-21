@@ -8,7 +8,6 @@ import { ImageItemPipe } from '../../pipes/image-item/image-item.pipe';
   templateUrl: './concert-invite-dialog.component.html',
   styleUrls: ['./concert-invite-dialog.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [TranslateModule, ImageItemPipe],
 })
 export class ConcertInviteDialogComponent {

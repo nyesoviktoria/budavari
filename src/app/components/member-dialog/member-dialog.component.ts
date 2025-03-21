@@ -10,7 +10,6 @@ import { MembersDialogImageSourcePipe } from '../../pipes/members-dialog-image-s
   templateUrl: './member-dialog.component.html',
   styleUrls: ['./member-dialog.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [CdkScrollable, MatDialogContent, TranslateModule, MembersDialogImageSourcePipe],
 })
 export class MemberDialogComponent {

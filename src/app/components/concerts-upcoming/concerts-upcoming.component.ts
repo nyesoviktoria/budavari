@@ -8,7 +8,6 @@ import { ConcertUpcomingItemComponent } from '../concert-upcoming-item/concert-u
   templateUrl: './concerts-upcoming.component.html',
   styleUrls: ['./concerts-upcoming.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [ConcertUpcomingItemComponent],
 })
 export class ConcertsUpcomingComponent {

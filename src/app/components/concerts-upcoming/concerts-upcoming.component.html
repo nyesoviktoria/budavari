@@ -1,7 +1,3 @@
 @for (concert of concertsUpcomingItems; track concert.title; let i = $index) {
-  <bvkz-concert-upcoming-item
-    [concert]="concert"
-    [concertIndex]="i"
-    (selectedInviteSource)="onOpenInviteDialog($event)"
-  ></bvkz-concert-upcoming-item>
+  <bvkz-concert-upcoming-item [concert]="concert" [concertIndex]="i" (selectedInviteSource)="onOpenInviteDialog($event)" />
 }

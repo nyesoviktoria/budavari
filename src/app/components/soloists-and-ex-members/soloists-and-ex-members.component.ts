@@ -10,7 +10,6 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './soloists-and-ex-members.component.html',
   styleUrls: ['./soloists-and-ex-members.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [AccordionComponent, TranslateModule],
 })
 export class SoloistsAndExMembersComponent {

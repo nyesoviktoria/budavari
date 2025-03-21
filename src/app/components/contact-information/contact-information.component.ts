@@ -10,7 +10,6 @@ import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
   templateUrl: './contact-information.component.html',
   styleUrls: ['./contact-information.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [TranslateModule, IconItemPipe],
 })
 export class ContactInformationComponent {

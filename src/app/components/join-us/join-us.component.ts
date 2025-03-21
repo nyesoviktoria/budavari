@@ -8,7 +8,6 @@ import { ImageItemPipe } from '../../pipes/image-item/image-item.pipe';
   templateUrl: './join-us.component.html',
   styleUrls: ['./join-us.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [TranslateModule, ImageItemPipe],
 })
 export class JoinUsComponent {

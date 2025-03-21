@@ -42,7 +42,7 @@ bootstrapApplication(AppComponent, {
     { provide: BVKZ_FEATURE_NAME, useValue: bvkzReducer },
     provideHttpClient(withInterceptorsFromDi()),
     provideAnimations(),
-    provideExperimentalZonelessChangeDetection()
+    provideExperimentalZonelessChangeDetection(),
   ],
 })
   // eslint-disable-next-line no-console

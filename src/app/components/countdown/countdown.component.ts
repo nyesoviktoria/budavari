@@ -21,7 +21,6 @@ import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
   templateUrl: './countdown.component.html',
   styleUrls: ['./countdown.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [AsyncPipe, TranslateModule, IconItemPipe],
 })
 export class CountdownComponent implements OnInit, OnDestroy {

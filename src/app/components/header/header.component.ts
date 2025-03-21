@@ -12,7 +12,6 @@ import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [RouterLink, RouterLinkActive, TranslateModule, IconItemPipe],
 })
 export class HeaderComponent {

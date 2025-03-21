@@ -12,7 +12,6 @@ import { ImageItemPipe } from '../../pipes/image-item/image-item.pipe';
   templateUrl: './concert-upcoming-item.component.html',
   styleUrls: ['./concert-upcoming-item.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [NgClass, CountdownComponent, ConcertUpcomingIconsComponent, TranslateModule, ImageItemPipe],
 })
 export class ConcertUpcomingItemComponent implements OnInit {

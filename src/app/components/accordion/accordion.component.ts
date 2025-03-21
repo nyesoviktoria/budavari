@@ -9,7 +9,6 @@ import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
   styleUrls: ['./accordion.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [toggleAnimation],
-  standalone: true,
   imports: [NgClass, TranslateModule, IconItemPipe],
 })
 export class AccordionComponent {

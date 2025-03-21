@@ -21,7 +21,6 @@ import { IsLoadingPipe } from '../../pipes/web-request-state/is-loading.pipe';
   templateUrl: './concerts-container.component.html',
   styleUrls: ['./concerts-container.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [
     LoaderComponent,
     ConcertsUpcomingComponent,

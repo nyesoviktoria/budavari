@@ -10,7 +10,6 @@ import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
   templateUrl: './members.component.html',
   styleUrls: ['./members.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [NgClass, TranslateModule, IconItemPipe],
 })
 export class MembersComponent {
