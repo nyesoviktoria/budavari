@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit, input } from '@angular/core';
 
 import { CountdownResult } from '../../interfaces/countdown-result.interface';
 
@@ -24,7 +24,7 @@ import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
   imports: [AsyncPipe, TranslateModule, IconItemPipe],
 })
 export class CountdownComponent implements OnInit, OnDestroy {
-  @Input() dateTo = '';
+  readonly dateTo = input('');
 
   readonly iconsRoute = ICONS_ROUTE;
 
@@ -51,7 +51,7 @@ export class CountdownComponent implements OnInit, OnDestroy {
   }
 
   private initSimpleCountdown(): void {
-    this.totalSecondes = secondsUntilConcert(this.dateTo);
+    this.totalSecondes = secondsUntilConcert(this.dateTo());
 
     this.getCountdownResult(this.totalSecondes);
 

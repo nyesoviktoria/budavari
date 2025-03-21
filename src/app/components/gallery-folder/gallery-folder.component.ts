@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
 
 import { GalleryItem } from '../../interfaces/gallery-item.interface';
 import { SelectedGalleryDialogData } from '../../interfaces/selected-gallery-dialog-data.interface';
@@ -17,9 +17,9 @@ import { GalleryItemSmallSourcePipe } from '../../pipes/gallery-item-source/gall
   imports: [NgxPaginationModule, NgClass, TranslateModule, IconItemPipe, GalleryItemSmallSourcePipe],
 })
 export class GalleryFolderComponent {
-  @Output() selectedImageId = new EventEmitter<SelectedGalleryDialogData>();
+  readonly selectedImageId = output<SelectedGalleryDialogData>();
 
-  @Input() galleryItems: readonly GalleryFolderItem[] = [];
+  readonly galleryItems = input<readonly GalleryFolderItem[]>([]);
 
   readonly itemsPerPage = 1;
   currentPage = 1;

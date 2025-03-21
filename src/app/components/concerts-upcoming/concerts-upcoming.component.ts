@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
 import { ConcertUpcomingItem } from '../../interfaces/concert-upcoming-item.interface';
 
 import { ConcertUpcomingItemComponent } from '../concert-upcoming-item/concert-upcoming-item.component';
@@ -11,9 +11,9 @@ import { ConcertUpcomingItemComponent } from '../concert-upcoming-item/concert-u
   imports: [ConcertUpcomingItemComponent],
 })
 export class ConcertsUpcomingComponent {
-  @Input() concertsUpcomingItems: readonly ConcertUpcomingItem[] = [];
+  readonly concertsUpcomingItems = input<readonly ConcertUpcomingItem[]>([]);
 
-  @Output() selectedInviteSource = new EventEmitter<string>();
+  readonly selectedInviteSource = output<string>();
 
   expiredConcertIndex = true;
 

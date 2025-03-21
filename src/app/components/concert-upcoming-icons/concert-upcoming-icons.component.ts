@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, input, output } from '@angular/core';
 import { MINUTES_IN_AN_HOUR, NUMBER_TO_FIX_CONCERT_TIME } from '../../constants/app.constants';
 import { ConcertUpcomingItem } from '../../interfaces/concert-upcoming-item.interface';
 
@@ -13,18 +13,18 @@ import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
   imports: [TranslateModule, IconItemPipe],
 })
 export class ConcertUpcomingIconsComponent implements OnInit {
-  @Input() concertActual!: ConcertUpcomingItem;
-  @Output() selectedInviteSource = new EventEmitter<string>();
+  readonly concertActual = input.required<ConcertUpcomingItem>();
+  readonly selectedInviteSource = output<string>();
 
   private googleCalendarUrlStart = 'https://www.google.com/calendar/render?action=TEMPLATE';
 
   concertCalendarUrl = '';
 
   ngOnInit(): void {
-    this.concertCalendarUrl = `${this.googleCalendarUrlStart}&text=${this.concertActual.title}&dates=${this.createCorrectDateForm(
-      this.concertActual.dateCode,
-      this.concertActual.concertLengthInMinutes
-    )}&details=${this.concertActual.description}&location=${this.concertActual.place}&sf=true&output=xml`;
+    this.concertCalendarUrl = `${this.googleCalendarUrlStart}&text=${this.concertActual().title}&dates=${this.createCorrectDateForm(
+      this.concertActual().dateCode,
+      this.concertActual().concertLengthInMinutes
+    )}&details=${this.concertActual().description}&location=${this.concertActual().place}&sf=true&output=xml`;
   }
 
   createCorrectDateForm(dateCode: string, length: number): string {

@@ -1,5 +1,5 @@
 <div class="concerts-previous__container">
-  @for (concert of concertsPreviousItems; track concert) {
+  @for (concert of concertsPreviousItems(); track concert) {
     <div>
       <p class="concerts-previous__title">{{ concert.concertDate }}, {{ concert.concertPlace }}</p>
       <p class="concerts-previous__link">

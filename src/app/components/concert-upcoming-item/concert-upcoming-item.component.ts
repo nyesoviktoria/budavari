@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, input, output } from '@angular/core';
 import { ConcertUpcomingItem } from '../../interfaces/concert-upcoming-item.interface';
 import { secondsUntilConcert } from '../../utils/seconds-until-concert/seconds-until-concert.util';
 import { NgClass } from '@angular/common';
@@ -15,15 +15,15 @@ import { ImageItemPipe } from '../../pipes/image-item/image-item.pipe';
   imports: [NgClass, CountdownComponent, ConcertUpcomingIconsComponent, TranslateModule, ImageItemPipe],
 })
 export class ConcertUpcomingItemComponent implements OnInit {
-  @Input() concert!: ConcertUpcomingItem;
-  @Input() concertIndex = 0;
+  readonly concert = input.required<ConcertUpcomingItem>();
+  readonly concertIndex = input(0);
 
-  @Output() selectedInviteSource = new EventEmitter<string>();
+  readonly selectedInviteSource = output<string>();
 
   isConcertExpired = false;
 
   ngOnInit(): void {
-    this.isConcertExpired = secondsUntilConcert(this.concert.dateCode) < 0;
+    this.isConcertExpired = secondsUntilConcert(this.concert().dateCode) < 0;
   }
 
   onOpenInviteDialog(inviteSource: string): void {

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, output } from '@angular/core';
 import { ICONS_ROUTE, IMAGES_ROUTE } from '../../constants/app.constants';
 import { MEMBERS_PARTS_ITEMS } from '../../constants/members-part-items-config.constants';
 import { NgClass } from '@angular/common';
@@ -13,7 +13,7 @@ import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
   imports: [NgClass, TranslateModule, IconItemPipe],
 })
 export class MembersComponent {
-  @Output() memberId = new EventEmitter<string>();
+  readonly memberId = output<string>();
 
   readonly iconsRoute = ICONS_ROUTE;
   readonly imagesRoute = IMAGES_ROUTE;

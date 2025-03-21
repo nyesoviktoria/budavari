@@ -1,7 +1,7 @@
 <h1 class="primary-heading">{{ 'BVKZ.GALLERY__COMPONENT.GALLERY_TITLE' | translate }}</h1>
 
 <ul class="gallery-folder__list">
-  @for (folder of galleryItems | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }; track folder.folderId) {
+  @for (folder of galleryItems() | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }; track folder.folderId) {
     <li class="gallery-folder__list-item">
       <div class="gallery-folder__header">
         <h2 class="secondary-heading gallery-folder__title">{{ folder.title }}</h2>

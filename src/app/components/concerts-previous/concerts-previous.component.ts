@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
 import { ConcertPreviousItem } from '../../interfaces/concerts-previous-item.interface';
 
 import { TranslateModule } from '@ngx-translate/core';
@@ -12,9 +12,9 @@ import { VideosSourcePipe } from '../../pipes/videos-source/videos-source.pipe';
   imports: [TranslateModule, VideosSourcePipe],
 })
 export class ConcertsPreviousComponent {
-  @Input() concertsPreviousItems: readonly ConcertPreviousItem[] = [];
+  readonly concertsPreviousItems = input<readonly ConcertPreviousItem[]>([]);
 
-  @Output() video = new EventEmitter<HTMLVideoElement>();
+  readonly video = output<HTMLVideoElement>();
 
   onPlay(audio: HTMLVideoElement): void {
     this.video.emit(audio);

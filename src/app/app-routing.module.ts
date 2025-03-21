@@ -1,19 +1,29 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CONCERTS_ROUTE, CONTACT_ROUTE, GALLERY_ROUTE, HOME_PATH, HOME_ROUTE, RECORDS_ROUTE } from './constants/routing.constants';
-import { ConcertsContainerComponent } from './containers/concerts-container/concerts-container.component';
-import { ContactContainerComponent } from './containers/contact-container/contact-container.component';
-import { GalleryContainerComponent } from './containers/gallery-container/gallery-container.component';
-import { HomeContainerComponent } from './containers/home-container/home-container.component';
-import { RecordsContainerComponent } from './containers/records-container/records-container.component';
 
 const routes: Routes = [
   { path: '', redirectTo: HOME_PATH, pathMatch: 'full' },
-  { path: HOME_ROUTE, component: HomeContainerComponent },
-  { path: CONCERTS_ROUTE, component: ConcertsContainerComponent },
-  { path: GALLERY_ROUTE, component: GalleryContainerComponent },
-  { path: CONTACT_ROUTE, component: ContactContainerComponent },
-  { path: RECORDS_ROUTE, component: RecordsContainerComponent },
+  {
+    path: HOME_ROUTE,
+    loadComponent: () => import('./containers/home-container/home-container.component').then((m) => m.HomeContainerComponent),
+  },
+  {
+    path: CONCERTS_ROUTE,
+    loadComponent: () => import('./containers/concerts-container/concerts-container.component').then((m) => m.ConcertsContainerComponent),
+  },
+  {
+    path: GALLERY_ROUTE,
+    loadComponent: () => import('./containers/gallery-container/gallery-container.component').then((m) => m.GalleryContainerComponent),
+  },
+  {
+    path: CONTACT_ROUTE,
+    loadComponent: () => import('./containers/contact-container/contact-container.component').then((m) => m.ContactContainerComponent),
+  },
+  {
+    path: RECORDS_ROUTE,
+    loadComponent: () => import('./containers/records-container/records-container.component').then((m) => m.RecordsContainerComponent),
+  },
 ];
 
 @NgModule({

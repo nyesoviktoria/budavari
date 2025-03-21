@@ -1,9 +1,9 @@
-<div class="accordion__wrapper" [ngClass]="{ 'accordion__content-reverse': isReverse }">
+<div class="accordion__wrapper" [ngClass]="{ 'accordion__content-reverse': isReverse() }">
   <button (click)="toggleVisibility()" class="accordion__button">
-    @if (buttonName) {
-      <span>{{ buttonName }}</span>
+    @if (buttonName()) {
+      <span>{{ buttonName() }}</span>
     }
-    @if (isIcon) {
+    @if (isIcon()) {
       <img
         class="accordion__arrow-icon"
         [ngClass]="{ rotate: isOpen }"

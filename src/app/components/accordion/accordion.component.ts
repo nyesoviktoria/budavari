@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
 import { toggleAnimation } from '../../constants/animations.constants';
 import { NgClass } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
@@ -12,13 +12,13 @@ import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
   imports: [NgClass, TranslateModule, IconItemPipe],
 })
 export class AccordionComponent {
-  @Input() buttonName = '';
+  readonly buttonName = input('');
 
-  @Input() isIcon = true;
+  readonly isIcon = input(true);
 
-  @Input() isReverse = false;
+  readonly isReverse = input(false);
 
-  @Output() isCollapsed = new EventEmitter<boolean>();
+  readonly isCollapsed = output<boolean>();
 
   isOpen = false;
 
