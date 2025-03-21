@@ -1,5 +1,5 @@
-@import '../../../variables.scss';
-@import '../../../mixins.scss';
+@use '../../../variables.scss';
+@use '../../../mixins.scss';
 
 .concerts-upcoming__icons-container {
   display: flex;
@@ -8,19 +8,19 @@
   margin-top: auto;
   padding-right: 2rem;
 
-  @include tablet {
+  @include mixins.tablet {
     padding-right: 0;
   }
 }
 
 .concerts-upcoming__icon {
-  filter: $icon-color-dark-blue;
+  filter: variables.$icon-color-dark-blue;
   height: 3.2rem;
   transition: all 0.3s;
 }
 
 .concerts-upcoming__icon:hover {
   cursor: pointer;
-  filter: $icon-color-dark-blue-hover;
+  filter: variables.$icon-color-dark-blue-hover;
   transform: scale(1.05);
 }

@@ -16,7 +16,6 @@ import { IsLoadingPipe } from '../../pipes/web-request-state/is-loading.pipe';
 @Component({
   selector: 'bvkz-gallery-container',
   templateUrl: './gallery-container.component.html',
-  styleUrls: ['./gallery-container.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [LoaderComponent, GalleryFolderComponent, AsyncPipe, TranslateModule, HasErrorPipe, HasResultPipe, IsLoadingPipe],
 })

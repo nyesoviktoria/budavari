@@ -15,7 +15,6 @@ import { SoloistsAndExMembersComponent } from '../../components/soloists-and-ex-
 @Component({
   selector: 'bvkz-home-container',
   templateUrl: './home-container.component.html',
-  styleUrls: ['./home-container.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [HeroSectionComponent, AboutUsComponent, TestimonialsComponent, MembersComponent, SoloistsAndExMembersComponent],
 })

@@ -1,9 +1,9 @@
-@import '../../../variables.scss';
-@import '../../../mixins.scss';
+@use '../../../variables.scss';
+@use '../../../mixins.scss';
 
 .mdc-dialog__surface {
   min-height: 10vh;
-  background-color: $color-grey-dark;
+  background-color: variables.$color-grey-dark;
   overflow: hidden;
 }
 
@@ -20,7 +20,7 @@
 
 .gallery-dialog__arrow {
   cursor: pointer;
-  filter: $icon-color-white;
+  filter: variables.$icon-color-white;
   height: 100vh;
   opacity: 0;
   position: absolute;

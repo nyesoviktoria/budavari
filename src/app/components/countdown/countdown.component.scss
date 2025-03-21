@@ -1,11 +1,11 @@
-@import '../../../variables.scss';
-@import '../../../mixins.scss';
+@use '../../../variables.scss';
+@use '../../../mixins.scss';
 
 .countdown {
   align-items: center;
-  background-color: $color-primary-dark-darker;
+  background-color: variables.$color-primary-dark-darker;
   border-radius: 0 8px 0 8px;
-  color: $color-primary-light;
+  color: variables.$color-primary-light;
   display: flex;
   font-size: 1.8rem;
   font-weight: 500;
@@ -17,7 +17,7 @@
 }
 
 .countdown__icon {
-  filter: $icon-color-white;
+  filter: variables.$icon-color-white;
   height: 2.4rem;
   align-self: center;
 }
@@ -34,9 +34,9 @@
 
 .countdown__item {
   align-items: center;
-  background-color: $color-primary-light;
-  border-radius: $border-radius-button;
-  color: $color-primary-dark-darker;
+  background-color: variables.$color-primary-light;
+  border-radius: variables.$border-radius-button;
+  color: variables.$color-primary-dark-darker;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -48,7 +48,7 @@
   font-size: 2.4rem;
   font-weight: 600;
 
-  @include tablet {
+  @include mixins.tablet {
     font-size: 2.2rem;
   }
 }
@@ -57,7 +57,7 @@
   font-size: 1.2rem;
   font-weight: 500;
 
-  @include tablet {
+  @include mixins.tablet {
     font-size: 1rem;
   }
 }

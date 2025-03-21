@@ -1,4 +1,4 @@
-@import '../../../variables.scss';
+@use '../../../variables.scss';
 
 .accordion__wrapper {
   display: flex;
@@ -21,7 +21,7 @@
 
 .accordion__arrow-icon {
   cursor: pointer;
-  filter: $icon-color-dark-blue;
+  filter: variables.$icon-color-dark-blue;
   height: 2.4rem;
   transition: all 0.3s;
 }

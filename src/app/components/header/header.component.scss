@@ -1,10 +1,10 @@
-@import '../../../variables.scss';
-@import '../../../mixins.scss';
+@use '../../../variables.scss';
+@use '../../../mixins.scss';
 
 .header__navigation-desktop {
   align-items: center;
-  background-color: $color-primary-light;
-  box-shadow: $box-shadow-navbar;
+  background-color: variables.$color-primary-light;
+  box-shadow: variables.$box-shadow-navbar;
   display: grid;
   grid-template-columns: 2fr 3fr;
   height: 7.4rem;
@@ -15,27 +15,27 @@
   width: 100%;
   z-index: 1000;
 
-  @include tablet {
+  @include mixins.tablet {
     padding: 0 1rem 0 3.2rem;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     padding: 0 2rem 0 3.2rem;
   }
 
-  @include desktop-lg {
+  @include mixins.desktop-lg {
     grid-template-columns: 1fr 1fr;
     padding: 0 3.2rem;
   }
 
-  @include desktop-xl {
+  @include mixins.desktop-xl {
     grid-template-columns: 3fr 2fr;
     padding: 0 4.8rem;
   }
 }
 
 .header__navigation-mobile {
-  background-color: $color-primary-light;
+  background-color: variables.$color-primary-light;
   height: 100%;
   position: fixed;
   right: 0;
@@ -58,7 +58,7 @@
 
 .header__logo-text {
   align-self: center;
-  color: $color-grey;
+  color: variables.$color-grey;
   font-size: 2.2rem;
   line-height: 2rem;
 }
@@ -73,7 +73,7 @@
   list-style: none;
   padding: 1.2rem 2.4rem;
 
-  @include tablet {
+  @include mixins.tablet {
     display: flex;
     justify-content: space-between;
   }
@@ -81,7 +81,7 @@
 
 .header__navigation-link:link,
 .header__navigation-link:visited {
-  color: $color-primary-dark;
+  color: variables.$color-primary-dark;
   font-size: 2.4rem;
   font-weight: 700;
   position: relative;
@@ -91,12 +91,12 @@
 
 .header__navigation-link:hover,
 .header__navigation-link-active:visited {
-  color: $color-primary-dark-darker;
+  color: variables.$color-primary-dark-darker;
 }
 
 .header__navigation-link-animation:after {
   background: none repeat scroll 0 0 transparent;
-  background: $color-primary-dark-darker;
+  background: variables.$color-primary-dark-darker;
   bottom: 0;
   content: '';
   display: block;
@@ -117,18 +117,18 @@
 .header__mobile-menu-icon {
   cursor: pointer;
   display: flex;
-  filter: $icon-color-dark-blue;
+  filter: variables.$icon-color-dark-blue;
   height: 3.6rem;
   justify-self: end;
   transition: all 0.3s;
 
-  @include tablet {
+  @include mixins.tablet {
     display: none;
   }
 }
 
 .header__mobile-menu-icon :hover {
-  filter: $icon-color-dark-blue-hover;
+  filter: variables.$icon-color-dark-blue-hover;
 }
 
 .header__navigation-list-mobile {

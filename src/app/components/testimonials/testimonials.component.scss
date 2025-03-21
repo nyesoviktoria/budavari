@@ -1,5 +1,5 @@
-@import '../../../mixins.scss';
-@import '../../../variables.scss';
+@use '../../../mixins.scss';
+@use '../../../variables.scss';
 
 .testimonials__section-desktop {
   display: none;
@@ -8,14 +8,14 @@
   max-width: 80rem;
   position: relative;
 
-  @include tablet {
+  @include mixins.tablet {
     display: block;
   }
 }
 
 .testimonials__carousel-track {
-  border-radius: $border-radius-basic;
-  box-shadow: $box-shadow-testimonial;
+  border-radius: variables.$border-radius-basic;
+  box-shadow: variables.$box-shadow-testimonial;
   height: 100%;
   position: relative;
   /* TODO: overflow: hidden;  - while there is only one testimonial*/
@@ -41,18 +41,18 @@
   height: 10rem;
   width: 10rem;
 
-  @include tablet {
+  @include mixins.tablet {
     justify-self: end;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     height: 9rem;
     width: 9rem;
   }
 }
 
 .testimonials__image {
-  border-radius: $border-radius-round;
+  border-radius: variables.$border-radius-round;
   height: 100%;
   object-fit: cover;
   width: 100%;
@@ -66,18 +66,18 @@
   justify-self: end;
   text-align: end;
 
-  @include desktop {
+  @include mixins.desktop {
     font-size: 1.4rem;
   }
 }
 
 .testimonials__arrow {
   align-items: center;
-  border-radius: $border-radius-round;
+  border-radius: variables.$border-radius-round;
   border: none;
   cursor: pointer;
   display: flex;
-  filter: $icon-color-dark-blue;
+  filter: variables.$icon-color-dark-blue;
   height: 40px;
   justify-content: center;
   position: absolute;
@@ -88,7 +88,7 @@
 }
 
 .testimonials__arrow:hover {
-  filter: $icon-color-dark-blue-hover;
+  filter: variables.$icon-color-dark-blue-hover;
 }
 
 .testimonials__arrow-left {
@@ -102,7 +102,7 @@
 .disabled,
 .disabled:hover {
   cursor: auto;
-  filter: $icon-color-disabled;
+  filter: variables.$icon-color-disabled;
 }
 
 .testimonials__carousel-navigation {
@@ -117,7 +117,7 @@
 
 .testimonials__carousel-navigation-dot {
   background: rgba(0, 0, 0, 0.3);
-  border-radius: $border-radius-round;
+  border-radius: variables.$border-radius-round;
   border: 0;
   cursor: pointer;
   height: 12px;
@@ -135,7 +135,7 @@
   margin: 0 auto;
   max-width: 40rem;
 
-  @include tablet {
+  @include mixins.tablet {
     display: none;
   }
 }
@@ -146,8 +146,8 @@
 
 .testimonials__cart-mobile {
   align-items: center;
-  border-radius: $border-radius-basic;
-  box-shadow: $box-shadow-testimonial;
+  border-radius: variables.$border-radius-basic;
+  box-shadow: variables.$box-shadow-testimonial;
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
@@ -157,7 +157,7 @@
 }
 
 .testimonials__quotation-icon {
-  filter: $icon-color-middle-blue;
+  filter: variables.$icon-color-middle-blue;
   height: 4.2rem;
   left: 0;
   position: absolute;

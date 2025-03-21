@@ -1,3 +1,6 @@
+@use './variables.scss';
+@use './mixins.scss';
+
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
@@ -36,8 +39,6 @@ $budavari-theme: mat.m2-define-light-theme(
 @include mat.all-component-themes($budavari-theme);
 
 /* You can add global styles to this file, and also import other style files */
-@import './variables.scss';
-@import './mixins.scss';
 
 * {
   margin: 0;
@@ -51,25 +52,25 @@ html {
 
 body {
   font-family: 'Roboto', sans-serif;
-  color: $color-grey-dark;
-  background-color: $color-primary-dark-lighter;
+  color: variables.$color-grey-dark;
+  background-color: variables.$color-primary-dark-lighter;
 }
 
 .wrapper-container {
   margin: 0 auto;
-  background-color: $color-primary-light-transparent-much;
+  background-color: variables.$color-primary-light-transparent-much;
   padding: 2rem 3.2rem;
   max-width: 105rem;
 
-  @include tablet {
+  @include mixins.tablet {
     padding: 3.2rem 5.2rem;
   }
 
-  @include desktop-lg {
+  @include mixins.desktop-lg {
     max-width: 120rem;
   }
 
-  @include desktop-xl {
+  @include mixins.desktop-xl {
     max-width: 130rem;
   }
 }
@@ -79,7 +80,7 @@ body {
   font-weight: 700;
   margin-bottom: 2rem;
 
-  @include tablet {
+  @include mixins.tablet {
     font-size: 4rem;
     margin-bottom: 3.2rem;
   }
@@ -90,7 +91,7 @@ body {
   font-weight: 600;
   margin-bottom: 2.4rem;
 
-  @include tablet {
+  @include mixins.tablet {
     font-size: 3rem;
   }
 }
@@ -100,7 +101,7 @@ body {
   font-weight: 500;
   margin-bottom: 0.8rem;
 
-  @include tablet {
+  @include mixins.tablet {
     font-size: 2.4rem;
   }
 }
@@ -110,7 +111,7 @@ body {
   margin-bottom: 3rem;
   line-height: 2.6rem;
 
-  @include tablet {
+  @include mixins.tablet {
     line-height: 3rem;
   }
 }
@@ -141,7 +142,7 @@ body {
 .anchor-style:visited {
   display: inline;
   text-decoration: none;
-  color: $color-grey-dark;
+  color: variables.$color-grey-dark;
 }
 
 .anchor-style:hover {

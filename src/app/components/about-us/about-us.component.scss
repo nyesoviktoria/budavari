@@ -1,5 +1,5 @@
-@import '../../../variables.scss';
-@import '../../../mixins.scss';
+@use '../../../variables.scss';
+@use '../../../mixins.scss';
 
 .about-us__section {
   padding: 5.2rem 0 0 0;
@@ -9,7 +9,7 @@
   display: grid;
   grid-template-columns: 1fr;
 
-  @include tablet {
+  @include mixins.tablet {
     grid-template-columns: 3fr 1fr;
   }
 }
@@ -21,7 +21,7 @@
 .about-us__text-to-hide {
   display: none;
 
-  @include tablet {
+  @include mixins.tablet {
     display: inline-block;
   }
 }
@@ -29,7 +29,7 @@
 .about-us__accordion {
   display: inline-block;
 
-  @include tablet {
+  @include mixins.tablet {
     display: none;
   }
 }
@@ -38,29 +38,29 @@
   display: none;
   padding: 3.2rem 2rem 7.2rem 2rem;
 
-  @include tablet {
+  @include mixins.tablet {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     padding: 0 0 6.4rem 2rem;
   }
 }
 
 .about-us__image-container {
-  border-radius: $border-radius-basic;
+  border-radius: variables.$border-radius-basic;
   max-height: 12rem;
   max-width: 13rem;
   overflow: hidden;
 
-  @include tablet {
+  @include mixins.tablet {
     max-height: 18rem;
     max-width: 20rem;
   }
 
-  @include desktop-lg {
+  @include mixins.desktop-lg {
     max-height: 17rem;
     max-width: 20rem;
   }

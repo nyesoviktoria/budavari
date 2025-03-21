@@ -1,5 +1,5 @@
-@import '../../../variables.scss';
-@import '../../../mixins.scss';
+@use '../../../variables.scss';
+@use '../../../mixins.scss';
 
 .contact-information__section {
   display: flex;
@@ -19,7 +19,7 @@
 
 .contact-information__icon {
   height: 2.4rem;
-  filter: $icon-color-dark-blue;
+  filter: variables.$icon-color-dark-blue;
 }
 
 .contact-information__map-container {
@@ -28,7 +28,7 @@
   margin: 0 auto;
   max-width: 60rem;
 
-  @include desktop {
+  @include mixins.desktop {
     display: block;
   }
 }

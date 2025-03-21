@@ -1,11 +1,11 @@
-@import '../../../mixins.scss';
+@use '../../../mixins.scss';
 
 .soloists-and-ex-members__section {
   display: block;
   margin: 0 auto;
   max-width: 28rem;
 
-  @include tablet {
+  @include mixins.tablet {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     justify-items: start;
