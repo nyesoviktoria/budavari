@@ -8,7 +8,7 @@ export interface ConcertUpcomingItem {
   readonly concertLengthInMinutes: number;
   readonly place: string;
   readonly description: string;
-  readonly inviteImageSource: string | null;
-  readonly mapUrl: string | null;
-  readonly facebookEventUrl: string | null;
+  readonly inviteImageSource?: string;
+  readonly mapUrl?: string;
+  readonly facebookEventUrl?: string;
 }

@@ -23,10 +23,16 @@
             "index": "src/index.html",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["src/favicon.png", "src/assets", "src/.htaccess"],
+            "assets": [
+              "src/favicon.png",
+              "src/assets",
+              "src/.htaccess",
+              { "glob": "**/*", "input": "api/bvkz-client-api", "output": "/api/bvkz-client-api" }
+            ],
             "styles": ["src/styles.scss"],
             "scripts": [],
-            "browser": "src/main.ts"
+            "browser": "src/main.ts",
+            "allowedCommonJsDependencies": ["bvkz-client-api"]
           },
           "configurations": {
             "production": {

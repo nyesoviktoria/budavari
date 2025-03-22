@@ -3,18 +3,17 @@ import { createEffect, Actions, ofType } from '@ngrx/effects';
 import { fetchPreviousConcerts, fetchPreviousConcertsError, fetchPreviousConcertsSuccess } from '../actions/previous-concerts.actions';
 import { catchError, map, switchMap } from 'rxjs';
 
-import { ConcertsPreviousResponse } from '../../../../interfaces/concerts-previous-response.interface';
 import { mapConcertsPreviousResponseToConcertPreviousItems } from '../../../../mappers/concerts-previous-response-to-concert-previous-items/concerts-previous-response-to-concert-previous-items.mapper';
 import { toErrorAction } from '../../../../utils/store-util/store-util';
-import { ConcertsService } from '../../../../services/concerts/concerts.service';
+import { ConcertsService, GetPreviousConcertsResponse } from '../../../../../../api';
 
 @Injectable()
 export class PreviousConcertsEffects {
   fetchPreviousConcerts$ = createEffect(() =>
     this.actions$.pipe(
       ofType(fetchPreviousConcerts),
-      switchMap(() => this.concertsService.getPreviousConcertsData()),
-      map((response: readonly ConcertsPreviousResponse[]) =>
+      switchMap(() => this.concertsService.getPreviousConcerts()),
+      map((response: GetPreviousConcertsResponse) =>
         fetchPreviousConcertsSuccess({ previousConcerts: mapConcertsPreviousResponseToConcertPreviousItems(response) })
       ),
       catchError(toErrorAction(fetchPreviousConcertsError))

@@ -87,15 +87,16 @@ INSERT INTO `upcoming_concerts` (`ImageDesktopSource`, `ImageMobileSource`, `Ima
   ('concert-desktop', 'concert-mobile', 'nyári éjszaka', 'Szentivánéji muzsika', '2023. június 24., 18:00', '2023-06-24T17:00', 90, 'Albertfalvi Közösségi Ház', 'Szeretettel várunk mindenkit évadzáró koncertünkön az Albertfalvi Közösségi házban, ahol részletek hangzanak el többek között Purcell, Händel, Telemann, Mendelssohn, Sibelius, Gershwin és Grieg műveiből.', 'meghivo', 'https://goo.gl/maps/QdmsUAzmSADgBq4a6', null);
 
 CREATE TABLE `previous_concerts` (
-  `id` tinyint NOT NULL AUTO_INCREMENT,
-  `date` varchar(30) ,
-  `location` varchar(40),
-  `url` varchar(150) ,
-  `videoSource` varchar(20) ,
-  PRIMARY KEY (`id`)
+  `Id` tinyint NOT NULL AUTO_INCREMENT,
+  `ConcertDate` varchar(30) ,
+  `ConcertLocation` varchar(40),
+  `ConcertUrl` varchar(150) ,
+  `VideoSource` varchar(20) ,
+  PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_hungarian_ci;
 
-INSERT INTO `previous_concerts` (`id`, `date`, `location`, `url`, `videoSource`) VALUES
+
+INSERT INTO `previous_concerts` (`Id`, `ConcertDate`, `ConcertLocation`, `ConcertUrl`, `VideoSource`) VALUES
 (1, '2023. július 22.', 'Vászoly, Szent Jakab-templom', 'https://www.youtube.com/playlist?list=PLFHt78hGynFneBXgRUvPjOT2-6vq2_L9m', '20230722'),
 (2, '2023. június 24.', 'Albertfalvi Közösségi Ház', 'https://www.youtube.com/playlist?list=PLFHt78hGynFnUIK8oIFMlD_QeY3eibBYy', '20230624'),
 (3, '2022. december 17.', 'Deák Téri Gimnázium', 'https://youtube.com/playlist?list=PLFHt78hGynFlYLnJbUotQF043nBPaWHYg', '20221217'),
@@ -217,8 +218,6 @@ INSERT INTO `images` (`FolderId`, `ImageSource`, `IsVertical`) VALUES
 (3, '2019.06.23.img18', false),
 (3, '2019.06.23.img19', false),
 (3, '2019.06.23.img20', true);
-
-
 
 INSERT INTO `upcoming_concerts` (`ImageDesktopSource`, `ImageMobileSource`, `ImageAltText`, `ConcertTitle`, `ConcertDate`, `ConcertDateCode`, `ConcertLengthInMinutes`, `ConcertLocation`, `ConcertDescription`, `ConcertInviteImageSource`, `ConcertLocationMapUrl`, `ConcertFacebookEventUrl`) VALUES
   ('concert-desktop-godollo', 'concert-mobile-godollo', 'Gödöllői Királyi Kastély', 'A klasszika gyöngyszemei', '2024. február 24., 18:00', '2024-02-24T17:00', 90, 'Gödöllői királyi kastély, Gödöllő 2100', 'Joseph Martin Kraust, a 21 évesen Németországból Stockholmba költöző zeneszerzőt nem véletlenül emlegetik a „svédek Mozartjaként” – a két komponista között nemcsak klasszicista stílusuk, de hasonló életpályájuk miatt és korai haláluk miatt is könnyen vont párhuzamot az utókor. Műsorunkban a Kraus kevéssé ismert Olympiai nyitányát, valamint Wolfgang Amadeus Mozart népszerű D-dúr fuvolaversenyét, valamint a Mozart egy korai G-dúr szimfóniáját játsszuk.', null, 'https://maps.app.goo.gl/tc9Mi1oopAeTYiE46', 'https://fb.me/e/WNdy6XW3');

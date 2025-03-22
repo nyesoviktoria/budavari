@@ -17,6 +17,7 @@ import { environment } from './environments/environment.prod';
 import { pipes } from './app/pipes';
 import { AppComponent } from './app/app.component';
 import { importProvidersFrom, provideExperimentalZonelessChangeDetection } from '@angular/core';
+import { BvkzClientApiModule, Configuration } from '../api';
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -37,7 +38,13 @@ bootstrapApplication(AppComponent, {
       StoreModule.forRoot(),
       StoreModule.forFeature(BVKZ_FEATURE_NAME, bvkzReducer),
       StoreDevtoolsModule.instrument({ logOnly: environment.production, connectInZone: true }),
-      ...pipes
+      ...pipes,
+      BvkzClientApiModule.forRoot(
+        () =>
+          new Configuration({
+            basePath: 'https://www.budavarikamarazenekar.hu/api/bvkz',
+          })
+      )
     ),
     { provide: BVKZ_FEATURE_NAME, useValue: bvkzReducer },
     provideHttpClient(withInterceptorsFromDi()),

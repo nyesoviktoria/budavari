@@ -42,5 +42,4 @@ testem.log
 Thumbs.db
 
 # API
-/api/config.php
-/api/vendor
+/api

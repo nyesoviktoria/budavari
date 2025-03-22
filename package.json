@@ -31,6 +31,7 @@
     "@ngrx/store-devtools": "^19.0.1",
     "@ngx-translate/core": "^15.0.0",
     "@ngx-translate/http-loader": "^7.0.0",
+    "bvkz-client-api": "file:./api/bvkz-client-api",
     "date-fns": "^2.29.3",
     "ngx-pagination": "^6.0.3",
     "rxjs": "~7.8.0",

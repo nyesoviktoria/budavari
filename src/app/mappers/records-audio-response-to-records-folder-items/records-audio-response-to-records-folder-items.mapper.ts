@@ -1,5 +1,5 @@
+import { GetRecordsAudioResponse, RecordAudio } from '../../../../api';
 import { RecordsFolderItem } from '../../interfaces/record-item.interface';
-import { RecordsAudioResponse } from '../../interfaces/records-audio-response.interface';
 import { RecordId } from '../../types/record-id.type';
 
 const mapRecordId = (albumName: string): RecordId => {
@@ -10,11 +10,9 @@ const mapRecordId = (albumName: string): RecordId => {
   }
 };
 
-export const mapRecordsAudioResponseToRecordsFolderItems = (
-  recordsAudioResponse: readonly RecordsAudioResponse[]
-): readonly RecordsFolderItem[] =>
-  recordsAudioResponse
-    .map((recordsAudioTo: RecordsAudioResponse) => {
+export const mapRecordsAudioResponseToRecordsFolderItems = ({ records }: GetRecordsAudioResponse): readonly RecordsFolderItem[] =>
+  records
+    .map((recordsAudioTo: RecordAudio) => {
       const tracks = [
         { trackSource: recordsAudioTo.TrackSource, audioTitle: recordsAudioTo.RecordTitle, soloistName: recordsAudioTo.SoloistName },
       ];

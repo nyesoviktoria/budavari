@@ -1,9 +1,9 @@
+import { GalleryItem, GetGalleryResponse } from '../../../../api';
 import { GalleryFolderItem } from '../../interfaces/gallery-folder-item.interface';
-import { GalleryResponse } from '../../interfaces/gallery-response.interface';
 
-export const mapGalleryResponseToGalleryFolderItems = (galleryResponse: readonly GalleryResponse[]): readonly GalleryFolderItem[] =>
-  galleryResponse
-    .map((galleryTo: GalleryResponse) => {
+export const mapGalleryResponseToGalleryFolderItems = ({ gallery }: GetGalleryResponse): readonly GalleryFolderItem[] =>
+  gallery
+    .map((galleryTo: GalleryItem) => {
       const images = [{ imageSource: galleryTo.ImageSource, isVertical: galleryTo.IsVertical, id: galleryTo.ImageId }];
 
       return {

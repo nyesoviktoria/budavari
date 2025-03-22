@@ -1,10 +1,10 @@
+import { Concert, GetUpcomingConcertsResponse } from '../../../../api';
 import { ConcertUpcomingItem } from '../../interfaces/concert-upcoming-item.interface';
-import { ConcertsUpcomingResponse } from '../../interfaces/concerts-upcoming-response.interface';
 
-export const mapConcertsUpcomingResponseToConcertUpcomingItems = (
-  concertUpcomingResponse: readonly ConcertsUpcomingResponse[]
-): readonly ConcertUpcomingItem[] =>
-  concertUpcomingResponse.map((concertUpcomingItemTo: ConcertsUpcomingResponse) => ({
+export const mapConcertsUpcomingResponseToConcertUpcomingItems = ({
+  concerts,
+}: GetUpcomingConcertsResponse): readonly ConcertUpcomingItem[] =>
+  concerts.map((concertUpcomingItemTo: Concert) => ({
     imageDesktopSource: concertUpcomingItemTo.ImageDesktopSource,
     imageMobileSource: concertUpcomingItemTo.ImageMobileSource,
     imageAltText: concertUpcomingItemTo.ImageAltText,
