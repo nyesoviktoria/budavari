@@ -1,19 +1,16 @@
-@if (!isConcertExpired) {
-  <div class="concert-upcoming__container" [ngClass]="{ 'concert-upcoming__container-reverse': concertIndex() % 2 === 0 }">
-    <picture class="concert-upcoming__image-container">
-      <source media="(min-width:768px)" [srcset]="concert().imageDesktopSource | imageItem" />
-      <img class="concert-upcoming__image" [src]="concert().imageMobileSource | imageItem" [alt]="concert().imageAltText | translate" />
-      <bvkz-countdown [dateTo]="concert().dateCode"></bvkz-countdown>
-    </picture>
-    <div class="concert-upcoming__text">
-      <p class="concert-upcoming__text-title">{{ concert().title }}</p>
-      <p class="concert-upcoming__text-description" [innerHTML]="concert().description"></p>
-      <p class="concert-upcoming__text-date">{{ concert().date }}</p>
-      <p class="concert-upcoming__text-place">{{ concert().place }}</p>
-      <bvkz-concert-upcoming-icons
-        [concertActual]="concert()"
-        (selectedInviteSource)="onOpenInviteDialog($event)"
-      ></bvkz-concert-upcoming-icons>
-    </div>
+<div class="concert-upcoming__container" [ngClass]="{ 'concert-upcoming__container-reverse': concertIndex() % 2 === 0 }">
+  <picture class="concert-upcoming__image-container">
+    <img class="concert-upcoming__image" [src]="IMAGES_UPLOADS_ROUTE + concert().ImageSource" alt="concert-cover" />
+    <bvkz-countdown [dateTo]="concert().ConcertDate"></bvkz-countdown>
+  </picture>
+  <div class="concert-upcoming__text">
+    <p class="concert-upcoming__text-title">{{ concert().Title }}</p>
+    <p class="concert-upcoming__text-description" [innerHTML]="concert().Description"></p>
+    <p class="concert-upcoming__text-date">{{ concert().ConcertDate | date: 'medium' }}</p>
+    <p class="concert-upcoming__text-place">{{ concert().Location }}</p>
+    <bvkz-concert-upcoming-icons
+      [concertActual]="concert()"
+      (selectedInviteSource)="onOpenInviteDialog($event)"
+    ></bvkz-concert-upcoming-icons>
   </div>
-}
+</div>

@@ -1,9 +1,8 @@
 import { ChangeDetectionStrategy, Component, OnInit, input, output } from '@angular/core';
-import { MINUTES_IN_AN_HOUR, NUMBER_TO_FIX_CONCERT_TIME } from '../../constants/app.constants';
-import { ConcertUpcomingItem } from '../../interfaces/concert-upcoming-item.interface';
 
 import { TranslateModule } from '@ngx-translate/core';
 import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
+import { UpcomingConcert } from '../../../../api';
 
 @Component({
   selector: 'bvkz-concert-upcoming-icons',
@@ -13,30 +12,55 @@ import { IconItemPipe } from '../../pipes/icon-item/icon-item.pipe';
   imports: [TranslateModule, IconItemPipe],
 })
 export class ConcertUpcomingIconsComponent implements OnInit {
-  readonly concertActual = input.required<ConcertUpcomingItem>();
+  readonly concertActual = input.required<UpcomingConcert>();
   readonly selectedInviteSource = output<string>();
 
   private googleCalendarUrlStart = 'https://www.google.com/calendar/render?action=TEMPLATE';
 
   concertCalendarUrl = '';
+  locationMapUrl = '';
 
   ngOnInit(): void {
-    this.concertCalendarUrl = `${this.googleCalendarUrlStart}&text=${this.concertActual().title}&dates=${this.createCorrectDateForm(
-      this.concertActual().dateCode,
-      this.concertActual().concertLengthInMinutes
-    )}&details=${this.concertActual().description}&location=${this.concertActual().place}&sf=true&output=xml`;
+    const startDate = new Date(this.concertActual().ConcertDate);
+    const endDate = new Date(startDate.getTime() + this.concertActual().ConcertLengthInMinutes * 60000);
+
+    const formatDate = (date: Date) => {
+      return date
+        .toISOString()
+        .replace(/[-:]/g, '')
+        .replace(/\.\d+Z/, 'Z');
+    };
+
+    const params = new URLSearchParams({
+      text: this.concertActual().Title,
+      dates: `${formatDate(startDate)}/${formatDate(endDate)}`,
+      details: this.createDescription(),
+      location: this.concertActual().Location,
+      remind: '1440B,120B',
+      sf: 'true',
+      output: 'xml',
+    });
+
+    this.concertCalendarUrl = `${this.googleCalendarUrlStart}&${params.toString()}`;
+
+    this.generateMapsLink();
   }
 
-  createCorrectDateForm(dateCode: string, length: number): string {
-    const concertLengthHours = length / MINUTES_IN_AN_HOUR; //2
-    const concertLengthMinutes = length % MINUTES_IN_AN_HOUR; //0
-    const dateToCalculateArray = dateCode.replaceAll('-', '').replaceAll(':', '').split('T'); //[20230318, 1930]
+  private generateMapsLink(): void {
+    const encodedAddress = encodeURIComponent(this.concertActual().Location);
+    this.locationMapUrl = `https://www.google.com/maps/search/?api=1&query=${encodedAddress}`;
+  }
 
-    const concertDate = dateToCalculateArray[0]; //20230318
-    const concertStart = Number(dateToCalculateArray[1]) - NUMBER_TO_FIX_CONCERT_TIME; //1830
-    const concertEnd = concertStart + concertLengthHours * NUMBER_TO_FIX_CONCERT_TIME + concertLengthMinutes;
+  private createDescription(): string {
+    let desc = this.concertActual().Description;
 
-    return dateCode.includes('T') ? `${concertDate}T${concertStart}00Z/${concertDate}T${concertEnd}00Z` : `${concertDate}/${concertDate}`;
+    desc = desc.replace(/\n/g, '<br>').replace(/"/g, "'").replace(/&/g, '%26');
+
+    if (this.concertActual().FacebookEventUrl) {
+      desc += `<br><br>Facebook esemény: <a href="${this.concertActual().FacebookEventUrl}">Link</a>`;
+    }
+
+    return desc;
   }
 
   onOpenInviteDialog(inviteSource: string): void {

@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CONCERTS_ROUTE, CONTACT_ROUTE, GALLERY_ROUTE, HOME_PATH, HOME_ROUTE, RECORDS_ROUTE } from './constants/routing.constants';
+import { CONCERTS_ROUTE, CONTACT_ROUTE, GALLERY_ROUTE, HOME_ROUTE, RECORDS_ROUTE } from './constants/routing.constants';
 
 const routes: Routes = [
-  { path: '', redirectTo: HOME_PATH, pathMatch: 'full' },
+  { path: '', redirectTo: HOME_ROUTE, pathMatch: 'full' },
   {
     path: HOME_ROUTE,
     loadComponent: () => import('./containers/home-container/home-container.component').then((m) => m.HomeContainerComponent),
@@ -24,6 +24,7 @@ const routes: Routes = [
     path: RECORDS_ROUTE,
     loadComponent: () => import('./containers/records-container/records-container.component').then((m) => m.RecordsContainerComponent),
   },
+  { path: '**', loadComponent: () => import('./containers/home-container/home-container.component').then((m) => m.HomeContainerComponent) },
 ];
 
 @NgModule({

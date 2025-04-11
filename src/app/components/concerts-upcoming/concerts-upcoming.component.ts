@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
-import { ConcertUpcomingItem } from '../../interfaces/concert-upcoming-item.interface';
 
 import { ConcertUpcomingItemComponent } from '../concert-upcoming-item/concert-upcoming-item.component';
+import { UpcomingConcert } from '../../../../api';
 
 @Component({
   selector: 'bvkz-concerts-upcoming',
@@ -11,7 +11,7 @@ import { ConcertUpcomingItemComponent } from '../concert-upcoming-item/concert-u
   imports: [ConcertUpcomingItemComponent],
 })
 export class ConcertsUpcomingComponent {
-  readonly concertsUpcomingItems = input<readonly ConcertUpcomingItem[]>([]);
+  readonly concertsUpcomingItems = input<readonly UpcomingConcert[]>([]);
 
   readonly selectedInviteSource = output<string>();
 

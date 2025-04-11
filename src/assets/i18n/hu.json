@@ -78,6 +78,7 @@
       "CONCERTS__TITLE": "Koncertek",
       "PREVIOUS_CONCERTS__TITLE": "Korábbi koncertjeink",
       "ERROR_MESSAGE": "A tartalom jelenleg nem elérhető.",
+      "EMPTY_MESSAGE": "Jelenleg nincs közelgő koncert.",
       "CONCERTS_UPCOMING__IMAGE_ALT_TEXT": "2018. évi János-passió koncertről készült fénykép",
       "CONCERTS_UPCOMING__ICON_CALENDAR_TITLE": "Naptár",
       "CONCERTS_UPCOMING__ICON_CALENDER_ALT": "naptár ikon",

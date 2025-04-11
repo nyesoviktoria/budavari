@@ -16,8 +16,13 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from './environments/environment.prod';
 import { pipes } from './app/pipes';
 import { AppComponent } from './app/app.component';
-import { importProvidersFrom, provideExperimentalZonelessChangeDetection } from '@angular/core';
+import { importProvidersFrom, LOCALE_ID, provideExperimentalZonelessChangeDetection } from '@angular/core';
 import { BvkzClientApiModule, Configuration } from '../api';
+
+import localeHu from '@angular/common/locales/hu';
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData(localeHu);
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -50,6 +55,7 @@ bootstrapApplication(AppComponent, {
     provideHttpClient(withInterceptorsFromDi()),
     provideAnimations(),
     provideExperimentalZonelessChangeDetection(),
+    { provide: LOCALE_ID, useValue: 'hu' },
   ],
 })
   // eslint-disable-next-line no-console

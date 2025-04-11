@@ -2,6 +2,7 @@ export const ASSET_BASE_ROUTE = './../../../assets/';
 export const AUDIO_ROUTE = `${ASSET_BASE_ROUTE}audio/`;
 export const ICONS_ROUTE = `${ASSET_BASE_ROUTE}icons/`;
 export const IMAGES_ROUTE = `${ASSET_BASE_ROUTE}images/`;
+export const IMAGES_UPLOADS_ROUTE = `${ASSET_BASE_ROUTE}images/uploads/`;
 export const VIDEOS_ROUTE = `${ASSET_BASE_ROUTE}videos/`;
 export const MEMBER_IMAGES_ROUTE = `${ASSET_BASE_ROUTE}images/members/`;
 export const API_ROUTE = 'api/bvkz/';
